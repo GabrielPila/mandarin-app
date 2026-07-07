@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512">
+  <rect width="512" height="512" rx="110" fill="#c0392b"/>
+  <rect x="36" y="36" width="440" height="440" rx="88" fill="none" stroke="#e8b04b" stroke-width="10"/>
+  <text x="256" y="345" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="260" fill="#ffffff" text-anchor="middle" font-weight="bold">中</text>
+</svg>

@@ -1,0 +1,78 @@
+// core.js — diccionario, segmentación, pinyin/tonos
+(function(){
+'use strict';
+
+// ---------- Diccionario ----------
+const ALL = [];
+window.B1_VOCAB.forEach((e,i)=>{ e.id='b1:'+i; e.book=1; ALL.push(e); });
+window.B1_SUP.forEach((e,i)=>{ e.id='b1s:'+i; e.book=1; ALL.push(e); });
+
+const DICT = new Map(); // hanzi -> [entries]
+let MAXLEN = 1;
+for(const e of ALL){
+  if(!DICT.has(e.h)) DICT.set(e.h, []);
+  DICT.get(e.h).push(e);
+  if(e.h.length > MAXLEN) MAXLEN = e.h.length;
+}
+
+// ---------- Segmentación (longest match) ----------
+const isHan = ch => /[㐀-鿿豈-﫿]/.test(ch);
+
+function segment(text){
+  const tokens = [];
+  let i = 0;
+  while(i < text.length){
+    const ch = text[i];
+    if(!isHan(ch)){
+      // agrupar no-han consecutivos (puntuación, números, latín)
+      let j = i+1;
+      while(j < text.length && !isHan(text[j])) j++;
+      tokens.push({t: text.slice(i,j), plain:true});
+      i = j;
+      continue;
+    }
+    let matched = null;
+    for(let len = Math.min(MAXLEN, text.length - i); len >= 1; len--){
+      const cand = text.slice(i, i+len);
+      if(DICT.has(cand)){ matched = cand; break; }
+    }
+    if(matched){
+      tokens.push({t: matched, entries: DICT.get(matched)});
+      i += matched.length;
+    } else {
+      tokens.push({t: ch, plain:true});
+      i += 1;
+    }
+  }
+  return tokens;
+}
+
+// ---------- Pinyin / tonos ----------
+const TONED = {
+  '1':'āēīōūǖĀĒĪŌŪǕ', '2':'áéíóúǘÁÉÍÓÚǗ', '3':'ǎěǐǒǔǚǍĚǏǑǓǙ', '4':'àèìòùǜÀÈÌÒÙǛ'
+};
+function toneOf(syl){
+  for(const t of ['1','2','3','4']){
+    for(const c of TONED[t]) if(syl.includes(c)) return +t;
+  }
+  return 0; // neutro
+}
+const TONE_MARK = ['·','ˉ','ˊ','ˇ','ˋ'];
+
+// divide el pinyin de una palabra en sílabas alineadas con sus caracteres
+function syllables(entry){
+  const syls = entry.p.split(/[\s'\-]+/).filter(s=>s.length);
+  const chars = Array.from(entry.h);
+  if(syls.length === chars.length) return syls;
+  // erhua: última sílaba termina en r y hay un 儿 extra
+  if(chars.length === syls.length + 1 && chars[chars.length-1] === '儿'){
+    return syls.concat(['']);
+  }
+  // desalineado: repartir lo mejor posible
+  const out = [];
+  for(let i=0;i<chars.length;i++) out.push(syls[i] || '');
+  return out;
+}
+
+window.Core = { ALL, DICT, segment, toneOf, TONE_MARK, syllables, isHan };
+})();
