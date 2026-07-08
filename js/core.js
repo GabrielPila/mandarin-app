@@ -77,12 +77,29 @@ function syllables(entry){
 }
 
 // ---------- Audio ----------
-function speak(text){
-  if(!window.speechSynthesis) return;
-  speechSynthesis.cancel(); // detener audio previo
+function speak(text, onEnd){
+  if(!window.speechSynthesis) {
+    if(onEnd) onEnd();
+    return;
+  }
   const u = new SpeechSynthesisUtterance(text);
   u.lang = 'zh-CN';
-  u.rate = 0.85; // un poco más lento para estudiantes
+  if (window.SRS && window.SRS.settings) {
+    u.rate = window.SRS.settings.voiceSpeed || 1.0;
+    const voices = speechSynthesis.getVoices();
+    if (window.SRS.settings.voiceURI) {
+      const v = voices.find(v => v.voiceURI === window.SRS.settings.voiceURI);
+      if (v) u.voice = v;
+    } else {
+      const best = voices.find(v => v.lang.includes('zh') && (v.name.includes('Premium') || v.name.includes('Ting-Ting') || v.name.includes('Google') || v.name.includes('Xiaoxiao')));
+      if(best) u.voice = best;
+    }
+  }
+  if(onEnd) {
+    u.onend = onEnd;
+    u.onerror = onEnd;
+  }
+  speechSynthesis.cancel();
   speechSynthesis.speak(u);
 }
 

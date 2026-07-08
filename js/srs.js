@@ -31,6 +31,7 @@ function review(id, grade){
   c.last = now;
   state[id] = c;
   save();
+  recordActivity();
 }
 
 function dueCards(pool){
@@ -50,10 +51,17 @@ function stats(pool){
   return {total: pool.length, learned, due, fresh: pool.length - learned};
 }
 
-// ---------- ajustes ----------
-let settings = {lang:'es', includeSup:false, newPerDay:10, maxLesson:20, textSize:'medium', theme:'system'};
+// ---------- ajustes y racha ----------
+let settings = {lang:'es', includeSup:false, newPerDay:10, maxLesson:20, textSize:'medium', theme:'system', history:{}, voiceSpeed:1.0, voiceURI:''};
 try { Object.assign(settings, JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}')); } catch(e){}
+if(!settings.history) settings.history = {};
 function saveSettings(){ localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); }
+
+function recordActivity(){
+  const today = new Date().toISOString().slice(0,10);
+  settings.history[today] = (settings.history[today] || 0) + 1;
+  saveSettings();
+}
 
 // ---------- exportar / importar ----------
 function exportData(){
@@ -67,5 +75,5 @@ function importData(json){
 }
 function resetAll(){ state = {}; save(); }
 
-window.SRS = { get, review, dueCards, newCards, stats, settings, saveSettings, exportData, importData, resetAll };
+window.SRS = { get, review, dueCards, newCards, stats, settings, saveSettings, recordActivity, exportData, importData, resetAll };
 })();

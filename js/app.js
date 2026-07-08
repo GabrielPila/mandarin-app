@@ -8,7 +8,7 @@ const UI = {
   es: {study:'Estudiar', texts:'Textos', vocab:'Vocabulario', settings:'Ajustes',
     due:'para repasar', fresh:'nuevas', learned:'aprendidas', start:'Repasar ahora',
     cram:'Repaso libre por lección', lesson:'Lección', show:'Mostrar', again:'Otra vez',
-    hard:'Difícil', good:'Bien', easy:'Fácil', done:'¡Sesión terminada! 干得好!',
+    hard:'Difícil', good:'Bien', easy:'Fácil', done:'¡Has terminado por ahora!',
     dialogs:'Diálogos del libro', readings:'Lecturas nuevas', pinyin:'Pinyin',
     tones:'Tonos', trans:'Traducción', example:'Ejemplo', search:'Buscar…',
     lang:'Idioma de los significados', includeSup:'Incluir palabras suplementarias en las tarjetas',
@@ -16,13 +16,14 @@ const UI = {
     exportBtn:'Exportar progreso', importBtn:'Importar progreso', resetBtn:'Borrar todo el progreso',
     resetConfirm:'¿Seguro? Esto borra todo tu progreso de repaso.', imported:'Progreso importado ✓',
     noDue:'No hay tarjetas pendientes. ¡Vuelve más tarde o repasa una lección!',
-    cardsLeft:'tarjetas', supTag:'suplementaria', of:'de', back:'Volver', all:'Todas',
+    cardsLeft:'tarjetas', supTag:'suplementaria', of:'de', back:'Volver', all:'Todas', streak:'Racha', days:'días',
     text1:'Texto', flipHint:'Toca la tarjeta para ver la respuesta',
-    textSize: 'Tamaño del texto', theme: 'Tema', light: 'Claro', dark: 'Oscuro', system: 'Sistema', book1: 'Libro 1', book2: 'Libro 2', sizeSmall: 'Pequeño', sizeMedium: 'Mediano', sizeLarge: 'Grande'},
+    textSize: 'Tamaño del texto', theme: 'Tema', light: 'Claro', dark: 'Oscuro', system: 'Sistema', book1: 'Libro 1', book2: 'Libro 2', sizeSmall: 'Pequeño', sizeMedium: 'Mediano', sizeLarge: 'Grande',
+    voiceSpeed: 'Velocidad de voz', voice: 'Voz preferida', testVoice: '🔊 Probar', autoVoice: 'Automático (Recomendado)'},
   en: {study:'Study', texts:'Texts', vocab:'Vocabulary', settings:'Settings',
     due:'to review', fresh:'new', learned:'learned', start:'Review now',
     cram:'Free review by lesson', lesson:'Lesson', show:'Show', again:'Again',
-    hard:'Hard', good:'Good', easy:'Easy', done:'Session finished! 干得好!',
+    hard:'Hard', good:'Good', easy:'Easy', done:'You are done for now!',
     dialogs:'Book dialogues', readings:'New readings', pinyin:'Pinyin',
     tones:'Tones', trans:'Translation', example:'Example', search:'Search…',
     lang:'Language for meanings', includeSup:'Include supplementary words in flashcards',
@@ -30,9 +31,10 @@ const UI = {
     exportBtn:'Export progress', importBtn:'Import progress', resetBtn:'Reset all progress',
     resetConfirm:'Are you sure? This deletes all review progress.', imported:'Progress imported ✓',
     noDue:'No cards due. Come back later or cram a lesson!',
-    cardsLeft:'cards', supTag:'supplementary', of:'of', back:'Back', all:'All',
+    cardsLeft:'cards', supTag:'supplementary', of:'of', back:'Back', all:'All', streak:'Streak', days:'days',
     text1:'Text', flipHint:'Tap the card to reveal the answer',
-    textSize: 'Text size', theme: 'Theme', light: 'Light', dark: 'Dark', system: 'System', book1: 'Book 1', book2: 'Book 2', sizeSmall: 'Small', sizeMedium: 'Medium', sizeLarge: 'Large'}
+    textSize: 'Text size', theme: 'Theme', light: 'Light', dark: 'Dark', system: 'System', book1: 'Book 1', book2: 'Book 2', sizeSmall: 'Small', sizeMedium: 'Medium', sizeLarge: 'Large',
+    voiceSpeed: 'Voice speed', voice: 'Preferred voice', testVoice: '🔊 Test', autoVoice: 'Auto (Recommended)'}
 };
 function T(k){ return UI[S.settings.lang][k] || k; }
 function gloss(e){ return S.settings.lang === 'en' ? e.en : e.es; }
@@ -133,6 +135,44 @@ document.addEventListener('click', e => {
 });
 $('#popup-close').addEventListener('click', ()=> $('#popup').classList.remove('open'));
 
+// ---------- Tracing Quiz ----------
+window.startQuiz = function(word){
+  const modal = $('#quiz-modal'), hwCont = $('#quiz-hw'), status = $('.quiz-status');
+  modal.classList.remove('hidden');
+  hwCont.innerHTML = '';
+  status.textContent = 'Traza el carácter (' + word + ')';
+  
+  const chars = Array.from(word).filter(c => Core.isHan(c));
+  if(!chars.length) return;
+  
+  let currentIdx = 0;
+  
+  function renderChar(idx){
+    hwCont.innerHTML = '';
+    const box = document.createElement('div');
+    box.className = 'hw-quiz-box';
+    hwCont.appendChild(box);
+    const writer = HanziWriter.create(box, chars[idx], {
+      width: 250, height: 250, padding: 10,
+      showOutline: true, strokeAnimationSpeed: 2, delayBetweenStrokes: 50,
+      strokeColor: document.body.classList.contains('theme-dark') ? '#e53935' : '#d32f2f'
+    });
+    writer.quiz({
+      onComplete: () => {
+        if(idx + 1 < chars.length){
+          status.textContent = '¡Bien! Siguiente...';
+          setTimeout(() => renderChar(idx + 1), 800);
+        } else {
+          status.textContent = '¡Excelente! Terminado 🎉';
+          setTimeout(() => modal.classList.add('hidden'), 1500);
+        }
+      }
+    });
+  }
+  renderChar(0);
+};
+$('#quiz-close').addEventListener('click', () => $('#quiz-modal').classList.add('hidden'));
+
 // ---------- navegación ----------
 const tabs = ['study','texts','vocab','settings'];
 let current = 'study';
@@ -149,12 +189,35 @@ function setView(html){ const v = $('#view'); v.innerHTML = html; v.scrollTop = 
 function renderStudy(){
   const pool = cardPool();
   const st = S.stats(pool);
+  
+  const today = new Date();
+  let streak = 0;
+  for(let i=0; i<365; i++){
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const ds = d.toISOString().slice(0,10);
+    if(S.settings.history && S.settings.history[ds]) streak++;
+    else if(i > 0) break;
+  }
+  
+  let heatmapHTML = '<div class="heatmap">';
+  for(let i=13; i>=0; i--){
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const ds = d.toISOString().slice(0,10);
+    const count = (S.settings.history && S.settings.history[ds]) || 0;
+    const intensity = count === 0 ? 0 : count < 20 ? 1 : count < 50 ? 2 : 3;
+    heatmapHTML += `<div class="heat-box lvl-${intensity}" title="${ds}: ${count}"></div>`;
+  }
+  heatmapHTML += '</div>';
+
   const v = setView(`
     <div class="stats">
       <div class="stat"><b>${st.due}</b><span>${T('due')}</span></div>
       <div class="stat"><b>${st.fresh}</b><span>${T('fresh')}</span></div>
-      <div class="stat"><b>${st.learned}</b><span>${T('learned')}</span></div>
+      <div class="stat"><b>${streak}</b><span>${T('streak')} 🔥</span></div>
     </div>
+    ${heatmapHTML}
     <button id="start-srs" class="big-btn">${T('start')}</button>
     <h3>${T('cram')}</h3>
     <div id="cram-container"></div>`);
@@ -200,6 +263,7 @@ function runCards(queue, srsMode){
         <div class="card-h-row">
           <div class="card-h">${e.h}</div>
           <button class="spk-btn large" onclick="Core.speak('${e.h}'); event.stopPropagation();">🔊</button>
+          <button class="spk-btn large" onclick="window.startQuiz('${e.h}'); event.stopPropagation();">✍️</button>
         </div>
         <div class="card-back hidden">
           <div class="card-p">${e.p}</div>
@@ -250,6 +314,7 @@ function runCards(queue, srsMode){
       b.addEventListener('click', ()=>{
         const g = +b.dataset.g;
         if(srsMode) S.review(e.id, g);
+        else S.recordActivity();
         if(g === 0) queue.push(e); // repetir al final
         idx++;
         show();
@@ -285,7 +350,53 @@ function renderTextList(){
 }
 
 let readerMode = 'none', readerTrans = false;
+// ---------- Text Reader Logic ----------
+let readerLines = [];
+let readerIndex = 0;
+let isPlaying = false;
+
+window.playReader = function(startIndex = 0) {
+  if(window.speechSynthesis) window.speechSynthesis.cancel();
+  readerIndex = startIndex;
+  isPlaying = true;
+  updateReaderUI();
+  window.playNextLine();
+};
+
+window.stopReader = function() {
+  if(window.speechSynthesis) window.speechSynthesis.cancel();
+  isPlaying = false;
+  readerLines.forEach(l => l.row.classList.remove('reading-active'));
+  updateReaderUI();
+};
+
+window.playNextLine = function() {
+  if (!isPlaying) return;
+  if (readerIndex >= readerLines.length) {
+    window.stopReader();
+    return;
+  }
+  
+  readerLines.forEach(l => l.row.classList.remove('reading-active'));
+  const current = readerLines[readerIndex];
+  current.row.classList.add('reading-active');
+  
+  // Opcional: auto-scroll para mantener la línea en el centro
+  current.row.scrollIntoView({behavior: 'smooth', block: 'center'});
+  
+  Core.speak(current.text, () => {
+    readerIndex++;
+    window.playNextLine();
+  });
+};
+
+function updateReaderUI() {
+  const btn = $('#tg-audio');
+  if(btn) btn.textContent = isPlaying ? '⏹️' : '🔊';
+}
+
 function renderReader(t, kind){
+  window.stopReader();
   const v = setView(`
     <button id="back" class="back-btn">← ${T('back')}</button>
     <h2 class="reader-title">${t.t}</h2>
@@ -299,9 +410,8 @@ function renderReader(t, kind){
     <div id="reader"></div>`);
   $('#back').addEventListener('click', renderTextList);
   $('#tg-audio').addEventListener('click', ()=>{
-    const parts = kind === 'dialog' ? t.parts : [{lines: t.lines}];
-    const allZh = parts.flatMap(p => p.lines.map(l => l.zh)).join('，');
-    Core.speak(allZh);
+    if(isPlaying) window.stopReader();
+    else window.playReader(0);
   });
   const update = ()=>{
     $('#tg-pinyin').classList.toggle('on', readerMode==='pinyin');
@@ -318,6 +428,7 @@ function renderReader(t, kind){
 function drawReader(t, kind){
   const r = $('#reader');
   r.innerHTML = '';
+  readerLines = [];
   const parts = kind === 'dialog' ? t.parts : [{lines: t.lines}];
   parts.forEach((p, pi)=>{
     if(kind === 'dialog'){
@@ -346,6 +457,13 @@ function drawReader(t, kind){
         row.appendChild(tr);
       }
       r.appendChild(row);
+      
+      const lineObj = { row, text: (line.s ? line.s + '，' : '') + line.zh };
+      readerLines.push(lineObj);
+      
+      row.addEventListener('click', () => {
+        window.playReader(readerLines.indexOf(lineObj));
+      });
     }
   });
 }
@@ -412,6 +530,15 @@ function renderSettings(){
       <input type="range" id="new-per-day" min="0" max="40" step="5" value="${S.settings.newPerDay}"></div>
     <div class="setting row"><label>${T('includeSup')}</label>
       <input type="checkbox" id="inc-sup" ${S.settings.includeSup?'checked':''}></div>
+      
+    <div class="setting"><label>${T('voiceSpeed')}: <b id="vs-val">${S.settings.voiceSpeed || 1.0}x</b></label>
+      <input type="range" id="voice-speed" min="0.5" max="1.5" step="0.1" value="${S.settings.voiceSpeed || 1.0}"></div>
+    <div class="setting"><label>${T('voice')}</label>
+      <div style="display:flex; gap:8px;">
+        <select id="voice-select" style="flex:1; padding:8px; border-radius:8px; border:1px solid var(--line); background:var(--card-bg); color:var(--ink); font-size:14px;"></select>
+        <button id="test-voice" class="big-btn secondary" style="margin:0; width:auto; padding:8px 16px;">${T('testVoice')}</button>
+      </div></div>
+      
     <div class="setting">
       <button id="export" class="big-btn secondary">${T('exportBtn')}</button>
       <button id="import" class="big-btn secondary">${T('importBtn')}</button>
@@ -451,6 +578,42 @@ function renderSettings(){
   $('#max-lesson').addEventListener('input', e=>{ S.settings.maxLesson=+e.target.value; $('#ml-val').textContent=e.target.value; S.saveSettings(); });
   $('#new-per-day').addEventListener('input', e=>{ S.settings.newPerDay=+e.target.value; $('#npd-val').textContent=e.target.value; S.saveSettings(); });
   $('#inc-sup').addEventListener('change', e=>{ S.settings.includeSup=e.target.checked; S.saveSettings(); });
+  
+  const populateVoices = () => {
+    const sel = $('#voice-select');
+    if(!sel) return;
+    const premium = ['premium', 'tingting', 'ting-ting', 'meijia', 'google', 'xiaoxiao'];
+    const voices = speechSynthesis.getVoices().filter(v => {
+      if(!v.lang.includes('zh')) return false;
+      const name = v.name.toLowerCase();
+      if(name.includes('hk') || name.includes('yue') || name.includes('粤')) return false;
+      return premium.some(k => name.includes(k));
+    });
+    
+    sel.innerHTML = '<option value="">' + T('autoVoice') + '</option>' + 
+      voices.map(v => {
+        let source = 'Local';
+        const uri = (v.voiceURI || '').toLowerCase();
+        const n = v.name.toLowerCase();
+        if(n.includes('google')) source = 'Google Chrome';
+        else if(uri.includes('apple') || n.includes('tingting') || n.includes('meijia')) source = 'Apple / iOS';
+        else if(uri.includes('microsoft') || n.includes('xiaoxiao')) source = 'Microsoft Edge';
+        else if(!v.localService) source = 'Cloud';
+        
+        // Limpiar el nombre para que no se vea tan largo si ya incluye la fuente
+        let cleanName = v.name.replace('（中国大陆）', '').replace('(China mainland)', '').trim();
+        
+        return `<option value="${v.voiceURI}" ${S.settings.voiceURI === v.voiceURI ? 'selected' : ''}>${cleanName} (${source})</option>`;
+      }).join('');
+  };
+  populateVoices();
+  if(speechSynthesis.onvoiceschanged !== undefined) {
+    speechSynthesis.onvoiceschanged = populateVoices;
+  }
+  $('#voice-select').addEventListener('change', e=>{ S.settings.voiceURI=e.target.value; S.saveSettings(); });
+  $('#voice-speed').addEventListener('input', e=>{ S.settings.voiceSpeed=+e.target.value; $('#vs-val').textContent=e.target.value+'x'; S.saveSettings(); });
+  $('#test-voice').addEventListener('click', ()=>{ Core.speak('你好，欢迎学习中文！'); });
+  
   $('#export').addEventListener('click', ()=>{
     const blob = new Blob([S.exportData()], {type:'application/json'});
     const a = document.createElement('a');
@@ -472,6 +635,7 @@ function renderSettings(){
 }
 
 function renderTabs(){
+  if(window.stopReader) window.stopReader();
   $('#tab-study .tab-label').textContent = T('study');
   $('#tab-texts .tab-label').textContent = T('texts');
   $('#tab-vocab .tab-label').textContent = T('vocab');
