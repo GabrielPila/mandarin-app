@@ -1,5 +1,5 @@
 // NPCR Book 2 vocabulary (lecciones 11-20)
-window.B2_VOCAB = [
+export const B2_VOCAB = [
 {h:"啊",p:"à",pos:"Interj.",es:"oh; ah",en:"oh; ah",l:13, tags:["npcr", "hsk3"]},
 {h:"哎",p:"āi",pos:"Interj.",es:"ah; sí",en:"hey; yes",l:20, tags:["npcr"]},
 {h:"哎呀",p:"āi yà",pos:"Interj.",es:"oh; ay (sorpresa)",en:"oh my (surprise)",l:20, tags:["npcr"]},
@@ -457,7 +457,7 @@ window.B2_VOCAB = [
 {h:"遇",p:"yù",pos:"V",es:"encontrar",en:"to encounter",l:13, tags:["npcr"]},
 {h:"原来",p:"yuán lái",pos:"Adv.",es:"originalmente; conque",en:"originally; so it turns out",l:19, tags:["npcr", "hsk4"]},
 {h:"远",p:"yuǎn",pos:"Adj.",es:"lejos",en:"far",l:15, tags:["npcr", "hsk2"]},
-{h:"远在天边，近在眼前",p:"yuǎn zài tiān biān, jìn zài yǎn qián",pos:"EI",es:"está justo delante de ti",en:"right in front of you",l:15, tags:["npcr"]},
+{h:"远在天边，近在眼前",p:"yuǎn zài tiān biān ， jìn zài yǎn qián",pos:"EI",es:"está justo delante de ti",en:"right in front of you",l:15, tags:["npcr"]},
 {h:"愿意",p:"yuàn yì",pos:"V.aux.",es:"querer; tener gusto en",en:"to be willing",l:17, tags:["npcr", "hsk3"]},
 {h:"越来越",p:"yuè lái yuè",pos:"EI",es:"cada vez más",en:"more and more",l:20, tags:["npcr"]},
 {h:"运",p:"yùn",pos:"V",es:"transportar",en:"to transport",l:12, tags:["npcr"]},

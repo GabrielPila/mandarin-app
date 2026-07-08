@@ -1,5 +1,5 @@
 // Lecturas nuevas (generadas) para el Libro 2
-window.B2_READINGS = [
+export const B2_READINGS = [
 {l:11,t:"去西安旅行",tes:"Viaje a Xi'an",ten:"Trip to Xi'an",lines:[
 {zh:"上个月我去西安旅行了。",es:"El mes pasado viajé a Xi'an.",en:"I traveled to Xi'an last month."},
 {zh:"在西安我玩儿得非常高兴。",es:"Me divertí mucho en Xi'an.",en:"I had a great time in Xi'an."},

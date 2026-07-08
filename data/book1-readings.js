@@ -1,5 +1,5 @@
 // Lecturas nuevas (generadas) — cada una usa solo vocabulario hasta esa lección
-window.B1_READINGS = [
+export const B1_READINGS = [
 {l:1,t:"你好, 我叫王月",tes:"Hola, me llamo Wang Yue",ten:"Hi, my name is Wang Yue",lines:[
 {zh:"你好! 我姓王, 叫王月。",es:"¡Hola! Mi apellido es Wang; me llamo Wang Yue.",en:"Hello! My surname is Wang; my name is Wang Yue."},
 {zh:"请问, 你叫什么名字?",es:"Disculpa, ¿cómo te llamas?",en:"May I ask your name?"},

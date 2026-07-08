@@ -1,5 +1,5 @@
 // NPCR Book 1 supplementary vocabulary (palabras suplementarias) + extra tokens used in texts
-window.B1_SUP = [
+export const B1_SUP = [
 {h:"埃及",p:"Āi jí",pos:"NP",es:"Egipto",en:"Egypt",l:2,sup:1},
 {h:"澳大利亚",p:"Ào dà lì yà",pos:"NP",es:"Australia",en:"Australia",l:2,sup:1},
 {h:"白色",p:"bái sè",pos:"S",es:"blanco",en:"white",l:7,sup:1},
@@ -151,5 +151,16 @@ window.B1_SUP = [
 {h:"验",p:"yàn",pos:"V",es:"examinar; analizar",en:"to test; to examine",l:8,sup:1},
 {h:"好的",p:"hǎo de",pos:"EI",es:"vale; de acuerdo",en:"OK; all right",l:6,sup:1},
 {h:"好吧",p:"hǎo ba",pos:"EI",es:"está bien; bueno",en:"all right then",l:7,sup:1},
-{h:"真的",p:"zhēn de",pos:"EI",es:"¿de verdad?; de verdad",en:"really",l:5,sup:1}
+{h:"真的",p:"zhēn de",pos:"EI",es:"¿de verdad?; de verdad",en:"really",l:5,sup:1},
+{h:"宋",p:"Sòng",pos:"NP",es:"Song (apellido)",en:"Song (surname)",l:1,sup:1},
+{h:"林",p:"Lín",pos:"NP",es:"Lin (apellido)",en:"Lin (surname)",l:1,sup:1},
+{h:"王",p:"Wáng",pos:"NP",es:"Wang (apellido)",en:"Wang (surname)",l:2,sup:1},
+{h:"力波",p:"Lì bō",pos:"NP",es:"Libo (nombre corto de Ding Libo)",en:"Libo (Ding Libo's short name)",l:1,sup:1},
+{h:"大为",p:"Dà wéi",pos:"NP",es:"Dawei (nombre corto de Ma Dawei)",en:"Dawei (Ma Dawei's short name)",l:1,sup:1},
+{h:"小云",p:"Xiǎo yún",pos:"NP",es:"Xiaoyun (nombre corto de Wang Xiaoyun)",en:"Xiaoyun (Wang Xiaoyun's short name)",l:2,sup:1},
+{h:"雨平",p:"Yǔ píng",pos:"NP",es:"Yuping (nombre corto de Lu Yuping)",en:"Yuping (Lu Yuping's short name)",l:3,sup:1},
+{h:"王月",p:"Wáng Yuè",pos:"NP",es:"Wang Yue (nombre)",en:"Wang Yue (a name)",l:1,sup:1},
+{h:"欢欢",p:"Huān huan",pos:"NP",es:"Huanhuan (nombre de perro)",en:"Huanhuan (a dog's name)",l:3,sup:1},
+{h:"谢",p:"xiè",pos:"V",es:"agradecer",en:"to thank",l:1,sup:1},
+{h:"明年",p:"míng nián",pos:"S",es:"el año que viene",en:"next year",l:10,sup:1}
 ];

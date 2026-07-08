@@ -1,4 +1,4 @@
-window.GRAMMAR = [
+export const GRAMMAR = [
   {
     "id": "g-adj-pred",
     "tags": [

@@ -1,6 +1,6 @@
 // NPCR Book 1 vocabulary. h=hanzi, p=pinyin, pos, es/en=glosses, l=lesson (0=fonética), sup=supplementary
 // ex=[chino, español, inglés]
-window.B1_VOCAB = [
+export const B1_VOCAB = [
 // ---- Lección 0 (preparación fonética): números y básicos ----
 {h:"一",p:"yī",pos:"Num.",es:"uno",en:"one",l:0, tags:["npcr", "hsk1"], ex:["我有一个哥哥。","Tengo un hermano mayor.","I have one older brother."]},
 {h:"二",p:"èr",pos:"Num.",es:"dos",en:"two",l:0, tags:["npcr", "hsk1"], ex:["现在二层没有人。","Ahora no hay nadie en el segundo piso.","There is nobody on the second floor now."]},

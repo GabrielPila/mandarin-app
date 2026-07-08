@@ -1,5 +1,5 @@
 // NPCR Book 2 lesson dialogues (lecciones 11-20)
-window.B2_TEXTS = [
+export const B2_TEXTS = [
 {l:11,t:"我玩儿得非常高兴",tes:"Me divertí mucho",ten:"I had a great time",parts:[
 {ies:"Lin Na ha venido a cambiar dinero al banco, donde se encuentra con Ding Libo.",ien:"Lin Na comes to the bank to change money and runs into Ding Libo.",lines:[
 {s:"林娜",zh:"力波, 你来得真早!",es:"¡Libo, llegaste muy temprano!",en:"Libo, you're here really early!"},

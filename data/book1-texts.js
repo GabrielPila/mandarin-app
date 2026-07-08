@@ -1,6 +1,6 @@
 // NPCR Book 1 lesson dialogues. l=lesson, t=título zh, tes/ten=título es/en
 // parts: diálogos; lines: s=hablante, zh, es, en
-window.B1_TEXTS = [
+export const B1_TEXTS = [
 {l:1,t:"你最近怎么样",tes:"Cómo has estado",ten:"How have you been",parts:[
 {ies:"Ma Dawei se encuentra con Song Hua en el campus por primera vez.",ien:"Ma Dawei meets Song Hua on campus for the first time.",lines:[
 {s:"马大为",zh:"你好!",es:"¡Hola!",en:"Hello!"},

@@ -6,7 +6,7 @@
 ## STATUS (update as you go)
 
 - [ ] 1. `docs: add implementation plan` — this file
-- [ ] 2. `chore: data files to ES modules + validation script + tests` (Phase 0 + 1.1)
+- [x] 2. `chore: data files to ES modules + validation script + tests` (Phase 0 + 1.1)
 - [ ] 3. `refactor: split app into ES modules` (Phase 1, CACHE v0.8.0)
 - [ ] 4. `feat: progress dashboard and session stats` (2.8 lapses+summary, 2.9)
 - [ ] 5. `feat: reverse cards and cloze quiz` (2.1, 2.2)
