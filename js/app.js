@@ -74,7 +74,10 @@ function renderTokens(zh, mode){
       const ruby = document.createElement('span');
       ruby.className = 'ruby';
       if(mode === 'pinyin') ruby.textContent = syls[i] || ' ';
-      else if(mode === 'tones') ruby.textContent = syls[i] ? C.TONE_MARK[C.toneOf(syls[i])] : ' ';
+      else if(mode === 'tones') {
+        ruby.textContent = syls[i] ? C.TONE_MARK[C.toneOf(syls[i])] : ' ';
+        ruby.classList.add('tones-only');
+      }
       else ruby.textContent = '';
       if(mode === 'none') ruby.style.display = 'none';
       const base = document.createElement('span');
@@ -387,7 +390,7 @@ window.playNextLine = function() {
   Core.speak(current.text, () => {
     readerIndex++;
     window.playNextLine();
-  });
+  }, current.speaker);
 };
 
 function updateReaderUI() {
@@ -458,7 +461,7 @@ function drawReader(t, kind){
       }
       r.appendChild(row);
       
-      const lineObj = { row, text: (line.s ? line.s + '，' : '') + line.zh };
+      const lineObj = { row, text: line.zh, speaker: line.s };
       readerLines.push(lineObj);
       
       row.addEventListener('click', () => {

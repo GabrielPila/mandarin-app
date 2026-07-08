@@ -2,6 +2,15 @@
 
 All notable changes to the Mandarin App will be documented in this file.
 
+## [v0.6.2] - Reader UX Polish
+- **Fixed:** Tone marks now render at a much larger, readable size when "Tones" mode is active.
+- **Fixed:** Chinese characters in the Text Reader now correctly scale dynamically with the global Text Size setting.
+- **Changed:** Removed speaker names from being spoken aloud by the audio reader to improve immersion.
+
+## [v0.6.1] - Voice Actors
+- **Added:** Smart Auto-Casting: The audio reader now dynamically assigns Male and Female voices to characters based on the speaker's name.
+- **Added:** Fallback Pitch-Shifting for iOS/Mac users to simulate male voices if premium ones are unavailable.
+
 ## [v0.6] - Interactive Reader & Premium Voices
 - **Added:** Interactive Text Reader: texts are now read line-by-line with visual highlighting.
 - **Added:** Click-to-Play: tap any sentence in a text to instantly start reading from there.
