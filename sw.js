@@ -1,9 +1,10 @@
-const CACHE = 'mandarin-v2';
+const CACHE = 'mandarin-v3';
 const ASSETS = [
   '.', 'index.html', 'css/app.css',
   'js/core.js', 'js/srs.js', 'js/app.js',
   'data/book1-vocab.js', 'data/book1-sup.js', 'data/book1-texts.js', 'data/book1-readings.js',
   'data/book2-vocab.js', 'data/book2-sup.js', 'data/book2-texts.js', 'data/book2-readings.js',
+  'https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js',
   'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-180.png'
 ];
 self.addEventListener('install', e => {

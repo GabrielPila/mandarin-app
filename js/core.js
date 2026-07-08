@@ -76,5 +76,15 @@ function syllables(entry){
   return out;
 }
 
-window.Core = { ALL, DICT, segment, toneOf, TONE_MARK, syllables, isHan };
+// ---------- Audio ----------
+function speak(text){
+  if(!window.speechSynthesis) return;
+  speechSynthesis.cancel(); // detener audio previo
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'zh-CN';
+  u.rate = 0.85; // un poco más lento para estudiantes
+  speechSynthesis.speak(u);
+}
+
+window.Core = { ALL, DICT, segment, toneOf, TONE_MARK, syllables, isHan, speak };
 })();

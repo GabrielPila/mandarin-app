@@ -18,7 +18,7 @@ const UI = {
     noDue:'No hay tarjetas pendientes. ¡Vuelve más tarde o repasa una lección!',
     cardsLeft:'tarjetas', supTag:'suplementaria', of:'de', back:'Volver', all:'Todas',
     text1:'Texto', flipHint:'Toca la tarjeta para ver la respuesta',
-    textSize: 'Tamaño del texto', book1: 'Libro 1', book2: 'Libro 2', sizeSmall: 'Pequeño', sizeMedium: 'Mediano', sizeLarge: 'Grande'},
+    textSize: 'Tamaño del texto', theme: 'Tema', light: 'Claro', dark: 'Oscuro', system: 'Sistema', book1: 'Libro 1', book2: 'Libro 2', sizeSmall: 'Pequeño', sizeMedium: 'Mediano', sizeLarge: 'Grande'},
   en: {study:'Study', texts:'Texts', vocab:'Vocabulary', settings:'Settings',
     due:'to review', fresh:'new', learned:'learned', start:'Review now',
     cram:'Free review by lesson', lesson:'Lesson', show:'Show', again:'Again',
@@ -32,7 +32,7 @@ const UI = {
     noDue:'No cards due. Come back later or cram a lesson!',
     cardsLeft:'cards', supTag:'supplementary', of:'of', back:'Back', all:'All',
     text1:'Text', flipHint:'Tap the card to reveal the answer',
-    textSize: 'Text size', book1: 'Book 1', book2: 'Book 2', sizeSmall: 'Small', sizeMedium: 'Medium', sizeLarge: 'Large'}
+    textSize: 'Text size', theme: 'Theme', light: 'Light', dark: 'Dark', system: 'System', book1: 'Book 1', book2: 'Book 2', sizeSmall: 'Small', sizeMedium: 'Medium', sizeLarge: 'Large'}
 };
 function T(k){ return UI[S.settings.lang][k] || k; }
 function gloss(e){ return S.settings.lang === 'en' ? e.en : e.es; }
@@ -90,11 +90,13 @@ function renderTokens(zh, mode){
 function showPopup(tok){
   const pop = $('#popup'), body = $('#popup-body');
   body.innerHTML = '';
-  for(const e of tok.entries){
+  tok.entries.forEach((e, idx) => {
     const div = document.createElement('div');
     div.className = 'pop-entry';
     div.innerHTML = `<div class="pop-head"><span class="pop-h">${e.h}</span>
+      <button class="spk-btn" onclick="Core.speak('${e.h}')">🔊</button>
       <span class="pop-p">${e.p}</span></div>
+      <div id="hw-cont-${idx}" class="hw-container"></div>
       <div class="pop-meta">${e.pos ? e.pos+' · ' : ''}${T('lesson')} ${e.l}${e.sup ? ' · '+T('supTag') : ''}</div>
       <div class="pop-g">${gloss(e)}</div>`;
     if(e.ex){
@@ -108,7 +110,22 @@ function showPopup(tok){
       div.appendChild(exd);
     }
     body.appendChild(div);
-  }
+    if(window.HanziWriter){
+      const hwCont = div.querySelector('#hw-cont-'+idx);
+      for(const ch of e.h){
+        if(!C.isHan(ch)) continue;
+        const box = document.createElement('div');
+        box.className = 'hw-box';
+        hwCont.appendChild(box);
+        const writer = HanziWriter.create(box, ch, {
+          width: 50, height: 50, padding: 2,
+          strokeColor: document.body.classList.contains('theme-dark') ? '#e53935' : '#d32f2f',
+          delayBetweenStrokes: 100, strokeAnimationSpeed: 1.5
+        });
+        box.addEventListener('click', () => writer.animateCharacter());
+      }
+    }
+  });
   pop.classList.add('open');
 }
 document.addEventListener('click', e => {
@@ -180,11 +197,15 @@ function runCards(queue, srsMode){
     const v = setView(`
       <div class="card-progress">${idx+1} ${T('of')} ${queue.length}</div>
       <div id="card" class="card">
-        <div class="card-h">${e.h}</div>
+        <div class="card-h-row">
+          <div class="card-h">${e.h}</div>
+          <button class="spk-btn large" onclick="Core.speak('${e.h}'); event.stopPropagation();">🔊</button>
+        </div>
         <div class="card-back hidden">
           <div class="card-p">${e.p}</div>
           <div class="card-pos">${e.pos||''}</div>
           <div class="card-g">${gloss(e)}</div>
+          <div id="card-hw" class="hw-container center"></div>
           <div class="card-ex"></div>
         </div>
         <div class="flip-hint">${T('flipHint')}</div>
@@ -209,6 +230,21 @@ function runCards(queue, srsMode){
       v.querySelector('.card-back').classList.remove('hidden');
       v.querySelector('.flip-hint').classList.add('hidden');
       $('#grade').classList.remove('hidden');
+      
+      const hwCont = v.querySelector('#card-hw');
+      if(window.HanziWriter && hwCont.innerHTML===''){
+        for(const ch of e.h){
+          if(!C.isHan(ch)) continue;
+          const box = document.createElement('div');
+          box.className = 'hw-box';
+          hwCont.appendChild(box);
+          const writer = HanziWriter.create(box, ch, {
+            width: 44, height: 44, padding: 2,
+            strokeColor: document.body.classList.contains('theme-dark') ? '#e53935' : '#d32f2f'
+          });
+          setTimeout(() => writer.animateCharacter(), 200);
+        }
+      }
     });
     $('#grade').querySelectorAll('button').forEach(b=>{
       b.addEventListener('click', ()=>{
@@ -258,9 +294,15 @@ function renderReader(t, kind){
       <button id="tg-pinyin">${T('pinyin')}</button>
       <button id="tg-tones">${T('tones')}</button>
       <button id="tg-trans">${T('trans')}</button>
+      <button id="tg-audio" class="action-btn">🔊</button>
     </div>
     <div id="reader"></div>`);
   $('#back').addEventListener('click', renderTextList);
+  $('#tg-audio').addEventListener('click', ()=>{
+    const parts = kind === 'dialog' ? t.parts : [{lines: t.lines}];
+    const allZh = parts.flatMap(p => p.lines.map(l => l.zh)).join('，');
+    Core.speak(allZh);
+  });
   const update = ()=>{
     $('#tg-pinyin').classList.toggle('on', readerMode==='pinyin');
     $('#tg-tones').classList.toggle('on', readerMode==='tones');
@@ -358,6 +400,12 @@ function renderSettings(){
         <button id="ts-medium">${T('sizeMedium')}</button>
         <button id="ts-large">${T('sizeLarge')}</button>
       </div></div>
+    <div class="setting"><label>${T('theme')}</label>
+      <div class="seg">
+        <button id="th-light">${T('light')}</button>
+        <button id="th-dark">${T('dark')}</button>
+        <button id="th-system">${T('system')}</button>
+      </div></div>
     <div class="setting"><label>${T('maxLesson')}: <b id="ml-val">${S.settings.maxLesson}</b></label>
       <input type="range" id="max-lesson" min="1" max="20" value="${S.settings.maxLesson}"></div>
     <div class="setting"><label>${T('newPerDay')}: <b id="npd-val">${S.settings.newPerDay}</b></label>
@@ -384,11 +432,21 @@ function renderSettings(){
   };
   markTs();
 
+  const markTh = ()=>{
+    $('#th-light').classList.toggle('on', S.settings.theme==='light');
+    $('#th-dark').classList.toggle('on', S.settings.theme==='dark');
+    $('#th-system').classList.toggle('on', S.settings.theme==='system');
+  };
+  markTh();
+
   $('#lang-es').addEventListener('click', ()=>{ S.settings.lang='es'; S.saveSettings(); markLang(); renderTabs(); });
   $('#lang-en').addEventListener('click', ()=>{ S.settings.lang='en'; S.saveSettings(); markLang(); renderTabs(); });
-  $('#ts-small').addEventListener('click', ()=>{ S.settings.textSize='small'; S.saveSettings(); markTs(); applyTextSize(); });
-  $('#ts-medium').addEventListener('click', ()=>{ S.settings.textSize='medium'; S.saveSettings(); markTs(); applyTextSize(); });
-  $('#ts-large').addEventListener('click', ()=>{ S.settings.textSize='large'; S.saveSettings(); markTs(); applyTextSize(); });
+  $('#ts-small').addEventListener('click', ()=>{ S.settings.textSize='small'; S.saveSettings(); markTs(); applyTheme(); });
+  $('#ts-medium').addEventListener('click', ()=>{ S.settings.textSize='medium'; S.saveSettings(); markTs(); applyTheme(); });
+  $('#ts-large').addEventListener('click', ()=>{ S.settings.textSize='large'; S.saveSettings(); markTs(); applyTheme(); });
+  $('#th-light').addEventListener('click', ()=>{ S.settings.theme='light'; S.saveSettings(); markTh(); applyTheme(); });
+  $('#th-dark').addEventListener('click', ()=>{ S.settings.theme='dark'; S.saveSettings(); markTh(); applyTheme(); });
+  $('#th-system').addEventListener('click', ()=>{ S.settings.theme='system'; S.saveSettings(); markTh(); applyTheme(); });
 
   $('#max-lesson').addEventListener('input', e=>{ S.settings.maxLesson=+e.target.value; $('#ml-val').textContent=e.target.value; S.saveSettings(); });
   $('#new-per-day').addEventListener('input', e=>{ S.settings.newPerDay=+e.target.value; $('#npd-val').textContent=e.target.value; S.saveSettings(); });
@@ -422,13 +480,23 @@ function renderTabs(){
 }
 
 // ---------- init ----------
-function applyTextSize() {
+function applyTheme() {
+  // text size
   document.body.className = document.body.className.replace(/text-(small|medium|large)/, '').trim();
   if(!S.settings.textSize) S.settings.textSize = 'medium';
   document.body.classList.add('text-' + S.settings.textSize);
+  
+  // colors
+  document.body.classList.remove('theme-light', 'theme-dark');
+  if(!S.settings.theme) S.settings.theme = 'system';
+  if(S.settings.theme === 'light') document.body.classList.add('theme-light');
+  else if(S.settings.theme === 'dark') document.body.classList.add('theme-dark');
 }
 
-applyTextSize();
+applyTheme();
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+  if(S.settings.theme === 'system') applyTheme();
+});
 renderTabs();
 nav('study');
 if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
