@@ -160,6 +160,10 @@ h4 { margin: 24px 0 10px; font-size:14px; color: var(--ink); letter-spacing: 0.5
 .lesson-btn.on { border-color: var(--primary); color:var(--primary); background: rgba(39,174,96,0.05); }
 .lesson-grid.small .lesson-btn { padding:8px 2px; }
 .lesson-grid.small { grid-template-columns: repeat(auto-fill, minmax(46px,1fr)); margin:10px 0 20px; }
+
+.scroll-row { display:flex; overflow-x:auto; gap:10px; margin:10px 0 20px; padding-bottom:10px; -webkit-overflow-scrolling:touch; }
+.scroll-row::-webkit-scrollbar { display:none; }
+.scroll-row .lesson-btn { flex: 0 0 auto; padding:8px 14px; min-width: 60px; }
 .empty { text-align:center; color:var(--muted); font-size:17px; margin:40px 12px; }
 
 /* --- tarjeta --- */
@@ -235,6 +239,22 @@ h4 { margin: 24px 0 10px; font-size:14px; color: var(--ink); letter-spacing: 0.5
 .reading-active { background: rgba(39, 174, 96, 0.1); border-left: 3px solid var(--primary); }
 
 .speaker { font-size:13px; font-weight:600; color:var(--primary); margin-bottom:4px; opacity:0.8; }
+.toast.show { bottom: 20px; opacity: 1; pointer-events: auto; }
+
+/* ====== GRAMÁTICA ====== */
+.glist { padding-bottom: 20px; }
+.grammar-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 16px; margin-bottom: 16px; box-shadow: var(--shadow-sm); }
+.g-title { font-size: 18px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+.g-tags { margin-bottom: 10px; display:flex; gap: 6px; flex-wrap: wrap; }
+.g-tag { font-size: 10px; font-weight: 700; background: rgba(39, 174, 96, 0.1); color: var(--primary); padding: 2px 6px; border-radius: 4px; border: 1px solid rgba(39, 174, 96, 0.2); }
+.g-desc { font-size: 14px; line-height: 1.5; color: var(--ink); margin-bottom: 14px; }
+.g-examples { display:flex; flex-direction:column; gap: 8px; border-top: 1px dashed var(--line); padding-top: 12px; }
+.g-ex { padding: 8px 10px; background: rgba(0,0,0,0.03); border-radius: 8px; cursor: pointer; transition: background 0.2s ease; }
+.g-ex:active { background: rgba(39, 174, 96, 0.1); }
+.g-ex-zh { font-size: 16px; color: var(--ink); margin-bottom: 4px; display:flex; justify-content:space-between; align-items:center; }
+.g-speaker { font-size: 12px; color: var(--primary); opacity:0.8; font-weight: 600; }
+.g-ex-tr { font-size: 13px; color: var(--muted); }
+
 .line-zh { font-size: var(--font-lg); line-height:1.6; margin-bottom:4px; }
 .line-tr { font-size: var(--font-base); color:var(--muted); margin-top:4px; line-height:1.4; }
 

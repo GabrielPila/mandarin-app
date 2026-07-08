@@ -2,7 +2,15 @@
 
 All notable changes to the Mandarin App will be documented in this file.
 
-## [v0.6.2] - Reader UX Polish
+## [v0.7.0] - 2026-07-08
+- **Added:** Comprehensive grammar database for NPCR Book 1 (14 points) and Book 2 (6 points).
+- **Added:** Automatic HSK tagging script matching over 600 words across Book 1 and 2 dictionaries.
+
+## [v0.6.2] - Grammar & HSK Phase 1
+- **Added:** "Gramática" tab in the bottom navigation for grammar rules and explanations.
+- **Added:** Initial grammar database with first 5 grammar points for Book 1.
+- **Added:** HSK 1 and HSK 2 filter toggles added to Dictionary and Study tabs.
+- **Added:** Hybrid Voice Casting hooked up to grammar example sentences.
 - **Fixed:** Tone marks now render at a much larger, readable size when "Tones" mode is active.
 - **Fixed:** Chinese characters in the Text Reader now correctly scale dynamically with the global Text Size setting.
 - **Changed:** Removed speaker names from being spoken aloud by the audio reader to improve immersion.

@@ -5,7 +5,7 @@ const $ = sel => document.querySelector(sel);
 const S = window.SRS, C = window.Core;
 
 const UI = {
-  es: {study:'Estudiar', texts:'Textos', vocab:'Vocabulario', settings:'Ajustes',
+  es: {study:'Estudiar', texts:'Textos', vocab:'Vocabulario', grammar:'Gramática', settings:'Ajustes',
     due:'para repasar', fresh:'nuevas', learned:'aprendidas', start:'Repasar ahora',
     cram:'Repaso libre por lección', lesson:'Lección', show:'Mostrar', again:'Otra vez',
     hard:'Difícil', good:'Bien', easy:'Fácil', done:'¡Has terminado por ahora!',
@@ -20,7 +20,7 @@ const UI = {
     text1:'Texto', flipHint:'Toca la tarjeta para ver la respuesta',
     textSize: 'Tamaño del texto', theme: 'Tema', light: 'Claro', dark: 'Oscuro', system: 'Sistema', book1: 'Libro 1', book2: 'Libro 2', sizeSmall: 'Pequeño', sizeMedium: 'Mediano', sizeLarge: 'Grande',
     voiceSpeed: 'Velocidad de voz', voice: 'Voz preferida', testVoice: '🔊 Probar', autoVoice: 'Automático (Recomendado)'},
-  en: {study:'Study', texts:'Texts', vocab:'Vocabulary', settings:'Settings',
+  en: {study:'Study', texts:'Texts', vocab:'Vocabulary', grammar:'Grammar', settings:'Settings',
     due:'to review', fresh:'new', learned:'learned', start:'Review now',
     cram:'Free review by lesson', lesson:'Lesson', show:'Show', again:'Again',
     hard:'Hard', good:'Good', easy:'Easy', done:'You are done for now!',
@@ -177,12 +177,12 @@ window.startQuiz = function(word){
 $('#quiz-close').addEventListener('click', () => $('#quiz-modal').classList.add('hidden'));
 
 // ---------- navegación ----------
-const tabs = ['study','texts','vocab','settings'];
+const tabs = ['study','texts','vocab','grammar','settings'];
 let current = 'study';
 function nav(tab){
   current = tab;
   tabs.forEach(t => $('#tab-'+t).classList.toggle('active', t===tab));
-  ({study:renderStudy, texts:renderTextList, vocab:renderVocab, settings:renderSettings})[tab]();
+  ({study:renderStudy, texts:renderTextList, vocab:renderVocab, grammar:renderGrammar, settings:renderSettings})[tab]();
 }
 tabs.forEach(t => $('#tab-'+t).addEventListener('click', ()=>nav(t)));
 
@@ -226,8 +226,20 @@ function renderStudy(){
     <div id="cram-container"></div>`);
   $('#start-srs').addEventListener('click', startSRS);
   const container = $('#cram-container');
-  container.innerHTML = `<h4>${T('book1')} (1-10)</h4><div id="cram-b1" class="lesson-grid"></div>
+  container.innerHTML = `<h4>HSK</h4><div id="cram-hsk" class="lesson-grid" style="margin-bottom: 20px;"></div>
+                         <h4>${T('book1')} (1-10)</h4><div id="cram-b1" class="lesson-grid"></div>
                          <h4>${T('book2')} (11-20)</h4><div id="cram-b2" class="lesson-grid"></div>`;
+                         
+  ['hsk1', 'hsk2', 'hsk3'].forEach(tag => {
+    const cards = C.ALL.filter(e => e.tags && e.tags.includes(tag) && (S.settings.includeSup || !e.sup));
+    if(!cards.length) return;
+    const b = document.createElement('button');
+    b.className = 'lesson-btn';
+    b.innerHTML = `<b>${tag.toUpperCase()}</b><span>${cards.length}</span>`;
+    b.addEventListener('click', ()=> startCram(cards));
+    $('#cram-hsk').appendChild(b);
+  });
+                         
   for(let l=0; l<=20; l++){
     const cards = C.ALL.filter(e => e.l===l && (S.settings.includeSup || !e.sup));
     if(!cards.length) continue;
@@ -475,27 +487,41 @@ function drawReader(t, kind){
 function renderVocab(){
   const v = setView(`
     <input id="vsearch" class="search" placeholder="${T('search')}">
-    <div id="vfilter" class="lesson-grid small"></div>
+    <div id="vfilter" class="scroll-row"></div>
     <div id="vlist" class="vlist"></div>`);
-  let lesson = null;
+  let activeFilter = 'all';
   const grid = $('#vfilter');
-  const allB = document.createElement('button');
-  allB.className = 'lesson-btn on'; allB.innerHTML = `<b>${T('all')}</b>`;
-  allB.addEventListener('click', ()=>{ lesson=null; mark(allB); draw(); });
-  grid.appendChild(allB);
-  for(let l=0;l<=20;l++){
+  
+  const filters = ['all', 'hsk1', 'hsk2', 'hsk3', 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+  filters.forEach(f => {
     const b = document.createElement('button');
-    b.className='lesson-btn'; b.innerHTML = `<b>${l===0?'✦':l}</b>`;
-    b.addEventListener('click', ()=>{ lesson=l; mark(b); draw(); });
+    b.className = 'lesson-btn' + (f==='all' ? ' on' : '');
+    b.style.display = 'inline-block';
+    if(f === 'all') b.innerHTML = `<b>${T('all')}</b>`;
+    else if (typeof f === 'string') b.innerHTML = `<b>${f.toUpperCase()}</b>`;
+    else b.innerHTML = `<b>L${f===0?'✦':f}</b>`;
+    
+    b.addEventListener('click', () => { 
+      activeFilter = f; 
+      grid.querySelectorAll('.lesson-btn').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on');
+      draw(); 
+    });
     grid.appendChild(b);
-  }
-  function mark(btn){ grid.querySelectorAll('.lesson-btn').forEach(x=>x.classList.remove('on')); btn.classList.add('on'); }
+  });
+  
   $('#vsearch').addEventListener('input', draw);
+  
   function draw(){
     const q = $('#vsearch').value.trim().toLowerCase();
     const list = $('#vlist');
     list.innerHTML = '';
-    let items = C.ALL.filter(e => lesson===null || e.l===lesson);
+    
+    let items = C.ALL.filter(e => {
+      if (activeFilter === 'all') return true;
+      if (typeof activeFilter === 'string') return e.tags && e.tags.includes(activeFilter);
+      return e.l === activeFilter;
+    });
     if(q) items = items.filter(e => e.h.includes(q) || e.p.toLowerCase().includes(q)
       || (e.es && e.es.toLowerCase().includes(q)) || (e.en && e.en.toLowerCase().includes(q)));
     items.slice(0, 400).forEach(e=>{
@@ -505,6 +531,66 @@ function renderVocab(){
         <span class="vg">${gloss(e)}</span><span class="vl">${e.l===0?'✦':e.l}</span>`;
       d.addEventListener('click', ()=> showPopup({t:e.h, entries: C.DICT.get(e.h)}));
       list.appendChild(d);
+    });
+  }
+  draw();
+}
+
+// ---------- GRAMÁTICA ----------
+function renderGrammar(){
+  const v = setView(`
+    <div id="gfilter" class="scroll-row">
+       <button class="lesson-btn on" data-tag="all"><b>Todas</b></button>
+       <button class="lesson-btn" data-tag="hsk1"><b>HSK 1</b></button>
+       <button class="lesson-btn" data-tag="hsk2"><b>HSK 2</b></button>
+       <button class="lesson-btn" data-tag="hsk3"><b>HSK 3</b></button>
+       <button class="lesson-btn" data-tag="npcr"><b>NPCR</b></button>
+    </div>
+    <div id="glist" class="glist"></div>`);
+    
+  let currentTag = 'all';
+  const grid = $('#gfilter');
+  grid.querySelectorAll('button').forEach(b => {
+    b.addEventListener('click', () => {
+      grid.querySelectorAll('button').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on');
+      currentTag = b.dataset.tag;
+      draw();
+    });
+  });
+  
+  function draw(){
+    const list = $('#glist');
+    list.innerHTML = '';
+    const items = window.GRAMMAR.filter(g => currentTag === 'all' || 
+      (currentTag === 'npcr' ? g.tags.some(t => t.startsWith('npcr')) : g.tags.includes(currentTag)));
+      
+    items.forEach(g => {
+      const card = document.createElement('div');
+      card.className = 'grammar-card';
+      let exHTML = '';
+      g.examples.forEach((ex, i) => {
+        exHTML += `<div class="g-ex" data-id="${g.id}" data-idx="${i}">
+           <div class="g-ex-zh">${ex.zh} <span class="g-speaker">(${ex.s}) 🔊</span></div>
+           <div class="g-ex-tr">${S.settings.lang==='en'?ex.en:ex.es}</div>
+        </div>`;
+      });
+      card.innerHTML = `
+        <div class="g-title">${g.title}</div>
+        <div class="g-tags">${g.tags.map(t => `<span class="g-tag">${t.toUpperCase()}</span>`).join('')}</div>
+        <div class="g-desc">${g.desc}</div>
+        <div class="g-examples">${exHTML}</div>
+      `;
+      list.appendChild(card);
+    });
+    
+    // Add audio click handlers
+    list.querySelectorAll('.g-ex').forEach(el => {
+      el.addEventListener('click', () => {
+        const g = window.GRAMMAR.find(x => x.id === el.dataset.id);
+        const ex = g.examples[el.dataset.idx];
+        Core.speak(ex.zh, null, ex.s);
+      });
     });
   }
   draw();
@@ -642,6 +728,7 @@ function renderTabs(){
   $('#tab-study .tab-label').textContent = T('study');
   $('#tab-texts .tab-label').textContent = T('texts');
   $('#tab-vocab .tab-label').textContent = T('vocab');
+  $('#tab-grammar .tab-label').textContent = T('grammar');
   $('#tab-settings .tab-label').textContent = T('settings');
   nav(current);
 }
