@@ -17,7 +17,8 @@ const UI = {
     resetConfirm:'¿Seguro? Esto borra todo tu progreso de repaso.', imported:'Progreso importado ✓',
     noDue:'No hay tarjetas pendientes. ¡Vuelve más tarde o repasa una lección!',
     cardsLeft:'tarjetas', supTag:'suplementaria', of:'de', back:'Volver', all:'Todas',
-    text1:'Texto', flipHint:'Toca la tarjeta para ver la respuesta'},
+    text1:'Texto', flipHint:'Toca la tarjeta para ver la respuesta',
+    textSize: 'Tamaño del texto', book1: 'Libro 1', book2: 'Libro 2', sizeSmall: 'Pequeño', sizeMedium: 'Mediano', sizeLarge: 'Grande'},
   en: {study:'Study', texts:'Texts', vocab:'Vocabulary', settings:'Settings',
     due:'to review', fresh:'new', learned:'learned', start:'Review now',
     cram:'Free review by lesson', lesson:'Lesson', show:'Show', again:'Again',
@@ -30,7 +31,8 @@ const UI = {
     resetConfirm:'Are you sure? This deletes all review progress.', imported:'Progress imported ✓',
     noDue:'No cards due. Come back later or cram a lesson!',
     cardsLeft:'cards', supTag:'supplementary', of:'of', back:'Back', all:'All',
-    text1:'Text', flipHint:'Tap the card to reveal the answer'}
+    text1:'Text', flipHint:'Tap the card to reveal the answer',
+    textSize: 'Text size', book1: 'Book 1', book2: 'Book 2', sizeSmall: 'Small', sizeMedium: 'Medium', sizeLarge: 'Large'}
 };
 function T(k){ return UI[S.settings.lang][k] || k; }
 function gloss(e){ return S.settings.lang === 'en' ? e.en : e.es; }
@@ -138,17 +140,19 @@ function renderStudy(){
     </div>
     <button id="start-srs" class="big-btn">${T('start')}</button>
     <h3>${T('cram')}</h3>
-    <div id="cram-lessons" class="lesson-grid"></div>`);
+    <div id="cram-container"></div>`);
   $('#start-srs').addEventListener('click', startSRS);
-  const grid = $('#cram-lessons');
-  for(let l=0; l<=10; l++){
+  const container = $('#cram-container');
+  container.innerHTML = `<h4>${T('book1')} (1-10)</h4><div id="cram-b1" class="lesson-grid"></div>
+                         <h4>${T('book2')} (11-20)</h4><div id="cram-b2" class="lesson-grid"></div>`;
+  for(let l=0; l<=20; l++){
     const cards = C.ALL.filter(e => e.l===l && (S.settings.includeSup || !e.sup));
     if(!cards.length) continue;
     const b = document.createElement('button');
     b.className = 'lesson-btn';
     b.innerHTML = `<b>${l===0?'✦':l}</b><span>${cards.length}</span>`;
     b.addEventListener('click', ()=> startCram(cards));
-    grid.appendChild(b);
+    (l <= 10 ? $('#cram-b1') : $('#cram-b2')).appendChild(b);
   }
 }
 
@@ -224,7 +228,9 @@ function renderTextList(){
   const v = setView(`<h3>${T('dialogs')}</h3><div id="list-d" class="text-list"></div>
     <h3>${T('readings')}</h3><div id="list-r" class="text-list"></div>`);
   const ld = $('#list-d'), lr = $('#list-r');
-  window.B1_TEXTS.forEach((t,i)=>{
+  const allTexts = window.B1_TEXTS.concat(window.B2_TEXTS || []);
+  const allReadings = window.B1_READINGS.concat(window.B2_READINGS || []);
+  allTexts.forEach((t,i)=>{
     const b = document.createElement('button');
     b.className = 'text-item';
     b.innerHTML = `<b>${T('lesson')} ${t.l}</b><span class="ti-zh">${t.t}</span>
@@ -232,7 +238,7 @@ function renderTextList(){
     b.addEventListener('click', ()=> renderReader(t, 'dialog'));
     ld.appendChild(b);
   });
-  window.B1_READINGS.forEach((t,i)=>{
+  allReadings.forEach((t,i)=>{
     const b = document.createElement('button');
     b.className = 'text-item reading';
     b.innerHTML = `<b>${T('lesson')} ${t.l}</b><span class="ti-zh">${t.t}</span>
@@ -314,7 +320,7 @@ function renderVocab(){
   allB.className = 'lesson-btn on'; allB.innerHTML = `<b>${T('all')}</b>`;
   allB.addEventListener('click', ()=>{ lesson=null; mark(allB); draw(); });
   grid.appendChild(allB);
-  for(let l=0;l<=10;l++){
+  for(let l=0;l<=20;l++){
     const b = document.createElement('button');
     b.className='lesson-btn'; b.innerHTML = `<b>${l===0?'✦':l}</b>`;
     b.addEventListener('click', ()=>{ lesson=l; mark(b); draw(); });
@@ -346,8 +352,14 @@ function renderSettings(){
   const v = setView(`
     <div class="setting"><label>${T('lang')}</label>
       <div class="seg"><button id="lang-es">Español</button><button id="lang-en">English</button></div></div>
+    <div class="setting"><label>${T('textSize')}</label>
+      <div class="seg">
+        <button id="ts-small">${T('sizeSmall')}</button>
+        <button id="ts-medium">${T('sizeMedium')}</button>
+        <button id="ts-large">${T('sizeLarge')}</button>
+      </div></div>
     <div class="setting"><label>${T('maxLesson')}: <b id="ml-val">${S.settings.maxLesson}</b></label>
-      <input type="range" id="max-lesson" min="1" max="10" value="${S.settings.maxLesson}"></div>
+      <input type="range" id="max-lesson" min="1" max="20" value="${S.settings.maxLesson}"></div>
     <div class="setting"><label>${T('newPerDay')}: <b id="npd-val">${S.settings.newPerDay}</b></label>
       <input type="range" id="new-per-day" min="0" max="40" step="5" value="${S.settings.newPerDay}"></div>
     <div class="setting row"><label>${T('includeSup')}</label>
@@ -358,14 +370,26 @@ function renderSettings(){
       <input type="file" id="import-file" accept=".json" style="display:none">
       <button id="reset" class="big-btn danger">${T('resetBtn')}</button>
     </div>
-    <p class="about">NPCR · El Nuevo Libro de Chino Práctico 1 · v1</p>`);
+    <p class="about">NPCR · El Nuevo Libro de Chino Práctico 1 & 2</p>`);
   const markLang = ()=>{
     $('#lang-es').classList.toggle('on', S.settings.lang==='es');
     $('#lang-en').classList.toggle('on', S.settings.lang==='en');
   };
   markLang();
+  
+  const markTs = ()=>{
+    $('#ts-small').classList.toggle('on', S.settings.textSize==='small');
+    $('#ts-medium').classList.toggle('on', S.settings.textSize==='medium');
+    $('#ts-large').classList.toggle('on', S.settings.textSize==='large');
+  };
+  markTs();
+
   $('#lang-es').addEventListener('click', ()=>{ S.settings.lang='es'; S.saveSettings(); markLang(); renderTabs(); });
   $('#lang-en').addEventListener('click', ()=>{ S.settings.lang='en'; S.saveSettings(); markLang(); renderTabs(); });
+  $('#ts-small').addEventListener('click', ()=>{ S.settings.textSize='small'; S.saveSettings(); markTs(); applyTextSize(); });
+  $('#ts-medium').addEventListener('click', ()=>{ S.settings.textSize='medium'; S.saveSettings(); markTs(); applyTextSize(); });
+  $('#ts-large').addEventListener('click', ()=>{ S.settings.textSize='large'; S.saveSettings(); markTs(); applyTextSize(); });
+
   $('#max-lesson').addEventListener('input', e=>{ S.settings.maxLesson=+e.target.value; $('#ml-val').textContent=e.target.value; S.saveSettings(); });
   $('#new-per-day').addEventListener('input', e=>{ S.settings.newPerDay=+e.target.value; $('#npd-val').textContent=e.target.value; S.saveSettings(); });
   $('#inc-sup').addEventListener('change', e=>{ S.settings.includeSup=e.target.checked; S.saveSettings(); });
@@ -398,6 +422,13 @@ function renderTabs(){
 }
 
 // ---------- init ----------
+function applyTextSize() {
+  document.body.className = document.body.className.replace(/text-(small|medium|large)/, '').trim();
+  if(!S.settings.textSize) S.settings.textSize = 'medium';
+  document.body.classList.add('text-' + S.settings.textSize);
+}
+
+applyTextSize();
 renderTabs();
 nav('study');
 if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');

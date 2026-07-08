@@ -6,6 +6,8 @@
 const ALL = [];
 window.B1_VOCAB.forEach((e,i)=>{ e.id='b1:'+i; e.book=1; ALL.push(e); });
 window.B1_SUP.forEach((e,i)=>{ e.id='b1s:'+i; e.book=1; ALL.push(e); });
+window.B2_VOCAB.forEach((e,i)=>{ e.id='b2:'+i; e.book=2; ALL.push(e); });
+window.B2_SUP.forEach((e,i)=>{ e.id='b2s:'+i; e.book=2; ALL.push(e); });
 
 const DICT = new Map(); // hanzi -> [entries]
 let MAXLEN = 1;

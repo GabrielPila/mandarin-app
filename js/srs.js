@@ -51,7 +51,7 @@ function stats(pool){
 }
 
 // ---------- ajustes ----------
-let settings = {lang:'es', includeSup:false, newPerDay:10, maxLesson:10};
+let settings = {lang:'es', includeSup:false, newPerDay:10, maxLesson:20, textSize:'medium'};
 try { Object.assign(settings, JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}')); } catch(e){}
 function saveSettings(){ localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); }
 
