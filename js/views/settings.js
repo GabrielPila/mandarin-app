@@ -1,7 +1,7 @@
 // views/settings.js — ajustes
 import { settings, saveSettings, exportData, importData, resetAll } from '../store.js';
 import { T } from '../i18n.js';
-import { speak, premiumChineseVoices } from '../audio.js';
+import { speak, chineseVoices } from '../audio.js';
 import { $, setView, applyTheme } from '../ui.js';
 import { register, nav } from '../router.js';
 
@@ -55,16 +55,16 @@ export function renderSettings() {
 
   const populateVoices = () => {
     const sel = $('#voice-select'); if (!sel) return;
-    const voices = premiumChineseVoices();
+    const voices = chineseVoices();
     sel.innerHTML = '<option value="">' + T('autoVoice') + '</option>' +
       voices.map(v => {
         let source = 'Local';
         const uri = (v.voiceURI || '').toLowerCase(), nm = v.name.toLowerCase();
-        if (nm.includes('google')) source = 'Google Chrome';
-        else if (uri.includes('apple') || nm.includes('tingting') || nm.includes('meijia')) source = 'Apple / iOS';
-        else if (uri.includes('microsoft') || nm.includes('xiaoxiao')) source = 'Microsoft Edge';
+        if (nm.includes('google')) source = 'Google';
+        else if (uri.includes('microsoft') || nm.includes('xiaoxiao') || nm.includes('yunxi') || nm.includes('yunyang')) source = 'Microsoft';
+        else if (uri.includes('apple') || nm.includes('tingting') || nm.includes('meijia')) source = 'Apple';
         else if (!v.localService) source = 'Cloud';
-        const cleanName = v.name.replace('（中国大陆）', '').replace('(China mainland)', '').trim();
+        const cleanName = v.name.replace(/\s*\(Chinese[\s\S]*$/i, '').replace(/\s*（[^）]*）\s*$/, '').trim();
         return `<option value="${v.voiceURI}" ${settings.voiceURI === v.voiceURI ? 'selected' : ''}>${cleanName} (${source})</option>`;
       }).join('');
   };

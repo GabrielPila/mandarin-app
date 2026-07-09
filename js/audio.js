@@ -26,25 +26,25 @@ export function speak(text, onEnd, speaker) {
     else if (isMale) pitch = 0.5;
   }
 
+  const zhVoices = chineseVoices();
   if (settings.voiceURI) {
     const v = voices.find(v => v.voiceURI === settings.voiceURI);
     if (v) u.voice = v;
     u.pitch = pitch;
   } else if (isMale) {
-    const malePremium = voices.find(v => v.lang.includes('zh') && (v.name.includes('Yunyang') || v.name.includes('Yunxi') || v.name.includes('Standard-B') || v.name.includes('Standard-C')));
+    // intenta una voz masculina nativa; si no, la mejor voz + pitch simulado
+    const malePremium = zhVoices.find(v => /yunyang|yunxi|yunjian|kangkang|standard-[bc]|grandpa|eddy|rocko|reed/i.test(v.name));
     if (malePremium) {
       u.voice = malePremium;
-      if (speaker.includes('马大为')) u.pitch = 0.8;
-      else if (speaker.includes('丁力波')) u.pitch = 1.1;
-      else u.pitch = 1.0;
+      if (speaker.includes('马大为')) u.pitch = 0.85;
+      else if (speaker.includes('丁力波')) u.pitch = 1.05;
+      else u.pitch = 0.95;
     } else {
-      const best = voices.find(v => v.lang.includes('zh') && (v.name.includes('Premium') || v.name.includes('Ting-Ting') || v.name.includes('Google') || v.name.includes('Xiaoxiao')));
-      if (best) u.voice = best;
+      if (zhVoices[0]) u.voice = zhVoices[0];
       u.pitch = pitch;
     }
   } else {
-    const best = voices.find(v => v.lang.includes('zh') && (v.name.includes('Premium') || v.name.includes('Ting-Ting') || v.name.includes('Google') || v.name.includes('Xiaoxiao')));
-    if (best) u.voice = best;
+    if (zhVoices[0]) u.voice = zhVoices[0]; // la mejor voz disponible (Google/mejorada primero)
     u.pitch = pitch;
   }
 
@@ -53,15 +53,27 @@ export function speak(text, onEnd, speaker) {
   speechSynthesis.speak(u);
 }
 
-// Lista de voces chinas "premium" para el selector de ajustes
-export function premiumChineseVoices() {
-  const premium = ['premium', 'tingting', 'ting-ting', 'meijia', 'google', 'xiaoxiao'];
-  return speechSynthesis.getVoices().filter(v => {
-    if (!v.lang.includes('zh')) return false;
-    const name = v.name.toLowerCase();
-    if (name.includes('hk') || name.includes('yue') || name.includes('粤')) return false;
-    return premium.some(k => name.includes(k));
+// Todas las voces de mandarín disponibles, ordenadas por calidad (Google/mejoradas primero).
+// Excluye cantonés (HK/yue). Se usa tanto para la selección automática como para el selector.
+export function chineseVoices() {
+  const voices = speechSynthesis.getVoices().filter(v => {
+    const lang = v.lang.toLowerCase();
+    if (!lang.includes('zh')) return false;
+    const n = v.name.toLowerCase();
+    if (lang.includes('hk') || n.includes('yue') || n.includes('粤') || n.includes('cantonese')) return false;
+    return true;
   });
+  const rank = v => {
+    const n = v.name.toLowerCase();
+    let s = 0;
+    if (n.includes('google')) s += 100;                                   // Google (Chrome) primero
+    if (/premium|enhanced|natural|neural|xiaoxiao|yunxi|yunyang/.test(n)) s += 60; // voces mejoradas
+    if (/tingting|meijia|sinji/.test(n)) s += 25;                         // buenas voces de Apple
+    if (v.lang.toLowerCase() === 'zh-cn') s += 15;                        // mandarín continental
+    if (!v.localService) s += 8;                                         // voces de red suelen ser mejores
+    return -s;
+  };
+  return voices.sort((a, b) => rank(a) - rank(b));
 }
 
 // ---------- Reproductor del lector (líneas: {row, text, speaker}) ----------
