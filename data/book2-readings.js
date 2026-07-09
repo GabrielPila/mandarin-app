@@ -1,92 +1,478 @@
 // Lecturas nuevas (generadas) para el Libro 2
 export const B2_READINGS = [
-{l:11,t:"去西安旅行",tes:"Viaje a Xi'an",ten:"Trip to Xi'an",lines:[
-{zh:"上个月我去西安旅行了。",es:"El mes pasado viajé a Xi'an.",en:"I traveled to Xi'an last month."},
-{zh:"在西安我玩儿得非常高兴。",es:"Me divertí mucho en Xi'an.",en:"I had a great time in Xi'an."},
-{zh:"我参观了兵马俑博物馆, 觉得非常有意思。",es:"Visité el museo de los Guerreros de Terracota y me pareció muy interesante.",en:"I visited the Terracotta Warriors museum and found it very interesting."},
-{zh:"我还吃了西安的小吃, 很好吃, 就是有点儿辣。",es:"También comí los bocadillos de Xi'an, muy ricos, solo que un poco picantes.",en:"I also ate Xi'an snacks, very delicious, just a bit spicy."},
-{zh:"去以前我去了银行换人民币。",es:"Antes de ir, fui al banco a cambiar renminbi.",en:"Before going, I went to the bank to change RMB."},
-{zh:"一百欧元能换不少人民币呢。",es:"Con cien euros se puede cambiar bastante renminbi.",en:"One hundred euros can be changed into quite a lot of RMB."},
-{zh:"下个月我想去上海看世博园。",es:"El mes que viene quiero ir a Shanghai a ver el Parque de la Expo.",en:"Next month I want to go to Shanghai to see the Expo Park."}]},
-{l:12,t:"寄包裹",tes:"Enviando un paquete",ten:"Sending a parcel",lines:[
-{zh:"今天下午我去了邮局。",es:"Hoy por la tarde fui a la oficina de correos.",en:"This afternoon I went to the post office."},
-{zh:"我想给英国的朋友寄一个包裹。",es:"Quería enviarle un paquete a un amigo en el Reino Unido.",en:"I wanted to send a parcel to a friend in the UK."},
-{zh:"里边有一本新版的汉语书, 还有一件毛衣。",es:"Adentro hay una nueva edición de un libro de chino y también un jersey.",en:"Inside there is a new edition of a Chinese book and also a sweater."},
-{zh:"营业员问我: 您要寄航空还是海运?",es:"El empleado me preguntó: ¿Lo envía por avión o por barco?",en:"The clerk asked me: Are you sending it by air or sea?"},
-{zh:"我说: 航空大概需要多少钱?",es:"Yo dije: ¿Cuánto cuesta más o menos por avión?",en:"I said: Roughly how much does airmail cost?"},
-{zh:"他说航空太贵了, 海运便宜一些, 但是慢。",es:"Dijo que por avión es muy caro, por barco es algo más barato pero lento.",en:"He said airmail is too expensive, sea mail is somewhat cheaper but slow."},
-{zh:"最后我决定寄航空, 因为我想让他快点儿收到。",es:"Al final decidí enviarlo por avión, porque quiero que lo reciba pronto.",en:"In the end I decided to send it by air, because I want him to receive it soon."},
-{zh:"填完了单子, 我就把包裹交给了营业员。",es:"Después de rellenar el formulario, le entregué el paquete al empleado.",en:"After filling out the form, I handed the parcel to the clerk."}]},
-{l:13,t:"买手机卡",tes:"Comprando una tarjeta SIM",ten:"Buying a SIM card",lines:[
-{zh:"昨天我的手机丢了, 我很着急。",es:"Ayer perdí mi móvil y estaba muy ansioso.",en:"Yesterday I lost my phone and was very anxious."},
-{zh:"今天我去中国移动办了一张新卡。",es:"Hoy fui a China Mobile a tramitar una tarjeta nueva.",en:"Today I went to China Mobile to get a new SIM card."},
-{zh:"营业员让我出示身份证或者护照。",es:"La empleada me pidió que mostrara el carné de identidad o el pasaporte.",en:"The clerk asked me to show my ID card or passport."},
-{zh:"可是我的护照在大使馆办签证, 没有带来。",es:"Pero mi pasaporte estaba en la embajada para el visado, no lo había traído.",en:"But my passport was at the embassy for a visa, I hadn't brought it."},
-{zh:"我说: 学生证可以吗? 她说不行。",es:"Dije: ¿Sirve el carné de estudiante? Ella dijo que no.",en:"I said: Will a student ID do? She said no."},
-{zh:"还好我带了驾照, 她把我的驾照复印了一下。",es:"Por suerte traje mi licencia de conducir, y ella la fotocopió.",en:"Luckily I brought my driver's license, and she photocopied it."},
-{zh:"我把姓名和手机号写在单子上, 签了字。",es:"Escribí mi nombre y número de móvil en el formulario, y firmé.",en:"I wrote my name and mobile number on the form and signed it."},
-{zh:"现在我又可以给朋友打电话了!",es:"¡Ahora puedo volver a llamar a mis amigos!",en:"Now I can call my friends again!"}]},
-{l:14,t:"租房子",tes:"Alquilar un apartamento",ten:"Renting an apartment",lines:[
-{zh:"丁力波想在学校外边租一套房子。",es:"Ding Libo quiere alquilar un apartamento fuera de la escuela.",en:"Ding Libo wants to rent an apartment outside the school."},
-{zh:"买房子太贵了, 租的比买的便宜多了。",es:"Comprar un apartamento es muy caro; alquilar es mucho más barato que comprar.",en:"Buying an apartment is too expensive; renting is much cheaper than buying."},
-{zh:"昨天他去看了一套一居室, 觉得很不错。",es:"Ayer fue a ver un apartamento de un dormitorio y le pareció muy bueno.",en:"Yesterday he went to see a one-bedroom apartment and thought it was very nice."},
-{zh:"房租是一个月两千块, 交通也很方便。",es:"El alquiler es de dos mil kuai al mes, y el transporte es muy cómodo.",en:"The rent is two thousand kuai a month, and transportation is very convenient."},
-{zh:"可是房间里没有家具, 也没有冰箱和洗衣机。",es:"Pero en la habitación no hay muebles, ni tampoco nevera ni lavadora.",en:"But there is no furniture in the room, nor a fridge or washing machine."},
-{zh:"房东说明天可以把家具送来。",es:"El casero dijo que mañana podría traer los muebles.",en:"The landlord said he could deliver the furniture tomorrow."},
-{zh:"太巧了, 他的朋友也住在那儿。",es:"¡Qué casualidad! Su amigo también vive allí.",en:"What a coincidence, his friend also lives there."},
-{zh:"以后他们可以一起去学校了。",es:"En el futuro podrán ir juntos a la escuela.",en:"In the future they can go to school together."}]},
-{l:15,t:"中国画和油画",tes:"Pinturas chinas y al óleo",ten:"Chinese and oil paintings",lines:[
-{zh:"马大为非常喜欢中国艺术。",es:"A Ma Dawei le gusta mucho el arte chino.",en:"Ma Dawei really likes Chinese art."},
-{zh:"他觉得中国画跟油画不一样。",es:"Él piensa que las pinturas chinas no son iguales a las pinturas al óleo.",en:"He thinks Chinese paintings are not the same as oil paintings."},
-{zh:"中国画主要用墨和水画在宣纸上。",es:"Las pinturas chinas se pintan principalmente con tinta y agua sobre papel Xuan.",en:"Chinese paintings are mainly painted with ink and water on Xuan paper."},
-{zh:"油画是用油彩画在画布上。",es:"Las pinturas al óleo se pintan con colores al óleo sobre lienzo.",en:"Oil paintings are painted with oil colors on canvas."},
-{zh:"中国画常常画山水、花鸟和人物。",es:"Las pinturas chinas a menudo representan paisajes, flores y pájaros, y figuras.",en:"Chinese paintings often depict landscapes, flowers and birds, and figures."},
-{zh:"马大为想学画中国画, 他买了一支毛笔。",es:"Ma Dawei quiere aprender a pintar pintura china, así que compró un pincel.",en:"Ma Dawei wants to learn to paint Chinese painting, so he bought a brush."},
-{zh:"老师说他画得不错, 可是还需要多练习。",es:"El profesor dice que pinta bastante bien, pero que aún necesita practicar más.",en:"The teacher says he paints quite well, but still needs to practice more."},
-{zh:"大为希望能画出一幅漂亮的风景画。",es:"Dawei espera poder pintar un hermoso paisaje.",en:"Dawei hopes to be able to paint a beautiful landscape painting."}]},
-{l:16,t:"游泳比赛",tes:"Competición de natación",ten:"Swimming competition",lines:[
-{zh:"明天学校要举行游泳比赛。",es:"Mañana la escuela celebrará una competición de natación.",en:"Tomorrow the school will hold a swimming competition."},
-{zh:"丁力波是五岁开始学游泳的, 游得非常快。",es:"Ding Libo empezó a aprender a nadar a los cinco años, y nada rapidísimo.",en:"Ding Libo started learning to swim at five, and swims very fast."},
-{zh:"大为游泳游得不怎么好, 可是他喜欢打篮球。",es:"Dawei no nada muy bien, pero le gusta jugar al baloncesto.",en:"Dawei doesn't swim very well, but he likes playing basketball."},
-{zh:"游泳馆里有很多人, 大家都在练习。",es:"Hay mucha gente en la piscina; todos están practicando.",en:"There are many people in the indoor pool; everyone is practicing."},
-{zh:"林娜的身体不太好, 医生让她多锻炼身体。",es:"La salud de Lin Na no es muy buena; el médico le dijo que hiciera más ejercicio.",en:"Lin Na's health isn't very good; the doctor told her to exercise more."},
-{zh:"她打算从下个星期开始每天去游泳馆游泳。",es:"Ella planea empezar a ir a nadar a la piscina todos los días desde la próxima semana.",en:"She plans to start going swimming at the indoor pool every day from next week."},
-{zh:"运动对身体有好处, 我们都应该多运动。",es:"El deporte es bueno para la salud; todos deberíamos hacer más deporte.",en:"Sports are good for health; we should all exercise more."},
-{zh:"力波希望能得第一名, 我们去给他加油吧!",es:"Libo espera conseguir el primer puesto, ¡vamos a animarle!",en:"Libo hopes to win first place, let's go cheer for him!"}]},
-{l:17,t:"看京剧",tes:"Viendo Ópera de Beijing",ten:"Watching Beijing Opera",lines:[
-{zh:"你以前看过京剧没有?",es:"¿Has visto Ópera de Beijing alguna vez?",en:"Have you ever watched Beijing Opera before?"},
-{zh:"昨天晚上我和朋友去长安大戏院看了一场京剧。",es:"Anoche fui con un amigo al Gran Teatro de Chang'an a ver una obra de Ópera de Beijing.",en:"Last night a friend and I went to Chang'an Grand Theater to see a Beijing Opera show."},
-{zh:"虽然我听不懂他们唱什么, 但是我觉得很精彩。",es:"Aunque no entiendo lo que cantan, me parece espléndida.",en:"Although I can't understand what they sing, I think it's splendid."},
-{zh:"京剧的服装特别漂亮, 化妆也很有意思。",es:"El vestuario de la Ópera de Beijing es precioso, y el maquillaje también es muy interesante.",en:"The costumes of Beijing Opera are especially beautiful, and the makeup is also very interesting."},
-{zh:"舞台上的人一会儿唱, 一会儿跳, 还会武术。",es:"Las personas en el escenario a veces cantan, a veces saltan, y también saben artes marciales.",en:"The people on stage sometimes sing, sometimes jump, and also know martial arts."},
-{zh:"朋友给我介绍了中国四大名著。",es:"Mi amigo me habló de las Cuatro Grandes Novelas Clásicas de China.",en:"My friend introduced China's Four Great Classical Novels to me."},
-{zh:"很多京剧故事都来自这些古典小说。",es:"Muchas historias de la Ópera de Beijing provienen de estas novelas clásicas.",en:"Many Beijing Opera stories come from these classical novels."},
-{zh:"如果有时间, 我还想去听听相声。",es:"Si tengo tiempo, también me gustaría ir a escuchar Xiangsheng (diálogo cómico).",en:"If I have time, I'd also like to go listen to crosstalk (Xiangsheng)."}]},
-{l:18,t:"爬长城",tes:"Escalando la Gran Muralla",ten:"Climbing the Great Wall",lines:[
-{zh:"今天的天气非常好, 是个晴天。",es:"El tiempo hoy es estupendo, es un día soleado.",en:"The weather today is very good, it's a sunny day."},
-{zh:"我们决定去爬长城。大家都很激动。",es:"Decidimos ir a escalar la Gran Muralla. Todos estamos muy emocionados.",en:"We decided to go climb the Great Wall. Everyone is very excited."},
-{zh:"长城离市区很远, 我们坐了两个小时的车。",es:"La Gran Muralla está muy lejos del centro; fuimos en coche durante dos horas.",en:"The Great Wall is far from downtown; we took a bus for two hours."},
-{zh:"爬长城很累, 可是长城上的风景特别美。",es:"Escalar la Gran Muralla es agotador, pero el paisaje desde allí es bellísimo.",en:"Climbing the Great Wall is tiring, but the scenery on it is exceptionally beautiful."},
-{zh:"终于, 我们爬上长城来了!",es:"¡Por fin hemos subido a la Gran Muralla!",en:"Finally, we have climbed up the Great Wall!"},
-{zh:"中国有一句话: 不到长城非好汉。",es:"En China hay un dicho: el que no ha estado en la Gran Muralla no es un verdadero hombre.",en:"There is a saying in China: He who has never been to the Great Wall is not a true man."},
-{zh:"现在我们都是好汉了!",es:"¡Ahora todos somos verdaderos hombres!",en:"Now we are all true men!"},
-{zh:"下山的时候我们去买了一些纪念品。",es:"Al bajar de la montaña fuimos a comprar algunos recuerdos.",en:"When coming down the mountain we went to buy some souvenirs."}]},
-{l:19,t:"交通安全",tes:"Seguridad vial",ten:"Traffic safety",lines:[
-{zh:"昨天发生了一件倒霉的事: 我的自行车被汽车撞了。",es:"Ayer me pasó algo de mala suerte: mi bicicleta fue chocada por un coche.",en:"Yesterday an unlucky thing happened: my bicycle was hit by a car."},
-{zh:"我本来在人行道上骑车, 突然一辆汽车开过来。",es:"Yo iba por la ciclovía y de repente apareció un coche.",en:"I was riding on the bike lane, and suddenly a car came over."},
-{zh:"那个司机闯了红灯, 开得太快了。",es:"Ese conductor se saltó un semáforo en rojo; iba demasiado rápido.",en:"That driver ran a red light; he was driving too fast."},
-{zh:"我的腿摔伤了, 自行车也坏了。",es:"Me lastimé la pierna al caer y la bicicleta también se rompió.",en:"I injured my leg falling, and the bicycle was also broken."},
-{zh:"警察来了, 他们说那个司机应该赔钱。",es:"Llegó la policía y dijeron que el conductor debía pagar los daños.",en:"The police came, they said that driver should compensate."},
-{zh:"在中国骑车一定要注意安全, 小心汽车。",es:"Al ir en bici en China hay que prestar atención a la seguridad y tener cuidado con los coches.",en:"When cycling in China you must pay attention to safety and watch out for cars."},
-{zh:"现在我只能坐公共汽车去学校了。",es:"Ahora solo puedo ir a la escuela en autobús.",en:"Now I can only take the bus to school."},
-{zh:"希望我的腿能快点儿好起来。",es:"Espero que mi pierna se cure pronto.",en:"I hope my leg can get better soon."}]},
-{l:20,t:"在机场",tes:"En el aeropuerto",ten:"At the airport",lines:[
-{zh:"林娜马上就要回国了, 我们去机场送她。",es:"Lin Na está a punto de volver a su país; vamos al aeropuerto a despedirla.",en:"Lin Na is about to return to her country; we are going to the airport to see her off."},
-{zh:"机场里人山人海, 非常热闹。",es:"Hay muchísima gente en el aeropuerto; está muy animado.",en:"There is a sea of people in the airport; it's very bustling."},
-{zh:"办手续的时候, 工作人员说行李超重了。",es:"Al facturar, el empleado dijo que el equipaje tenía exceso de peso.",en:"When checking in, the staff said the luggage was overweight."},
-{zh:"她只好把几本书拿出来, 放进随身带的包里。",es:"Tuvo que sacar algunos libros y ponerlos en su bolso de mano.",en:"She had to take out some books and put them in her carry-on bag."},
-{zh:"过安检的时候, 保安说: 请把电脑拿出来。",es:"Al pasar el control de seguridad, el guardia dijo: Por favor, saque la computadora.",en:"When passing the security check, the guard said: Please take out your computer."},
-{zh:"飞机还有半个小时就要起飞了。",es:"El avión despegará en media hora.",en:"The plane is going to take off in half an hour."},
-{zh:"我们对林娜说: 祝你一路平安!",es:"Le dijimos a Lin Na: ¡Buen viaje!",en:"We said to Lin Na: Have a safe trip!"},
-{zh:"她哭了, 舍不得离开我们。",es:"Ella lloró, no quería separarse de nosotros.",en:"She cried, reluctant to leave us."}]}
+	{
+		l: 11,
+		t: "去西安旅行",
+		tes: "Viaje a Xi'an",
+		ten: "Trip to Xi'an",
+		lines: [
+			{
+				zh: "上个月我去西安旅行了。",
+				es: "El mes pasado viajé a Xi'an.",
+				en: "I traveled to Xi'an last month.",
+			},
+			{
+				zh: "在西安我玩儿得非常高兴。",
+				es: "Me divertí mucho en Xi'an.",
+				en: "I had a great time in Xi'an.",
+			},
+			{
+				zh: "我参观了兵马俑博物馆, 觉得非常有意思。",
+				es: "Visité el museo de los Guerreros de Terracota y me pareció muy interesante.",
+				en: "I visited the Terracotta Warriors museum and found it very interesting.",
+			},
+			{
+				zh: "我还吃了西安的小吃, 很好吃, 就是有点儿辣。",
+				es: "También comí los bocadillos de Xi'an, muy ricos, solo que un poco picantes.",
+				en: "I also ate Xi'an snacks, very delicious, just a bit spicy.",
+			},
+			{
+				zh: "去以前我去了银行换人民币。",
+				es: "Antes de ir, fui al banco a cambiar renminbi.",
+				en: "Before going, I went to the bank to change RMB.",
+			},
+			{
+				zh: "一百欧元能换不少人民币呢。",
+				es: "Con cien euros se puede cambiar bastante renminbi.",
+				en: "One hundred euros can be changed into quite a lot of RMB.",
+			},
+			{
+				zh: "下个月我想去上海看世博园。",
+				es: "El mes que viene quiero ir a Shanghai a ver el Parque de la Expo.",
+				en: "Next month I want to go to Shanghai to see the Expo Park.",
+			},
+		],
+	},
+	{
+		l: 12,
+		t: "寄包裹",
+		tes: "Enviando un paquete",
+		ten: "Sending a parcel",
+		lines: [
+			{
+				zh: "今天下午我去了邮局。",
+				es: "Hoy por la tarde fui a la oficina de correos.",
+				en: "This afternoon I went to the post office.",
+			},
+			{
+				zh: "我想给英国的朋友寄一个包裹。",
+				es: "Quería enviarle un paquete a un amigo en el Reino Unido.",
+				en: "I wanted to send a parcel to a friend in the UK.",
+			},
+			{
+				zh: "里边有一本新版的汉语书, 还有一件毛衣。",
+				es: "Adentro hay una nueva edición de un libro de chino y también un jersey.",
+				en: "Inside there is a new edition of a Chinese book and also a sweater.",
+			},
+			{
+				zh: "营业员问我: 您要寄航空还是海运?",
+				es: "El empleado me preguntó: ¿Lo envía por avión o por barco?",
+				en: "The clerk asked me: Are you sending it by air or sea?",
+			},
+			{
+				zh: "我说: 航空大概需要多少钱?",
+				es: "Yo dije: ¿Cuánto cuesta más o menos por avión?",
+				en: "I said: Roughly how much does airmail cost?",
+			},
+			{
+				zh: "他说航空太贵了, 海运便宜一些, 但是慢。",
+				es: "Dijo que por avión es muy caro, por barco es algo más barato pero lento.",
+				en: "He said airmail is too expensive, sea mail is somewhat cheaper but slow.",
+			},
+			{
+				zh: "最后我决定寄航空, 因为我想让他快点儿收到。",
+				es: "Al final decidí enviarlo por avión, porque quiero que lo reciba pronto.",
+				en: "In the end I decided to send it by air, because I want him to receive it soon.",
+			},
+			{
+				zh: "填完了单子, 我就把包裹交给了营业员。",
+				es: "Después de rellenar el formulario, le entregué el paquete al empleado.",
+				en: "After filling out the form, I handed the parcel to the clerk.",
+			},
+		],
+	},
+	{
+		l: 13,
+		t: "买手机卡",
+		tes: "Comprando una tarjeta SIM",
+		ten: "Buying a SIM card",
+		lines: [
+			{
+				zh: "昨天我的手机丢了, 我很着急。",
+				es: "Ayer perdí mi móvil y estaba muy ansioso.",
+				en: "Yesterday I lost my phone and was very anxious.",
+			},
+			{
+				zh: "今天我去中国移动办了一张新卡。",
+				es: "Hoy fui a China Mobile a tramitar una tarjeta nueva.",
+				en: "Today I went to China Mobile to get a new SIM card.",
+			},
+			{
+				zh: "营业员让我出示身份证或者护照。",
+				es: "La empleada me pidió que mostrara el carné de identidad o el pasaporte.",
+				en: "The clerk asked me to show my ID card or passport.",
+			},
+			{
+				zh: "可是我的护照在大使馆办签证, 没有带来。",
+				es: "Pero mi pasaporte estaba en la embajada para el visado, no lo había traído.",
+				en: "But my passport was at the embassy for a visa, I hadn't brought it.",
+			},
+			{
+				zh: "我说: 学生证可以吗? 她说不行。",
+				es: "Dije: ¿Sirve el carné de estudiante? Ella dijo que no.",
+				en: "I said: Will a student ID do? She said no.",
+			},
+			{
+				zh: "还好我带了驾照, 她把我的驾照复印了一下。",
+				es: "Por suerte traje mi licencia de conducir, y ella la fotocopió.",
+				en: "Luckily I brought my driver's license, and she photocopied it.",
+			},
+			{
+				zh: "我把姓名和手机号写在单子上, 签了字。",
+				es: "Escribí mi nombre y número de móvil en el formulario, y firmé.",
+				en: "I wrote my name and mobile number on the form and signed it.",
+			},
+			{
+				zh: "现在我又可以给朋友打电话了!",
+				es: "¡Ahora puedo volver a llamar a mis amigos!",
+				en: "Now I can call my friends again!",
+			},
+		],
+	},
+	{
+		l: 14,
+		t: "租房子",
+		tes: "Alquilar un apartamento",
+		ten: "Renting an apartment",
+		lines: [
+			{
+				zh: "丁力波想在学校外边租一套房子。",
+				es: "Ding Libo quiere alquilar un apartamento fuera de la escuela.",
+				en: "Ding Libo wants to rent an apartment outside the school.",
+			},
+			{
+				zh: "买房子太贵了, 租的比买的便宜多了。",
+				es: "Comprar un apartamento es muy caro; alquilar es mucho más barato que comprar.",
+				en: "Buying an apartment is too expensive; renting is much cheaper than buying.",
+			},
+			{
+				zh: "昨天他去看了一套一居室, 觉得很不错。",
+				es: "Ayer fue a ver un apartamento de un dormitorio y le pareció muy bueno.",
+				en: "Yesterday he went to see a one-bedroom apartment and thought it was very nice.",
+			},
+			{
+				zh: "房租是一个月两千块, 交通也很方便。",
+				es: "El alquiler es de dos mil kuai al mes, y el transporte es muy cómodo.",
+				en: "The rent is two thousand kuai a month, and transportation is very convenient.",
+			},
+			{
+				zh: "可是房间里没有家具, 也没有冰箱和洗衣机。",
+				es: "Pero en la habitación no hay muebles, ni tampoco nevera ni lavadora.",
+				en: "But there is no furniture in the room, nor a fridge or washing machine.",
+			},
+			{
+				zh: "房东说明天可以把家具送来。",
+				es: "El casero dijo que mañana podría traer los muebles.",
+				en: "The landlord said he could deliver the furniture tomorrow.",
+			},
+			{
+				zh: "太巧了, 他的朋友也住在那儿。",
+				es: "¡Qué casualidad! Su amigo también vive allí.",
+				en: "What a coincidence, his friend also lives there.",
+			},
+			{
+				zh: "以后他们可以一起去学校了。",
+				es: "En el futuro podrán ir juntos a la escuela.",
+				en: "In the future they can go to school together.",
+			},
+		],
+	},
+	{
+		l: 15,
+		t: "中国画和油画",
+		tes: "Pinturas chinas y al óleo",
+		ten: "Chinese and oil paintings",
+		lines: [
+			{
+				zh: "马大为非常喜欢中国艺术。",
+				es: "A Ma Dawei le gusta mucho el arte chino.",
+				en: "Ma Dawei really likes Chinese art.",
+			},
+			{
+				zh: "他觉得中国画跟油画不一样。",
+				es: "Él piensa que las pinturas chinas no son iguales a las pinturas al óleo.",
+				en: "He thinks Chinese paintings are not the same as oil paintings.",
+			},
+			{
+				zh: "中国画主要用墨和水画在宣纸上。",
+				es: "Las pinturas chinas se pintan principalmente con tinta y agua sobre papel Xuan.",
+				en: "Chinese paintings are mainly painted with ink and water on Xuan paper.",
+			},
+			{
+				zh: "油画是用油彩画在画布上。",
+				es: "Las pinturas al óleo se pintan con colores al óleo sobre lienzo.",
+				en: "Oil paintings are painted with oil colors on canvas.",
+			},
+			{
+				zh: "中国画常常画山水、花鸟和人物。",
+				es: "Las pinturas chinas a menudo representan paisajes, flores y pájaros, y figuras.",
+				en: "Chinese paintings often depict landscapes, flowers and birds, and figures.",
+			},
+			{
+				zh: "马大为想学画中国画, 他买了一支毛笔。",
+				es: "Ma Dawei quiere aprender a pintar pintura china, así que compró un pincel.",
+				en: "Ma Dawei wants to learn to paint Chinese painting, so he bought a brush.",
+			},
+			{
+				zh: "老师说他画得不错, 可是还需要多练习。",
+				es: "El profesor dice que pinta bastante bien, pero que aún necesita practicar más.",
+				en: "The teacher says he paints quite well, but still needs to practice more.",
+			},
+			{
+				zh: "大为希望能画出一幅漂亮的风景画。",
+				es: "Dawei espera poder pintar un hermoso paisaje.",
+				en: "Dawei hopes to be able to paint a beautiful landscape painting.",
+			},
+		],
+	},
+	{
+		l: 16,
+		t: "游泳比赛",
+		tes: "Competición de natación",
+		ten: "Swimming competition",
+		lines: [
+			{
+				zh: "明天学校要举行游泳比赛。",
+				es: "Mañana la escuela celebrará una competición de natación.",
+				en: "Tomorrow the school will hold a swimming competition.",
+			},
+			{
+				zh: "丁力波是五岁开始学游泳的, 游得非常快。",
+				es: "Ding Libo empezó a aprender a nadar a los cinco años, y nada rapidísimo.",
+				en: "Ding Libo started learning to swim at five, and swims very fast.",
+			},
+			{
+				zh: "大为游泳游得不怎么好, 可是他喜欢打篮球。",
+				es: "Dawei no nada muy bien, pero le gusta jugar al baloncesto.",
+				en: "Dawei doesn't swim very well, but he likes playing basketball.",
+			},
+			{
+				zh: "游泳馆里有很多人, 大家都在练习。",
+				es: "Hay mucha gente en la piscina; todos están practicando.",
+				en: "There are many people in the indoor pool; everyone is practicing.",
+			},
+			{
+				zh: "林娜的身体不太好, 医生让她多锻炼身体。",
+				es: "La salud de Lin Na no es muy buena; el médico le dijo que hiciera más ejercicio.",
+				en: "Lin Na's health isn't very good; the doctor told her to exercise more.",
+			},
+			{
+				zh: "她打算从下个星期开始每天去游泳馆游泳。",
+				es: "Ella planea empezar a ir a nadar a la piscina todos los días desde la próxima semana.",
+				en: "She plans to start going swimming at the indoor pool every day from next week.",
+			},
+			{
+				zh: "运动对身体有好处, 我们都应该多运动。",
+				es: "El deporte es bueno para la salud; todos deberíamos hacer más deporte.",
+				en: "Sports are good for health; we should all exercise more.",
+			},
+			{
+				zh: "力波希望能得第一名, 我们去给他加油吧!",
+				es: "Libo espera conseguir el primer puesto, ¡vamos a animarle!",
+				en: "Libo hopes to win first place, let's go cheer for him!",
+			},
+		],
+	},
+	{
+		l: 17,
+		t: "看京剧",
+		tes: "Viendo Ópera de Beijing",
+		ten: "Watching Beijing Opera",
+		lines: [
+			{
+				zh: "你以前看过京剧没有?",
+				es: "¿Has visto Ópera de Beijing alguna vez?",
+				en: "Have you ever watched Beijing Opera before?",
+			},
+			{
+				zh: "昨天晚上我和朋友去长安大戏院看了一场京剧。",
+				es: "Anoche fui con un amigo al Gran Teatro de Chang'an a ver una obra de Ópera de Beijing.",
+				en: "Last night a friend and I went to Chang'an Grand Theater to see a Beijing Opera show.",
+			},
+			{
+				zh: "虽然我听不懂他们唱什么, 但是我觉得很精彩。",
+				es: "Aunque no entiendo lo que cantan, me parece espléndida.",
+				en: "Although I can't understand what they sing, I think it's splendid.",
+			},
+			{
+				zh: "京剧的服装特别漂亮, 化妆也很有意思。",
+				es: "El vestuario de la Ópera de Beijing es precioso, y el maquillaje también es muy interesante.",
+				en: "The costumes of Beijing Opera are especially beautiful, and the makeup is also very interesting.",
+			},
+			{
+				zh: "舞台上的人一会儿唱, 一会儿跳, 还会武术。",
+				es: "Las personas en el escenario a veces cantan, a veces saltan, y también saben artes marciales.",
+				en: "The people on stage sometimes sing, sometimes jump, and also know martial arts.",
+			},
+			{
+				zh: "朋友给我介绍了中国四大名著。",
+				es: "Mi amigo me habló de las Cuatro Grandes Novelas Clásicas de China.",
+				en: "My friend introduced China's Four Great Classical Novels to me.",
+			},
+			{
+				zh: "很多京剧故事都来自这些古典小说。",
+				es: "Muchas historias de la Ópera de Beijing provienen de estas novelas clásicas.",
+				en: "Many Beijing Opera stories come from these classical novels.",
+			},
+			{
+				zh: "如果有时间, 我还想去听听相声。",
+				es: "Si tengo tiempo, también me gustaría ir a escuchar Xiangsheng (diálogo cómico).",
+				en: "If I have time, I'd also like to go listen to crosstalk (Xiangsheng).",
+			},
+		],
+	},
+	{
+		l: 18,
+		t: "爬长城",
+		tes: "Escalando la Gran Muralla",
+		ten: "Climbing the Great Wall",
+		lines: [
+			{
+				zh: "今天的天气非常好, 是个晴天。",
+				es: "El tiempo hoy es estupendo, es un día soleado.",
+				en: "The weather today is very good, it's a sunny day.",
+			},
+			{
+				zh: "我们决定去爬长城。大家都很激动。",
+				es: "Decidimos ir a escalar la Gran Muralla. Todos estamos muy emocionados.",
+				en: "We decided to go climb the Great Wall. Everyone is very excited.",
+			},
+			{
+				zh: "长城离市区很远, 我们坐了两个小时的车。",
+				es: "La Gran Muralla está muy lejos del centro; fuimos en coche durante dos horas.",
+				en: "The Great Wall is far from downtown; we took a bus for two hours.",
+			},
+			{
+				zh: "爬长城很累, 可是长城上的风景特别美。",
+				es: "Escalar la Gran Muralla es agotador, pero el paisaje desde allí es bellísimo.",
+				en: "Climbing the Great Wall is tiring, but the scenery on it is exceptionally beautiful.",
+			},
+			{
+				zh: "终于, 我们爬上长城来了!",
+				es: "¡Por fin hemos subido a la Gran Muralla!",
+				en: "Finally, we have climbed up the Great Wall!",
+			},
+			{
+				zh: "中国有一句话: 不到长城非好汉。",
+				es: "En China hay un dicho: el que no ha estado en la Gran Muralla no es un verdadero hombre.",
+				en: "There is a saying in China: He who has never been to the Great Wall is not a true man.",
+			},
+			{
+				zh: "现在我们都是好汉了!",
+				es: "¡Ahora todos somos verdaderos hombres!",
+				en: "Now we are all true men!",
+			},
+			{
+				zh: "下山的时候我们去买了一些纪念品。",
+				es: "Al bajar de la montaña fuimos a comprar algunos recuerdos.",
+				en: "When coming down the mountain we went to buy some souvenirs.",
+			},
+		],
+	},
+	{
+		l: 19,
+		t: "交通安全",
+		tes: "Seguridad vial",
+		ten: "Traffic safety",
+		lines: [
+			{
+				zh: "昨天发生了一件倒霉的事: 我的自行车被汽车撞了。",
+				es: "Ayer me pasó algo de mala suerte: mi bicicleta fue chocada por un coche.",
+				en: "Yesterday an unlucky thing happened: my bicycle was hit by a car.",
+			},
+			{
+				zh: "我本来在人行道上骑车, 突然一辆汽车开过来。",
+				es: "Yo iba por la ciclovía y de repente apareció un coche.",
+				en: "I was riding on the bike lane, and suddenly a car came over.",
+			},
+			{
+				zh: "那个司机闯了红灯, 开得太快了。",
+				es: "Ese conductor se saltó un semáforo en rojo; iba demasiado rápido.",
+				en: "That driver ran a red light; he was driving too fast.",
+			},
+			{
+				zh: "我的腿摔伤了, 自行车也坏了。",
+				es: "Me lastimé la pierna al caer y la bicicleta también se rompió.",
+				en: "I injured my leg falling, and the bicycle was also broken.",
+			},
+			{
+				zh: "警察来了, 他们说那个司机应该赔钱。",
+				es: "Llegó la policía y dijeron que el conductor debía pagar los daños.",
+				en: "The police came, they said that driver should compensate.",
+			},
+			{
+				zh: "在中国骑车一定要注意安全, 小心汽车。",
+				es: "Al ir en bici en China hay que prestar atención a la seguridad y tener cuidado con los coches.",
+				en: "When cycling in China you must pay attention to safety and watch out for cars.",
+			},
+			{
+				zh: "现在我只能坐公共汽车去学校了。",
+				es: "Ahora solo puedo ir a la escuela en autobús.",
+				en: "Now I can only take the bus to school.",
+			},
+			{
+				zh: "希望我的腿能快点儿好起来。",
+				es: "Espero que mi pierna se cure pronto.",
+				en: "I hope my leg can get better soon.",
+			},
+		],
+	},
+	{
+		l: 20,
+		t: "在机场",
+		tes: "En el aeropuerto",
+		ten: "At the airport",
+		lines: [
+			{
+				zh: "林娜马上就要回国了, 我们去机场送她。",
+				es: "Lin Na está a punto de volver a su país; vamos al aeropuerto a despedirla.",
+				en: "Lin Na is about to return to her country; we are going to the airport to see her off.",
+			},
+			{
+				zh: "机场里人山人海, 非常热闹。",
+				es: "Hay muchísima gente en el aeropuerto; está muy animado.",
+				en: "There is a sea of people in the airport; it's very bustling.",
+			},
+			{
+				zh: "办手续的时候, 工作人员说行李超重了。",
+				es: "Al facturar, el empleado dijo que el equipaje tenía exceso de peso.",
+				en: "When checking in, the staff said the luggage was overweight.",
+			},
+			{
+				zh: "她只好把几本书拿出来, 放进随身带的包里。",
+				es: "Tuvo que sacar algunos libros y ponerlos en su bolso de mano.",
+				en: "She had to take out some books and put them in her carry-on bag.",
+			},
+			{
+				zh: "过安检的时候, 保安说: 请把电脑拿出来。",
+				es: "Al pasar el control de seguridad, el guardia dijo: Por favor, saque la computadora.",
+				en: "When passing the security check, the guard said: Please take out your computer.",
+			},
+			{
+				zh: "飞机还有半个小时就要起飞了。",
+				es: "El avión despegará en media hora.",
+				en: "The plane is going to take off in half an hour.",
+			},
+			{
+				zh: "我们对林娜说: 祝你一路平安!",
+				es: "Le dijimos a Lin Na: ¡Buen viaje!",
+				en: "We said to Lin Na: Have a safe trip!",
+			},
+			{
+				zh: "她哭了, 舍不得离开我们。",
+				es: "Ella lloró, no quería separarse de nosotros.",
+				en: "She cried, reluctant to leave us.",
+			},
+		],
+	},
 ];
