@@ -1,0 +1,78 @@
+// i18n.js — cadenas de interfaz y helpers de traducción
+import { settings } from './store.js';
+
+export const UI = {
+  es: {
+    study: 'Estudiar', texts: 'Textos', vocab: 'Vocabulario', grammar: 'Gramática', settings: 'Ajustes',
+    due: 'para repasar', fresh: 'nuevas', learned: 'aprendidas', start: 'Repasar ahora',
+    cram: 'Repaso libre por lección', lesson: 'Lección', show: 'Mostrar', again: 'Otra vez',
+    hard: 'Difícil', good: 'Bien', easy: 'Fácil', done: '¡Has terminado por ahora!',
+    dialogs: 'Diálogos del libro', readings: 'Lecturas nuevas', pinyin: 'Pinyin',
+    tones: 'Tonos', trans: 'Traducción', example: 'Ejemplo', search: 'Buscar…',
+    lang: 'Idioma de los significados', includeSup: 'Incluir palabras suplementarias en las tarjetas',
+    newPerDay: 'Tarjetas nuevas por sesión', maxLesson: 'Estudiar hasta la lección',
+    exportBtn: 'Exportar progreso', importBtn: 'Importar progreso', resetBtn: 'Borrar todo el progreso',
+    resetConfirm: '¿Seguro? Esto borra todo tu progreso de repaso.', imported: 'Progreso importado ✓',
+    noDue: 'No hay tarjetas pendientes. ¡Vuelve más tarde o repasa una lección!',
+    cardsLeft: 'tarjetas', supTag: 'suplementaria', of: 'de', back: 'Volver', all: 'Todas', streak: 'Racha', days: 'días',
+    text1: 'Texto', flipHint: 'Toca la tarjeta para ver la respuesta',
+    textSize: 'Tamaño del texto', theme: 'Tema', light: 'Claro', dark: 'Oscuro', system: 'Sistema',
+    book1: 'Libro 1', book2: 'Libro 2', sizeSmall: 'Pequeño', sizeMedium: 'Mediano', sizeLarge: 'Grande',
+    voiceSpeed: 'Velocidad de voz', voice: 'Voz preferida', testVoice: '🔊 Probar', autoVoice: 'Automático (Recomendado)',
+    // dashboard + stats
+    progress: 'Progreso', known: 'conocidas', mature: 'dominadas', forecast: 'Próximos 7 días',
+    byLesson: 'Por lección', byHsk: 'Por nivel HSK', sessionSummary: 'Resumen de la sesión',
+    accuracy: 'Aciertos', time: 'Tiempo', failedWords: 'Palabras falladas', reviewFailed: 'Repasar falladas',
+    // práctica
+    practice: 'Práctica', reverse: 'Cartas inversas', reverseDesc: 'Significado → carácter',
+    cloze: 'Rellenar huecos', clozeDesc: 'Elige la palabra que falta',
+    builder: 'Ordena la frase', builderDesc: 'Reconstruye el diálogo',
+    pairs: 'Emparejar', pairsDesc: 'Une hanzi y significado',
+    toneGame: 'Entrena tonos', toneGameDesc: 'Identifica el tono que oyes',
+    numbers: 'Números y precios', numbersDesc: 'Escribe lo que oyes',
+    hardWords: 'Palabras difíciles', hardWordsDesc: 'Repasa tus puntos débiles',
+    check: 'Comprobar', correct: '¡Correcto!', incorrect: 'Incorrecto', next: 'Siguiente',
+    round: 'Ronda', score: 'Puntos', best: 'Mejor', restart: 'Reiniciar', chooseLesson: 'Elige una lección',
+    usesInTexts: 'Usos en los textos', seeMore: 'ver más', inTexts: 'En los textos',
+    // dictación
+    catNumbers: 'Números', catPrices: 'Precios', catTimes: 'Horas', catDates: 'Fechas', catMixed: 'Mixto',
+    typeAnswer: 'Escribe la respuesta', reveal: 'Mostrar respuesta'
+  },
+  en: {
+    study: 'Study', texts: 'Texts', vocab: 'Vocabulary', grammar: 'Grammar', settings: 'Settings',
+    due: 'to review', fresh: 'new', learned: 'learned', start: 'Review now',
+    cram: 'Free review by lesson', lesson: 'Lesson', show: 'Show', again: 'Again',
+    hard: 'Hard', good: 'Good', easy: 'Easy', done: 'You are done for now!',
+    dialogs: 'Book dialogues', readings: 'New readings', pinyin: 'Pinyin',
+    tones: 'Tones', trans: 'Translation', example: 'Example', search: 'Search…',
+    lang: 'Language for meanings', includeSup: 'Include supplementary words in flashcards',
+    newPerDay: 'New cards per session', maxLesson: 'Study up to lesson',
+    exportBtn: 'Export progress', importBtn: 'Import progress', resetBtn: 'Reset all progress',
+    resetConfirm: 'Are you sure? This deletes all review progress.', imported: 'Progress imported ✓',
+    noDue: 'No cards due. Come back later or cram a lesson!',
+    cardsLeft: 'cards', supTag: 'supplementary', of: 'of', back: 'Back', all: 'All', streak: 'Streak', days: 'days',
+    text1: 'Text', flipHint: 'Tap the card to reveal the answer',
+    textSize: 'Text size', theme: 'Theme', light: 'Light', dark: 'Dark', system: 'System',
+    book1: 'Book 1', book2: 'Book 2', sizeSmall: 'Small', sizeMedium: 'Medium', sizeLarge: 'Large',
+    voiceSpeed: 'Voice speed', voice: 'Preferred voice', testVoice: '🔊 Test', autoVoice: 'Auto (Recommended)',
+    progress: 'Progress', known: 'known', mature: 'mature', forecast: 'Next 7 days',
+    byLesson: 'By lesson', byHsk: 'By HSK level', sessionSummary: 'Session summary',
+    accuracy: 'Accuracy', time: 'Time', failedWords: 'Failed words', reviewFailed: 'Review failed',
+    practice: 'Practice', reverse: 'Reverse cards', reverseDesc: 'Meaning → character',
+    cloze: 'Fill the blank', clozeDesc: 'Pick the missing word',
+    builder: 'Build the sentence', builderDesc: 'Rebuild the dialogue',
+    pairs: 'Matching', pairsDesc: 'Match hanzi and meaning',
+    toneGame: 'Tone trainer', toneGameDesc: 'Identify the tone you hear',
+    numbers: 'Numbers & prices', numbersDesc: 'Type what you hear',
+    hardWords: 'Hard words', hardWordsDesc: 'Drill your weak spots',
+    check: 'Check', correct: 'Correct!', incorrect: 'Incorrect', next: 'Next',
+    round: 'Round', score: 'Score', best: 'Best', restart: 'Restart', chooseLesson: 'Choose a lesson',
+    usesInTexts: 'Uses in the texts', seeMore: 'see more', inTexts: 'In the texts',
+    catNumbers: 'Numbers', catPrices: 'Prices', catTimes: 'Times', catDates: 'Dates', catMixed: 'Mixed',
+    typeAnswer: 'Type the answer', reveal: 'Reveal answer'
+  }
+};
+
+export function T(k) { return UI[settings.lang][k] || k; }
+export function gloss(e) { return settings.lang === 'en' ? e.en : e.es; }
+export function exGloss(ex) { return settings.lang === 'en' ? ex[2] : ex[1]; }

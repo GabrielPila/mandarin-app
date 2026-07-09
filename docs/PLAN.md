@@ -7,11 +7,11 @@
 
 - [ ] 1. `docs: add implementation plan` — this file
 - [x] 2. `chore: data files to ES modules + validation script + tests` (Phase 0 + 1.1)
-- [ ] 3. `refactor: split app into ES modules` (Phase 1, CACHE v0.8.0)
-- [ ] 4. `feat: progress dashboard and session stats` (2.8 lapses+summary, 2.9)
-- [ ] 5. `feat: reverse cards and cloze quiz` (2.1, 2.2)
-- [ ] 6. `feat: practice games — sentence builder, pairs, tones, dictation` (2.3–2.6)
-- [ ] 7. `feat: word concordance` (2.7) + final CACHE bump
+- [x] 3. `refactor: split app into ES modules` (Phase 1, CACHE v0.8.0)
+- [x] 4. `feat: progress dashboard and session stats` (2.8 lapses+summary, 2.9)
+- [x] 5. `feat: reverse cards and cloze quiz` (2.1, 2.2)
+- [x] 6. `feat: practice games — sentence builder, pairs, tones, dictation` (2.3–2.6)
+- [x] 7. `feat: word concordance` (2.7) + final CACHE bump
 
 Handoff notes: (none yet)
 
@@ -140,3 +140,12 @@ UI home: **"Práctica" section on the Study tab** below the cram grids — a gri
 2. Preview (`mandarin-app` server, mobile viewport): console error-free; smoke: Study (stats/streak/cram/practice hub), review 3+ cards incl. reload-persistence, Textos (toggles, tap-popup, audio play/stop, line-tap seek), Vocabulario (search+filters), Gramática, Ajustes (each control), every new game one full round.
 3. localStorage migration check: seed pre-refactor state → post-refactor stats identical.
 4. Deploy: bump CACHE, push main, `curl -s -o /dev/null -w "%{http_code}"` on representative assets, reload twice on device (SW update cycle) and confirm version banner/behavior.
+
+---
+## Handoff status (updated)
+All milestones implemented and verified in the browser preview (mobile viewport, console clean):
+module refactor (no build step), progress dashboard + session summary + lapses, reverse cards,
+cloze, sentence builder, matching pairs, tone trainer, number/price dictation, word concordance.
+`node --test 'tests/*.test.mjs'` = 21 pass; `node scripts/validate-data.mjs` = clean.
+Committed locally (NOT pushed — awaiting Gabriel's review). To resume: run the two commands above,
+`preview_start mandarin-app`, and smoke-test tabs + games.

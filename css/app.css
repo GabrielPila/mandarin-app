@@ -354,3 +354,83 @@ h4 { margin: 24px 0 10px; font-size:14px; color: var(--ink); letter-spacing: 0.5
 #quiz-close { position:absolute; top:-40px; right:0; border:0; background:var(--line); width:32px; height:32px; border-radius:50%; font-size:16px; cursor:pointer; display:flex; align-items:center; justify-content:center; color:var(--ink); }
 .quiz-status { margin-bottom:16px; font-size:18px; font-weight:600; color:var(--primary); }
 .hw-quiz-box { width:250px; height:250px; border:2px dashed var(--line); border-radius:16px; background:var(--card-bg); display:flex; align-items:center; justify-content:center; }
+
+/* ====== v0.8 — panel de progreso, práctica y juegos ====== */
+/* dashboard */
+.dash { margin: 8px 0 16px; background:var(--card-bg); border:1px solid var(--card-border); border-radius:16px; padding:6px 14px; box-shadow:var(--shadow-sm); }
+.dash summary { cursor:pointer; font-size:14px; font-weight:600; color:var(--ink); padding:8px 0; list-style:none; }
+.dash summary::-webkit-details-marker { display:none; }
+.dash summary::before { content:'▸ '; color:var(--primary); }
+.dash[open] summary::before { content:'▾ '; }
+.prog-list { display:flex; flex-direction:column; gap:6px; margin-bottom:10px; }
+.prog-row { display:flex; align-items:center; gap:10px; }
+.prog-lbl { width:38px; font-size:12px; font-weight:600; color:var(--muted); text-align:right; }
+.prog-num { width:54px; font-size:11px; color:var(--muted); text-align:right; }
+.pbar { flex:1; height:8px; border-radius:6px; background:var(--line); position:relative; overflow:hidden; }
+.pbar-learned { position:absolute; left:0; top:0; bottom:0; background:var(--primary); opacity:0.45; }
+.pbar-mature { position:absolute; left:0; top:0; bottom:0; background:var(--primary); }
+.forecast { display:flex; gap:6px; align-items:flex-end; height:60px; padding:4px 0; }
+.fc-col { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; gap:2px; }
+.fc-bar { width:60%; background:var(--accent); border-radius:3px 3px 0 0; }
+.fc-col span { font-size:10px; color:var(--muted); }
+
+/* rejilla de juegos */
+.game-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+.game-card { display:flex; flex-direction:column; align-items:flex-start; gap:2px; text-align:left;
+  background:var(--card-bg); border:1px solid var(--card-border); border-radius:16px; padding:14px;
+  box-shadow:var(--shadow-sm); backdrop-filter:blur(8px); cursor:pointer; color:var(--ink); transition:all .2s ease; }
+.game-card:active { transform:scale(0.97); }
+.game-card .game-icon { font-size:22px; }
+.game-card b { font-size:15px; }
+.game-card .game-desc { font-size:11px; color:var(--muted); }
+
+/* opciones (cloze / tonos) */
+.cloze-sentence { font-size:var(--font-lg); line-height:1.5; text-align:center; margin:24px 0 8px; }
+.cloze-tr { text-align:center; color:var(--muted); font-size:14px; margin-bottom:20px; }
+.cloze-opts { display:flex; flex-direction:column; gap:10px; }
+.cloze-opt { padding:14px; border-radius:14px; border:1px solid var(--card-border); background:var(--card-bg);
+  color:var(--ink); font-size:var(--font-md); cursor:pointer; box-shadow:var(--shadow-sm); transition:all .15s ease; }
+.cloze-opt:active { transform:scale(0.98); }
+.opt-correct { background:rgba(39,174,96,.18); border-color:var(--primary); color:var(--primary); font-weight:600; }
+.opt-wrong { background:rgba(231,76,60,.15); border-color:#e74c3c; color:#e74c3c; }
+.tone-opt { font-size:24px; letter-spacing:6px; text-align:center; }
+.tone-play { text-align:center; margin:30px 0; }
+.tone-reveal, .num-reveal { text-align:center; font-size:20px; margin:12px 0; }
+
+/* ordenar la frase */
+.builder-hint { text-align:center; color:var(--muted); font-size:15px; margin:16px 0; }
+.builder-answer { min-height:56px; display:flex; flex-wrap:wrap; gap:8px; padding:12px; border-radius:14px;
+  border:2px dashed var(--line); margin-bottom:16px; }
+.builder-answer.ok { border-color:var(--primary); }
+.builder-answer.bad { border-color:#e74c3c; }
+.builder-bank { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px; }
+.tile { padding:10px 14px; border-radius:12px; border:1px solid var(--card-border); background:var(--card-bg);
+  color:var(--ink); font-size:var(--font-md); cursor:pointer; box-shadow:var(--shadow-sm); }
+.tile.used { opacity:.25; pointer-events:none; }
+.builder-result { margin-top:10px; text-align:center; font-size:var(--font-md); }
+
+/* emparejar */
+.pairs-grid { display:flex; gap:12px; }
+.pairs-col { flex:1; display:flex; flex-direction:column; gap:8px; }
+.pair-tile { padding:14px 8px; border-radius:12px; border:1px solid var(--card-border); background:var(--card-bg);
+  color:var(--ink); font-size:15px; cursor:pointer; box-shadow:var(--shadow-sm); transition:all .15s ease; }
+.pair-tile.sel { border-color:var(--primary); background:rgba(39,174,96,.1); }
+.pair-tile.bad { border-color:#e74c3c; background:rgba(231,76,60,.12); }
+.pair-tile.gone { opacity:0; pointer-events:none; }
+
+/* dictado */
+.num-input { text-align:center; font-size:22px; margin:10px 0; }
+.num-result { text-align:center; margin:8px 0; font-size:15px; }
+.seg.wrap { flex-wrap:wrap; }
+
+/* resumen de sesión */
+.summary { text-align:center; }
+.summary h2 { margin:20px 0; }
+.summary .stats { margin:16px 0; }
+
+/* concordancia / usos */
+.pop-uses { margin-top:14px; border-top:1px solid var(--line); padding-top:10px; }
+.use-line { padding:8px 0; border-bottom:1px solid var(--line); }
+.use-zh { font-size:var(--font-md); display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+.use-tr { font-size:13px; color:var(--muted); margin-top:2px; }
+.rev-front { font-size:var(--font-lg); font-weight:600; }
