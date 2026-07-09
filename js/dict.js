@@ -61,6 +61,12 @@ export function toneOf(syl) {
 }
 export const TONE_MARK = ['·', 'ˉ', 'ˊ', 'ˇ', 'ˋ'];
 
+// Normaliza pinyin para búsqueda: sin tonos, sin espacios ni separadores.
+// "péng you" y "pengyou" y "peng" coinciden todos.
+export function normPinyin(s) {
+  return s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[\s'’ʼ\-]/g, '').toLowerCase();
+}
+
 // divide el pinyin de una palabra en sílabas alineadas con sus caracteres
 export function syllables(entry) {
   const syls = entry.p.split(/[\s'\-]+/).filter(s => s.length);

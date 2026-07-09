@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { segment, syllables, toneOf, isHan, DICT } from '../js/dict.js';
+import { segment, syllables, toneOf, isHan, DICT, normPinyin } from '../js/dict.js';
 
 test('segment: longest match wins', () => {
   const toks = segment('图书馆在食堂北边');
@@ -46,6 +46,14 @@ test('isHan', () => {
   assert.ok(isHan('中'));
   assert.ok(!isHan('a'));
   assert.ok(!isHan('。'));
+});
+
+test('normPinyin strips tones, spaces and separators', () => {
+  assert.equal(normPinyin('péng you'), 'pengyou');
+  assert.equal(normPinyin('Xī ʼān'), 'xian');
+  assert.equal(normPinyin('dì-yī cì'), 'diyici');
+  assert.ok(normPinyin('péng you').includes(normPinyin('pengyou')));
+  assert.ok(normPinyin('péng you').includes(normPinyin('peng')));
 });
 
 test('dictionary covers core starters', () => {

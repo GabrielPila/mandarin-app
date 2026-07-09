@@ -1,5 +1,5 @@
 // views/vocab.js — explorador de vocabulario con búsqueda y concordancia
-import { ALL } from '../dict.js';
+import { ALL, normPinyin } from '../dict.js';
 import { settings } from '../store.js';
 import { T, gloss } from '../i18n.js';
 import { speak } from '../audio.js';
@@ -40,8 +40,11 @@ export function renderVocab() {
       if (typeof activeFilter === 'string') return e.tags && e.tags.includes(activeFilter);
       return e.l === activeFilter;
     });
-    if (q) items = items.filter(e => e.h.includes(q) || e.p.toLowerCase().includes(q)
-      || (e.es && e.es.toLowerCase().includes(q)) || (e.en && e.en.toLowerCase().includes(q)));
+    if (q) {
+      const qp = normPinyin(q);
+      items = items.filter(e => e.h.includes(q) || (qp && normPinyin(e.p).includes(qp))
+        || (e.es && e.es.toLowerCase().includes(q)) || (e.en && e.en.toLowerCase().includes(q)));
+    }
     items.slice(0, 400).forEach(e => {
       const d = document.createElement('div');
       d.className = 'vrow' + (e.sup ? ' sup' : '');
