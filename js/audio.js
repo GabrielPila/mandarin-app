@@ -45,9 +45,7 @@ export function speak(text, onEnd, speaker) {
 	} else if (isMale) {
 		// intenta una voz masculina nativa; si no, la mejor voz + pitch simulado
 		const malePremium = zhVoices.find((v) =>
-			/yunyang|yunxi|yunjian|kangkang|standard-[bc]/i.test(
-				v.name,
-			),
+			/yunyang|yunxi|yunjian|kangkang|standard-[bc]/i.test(v.name),
 		);
 		if (malePremium) {
 			u.voice = malePremium;
@@ -129,7 +127,7 @@ export function createReaderPlayer() {
 			cur.text,
 			() => {
 				index++;
-				next();
+				if (playing) setTimeout(next, 600);
 			},
 			cur.speaker,
 		);

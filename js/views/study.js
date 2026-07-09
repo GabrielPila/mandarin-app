@@ -134,7 +134,7 @@ export function renderStudy() {
 	const container = $("#cram-container");
 	container.innerHTML = `
     <div style="margin-bottom: 20px;">
-      <label class="vocab-chk" style="display:inline-flex;"><input type="checkbox" id="cram-random" checked> ${T("randomOrder")}</label>
+      <label class="vocab-chk" style="display:inline-flex;"><input type="checkbox" id="cram-random"> ${T("randomOrder")}</label>
     </div>
     <h4>HSK</h4><div id="cram-hsk" class="lesson-grid" style="margin-bottom:20px;"></div>
     <h4>${T("book1")} (1-10)</h4><div id="cram-b1" class="lesson-grid"></div>

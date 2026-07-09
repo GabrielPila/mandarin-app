@@ -35,16 +35,19 @@ export const settings = {
 	textSize: "medium",
 	theme: "system",
 	history: {},
-	voiceSpeed: 1.0,
+	voiceSpeed: 0.7,
 	voiceURI: "",
 	reverseCards: false,
 	pairsBest: {},
 };
 try {
-	Object.assign(
-		settings,
-		JSON.parse(localStorage.getItem(SETTINGS_KEY) || "{}"),
-	);
+	const local = JSON.parse(localStorage.getItem(SETTINGS_KEY) || "{}");
+	if (!local._v2) {
+		local.voiceSpeed = 0.7;
+		local._v2 = true;
+	}
+	Object.assign(settings, local);
+	saveSettings();
 } catch (e) {}
 if (!settings.history) settings.history = {};
 if (!settings.pairsBest) settings.pairsBest = {};
