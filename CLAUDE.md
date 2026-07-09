@@ -8,10 +8,11 @@ A vanilla-JS PWA for studying Mandarin with *El Nuevo Libro de Chino Práctico* 
 
 ## Commands
 
-- **Run locally**: `python3 -m http.server 8471` from the repo root (also configured in `.claude/launch.json` as `mandarin-app` for the preview tool).
-- **Validate a data file after editing**: `node -e "global.window={}; require('./data/book1-vocab.js'); console.log(global.window.B1_VOCAB.length)"` — all data files are `window.X = [...]` assignments, so this catches syntax errors.
-- **Deploy**: push to `main`. GitHub Pages serves the repo root (legacy build, no CI).
-- There are no tests and no linter.
+- **Run locally**: `python3 -m http.server 8471` from the repo root (also configured in `.claude/launch.json` as `mandarin-app` for the preview tool). The app loads as native ES modules, so it must be served over HTTP (not `file://`).
+- **Validate content**: `node scripts/validate-data.mjs` — checks pinyin↔character alignment, that every hanzi in the texts resolves in the dictionary, and that `sw.js` ASSETS matches the files on disk. Run after editing any `data/*.js`.
+- **Unit tests**: `node --test 'tests/*.test.mjs'` (segmenter, pinyin, SRS scheduling, number→hanzi). Plain Node, no deps.
+- **Deploy**: push to `main`. GitHub Pages serves the repo root (no CI).
+- No bundler, no package.json, no linter.
 
 ## Critical invariants
 
@@ -23,14 +24,24 @@ A vanilla-JS PWA for studying Mandarin with *El Nuevo Libro de Chino Práctico* 
 
 ## Architecture
 
-Load order in `index.html` matters — plain globals, later scripts consume earlier ones:
+Native ES modules; `index.html` loads only the hanzi-writer CDN (classic global `window.HanziWriter`) plus `<script type="module" src="js/main.js">`. Everything else is `import`/`export`. Data files are `export const X = [...]`; `data/index.js` re-exports all nine.
 
-1. **Data layer** (`data/*.js`): `B1_VOCAB`, `B1_SUP`, `B2_VOCAB`, `B2_SUP` (vocab entries: `{h, p, pos, es, en, l, sup?, tags?, ex?:[zh,es,en]}` where `l` is lesson 0–20, 0 = phonetics prep, 1–10 Book 1, 11–20 Book 2, `tags` carries HSK levels); `B1_TEXTS`/`B2_TEXTS` (book dialogues: lessons → `parts` → `lines` of `{s: speaker, zh, es, en}`); `B1_READINGS`/`B2_READINGS` (generated graded readings, same line shape without parts); `GRAMMAR` (grammar points with tags + example lines).
-2. **`js/core.js`** — builds the combined `ALL` list + `DICT` map, greedy longest-match `segment()`, pinyin syllable alignment and tone extraction (`toneOf` reads the diacritic), and `speak()` (Web Speech TTS with per-character pitch/voice heuristics for the NPCR cast — male/female speaker mapping lives here).
-3. **`js/srs.js`** — SM-2-style scheduler + all persistence: review state (`mandarin.srs.v1`) and settings/streak history (`mandarin.settings.v1`) in localStorage, export/import as JSON.
-4. **`js/app.js`** — all UI. One function per tab (`renderStudy`, `renderTextList`/`renderReader`, `renderVocab`, `renderGrammar`, `renderSettings`), wired through `nav()`; views are rebuilt by setting `#view.innerHTML`. Also: flashcard runner (`runCards` handles both SRS and cram modes), word popup (`showPopup`, with HanziWriter stroke animations), tracing quiz (`startQuiz`), and the audio reader (line-by-line TTS with highlight, `playReader`/`stopReader`).
+**Shared modules** (`js/`):
+- `dict.js` — builds combined `ALL` + `DICT`, assigns card ids, greedy longest-match `segment()`, pinyin `syllables()`/`toneOf()`.
+- `store.js` — the single source of persistence: SRS state (`mandarin.srs.v1`) and `settings` incl. streak `history` (`mandarin.settings.v1`), export/import. **All localStorage lives here.**
+- `srs.js` — SM-2 scheduler (`review`, `dueCards`, `stats`, `leeches`, `forecast`); imports store.
+- `audio.js` — `speak()` (per-character TTS voice/pitch map for the NPCR cast) + `createReaderPlayer()` (line-by-line reader with highlight).
+- `i18n.js` — `UI` map + `T`/`gloss`/`exGloss`.
+- `ui.js` — `renderTokens`, `showPopup` (with concordance + HanziWriter), `startQuiz`, `applyTheme`, `setView`, `cardPool`.
+- `numbers.js` — pure number/price/time/date → hanzi (unit-tested).
+- `concordance.js` — lazy word→lines index over all texts.
+- `router.js` — tab dispatch; views self-register via `register(tab, fn)`; `nav(tab)` calls the registered renderer.
 
-Rendering of Chinese text always goes through `renderTokens(zh, mode)` — it segments, attaches ruby (pinyin / tone marks / hidden) per character, and makes each known word tappable. Reuse it for any new feature that displays Chinese.
+**Views** (`js/views/`, one per screen, self-registering): `study` (stats, dashboard, practice hub, cram grids), `cards` (`runCards` — SRS/cram/reverse + session summary), `texts`, `vocab`, `grammar`, `settings`; `views/practice/` has the games (`cloze`, `builder`, `pairs`, `tones`, `numbers`, plus shared `corpus.js`). `main.js` wires the tab bar and boots.
+
+Rendering of Chinese text always goes through `renderTokens(zh, mode)` in `ui.js` — segments, attaches ruby (pinyin / tone marks / hidden) per character, makes each known word tappable. Reuse it for any new feature that displays Chinese.
+
+Reverse flashcards use id `rev:<baseId>` stored in the same SRS state. Practice games live under the "Práctica" hub on the Study tab (nav stays 5 tabs).
 
 ## Content pipeline
 
