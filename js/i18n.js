@@ -21,7 +21,11 @@ export const UI = {
 		easy: "Fácil",
 		done: "¡Has terminado por ahora!",
 		dialogs: "Diálogos del libro",
+		dialogsDesc: "Conversaciones originales extraídas de los libros de texto.",
 		readings: "Lecturas nuevas",
+		readingsDesc:
+			"Relatos narrados por una sola persona, generados usando " +
+			"exclusivamente el vocabulario visto hasta cada lección.",
 		pinyin: "Pinyin",
 		tones: "Tonos",
 		trans: "Traducción",
@@ -129,7 +133,11 @@ export const UI = {
 		easy: "Easy",
 		done: "You are done for now!",
 		dialogs: "Book dialogues",
+		dialogsDesc: "Original conversations transcribed from the textbooks.",
 		readings: "New readings",
+		readingsDesc:
+			"Single-person narratives generated using strictly the " +
+			"vocabulary learned up to each lesson.",
 		pinyin: "Pinyin",
 		tones: "Tones",
 		trans: "Translation",

@@ -95,7 +95,15 @@ export function showPopup(tok) {
 			exd.innerHTML = `<div class="pop-ex-label">${T("example")}</div>`;
 			const zh = document.createElement("div");
 			zh.className = "pop-ex-zh";
-			zh.appendChild(renderTokens(e.ex[0], "none"));
+			zh.appendChild(renderTokens(e.ex[0], "pinyin"));
+			const spk = document.createElement("button");
+			spk.className = "spk-btn";
+			spk.textContent = "🔊";
+			spk.addEventListener("click", (ev) => {
+				ev.stopPropagation();
+				speak(e.ex[0]);
+			});
+			zh.appendChild(spk);
 			const tr = document.createElement("div");
 			tr.className = "pop-ex-tr";
 			tr.textContent = exGloss(e.ex);

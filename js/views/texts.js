@@ -16,9 +16,32 @@ window.__stopReader = () => player.stop(); // el router lo llama al cambiar de p
 
 export function renderTextList() {
 	player.stop();
-	const v =
-		setView(`<h3>${T("dialogs")}</h3><div id="list-d" class="text-list"></div>
-    <h3>${T("readings")}</h3><div id="list-r" class="text-list"></div>`);
+	const v = setView(`
+    <div class="reader-toggles" style="margin-bottom: 16px;">
+      <button id="tab-d" class="on">${T("dialogs")}</button>
+      <button id="tab-r">${T("readings")}</button>
+    </div>
+    <div id="view-d">
+      <p class="section-desc">${T("dialogsDesc")}</p>
+      <div id="list-d" class="text-list"></div>
+    </div>
+    <div id="view-r" style="display: none;">
+      <p class="section-desc">${T("readingsDesc")}</p>
+      <div id="list-r" class="text-list"></div>
+    </div>
+  `);
+	$("#tab-d").addEventListener("click", () => {
+		$("#tab-d").classList.add("on");
+		$("#tab-r").classList.remove("on");
+		$("#view-d").style.display = "block";
+		$("#view-r").style.display = "none";
+	});
+	$("#tab-r").addEventListener("click", () => {
+		$("#tab-r").classList.add("on");
+		$("#tab-d").classList.remove("on");
+		$("#view-r").style.display = "block";
+		$("#view-d").style.display = "none";
+	});
 	const ld = $("#list-d"),
 		lr = $("#list-r");
 	B1_TEXTS.concat(B2_TEXTS).forEach((t) => {

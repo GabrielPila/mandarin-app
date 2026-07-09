@@ -6,15 +6,20 @@ import { speak } from "../audio.js";
 import { $, setView, popupEntry, renderTokens } from "../ui.js";
 import { register } from "../router.js";
 import { search as textSearch } from "../concordance.js";
+import { B1_TEXTS, B2_TEXTS } from "../../data/index.js";
 
 export function renderVocab() {
 	const v = setView(`
-    <input id="vsearch" class="search" placeholder="${T("search")}">
-    <div id="vfilter" class="scroll-row"></div>
+    <div style="display:flex; gap:10px; margin-bottom:16px;">
+      <input id="vsearch" class="search" placeholder="${T("search")}" style="flex:1;">
+      <div class="filter-wrap">
+        <select id="vfilter" class="filter-select"></select>
+      </div>
+    </div>
     <div id="vlist" class="vlist"></div>
     <div id="vtext"></div>`);
 	let activeFilter = "all";
-	const grid = $("#vfilter");
+	const sel = $("#vfilter");
 	const filters = [
 		"all",
 		"hsk1",
@@ -42,22 +47,26 @@ export function renderVocab() {
 		19,
 		20,
 	];
+	const texts = B1_TEXTS.concat(B2_TEXTS);
 	filters.forEach((f) => {
-		const b = document.createElement("button");
-		b.className = "lesson-btn" + (f === "all" ? " on" : "");
-		b.style.display = "inline-block";
-		if (f === "all") b.innerHTML = `<b>${T("all")}</b>`;
-		else if (typeof f === "string") b.innerHTML = `<b>${f.toUpperCase()}</b>`;
-		else b.innerHTML = `<b>L${f === 0 ? "✦" : f}</b>`;
-		b.addEventListener("click", () => {
-			activeFilter = f;
-			grid
-				.querySelectorAll(".lesson-btn")
-				.forEach((x) => x.classList.remove("on"));
-			b.classList.add("on");
-			draw();
-		});
-		grid.appendChild(b);
+		const opt = document.createElement("option");
+		opt.value = f;
+		if (f === "all") opt.textContent = T("all");
+		else if (typeof f === "string") opt.textContent = f.toUpperCase();
+		else {
+			const txt = texts.find((t) => t.l === f);
+			opt.textContent = `L${f === 0 ? "✦" : f}${txt ? " — " + txt.t : ""}`;
+		}
+		sel.appendChild(opt);
+	});
+	sel.addEventListener("change", (ev) => {
+		activeFilter =
+			ev.target.value === "all"
+				? "all"
+				: isNaN(ev.target.value)
+					? ev.target.value
+					: parseInt(ev.target.value);
+		draw();
 	});
 	$("#vsearch").addEventListener("input", draw);
 
