@@ -356,11 +356,26 @@ h4 {
 
 /* --- tarjeta --- */
 .card-progress {
-	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	color: var(--muted);
 	font-size: 13px;
 	margin-bottom: 12px;
 	font-weight: 500;
+	padding: 0 16px;
+}
+.nav-arrow {
+	background: none;
+	border: none;
+	font-size: 18px;
+	color: var(--muted);
+	cursor: pointer;
+	padding: 4px 12px;
+}
+.nav-arrow:disabled {
+	opacity: 0.2;
+	cursor: default;
 }
 .card {
 	background: var(--card-bg);
@@ -989,6 +1004,47 @@ h4 {
 }
 .vrow.sup .vh {
 	opacity: 0.75;
+}
+.vrow .vtag.sup-tag {
+	font-size: 10px;
+	color: #d97706;
+	background: rgba(217, 119, 6, 0.15);
+	border-radius: 6px;
+	padding: 3px 6px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+}
+.vrow .vtag.core-tag {
+	font-size: 10px;
+	color: var(--blue);
+	background: rgba(37, 99, 235, 0.15);
+	border-radius: 6px;
+	padding: 3px 6px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+}
+.vocab-chk {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 14px;
+	color: var(--muted);
+	cursor: pointer;
+	font-weight: 600;
+}
+.vocab-chk input {
+	accent-color: var(--primary);
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+@media (prefers-color-scheme: dark) {
+	.vrow .vtag.sup-tag {
+		color: #fbbf24;
+	}
+	.vrow .vtag.core-tag {
+		color: #93c5fd;
+	}
 }
 
 /* --- ajustes --- */

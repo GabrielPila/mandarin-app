@@ -10,15 +10,23 @@ import { B1_TEXTS, B2_TEXTS } from "../../data/index.js";
 
 export function renderVocab() {
 	const v = setView(`
-    <div style="display:flex; gap:10px; margin-bottom:16px;">
-      <input id="vsearch" class="search" placeholder="${T("search")}" style="flex:1;">
-      <div class="filter-wrap">
-        <select id="vfilter" class="filter-select"></select>
+    <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:16px;">
+      <div style="display:flex; gap:10px;">
+        <input id="vsearch" class="search" placeholder="${T("search")}" style="flex:1;">
+        <div class="filter-wrap">
+          <select id="vfilter" class="filter-select"></select>
+        </div>
+      </div>
+      <div style="display:flex; gap:20px; align-items:center; padding: 0 4px;">
+        <label class="vocab-chk"><input type="checkbox" id="chk-core" checked> CORE</label>
+        <label class="vocab-chk"><input type="checkbox" id="chk-sup" checked> SUP</label>
       </div>
     </div>
     <div id="vlist" class="vlist"></div>
     <div id="vtext"></div>`);
 	let activeFilter = "all";
+	let showCore = true;
+	let showSup = true;
 	const sel = $("#vfilter");
 	const filters = [
 		"all",
@@ -68,6 +76,14 @@ export function renderVocab() {
 					: parseInt(ev.target.value);
 		draw();
 	});
+	$("#chk-core").addEventListener("change", (e) => {
+		showCore = e.target.checked;
+		draw();
+	});
+	$("#chk-sup").addEventListener("change", (e) => {
+		showSup = e.target.checked;
+		draw();
+	});
 	$("#vsearch").addEventListener("input", draw);
 
 	function draw() {
@@ -75,6 +91,8 @@ export function renderVocab() {
 		const list = $("#vlist");
 		list.innerHTML = "";
 		let items = ALL.filter((e) => {
+			if (!showCore && !e.sup) return false;
+			if (!showSup && e.sup) return false;
 			if (activeFilter === "all") return true;
 			if (typeof activeFilter === "string")
 				return e.tags && e.tags.includes(activeFilter);
@@ -93,8 +111,15 @@ export function renderVocab() {
 		items.slice(0, 400).forEach((e) => {
 			const d = document.createElement("div");
 			d.className = "vrow" + (e.sup ? " sup" : "");
+			const tag = e.sup
+				? `<span class="vtag sup-tag">SUP</span>`
+				: `<span class="vtag core-tag">CORE</span>`;
 			d.innerHTML = `<span class="vh">${e.h}</span><span class="vp">${e.p}</span>
-        <span class="vg">${gloss(e)}</span><span class="vl">${e.l === 0 ? "✦" : e.l}</span>`;
+        <span class="vg">${gloss(e)}</span>
+        <div style="display:flex; gap:6px; align-items:center;">
+          ${tag}
+          <span class="vl">L${e.l === 0 ? "✦" : e.l}</span>
+        </div>`;
 			d.addEventListener("click", () => popupEntry(e.h));
 			list.appendChild(d);
 		});

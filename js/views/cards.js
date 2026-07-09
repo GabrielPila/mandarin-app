@@ -51,12 +51,13 @@ export function startSRS() {
 	);
 }
 
-export function startCram(cards) {
-	runCards(shuffle(cards.map((e) => ({ id: e.id }))), false);
+export function startCram(cards, randomize = true) {
+	const mapped = cards.map((e) => ({ id: e.id }));
+	runCards(randomize ? shuffle(mapped) : mapped, false, randomize);
 }
 
 // items: [{id}]  (id puede ser normal o 'rev:<id>')
-export function runCards(items, srsMode) {
+export function runCards(items, srsMode, isRandom = true) {
 	const total = items.length,
 		startTime = Date.now();
 	let idx = 0,
@@ -64,6 +65,33 @@ export function runCards(items, srsMode) {
 		answered = 0;
 	const gradeCounts = { 0: 0, 3: 0, 4: 0, 5: 0 };
 	const failed = new Set();
+	const gradedIdx = new Set();
+
+	if (window._cardKeydownHandler) {
+		document.removeEventListener("keydown", window._cardKeydownHandler);
+	}
+	window._cardKeydownHandler = (e) => {
+		const cardEl = document.getElementById("card");
+		if (!cardEl) return;
+
+		if (e.key === "ArrowLeft" && idx > 0) {
+			idx--;
+			show();
+		} else if (e.key === "ArrowRight" && idx < items.length - 1) {
+			idx++;
+			show();
+		} else if (e.key === " ") {
+			e.preventDefault(); // Prevent page scrolling
+			cardEl.click();
+		} else if (
+			e.key === "Backspace" ||
+			e.key === "Delete" ||
+			e.key === "Escape"
+		) {
+			nav("study");
+		}
+	};
+	document.addEventListener("keydown", window._cardKeydownHandler);
 
 	function finish() {
 		const secs = Math.round((Date.now() - startTime) / 1000);
@@ -127,8 +155,17 @@ export function runCards(items, srsMode) {
          <div class="card-g">${gloss(e)}</div><div class="hw-container center card-hw"></div>
          <div class="card-ex"></div>`;
 
+		const orderHint = isRandom ? "🔀" : "⬇️";
 		const v = setView(`
-      <div class="card-progress">${idx + 1} ${T("of")} ${total}${reverse ? " · ⇄" : ""}</div>
+      <div class="card-progress">
+        <div style="flex:1; text-align:left;"><button id="nav-quit" class="nav-arrow" title="${T("back")}">✕</button></div>
+        <div style="display:flex; align-items:center;">
+          <button id="nav-prev" class="nav-arrow" ${idx === 0 ? "disabled" : ""}>❮</button>
+          <span>${idx + 1} ${T("of")} ${total}${reverse ? " · ⇄" : ""} <span style="opacity: 0.5; margin-left: 4px;" title="${isRandom ? T("randomOrder") : T("ordered")}">${orderHint}</span></span>
+          <button id="nav-next" class="nav-arrow" ${idx >= items.length - 1 ? "disabled" : ""}>❯</button>
+        </div>
+        <div style="flex:1;"></div>
+      </div>
       <div id="card" class="card">
         ${front}
         <div class="card-back hidden">${back}</div>
@@ -172,26 +209,54 @@ export function runCards(items, srsMode) {
 		}
 
 		$("#card").addEventListener("click", () => {
-			v.querySelector(".card-back").classList.remove("hidden");
-			v.querySelector(".flip-hint").classList.add("hidden");
-			$("#grade").classList.remove("hidden");
-			const hwCont = v.querySelector(".card-hw");
-			if (window.HanziWriter && hwCont && hwCont.innerHTML === "") {
-				for (const ch of e.h) {
-					if (!isHan(ch)) continue;
-					const box = document.createElement("div");
-					box.className = "hw-box";
-					hwCont.appendChild(box);
-					const writer = window.HanziWriter.create(box, ch, {
-						width: 44,
-						height: 44,
-						padding: 2,
-						strokeColor: document.body.classList.contains("theme-dark")
-							? "#e53935"
-							: "#d32f2f",
-					});
-					setTimeout(() => writer.animateCharacter(), 200);
+			const backEl = v.querySelector(".card-back");
+			const hintEl = v.querySelector(".flip-hint");
+			const gradeEl = $("#grade");
+
+			if (backEl.classList.contains("hidden")) {
+				backEl.classList.remove("hidden");
+				hintEl.classList.add("hidden");
+				if (!gradedIdx.has(idx)) {
+					gradeEl.classList.remove("hidden");
 				}
+
+				const hwCont = v.querySelector(".card-hw");
+				if (window.HanziWriter && hwCont && hwCont.innerHTML === "") {
+					for (const ch of e.h) {
+						if (!isHan(ch)) continue;
+						const box = document.createElement("div");
+						box.className = "hw-box";
+						hwCont.appendChild(box);
+						const writer = window.HanziWriter.create(box, ch, {
+							width: 44,
+							height: 44,
+							padding: 2,
+							strokeColor: document.body.classList.contains("theme-dark")
+								? "#e53935"
+								: "#d32f2f",
+						});
+						setTimeout(() => writer.animateCharacter(), 200);
+					}
+				}
+			} else {
+				backEl.classList.add("hidden");
+				hintEl.classList.remove("hidden");
+				gradeEl.classList.add("hidden");
+			}
+		});
+
+		$("#nav-quit")?.addEventListener("click", () => nav("study"));
+
+		$("#nav-prev")?.addEventListener("click", () => {
+			if (idx > 0) {
+				idx--;
+				show();
+			}
+		});
+		$("#nav-next")?.addEventListener("click", () => {
+			if (idx < items.length - 1) {
+				idx++;
+				show();
 			}
 		});
 
@@ -206,6 +271,7 @@ export function runCards(items, srsMode) {
 					else failed.add(item.id);
 					if (srsMode) SRS.review(item.id, g);
 					if (g === 0) items.push(item); // repetir al final
+					gradedIdx.add(idx); // mark this specific index as graded
 					idx++;
 					show();
 				});

@@ -132,7 +132,11 @@ export function renderStudy() {
 	});
 
 	const container = $("#cram-container");
-	container.innerHTML = `<h4>HSK</h4><div id="cram-hsk" class="lesson-grid" style="margin-bottom:20px;"></div>
+	container.innerHTML = `
+    <div style="margin-bottom: 20px;">
+      <label class="vocab-chk" style="display:inline-flex;"><input type="checkbox" id="cram-random" checked> ${T("randomOrder")}</label>
+    </div>
+    <h4>HSK</h4><div id="cram-hsk" class="lesson-grid" style="margin-bottom:20px;"></div>
     <h4>${T("book1")} (1-10)</h4><div id="cram-b1" class="lesson-grid"></div>
     <h4>${T("book2")} (11-20)</h4><div id="cram-b2" class="lesson-grid"></div>`;
 	["hsk1", "hsk2", "hsk3"].forEach((tag) => {
@@ -143,7 +147,9 @@ export function renderStudy() {
 		const b = document.createElement("button");
 		b.className = "lesson-btn";
 		b.innerHTML = `<b>${tag.toUpperCase()}</b><span>${cards.length}</span>`;
-		b.addEventListener("click", () => startCram(cards));
+		b.addEventListener("click", () =>
+			startCram(cards, $("#cram-random").checked),
+		);
 		$("#cram-hsk").appendChild(b);
 	});
 	for (let l = 0; l <= 20; l++) {
@@ -154,7 +160,9 @@ export function renderStudy() {
 		const b = document.createElement("button");
 		b.className = "lesson-btn";
 		b.innerHTML = `<b>${l === 0 ? "✦" : l}</b><span>${cards.length}</span>`;
-		b.addEventListener("click", () => startCram(cards));
+		b.addEventListener("click", () =>
+			startCram(cards, $("#cram-random").checked),
+		);
 		(l <= 10 ? $("#cram-b1") : $("#cram-b2")).appendChild(b);
 	}
 }
