@@ -44,10 +44,20 @@ https://gabrielpila.github.io/mandarin-app/ directly from `main`.
   `b2s:<i>`, assigned in `js/core.js` from the order of
   `B1_VOCAB`/`B1_SUP`/`B2_VOCAB`/`B2_SUP`). **Only append to these arrays —
   never reorder or delete entries**, or every user's review schedule silently
-  attaches to the wrong words. If a duplicate vocabulary entry is discovered, 
-  DO NOT delete it; instead, append `_deleted: true` to the redundant entry's 
-  object so that the UI and validation scripts filter it out without shifting 
-  the array indices.
+  attaches to the wrong words. Editing an entry **in place** (fixing or
+  improving `p`/`pos`/`es`/`en`/`tags`, adding fields) is fine and
+  encouraged — the invariant is about array *positions*, not field values.
+  If a duplicate vocabulary entry is discovered, DO NOT delete it; instead,
+  append `_deleted: true` to the redundant entry's object so that the UI and
+  validation scripts filter it out without shifting the array indices.
+- **Book order lives in `sec`/`ord` fields, never in array order.** Vocab
+  entries carry optional `sec` (which "Palabras Nuevas" block within the
+  lesson: 1 = after Texto 1, 2 = after Texto 2, 3 = in-lesson Palabras
+  Suplementarias) and `ord` (1-based position within that block). Any UI
+  that wants to show vocabulary "as in the book" must sort by
+  `(l, sec, ord)`; entries without `sec` (index-only words) sort last within
+  their lesson. See `docs/EXTRACTION-PLAN.md` for how these fields get
+  populated.
 - **Every hanzi token appearing in texts must exist in some vocab array.** The
   reader has no external dictionary: `js/core.js` builds `DICT` from the vocab
   arrays and segments text by greedy longest-match. An unknown character renders

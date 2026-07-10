@@ -1,4 +1,4 @@
-const CACHE = "mandarin-v0.8.4.2";
+const CACHE = "mandarin-v0.8.5";
 const ASSETS = [
 	".",
 	"index.html",
@@ -35,6 +35,16 @@ const ASSETS = [
 	"data/book2-sup.js",
 	"data/book2-texts.js",
 	"data/book2-readings.js",
+	"data/book1-notes.js",
+	"data/book2-notes.js",
+	"data/book1-grammar-book.js",
+	"data/book2-grammar-book.js",
+	"data/book1-exercises.js",
+	"data/book2-exercises.js",
+	"data/book1-phonetics.js",
+	"data/book2-phonetics.js",
+	"data/book1-lecturas.js",
+	"data/book2-lecturas.js",
 	"https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js",
 	"manifest.webmanifest",
 	"icons/icon-192.png",

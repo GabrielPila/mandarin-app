@@ -19,7 +19,10 @@ export function setView(html) {
 // Conjunto de tarjetas activas según ajustes
 export function cardPool(ALL) {
 	return ALL.filter(
-		(e) => !e._deleted && e.l <= settings.maxLesson && (settings.includeSup || !e.sup),
+		(e) =>
+			!e._deleted &&
+			e.l <= settings.maxLesson &&
+			(settings.includeSup || !e.sup),
 	);
 }
 

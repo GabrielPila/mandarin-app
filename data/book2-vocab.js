@@ -8,6 +8,8 @@ export const B2_VOCAB = [
 		en: "oh; ah",
 		l: 13,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 5,
 	},
 	{
 		h: "哎",
@@ -26,6 +28,8 @@ export const B2_VOCAB = [
 		en: "oh my (surprise)",
 		l: 20,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 17,
 	},
 	{
 		h: "爱情",
@@ -35,6 +39,8 @@ export const B2_VOCAB = [
 		en: "love (romantic)",
 		l: 17,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 9,
 	},
 	{
 		h: "芭蕾",
@@ -53,6 +59,8 @@ export const B2_VOCAB = [
 		en: "ballet (dance)",
 		l: 17,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 11,
 	},
 	{
 		h: "把",
@@ -62,6 +70,8 @@ export const B2_VOCAB = [
 		en: "(marks preverbal object)",
 		l: 13,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 8,
 	},
 	{
 		h: "白",
@@ -71,6 +81,8 @@ export const B2_VOCAB = [
 		en: "white",
 		l: 14,
 		tags: ["npcr", "hsk2"],
+		sec: 2,
+		ord: 8,
 	},
 	{
 		h: "白小燕",
@@ -80,6 +92,8 @@ export const B2_VOCAB = [
 		en: "Bai Xiaoyan",
 		l: 20,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 20,
 	},
 	{
 		h: "班",
@@ -98,6 +112,8 @@ export const B2_VOCAB = [
 		en: "to move (house/things)",
 		l: 19,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 21,
 	},
 	{
 		h: "版",
@@ -107,6 +123,8 @@ export const B2_VOCAB = [
 		en: "edition",
 		l: 12,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 5,
 	},
 	{
 		h: "办",
@@ -125,6 +143,8 @@ export const B2_VOCAB = [
 		en: "way; method",
 		l: 15,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 20,
 	},
 	{
 		h: "办事",
@@ -134,6 +154,8 @@ export const B2_VOCAB = [
 		en: "to handle affairs",
 		l: 12,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 11,
 	},
 	{
 		h: "帮忙",
@@ -143,6 +165,8 @@ export const B2_VOCAB = [
 		en: "to help out",
 		l: 18,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 16,
 	},
 	{
 		h: "包",
@@ -152,6 +176,8 @@ export const B2_VOCAB = [
 		en: "bag",
 		l: 19,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 9,
 	},
 	{
 		h: "包裹",
@@ -161,6 +187,8 @@ export const B2_VOCAB = [
 		en: "parcel; package",
 		l: 12,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 1,
 	},
 	{
 		h: "保安",
@@ -170,6 +198,8 @@ export const B2_VOCAB = [
 		en: "security guard",
 		l: 12,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 2,
 	},
 	{
 		h: "报",
@@ -188,6 +218,8 @@ export const B2_VOCAB = [
 		en: "newspaper",
 		l: 19,
 		tags: ["npcr", "hsk2"],
+		sec: 2,
+		ord: 22,
 	},
 	{
 		h: "背包",
@@ -197,6 +229,8 @@ export const B2_VOCAB = [
 		en: "backpack",
 		l: 20,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 1,
 	},
 	{
 		h: "北方",
@@ -206,6 +240,8 @@ export const B2_VOCAB = [
 		en: "the North",
 		l: 18,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 15,
 	},
 	{
 		h: "被",
@@ -215,6 +251,8 @@ export const B2_VOCAB = [
 		en: "(passive marker) by",
 		l: 19,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 2,
 	},
 	{
 		h: "本",
@@ -224,6 +262,8 @@ export const B2_VOCAB = [
 		en: "(measure word for books)",
 		l: 12,
 		tags: ["npcr", "hsk1"],
+		sec: 2,
+		ord: 7,
 	},
 	{
 		h: "比",
@@ -233,6 +273,8 @@ export const B2_VOCAB = [
 		en: "than (comparison)",
 		l: 14,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 1,
 	},
 	{
 		h: "比",
@@ -251,6 +293,8 @@ export const B2_VOCAB = [
 		en: "score",
 		l: 16,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 11,
 	},
 	{
 		h: "比赛",
@@ -260,6 +304,8 @@ export const B2_VOCAB = [
 		en: "match / to compete",
 		l: 16,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 20,
 	},
 	{
 		h: "遍",
@@ -269,6 +315,8 @@ export const B2_VOCAB = [
 		en: "time (from start to finish)",
 		l: 12,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 10,
 	},
 	{
 		h: "表演",
@@ -278,6 +326,8 @@ export const B2_VOCAB = [
 		en: "to perform",
 		l: 14,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 6,
 	},
 	{
 		h: "别的",
@@ -287,6 +337,8 @@ export const B2_VOCAB = [
 		en: "other",
 		l: 15,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 19,
 	},
 	{
 		h: "别提",
@@ -296,6 +348,8 @@ export const B2_VOCAB = [
 		en: "don't even mention it",
 		l: 19,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 9,
 	},
 	{
 		h: "宾馆",
@@ -305,6 +359,8 @@ export const B2_VOCAB = [
 		en: "hotel",
 		l: 11,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 9,
 	},
 	{
 		h: "兵",
@@ -323,6 +379,8 @@ export const B2_VOCAB = [
 		en: "Terracotta Warriors",
 		l: 11,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 11,
 	},
 	{
 		h: "不但",
@@ -332,6 +390,8 @@ export const B2_VOCAB = [
 		en: "not only",
 		l: 18,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 5,
 	},
 	{
 		h: "不敢当",
@@ -341,6 +401,8 @@ export const B2_VOCAB = [
 		en: "I really don't deserve this",
 		l: 15,
 		tags: ["npcr", "hsk6"],
+		sec: 1,
+		ord: 11,
 	},
 	{
 		h: "部",
@@ -350,6 +412,8 @@ export const B2_VOCAB = [
 		en: "(measure for films, works)",
 		l: 17,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 8,
 	},
 	{
 		h: "才",
@@ -359,6 +423,8 @@ export const B2_VOCAB = [
 		en: "not until; only then",
 		l: 13,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 10,
 	},
 	{
 		h: "财",
@@ -377,6 +443,8 @@ export const B2_VOCAB = [
 		en: "dish; food",
 		l: 18,
 		tags: ["npcr", "hsk1"],
+		sec: 2,
+		ord: 6,
 	},
 	{
 		h: "参观",
@@ -395,6 +463,8 @@ export const B2_VOCAB = [
 		en: "to check; to look up",
 		l: 11,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 5,
 	},
 	{
 		h: "差",
@@ -404,6 +474,8 @@ export const B2_VOCAB = [
 		en: "poor; inferior",
 		l: 16,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 8,
 	},
 	{
 		h: "长",
@@ -413,6 +485,8 @@ export const B2_VOCAB = [
 		en: "long",
 		l: 13,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 12,
 	},
 	{
 		h: "长城",
@@ -422,6 +496,9 @@ export const B2_VOCAB = [
 		en: "Great Wall",
 		l: 11,
 		tags: ["npcr", "hsk4"],
+		sec: 4,
+		ord: 1,
+		extra: true,
 	},
 	{
 		h: "超",
@@ -440,6 +517,8 @@ export const B2_VOCAB = [
 		en: "to be overweight (luggage)",
 		l: 20,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 8,
 	},
 	{
 		h: "称",
@@ -449,6 +528,8 @@ export const B2_VOCAB = [
 		en: "to weigh",
 		l: 12,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 13,
 	},
 	{
 		h: "称呼",
@@ -458,6 +539,8 @@ export const B2_VOCAB = [
 		en: "to address / form of address",
 		l: 20,
 		tags: ["npcr", "hsk5"],
+		sec: 2,
+		ord: 1,
 	},
 	{
 		h: "池",
@@ -476,6 +559,8 @@ export const B2_VOCAB = [
 		en: "to go out; to be away",
 		l: 20,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 21,
 	},
 	{
 		h: "出租",
@@ -485,6 +570,8 @@ export const B2_VOCAB = [
 		en: "to rent out",
 		l: 14,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 27,
 	},
 	{
 		h: "传",
@@ -503,6 +590,8 @@ export const B2_VOCAB = [
 		en: "window",
 		l: 14,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 18,
 	},
 	{
 		h: "窗户",
@@ -512,6 +601,8 @@ export const B2_VOCAB = [
 		en: "window",
 		l: 20,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 3,
 	},
 	{
 		h: "窗口",
@@ -521,6 +612,8 @@ export const B2_VOCAB = [
 		en: "service window",
 		l: 12,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 6,
 	},
 	{
 		h: "次",
@@ -530,6 +623,8 @@ export const B2_VOCAB = [
 		en: "time (occurrence)",
 		l: 11,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 8,
 	},
 	{
 		h: "车次",
@@ -539,6 +634,8 @@ export const B2_VOCAB = [
 		en: "train number",
 		l: 13,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 3,
 	},
 	{
 		h: "从",
@@ -548,6 +645,8 @@ export const B2_VOCAB = [
 		en: "from",
 		l: 11,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 1,
 	},
 	{
 		h: "打",
@@ -566,6 +665,8 @@ export const B2_VOCAB = [
 		en: "plan / to plan",
 		l: 18,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 3,
 	},
 	{
 		h: "大概",
@@ -575,6 +676,8 @@ export const B2_VOCAB = [
 		en: "approximately",
 		l: 11,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 17,
 	},
 	{
 		h: "大厦",
@@ -602,6 +705,8 @@ export const B2_VOCAB = [
 		en: "embassy",
 		l: 13,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 9,
 	},
 	{
 		h: "大学生",
@@ -611,6 +716,8 @@ export const B2_VOCAB = [
 		en: "university student",
 		l: 16,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 6,
 	},
 	{
 		h: "待",
@@ -620,6 +727,8 @@ export const B2_VOCAB = [
 		en: "to stay",
 		l: 11,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 18,
 	},
 	{
 		h: "带",
@@ -629,6 +738,8 @@ export const B2_VOCAB = [
 		en: "to bring; to carry",
 		l: 13,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 3,
 	},
 	{
 		h: "戴",
@@ -638,6 +749,8 @@ export const B2_VOCAB = [
 		en: "to wear (hat, mask, etc.)",
 		l: 17,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 6,
 	},
 	{
 		h: "单",
@@ -656,6 +769,8 @@ export const B2_VOCAB = [
 		en: "form; list",
 		l: 12,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 4,
 	},
 	{
 		h: "但是",
@@ -665,6 +780,8 @@ export const B2_VOCAB = [
 		en: "but",
 		l: 15,
 		tags: ["npcr", "hsk2"],
+		sec: 2,
+		ord: 15,
 	},
 	{
 		h: "当",
@@ -674,6 +791,8 @@ export const B2_VOCAB = [
 		en: "to serve as",
 		l: 16,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 14,
 	},
 	{
 		h: "倒霉",
@@ -683,6 +802,8 @@ export const B2_VOCAB = [
 		en: "unlucky",
 		l: 19,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 10,
 	},
 	{
 		h: "得",
@@ -692,6 +813,8 @@ export const B2_VOCAB = [
 		en: "(complement particle)",
 		l: 11,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 19,
 	},
 	{
 		h: "得",
@@ -701,6 +824,8 @@ export const B2_VOCAB = [
 		en: "to have to; must",
 		l: 12,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 22,
 	},
 	{
 		h: "登机",
@@ -719,6 +844,8 @@ export const B2_VOCAB = [
 		en: "boarding pass",
 		l: 20,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 10,
 	},
 	{
 		h: "迪士尼乐园",
@@ -728,6 +855,8 @@ export const B2_VOCAB = [
 		en: "Disneyland",
 		l: 11,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 18,
 	},
 	{
 		h: "地下",
@@ -737,6 +866,8 @@ export const B2_VOCAB = [
 		en: "underground",
 		l: 16,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 12,
 	},
 	{
 		h: "第",
@@ -746,6 +877,8 @@ export const B2_VOCAB = [
 		en: "(ordinal prefix)",
 		l: 12,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 6,
 	},
 	{
 		h: "第三医院",
@@ -755,6 +888,8 @@ export const B2_VOCAB = [
 		en: "No. 3 Hospital",
 		l: 19,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 24,
 	},
 	{
 		h: "电脑",
@@ -782,6 +917,8 @@ export const B2_VOCAB = [
 		en: "elevator",
 		l: 15,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 2,
 	},
 	{
 		h: "顶",
@@ -800,6 +937,8 @@ export const B2_VOCAB = [
 		en: "to lose",
 		l: 19,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 1,
 	},
 	{
 		h: "东西",
@@ -809,6 +948,8 @@ export const B2_VOCAB = [
 		en: "thing; stuff",
 		l: 11,
 		tags: ["npcr", "hsk1"],
+		sec: 2,
+		ord: 8,
 	},
 	{
 		h: "懂",
@@ -818,6 +959,8 @@ export const B2_VOCAB = [
 		en: "to understand",
 		l: 11,
 		tags: ["npcr", "hsk2"],
+		sec: 2,
+		ord: 15,
 	},
 	{
 		h: "洞",
@@ -845,6 +988,8 @@ export const B2_VOCAB = [
 		en: "to cut off; to disconnect",
 		l: 13,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 23,
 	},
 	{
 		h: "锻炼",
@@ -854,6 +999,8 @@ export const B2_VOCAB = [
 		en: "to exercise",
 		l: 16,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 4,
 	},
 	{
 		h: "队",
@@ -872,6 +1019,8 @@ export const B2_VOCAB = [
 		en: "team member",
 		l: 16,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 14,
 	},
 	{
 		h: "对",
@@ -881,6 +1030,8 @@ export const B2_VOCAB = [
 		en: "to; towards (interested in)",
 		l: 15,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 13,
 	},
 	{
 		h: "而且",
@@ -890,6 +1041,8 @@ export const B2_VOCAB = [
 		en: "moreover; and also",
 		l: 18,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 8,
 	},
 	{
 		h: "发",
@@ -908,6 +1061,8 @@ export const B2_VOCAB = [
 		en: "to develop",
 		l: 11,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 2,
 	},
 	{
 		h: "方便",
@@ -917,6 +1072,8 @@ export const B2_VOCAB = [
 		en: "convenient",
 		l: 13,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 19,
 	},
 	{
 		h: "房间",
@@ -935,6 +1092,8 @@ export const B2_VOCAB = [
 		en: "to put; to place",
 		l: 12,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 14,
 	},
 	{
 		h: "放假",
@@ -944,6 +1103,8 @@ export const B2_VOCAB = [
 		en: "to have a holiday",
 		l: 18,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 2,
 	},
 	{
 		h: "非常",
@@ -980,6 +1141,8 @@ export const B2_VOCAB = [
 		en: "rich; abundant",
 		l: 18,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 6,
 	},
 	{
 		h: "服装",
@@ -989,6 +1152,8 @@ export const B2_VOCAB = [
 		en: "clothing; costume",
 		l: 14,
 		tags: ["npcr", "hsk5"],
+		sec: 2,
+		ord: 1,
 	},
 	{
 		h: "幅",
@@ -998,6 +1163,8 @@ export const B2_VOCAB = [
 		en: "(measure for paintings)",
 		l: 15,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 19,
 	},
 	{
 		h: "福",
@@ -1025,6 +1192,8 @@ export const B2_VOCAB = [
 		en: "tutorial class",
 		l: 16,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 16,
 	},
 	{
 		h: "父母",
@@ -1034,6 +1203,8 @@ export const B2_VOCAB = [
 		en: "parents",
 		l: 20,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 5,
 	},
 	{
 		h: "复印",
@@ -1043,6 +1214,8 @@ export const B2_VOCAB = [
 		en: "to photocopy",
 		l: 13,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 15,
 	},
 	{
 		h: "感人",
@@ -1052,6 +1225,8 @@ export const B2_VOCAB = [
 		en: "moving; touching",
 		l: 17,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 10,
 	},
 	{
 		h: "感兴趣",
@@ -1061,6 +1236,8 @@ export const B2_VOCAB = [
 		en: "to be interested in",
 		l: 15,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 14,
 	},
 	{
 		h: "高",
@@ -1070,15 +1247,19 @@ export const B2_VOCAB = [
 		en: "tall; high",
 		l: 14,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 22,
 	},
 	{
 		h: "高楼大厦",
 		p: "gāo lóu dà shà",
-		pos: "",
+		pos: "S",
 		es: "rascacielos",
 		en: "high-rise buildings",
 		l: 11,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 4,
 	},
 	{
 		h: "高铁",
@@ -1088,6 +1269,8 @@ export const B2_VOCAB = [
 		en: "high-speed rail",
 		l: 13,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 2,
 	},
 	{
 		h: "告诉",
@@ -1097,6 +1280,8 @@ export const B2_VOCAB = [
 		en: "to tell",
 		l: 12,
 		tags: ["npcr", "hsk2"],
+		sec: 2,
+		ord: 3,
 	},
 	{
 		h: "胳膊",
@@ -1115,6 +1300,8 @@ export const B2_VOCAB = [
 		en: "even more",
 		l: 20,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 15,
 	},
 	{
 		h: "公分",
@@ -1124,6 +1311,8 @@ export const B2_VOCAB = [
 		en: "centimeter",
 		l: 14,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 14,
 	},
 	{
 		h: "公斤",
@@ -1133,6 +1322,8 @@ export const B2_VOCAB = [
 		en: "kilogram",
 		l: 20,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 9,
 	},
 	{
 		h: "公司",
@@ -1142,6 +1333,8 @@ export const B2_VOCAB = [
 		en: "company",
 		l: 12,
 		tags: ["npcr", "hsk2"],
+		sec: 2,
+		ord: 13,
 	},
 	{
 		h: "够",
@@ -1151,6 +1344,8 @@ export const B2_VOCAB = [
 		en: "to be enough",
 		l: 19,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 20,
 	},
 	{
 		h: "姑娘",
@@ -1160,6 +1355,8 @@ export const B2_VOCAB = [
 		en: "girl; young woman",
 		l: 17,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 11,
 	},
 	{
 		h: "古典",
@@ -1169,6 +1366,8 @@ export const B2_VOCAB = [
 		en: "classical",
 		l: 17,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 6,
 	},
 	{
 		h: "故事",
@@ -1178,6 +1377,8 @@ export const B2_VOCAB = [
 		en: "story",
 		l: 14,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 18,
 	},
 	{
 		h: "故乡",
@@ -1187,6 +1388,8 @@ export const B2_VOCAB = [
 		en: "hometown",
 		l: 18,
 		tags: ["npcr", "hsk6"],
+		sec: 1,
+		ord: 16,
 	},
 	{
 		h: "拐",
@@ -1196,6 +1399,8 @@ export const B2_VOCAB = [
 		en: "to turn",
 		l: 19,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 15,
 	},
 	{
 		h: "广播",
@@ -1205,6 +1410,8 @@ export const B2_VOCAB = [
 		en: "broadcast / to broadcast",
 		l: 20,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 18,
 	},
 	{
 		h: "广州",
@@ -1214,6 +1421,8 @@ export const B2_VOCAB = [
 		en: "Guangzhou",
 		l: 18,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 21,
 	},
 	{
 		h: "国际",
@@ -1223,6 +1432,8 @@ export const B2_VOCAB = [
 		en: "international",
 		l: 17,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 22,
 	},
 	{
 		h: "国家",
@@ -1241,6 +1452,8 @@ export const B2_VOCAB = [
 		en: "National Centre for the Performing Arts",
 		l: 17,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 18,
 	},
 	{
 		h: "过道",
@@ -1250,6 +1463,8 @@ export const B2_VOCAB = [
 		en: "aisle",
 		l: 20,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 5,
 	},
 	{
 		h: "过",
@@ -1259,6 +1474,8 @@ export const B2_VOCAB = [
 		en: "(past-experience particle)",
 		l: 17,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 1,
 	},
 	{ h: "海", p: "hǎi", pos: "S", es: "mar", en: "sea", l: 12, tags: ["npcr"] },
 	{
@@ -1269,6 +1486,8 @@ export const B2_VOCAB = [
 		en: "poster",
 		l: 17,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 10,
 	},
 	{
 		h: "海南",
@@ -1278,6 +1497,8 @@ export const B2_VOCAB = [
 		en: "Hainan",
 		l: 18,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 19,
 	},
 	{
 		h: "海运",
@@ -1287,6 +1508,8 @@ export const B2_VOCAB = [
 		en: "to ship by sea",
 		l: 12,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 8,
 	},
 	{
 		h: "寒假",
@@ -1296,6 +1519,8 @@ export const B2_VOCAB = [
 		en: "winter vacation",
 		l: 17,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 17,
 	},
 	{
 		h: "汉语水平考试",
@@ -1305,6 +1530,8 @@ export const B2_VOCAB = [
 		en: "HSK (Chinese Proficiency Test)",
 		l: 16,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 21,
 	},
 	{
 		h: "航班",
@@ -1314,6 +1541,8 @@ export const B2_VOCAB = [
 		en: "flight",
 		l: 20,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 19,
 	},
 	{
 		h: "航空",
@@ -1323,6 +1552,8 @@ export const B2_VOCAB = [
 		en: "by air (mail)",
 		l: 12,
 		tags: ["npcr", "hsk6"],
+		sec: 1,
+		ord: 7,
 	},
 	{
 		h: "好好儿",
@@ -1332,6 +1563,8 @@ export const B2_VOCAB = [
 		en: "properly; to one's heart's content",
 		l: 15,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 3,
 	},
 	{
 		h: "好听",
@@ -1341,6 +1574,8 @@ export const B2_VOCAB = [
 		en: "pleasant to hear",
 		l: 15,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 10,
 	},
 	{
 		h: "好像",
@@ -1350,6 +1585,8 @@ export const B2_VOCAB = [
 		en: "to seem; as if",
 		l: 15,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 11,
 	},
 	{
 		h: "好心",
@@ -1359,6 +1596,8 @@ export const B2_VOCAB = [
 		en: "kind-hearted(ness)",
 		l: 19,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 17,
 	},
 	{
 		h: "河",
@@ -1368,6 +1607,8 @@ export const B2_VOCAB = [
 		en: "river",
 		l: 16,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 19,
 	},
 	{
 		h: "红",
@@ -1377,6 +1618,8 @@ export const B2_VOCAB = [
 		en: "red",
 		l: 14,
 		tags: ["npcr", "hsk2"],
+		sec: 2,
+		ord: 13,
 	},
 	{
 		h: "红楼梦",
@@ -1386,6 +1629,8 @@ export const B2_VOCAB = [
 		en: "Dream of the Red Chamber",
 		l: 17,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 19,
 	},
 	{
 		h: "后来",
@@ -1395,6 +1640,8 @@ export const B2_VOCAB = [
 		en: "later; afterwards",
 		l: 13,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 8,
 	},
 	{
 		h: "护照",
@@ -1404,6 +1651,8 @@ export const B2_VOCAB = [
 		en: "passport",
 		l: 13,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 6,
 	},
 	{
 		h: "花儿",
@@ -1431,6 +1680,8 @@ export const B2_VOCAB = [
 		en: "to paint",
 		l: 15,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 8,
 	},
 	{
 		h: "画家",
@@ -1440,6 +1691,8 @@ export const B2_VOCAB = [
 		en: "painter",
 		l: 15,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 10,
 	},
 	{
 		h: "画儿",
@@ -1467,6 +1720,8 @@ export const B2_VOCAB = [
 		en: "stage play",
 		l: 14,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 2,
 	},
 	{
 		h: "坏",
@@ -1476,6 +1731,8 @@ export const B2_VOCAB = [
 		en: "bad; broken",
 		l: 13,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 22,
 	},
 	{
 		h: "还",
@@ -1485,6 +1742,8 @@ export const B2_VOCAB = [
 		en: "to return (something)",
 		l: 13,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 11,
 	},
 	{
 		h: "会",
@@ -1521,6 +1780,8 @@ export const B2_VOCAB = [
 		en: "or",
 		l: 14,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 10,
 	},
 	{
 		h: "祸",
@@ -1539,6 +1800,8 @@ export const B2_VOCAB = [
 		en: "opportunity",
 		l: 20,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 9,
 	},
 	{
 		h: "鸡蛋",
@@ -1548,6 +1811,8 @@ export const B2_VOCAB = [
 		en: "egg",
 		l: 18,
 		tags: ["npcr", "hsk2"],
+		sec: 2,
+		ord: 3,
 	},
 	{
 		h: "极了",
@@ -1557,6 +1822,8 @@ export const B2_VOCAB = [
 		en: "extremely",
 		l: 16,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 9,
 	},
 	{
 		h: "计划",
@@ -1566,6 +1833,8 @@ export const B2_VOCAB = [
 		en: "plan / to plan",
 		l: 18,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 17,
 	},
 	{
 		h: "记",
@@ -1575,6 +1844,8 @@ export const B2_VOCAB = [
 		en: "to remember; to note down",
 		l: 12,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 17,
 	},
 	{
 		h: "记得",
@@ -1584,6 +1855,8 @@ export const B2_VOCAB = [
 		en: "to remember",
 		l: 17,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 14,
 	},
 	{
 		h: "记者",
@@ -1602,6 +1875,8 @@ export const B2_VOCAB = [
 		en: "to continue",
 		l: 18,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 19,
 	},
 	{
 		h: "加油",
@@ -1611,6 +1886,8 @@ export const B2_VOCAB = [
 		en: "to cheer on; go!",
 		l: 16,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 21,
 	},
 	{
 		h: "家",
@@ -1629,6 +1906,8 @@ export const B2_VOCAB = [
 		en: "Jia Baoyu (protagonist)",
 		l: 17,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 20,
 	},
 	{
 		h: "假",
@@ -1647,6 +1926,8 @@ export const B2_VOCAB = [
 		en: "to examine; to check",
 		l: 19,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 5,
 	},
 	{
 		h: "减",
@@ -1665,6 +1946,8 @@ export const B2_VOCAB = [
 		en: "to lose weight",
 		l: 16,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 1,
 	},
 	{
 		h: "建",
@@ -1674,6 +1957,8 @@ export const B2_VOCAB = [
 		en: "to build",
 		l: 11,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 3,
 	},
 	{
 		h: "建议",
@@ -1683,6 +1968,8 @@ export const B2_VOCAB = [
 		en: "suggestion / to suggest",
 		l: 14,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 9,
 	},
 	{
 		h: "交",
@@ -1692,6 +1979,8 @@ export const B2_VOCAB = [
 		en: "to hand in; to pay",
 		l: 13,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 14,
 	},
 	{
 		h: "教练",
@@ -1701,6 +1990,8 @@ export const B2_VOCAB = [
 		en: "coach",
 		l: 16,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 17,
 	},
 	{
 		h: "接",
@@ -1710,6 +2001,8 @@ export const B2_VOCAB = [
 		en: "to pick up; to answer (a call)",
 		l: 13,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 25,
 	},
 	{
 		h: "节目",
@@ -1719,6 +2012,8 @@ export const B2_VOCAB = [
 		en: "program; show",
 		l: 14,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 7,
 	},
 	{
 		h: "结果",
@@ -1728,6 +2023,8 @@ export const B2_VOCAB = [
 		en: "result",
 		l: 19,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 2,
 	},
 	{
 		h: "结婚",
@@ -1737,6 +2034,8 @@ export const B2_VOCAB = [
 		en: "to get married",
 		l: 17,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 12,
 	},
 	{
 		h: "介绍",
@@ -1746,6 +2045,8 @@ export const B2_VOCAB = [
 		en: "to introduce",
 		l: 15,
 		tags: ["npcr", "hsk2"],
+		sec: 2,
+		ord: 16,
 	},
 	{
 		h: "借",
@@ -1755,6 +2056,8 @@ export const B2_VOCAB = [
 		en: "to borrow; to lend",
 		l: 14,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 4,
 	},
 	{
 		h: "近",
@@ -1800,6 +2103,8 @@ export const B2_VOCAB = [
 		en: "brilliant; wonderful",
 		l: 16,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 7,
 	},
 	{
 		h: "景",
@@ -1818,6 +2123,8 @@ export const B2_VOCAB = [
 		en: "scenery; view",
 		l: 18,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 7,
 	},
 	{
 		h: "就",
@@ -1836,6 +2143,8 @@ export const B2_VOCAB = [
 		en: "(measure for sentences)",
 		l: 11,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 14,
 	},
 	{
 		h: "剧",
@@ -1854,6 +2163,8 @@ export const B2_VOCAB = [
 		en: "script",
 		l: 14,
 		tags: ["npcr", "hsk6"],
+		sec: 1,
+		ord: 24,
 	},
 	{
 		h: "剧院",
@@ -1872,6 +2183,8 @@ export const B2_VOCAB = [
 		en: "to feel; to think",
 		l: 11,
 		tags: ["npcr", "hsk2"],
+		sec: 2,
+		ord: 1,
 	},
 	{
 		h: "卡",
@@ -1899,6 +2212,8 @@ export const B2_VOCAB = [
 		en: "to open (doors/business)",
 		l: 15,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 2,
 	},
 	{
 		h: "开始",
@@ -1908,6 +2223,8 @@ export const B2_VOCAB = [
 		en: "to begin; to start",
 		l: 15,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 7,
 	},
 	{
 		h: "开玩笑",
@@ -1917,6 +2234,8 @@ export const B2_VOCAB = [
 		en: "to joke",
 		l: 15,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 3,
 	},
 	{
 		h: "看样子",
@@ -1926,6 +2245,8 @@ export const B2_VOCAB = [
 		en: "it looks like",
 		l: 18,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 13,
 	},
 	{
 		h: "康复",
@@ -1935,6 +2256,8 @@ export const B2_VOCAB = [
 		en: "to recover (health)",
 		l: 19,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 20,
 	},
 	{
 		h: "考试",
@@ -1953,6 +2276,8 @@ export const B2_VOCAB = [
 		en: "next to; to lean on; to rely on",
 		l: 20,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 2,
 	},
 	{
 		h: "课本",
@@ -1971,6 +2296,8 @@ export const B2_VOCAB = [
 		en: "Confucius",
 		l: 18,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 20,
 	},
 	{
 		h: "苦",
@@ -1980,6 +2307,8 @@ export const B2_VOCAB = [
 		en: "bitter",
 		l: 17,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 13,
 	},
 	{
 		h: "快递",
@@ -1998,6 +2327,8 @@ export const B2_VOCAB = [
 		en: "delivery courier",
 		l: 12,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 9,
 	},
 	{
 		h: "筐",
@@ -2007,6 +2338,8 @@ export const B2_VOCAB = [
 		en: "basket; bin",
 		l: 20,
 		tags: ["npcr", "hsk6"],
+		sec: 1,
+		ord: 15,
 	},
 	{
 		h: "拉",
@@ -2016,6 +2349,8 @@ export const B2_VOCAB = [
 		en: "to play (violin); to pull",
 		l: 17,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 16,
 	},
 	{
 		h: "来",
@@ -2034,6 +2369,8 @@ export const B2_VOCAB = [
 		en: "to leave",
 		l: 17,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 16,
 	},
 	{
 		h: "俩",
@@ -2043,6 +2380,8 @@ export const B2_VOCAB = [
 		en: "two (people)",
 		l: 20,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 2,
 	},
 	{
 		h: "联系",
@@ -2052,6 +2391,8 @@ export const B2_VOCAB = [
 		en: "to contact",
 		l: 20,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 11,
 	},
 	{
 		h: "脸",
@@ -2070,6 +2411,8 @@ export const B2_VOCAB = [
 		en: "facial makeup (opera)",
 		l: 17,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 8,
 	},
 	{
 		h: "梁祝",
@@ -2079,6 +2422,8 @@ export const B2_VOCAB = [
 		en: "Butterfly Lovers",
 		l: 17,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 19,
 	},
 	{
 		h: "聊",
@@ -2097,6 +2442,8 @@ export const B2_VOCAB = [
 		en: "to chat",
 		l: 13,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 9,
 	},
 	{
 		h: "了解",
@@ -2106,6 +2453,8 @@ export const B2_VOCAB = [
 		en: "to understand; to know about",
 		l: 20,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 14,
 	},
 	{
 		h: "林黛玉",
@@ -2115,6 +2464,8 @@ export const B2_VOCAB = [
 		en: "Lin Daiyu (protagonist)",
 		l: 17,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 21,
 	},
 	{
 		h: "流利",
@@ -2124,6 +2475,8 @@ export const B2_VOCAB = [
 		en: "fluent",
 		l: 11,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 13,
 	},
 	{
 		h: "留学",
@@ -2142,6 +2495,8 @@ export const B2_VOCAB = [
 		en: "international student",
 		l: 14,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 3,
 	},
 	{
 		h: "旅游",
@@ -2151,6 +2506,8 @@ export const B2_VOCAB = [
 		en: "to travel; to tour",
 		l: 18,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 4,
 	},
 	{
 		h: "麻烦",
@@ -2160,6 +2517,8 @@ export const B2_VOCAB = [
 		en: "troublesome / to trouble",
 		l: 19,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 12,
 	},
 	{
 		h: "马马虎虎",
@@ -2178,6 +2537,8 @@ export const B2_VOCAB = [
 		en: "right away",
 		l: 15,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 21,
 	},
 	{
 		h: "毛衣",
@@ -2187,6 +2548,8 @@ export const B2_VOCAB = [
 		en: "sweater",
 		l: 11,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 9,
 	},
 	{
 		h: "贸易",
@@ -2196,6 +2559,8 @@ export const B2_VOCAB = [
 		en: "trade",
 		l: 20,
 		tags: ["npcr", "hsk5"],
+		sec: 2,
+		ord: 7,
 	},
 	{
 		h: "帽子",
@@ -2205,6 +2570,8 @@ export const B2_VOCAB = [
 		en: "hat",
 		l: 13,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 15,
 	},
 	{
 		h: "美",
@@ -2214,6 +2581,8 @@ export const B2_VOCAB = [
 		en: "beautiful",
 		l: 11,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 6,
 	},
 	{
 		h: "美术",
@@ -2259,6 +2628,8 @@ export const B2_VOCAB = [
 		en: "cotton",
 		l: 14,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 15,
 	},
 	{
 		h: "面包",
@@ -2277,6 +2648,8 @@ export const B2_VOCAB = [
 		en: "mask",
 		l: 17,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 7,
 	},
 	{
 		h: "名不虚传",
@@ -2286,6 +2659,8 @@ export const B2_VOCAB = [
 		en: "to live up to one's reputation",
 		l: 18,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 11,
 	},
 	{
 		h: "名片",
@@ -2295,6 +2670,8 @@ export const B2_VOCAB = [
 		en: "business card",
 		l: 19,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 21,
 	},
 	{
 		h: "名曲",
@@ -2304,6 +2681,8 @@ export const B2_VOCAB = [
 		en: "famous piece of music",
 		l: 17,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 18,
 	},
 	{
 		h: "明信片",
@@ -2313,6 +2692,8 @@ export const B2_VOCAB = [
 		en: "postcard",
 		l: 11,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 13,
 	},
 	{
 		h: "墨",
@@ -2322,6 +2703,8 @@ export const B2_VOCAB = [
 		en: "ink (Chinese)",
 		l: 15,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 7,
 	},
 	{
 		h: "拿",
@@ -2331,6 +2714,8 @@ export const B2_VOCAB = [
 		en: "to take; to hold",
 		l: 12,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 3,
 	},
 	{
 		h: "那",
@@ -2340,6 +2725,8 @@ export const B2_VOCAB = [
 		en: "well then...",
 		l: 16,
 		tags: ["npcr", "hsk1"],
+		sec: 1,
+		ord: 18,
 	},
 	{
 		h: "那么",
@@ -2349,6 +2736,8 @@ export const B2_VOCAB = [
 		en: "so; that (degree)",
 		l: 15,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 18,
 	},
 	{
 		h: "那儿",
@@ -2367,6 +2756,8 @@ export const B2_VOCAB = [
 		en: "those",
 		l: 15,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 9,
 	},
 	{
 		h: "南",
@@ -2385,6 +2776,8 @@ export const B2_VOCAB = [
 		en: "the South",
 		l: 18,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 14,
 	},
 	{
 		h: "难",
@@ -2403,6 +2796,8 @@ export const B2_VOCAB = [
 		en: "bird",
 		l: 15,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 5,
 	},
 	{
 		h: "牛奶",
@@ -2421,6 +2816,8 @@ export const B2_VOCAB = [
 		en: "countryside",
 		l: 16,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 16,
 	},
 	{
 		h: "哦",
@@ -2430,6 +2827,8 @@ export const B2_VOCAB = [
 		en: "oh; I see",
 		l: 11,
 		tags: ["npcr", "hsk6"],
+		sec: 1,
+		ord: 15,
 	},
 	{
 		h: "爬",
@@ -2439,6 +2838,8 @@ export const B2_VOCAB = [
 		en: "to climb",
 		l: 18,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 1,
 	},
 	{
 		h: "拍",
@@ -2475,6 +2876,8 @@ export const B2_VOCAB = [
 		en: "to queue",
 		l: 11,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 2,
 	},
 	{
 		h: "牌",
@@ -2493,6 +2896,8 @@ export const B2_VOCAB = [
 		en: "local police station",
 		l: 19,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 14,
 	},
 	{
 		h: "胖",
@@ -2502,6 +2907,8 @@ export const B2_VOCAB = [
 		en: "fat; plump",
 		l: 16,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 2,
 	},
 	{
 		h: "跑",
@@ -2511,6 +2918,8 @@ export const B2_VOCAB = [
 		en: "to run",
 		l: 12,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 2,
 	},
 	{
 		h: "跑步",
@@ -2529,6 +2938,8 @@ export const B2_VOCAB = [
 		en: "to accompany",
 		l: 17,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 13,
 	},
 	{
 		h: "匹",
@@ -2538,6 +2949,8 @@ export const B2_VOCAB = [
 		en: "(measure for horses)",
 		l: 15,
 		tags: ["npcr", "hsk5"],
+		sec: 2,
+		ord: 8,
 	},
 	{
 		h: "瓶",
@@ -2556,6 +2969,8 @@ export const B2_VOCAB = [
 		en: "bottle",
 		l: 20,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 16,
 	},
 	{
 		h: "破财免灾",
@@ -2565,6 +2980,8 @@ export const B2_VOCAB = [
 		en: "losing money wards off disaster",
 		l: 19,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 10,
 	},
 	{
 		h: "浦东",
@@ -2574,6 +2991,8 @@ export const B2_VOCAB = [
 		en: "Pudong (Shanghai)",
 		l: 11,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 16,
 	},
 	{
 		h: "普通",
@@ -2592,6 +3011,8 @@ export const B2_VOCAB = [
 		en: "Mandarin (standard Chinese)",
 		l: 11,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 12,
 	},
 	{
 		h: "齐白石",
@@ -2601,6 +3022,8 @@ export const B2_VOCAB = [
 		en: "Qi Baishi (painter)",
 		l: 15,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 18,
 	},
 	{
 		h: "骑",
@@ -2619,6 +3042,8 @@ export const B2_VOCAB = [
 		en: "to ride a bike",
 		l: 19,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 12,
 	},
 	{
 		h: "旗袍",
@@ -2628,6 +3053,8 @@ export const B2_VOCAB = [
 		en: "qipao (Chinese dress)",
 		l: 14,
 		tags: ["npcr", "hsk6"],
+		sec: 2,
+		ord: 3,
 	},
 	{
 		h: "起",
@@ -2646,6 +3073,8 @@ export const B2_VOCAB = [
 		en: "(upward movement) up",
 		l: 18,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 18,
 	},
 	{
 		h: "气温",
@@ -2655,6 +3084,8 @@ export const B2_VOCAB = [
 		en: "temperature",
 		l: 18,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 14,
 	},
 	{
 		h: "签",
@@ -2664,6 +3095,8 @@ export const B2_VOCAB = [
 		en: "to sign",
 		l: 19,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 23,
 	},
 	{
 		h: "签证",
@@ -2673,6 +3106,8 @@ export const B2_VOCAB = [
 		en: "visa",
 		l: 13,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 7,
 	},
 	{
 		h: "签字",
@@ -2682,6 +3117,8 @@ export const B2_VOCAB = [
 		en: "to sign one's name",
 		l: 11,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 20,
 	},
 	{
 		h: "谦虚",
@@ -2691,6 +3128,8 @@ export const B2_VOCAB = [
 		en: "modest",
 		l: 15,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 17,
 	},
 	{
 		h: "钱包",
@@ -2700,6 +3139,8 @@ export const B2_VOCAB = [
 		en: "wallet",
 		l: 19,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 8,
 	},
 	{
 		h: "浅",
@@ -2709,6 +3150,8 @@ export const B2_VOCAB = [
 		en: "light (color); shallow",
 		l: 14,
 		tags: ["npcr", "hsk5"],
+		sec: 2,
+		ord: 12,
 	},
 	{
 		h: "强",
@@ -2718,6 +3161,8 @@ export const B2_VOCAB = [
 		en: "strong; better",
 		l: 14,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 25,
 	},
 	{
 		h: "敲",
@@ -2727,6 +3172,8 @@ export const B2_VOCAB = [
 		en: "to knock",
 		l: 12,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 15,
 	},
 	{
 		h: "巧",
@@ -2736,6 +3183,8 @@ export const B2_VOCAB = [
 		en: "coincidental",
 		l: 20,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 3,
 	},
 	{
 		h: "清楚",
@@ -2745,6 +3194,8 @@ export const B2_VOCAB = [
 		en: "clear",
 		l: 12,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 9,
 	},
 	{
 		h: "球",
@@ -2763,6 +3214,8 @@ export const B2_VOCAB = [
 		en: "(soccer) fan",
 		l: 16,
 		tags: ["npcr", "hsk5"],
+		sec: 2,
+		ord: 3,
 	},
 	{
 		h: "曲子",
@@ -2790,6 +3243,8 @@ export const B2_VOCAB = [
 		en: "lively; bustling",
 		l: 14,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 12,
 	},
 	{
 		h: "人民",
@@ -2808,6 +3263,8 @@ export const B2_VOCAB = [
 		en: "renminbi (RMB)",
 		l: 11,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 4,
 	},
 	{
 		h: "容易",
@@ -2826,6 +3283,8 @@ export const B2_VOCAB = [
 		en: "if",
 		l: 19,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 22,
 	},
 	{
 		h: "赛",
@@ -2862,6 +3321,8 @@ export const B2_VOCAB = [
 		en: "mountain top",
 		l: 18,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 2,
 	},
 	{
 		h: "山洞",
@@ -2871,6 +3332,8 @@ export const B2_VOCAB = [
 		en: "cave; tunnel",
 		l: 18,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 9,
 	},
 	{
 		h: "伤",
@@ -2880,6 +3343,8 @@ export const B2_VOCAB = [
 		en: "to injure",
 		l: 19,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 4,
 	},
 	{
 		h: "商场",
@@ -2889,6 +3354,8 @@ export const B2_VOCAB = [
 		en: "shopping mall",
 		l: 11,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 7,
 	},
 	{
 		h: "商量",
@@ -2898,6 +3365,8 @@ export const B2_VOCAB = [
 		en: "to discuss; to consult",
 		l: 14,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 8,
 	},
 	{
 		h: "上半场",
@@ -2907,6 +3376,8 @@ export const B2_VOCAB = [
 		en: "first half (of a game)",
 		l: 16,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 10,
 	},
 	{
 		h: "上海话",
@@ -2916,6 +3387,8 @@ export const B2_VOCAB = [
 		en: "Shanghainese",
 		l: 11,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 20,
 	},
 	{
 		h: "身份证",
@@ -2925,6 +3398,8 @@ export const B2_VOCAB = [
 		en: "ID card",
 		l: 13,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 4,
 	},
 	{
 		h: "深",
@@ -2934,6 +3409,8 @@ export const B2_VOCAB = [
 		en: "dark (color); deep",
 		l: 14,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 11,
 	},
 	{
 		h: "生活",
@@ -2943,6 +3420,8 @@ export const B2_VOCAB = [
 		en: "life",
 		l: 20,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 18,
 	},
 	{
 		h: "剩",
@@ -2952,6 +3431,8 @@ export const B2_VOCAB = [
 		en: "to remain; to be left",
 		l: 16,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 13,
 	},
 	{
 		h: "实用",
@@ -2970,6 +3451,8 @@ export const B2_VOCAB = [
 		en: "Expo Park",
 		l: 11,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 17,
 	},
 	{
 		h: "市",
@@ -2979,6 +3462,8 @@ export const B2_VOCAB = [
 		en: "city; municipal",
 		l: 16,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 5,
 	},
 	{
 		h: "式样",
@@ -2988,6 +3473,8 @@ export const B2_VOCAB = [
 		en: "style",
 		l: 14,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 7,
 	},
 	{
 		h: "收",
@@ -2997,6 +3484,8 @@ export const B2_VOCAB = [
 		en: "to receive",
 		l: 12,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 19,
 	},
 	{
 		h: "收件人",
@@ -3006,6 +3495,8 @@ export const B2_VOCAB = [
 		en: "recipient",
 		l: 12,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 18,
 	},
 	{
 		h: "书法",
@@ -3015,6 +3506,8 @@ export const B2_VOCAB = [
 		en: "calligraphy",
 		l: 15,
 		tags: ["npcr", "hsk6"],
+		sec: 2,
+		ord: 14,
 	},
 	{
 		h: "数",
@@ -3024,6 +3517,8 @@ export const B2_VOCAB = [
 		en: "to count",
 		l: 11,
 		tags: ["npcr", "hsk6"],
+		sec: 1,
+		ord: 21,
 	},
 	{
 		h: "水平",
@@ -3033,6 +3528,8 @@ export const B2_VOCAB = [
 		en: "level; standard",
 		l: 16,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 18,
 	},
 	{
 		h: "顺利",
@@ -3042,6 +3539,8 @@ export const B2_VOCAB = [
 		en: "smooth; without a hitch",
 		l: 13,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 7,
 	},
 	{
 		h: "说不定",
@@ -3051,6 +3550,8 @@ export const B2_VOCAB = [
 		en: "perhaps; maybe",
 		l: 20,
 		tags: ["npcr", "hsk5"],
+		sec: 2,
+		ord: 20,
 	},
 	{
 		h: "司机",
@@ -3060,6 +3561,8 @@ export const B2_VOCAB = [
 		en: "driver",
 		l: 19,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 13,
 	},
 	{ h: "丝", p: "sī", pos: "S", es: "seda", en: "silk", l: 14, tags: ["npcr"] },
 	{
@@ -3070,6 +3573,8 @@ export const B2_VOCAB = [
 		en: "to die",
 		l: 17,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 15,
 	},
 	{
 		h: "虽然",
@@ -3079,6 +3584,8 @@ export const B2_VOCAB = [
 		en: "although",
 		l: 17,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 4,
 	},
 	{
 		h: "所以",
@@ -3088,6 +3595,8 @@ export const B2_VOCAB = [
 		en: "so; therefore",
 		l: 16,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 3,
 	},
 	{
 		h: "它",
@@ -3106,6 +3615,8 @@ export const B2_VOCAB = [
 		en: "they (things/animals)",
 		l: 15,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 4,
 	},
 	{
 		h: "太极拳",
@@ -3115,6 +3626,8 @@ export const B2_VOCAB = [
 		en: "tai chi",
 		l: 14,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 11,
 	},
 	{
 		h: "泰山",
@@ -3124,6 +3637,8 @@ export const B2_VOCAB = [
 		en: "Mount Tai",
 		l: 18,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 18,
 	},
 	{
 		h: "躺",
@@ -3133,6 +3648,8 @@ export const B2_VOCAB = [
 		en: "to lie down",
 		l: 19,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 5,
 	},
 	{
 		h: "趟",
@@ -3142,6 +3659,8 @@ export const B2_VOCAB = [
 		en: "(measure for trips)",
 		l: 13,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 5,
 	},
 	{
 		h: "套",
@@ -3151,6 +3670,8 @@ export const B2_VOCAB = [
 		en: "set; suit",
 		l: 12,
 		tags: ["npcr", "hsk5"],
+		sec: 2,
+		ord: 8,
 	},
 	{
 		h: "踢",
@@ -3169,6 +3690,8 @@ export const B2_VOCAB = [
 		en: "to improve; to raise",
 		l: 16,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 19,
 	},
 	{
 		h: "体重",
@@ -3178,6 +3701,8 @@ export const B2_VOCAB = [
 		en: "body weight",
 		l: 16,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 6,
 	},
 	{
 		h: "替",
@@ -3187,6 +3712,8 @@ export const B2_VOCAB = [
 		en: "on behalf of; for",
 		l: 12,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 10,
 	},
 	{
 		h: "填",
@@ -3196,6 +3723,8 @@ export const B2_VOCAB = [
 		en: "to fill in",
 		l: 12,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 16,
 	},
 	{
 		h: "停",
@@ -3205,6 +3734,8 @@ export const B2_VOCAB = [
 		en: "to stop; to park",
 		l: 13,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 13,
 	},
 	{
 		h: "停车场",
@@ -3214,6 +3745,8 @@ export const B2_VOCAB = [
 		en: "parking lot",
 		l: 13,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 14,
 	},
 	{
 		h: "通",
@@ -3232,6 +3765,8 @@ export const B2_VOCAB = [
 		en: "to agree",
 		l: 14,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 19,
 	},
 	{
 		h: "痛苦",
@@ -3241,6 +3776,8 @@ export const B2_VOCAB = [
 		en: "painful; miserable",
 		l: 17,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 14,
 	},
 	{
 		h: "偷",
@@ -3268,6 +3805,8 @@ export const B2_VOCAB = [
 		en: "to check in (luggage)",
 		l: 20,
 		tags: ["npcr", "hsk6"],
+		sec: 1,
+		ord: 7,
 	},
 	{
 		h: "脱",
@@ -3277,6 +3816,8 @@ export const B2_VOCAB = [
 		en: "to take off (clothes, shoes)",
 		l: 20,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 14,
 	},
 	{
 		h: "外滩",
@@ -3286,6 +3827,8 @@ export const B2_VOCAB = [
 		en: "the Bund (Shanghai)",
 		l: 11,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 19,
 	},
 	{
 		h: "外衣",
@@ -3295,6 +3838,8 @@ export const B2_VOCAB = [
 		en: "coat; outerwear",
 		l: 20,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 12,
 	},
 	{
 		h: "外援",
@@ -3304,6 +3849,8 @@ export const B2_VOCAB = [
 		en: "foreign player; outside help",
 		l: 16,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 15,
 	},
 	{
 		h: "弯",
@@ -3313,6 +3860,8 @@ export const B2_VOCAB = [
 		en: "to bend",
 		l: 19,
 		tags: ["npcr", "hsk5"],
+		sec: 2,
+		ord: 7,
 	},
 	{
 		h: "完",
@@ -3322,6 +3871,8 @@ export const B2_VOCAB = [
 		en: "to finish",
 		l: 12,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 20,
 	},
 	{
 		h: "玩儿",
@@ -3331,6 +3882,8 @@ export const B2_VOCAB = [
 		en: "to have fun; to play",
 		l: 11,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 7,
 	},
 	{
 		h: "玩笑",
@@ -3349,6 +3902,8 @@ export const B2_VOCAB = [
 		en: "evening party; gala",
 		l: 14,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 4,
 	},
 	{
 		h: "网络",
@@ -3358,6 +3913,8 @@ export const B2_VOCAB = [
 		en: "network; internet",
 		l: 13,
 		tags: ["npcr", "hsk6"],
+		sec: 2,
+		ord: 20,
 	},
 	{
 		h: "往",
@@ -3367,6 +3924,8 @@ export const B2_VOCAB = [
 		en: "towards",
 		l: 15,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 12,
 	},
 	{
 		h: "忘",
@@ -3376,6 +3935,8 @@ export const B2_VOCAB = [
 		en: "to forget",
 		l: 15,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 5,
 	},
 	{
 		h: "微信",
@@ -3385,6 +3946,8 @@ export const B2_VOCAB = [
 		en: "WeChat",
 		l: 20,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 19,
 	},
 	{
 		h: "卫生间",
@@ -3403,6 +3966,8 @@ export const B2_VOCAB = [
 		en: "(polite measure for people)",
 		l: 12,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 12,
 	},
 	{
 		h: "文化",
@@ -3421,6 +3986,8 @@ export const B2_VOCAB = [
 		en: "boring; bored",
 		l: 13,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 24,
 	},
 	{
 		h: "无线",
@@ -3439,6 +4006,8 @@ export const B2_VOCAB = [
 		en: "Wi-Fi",
 		l: 13,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 18,
 	},
 	{
 		h: "西安",
@@ -3448,6 +4017,8 @@ export const B2_VOCAB = [
 		en: "Xi'an",
 		l: 11,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 22,
 	},
 	{
 		h: "希望",
@@ -3457,6 +4028,8 @@ export const B2_VOCAB = [
 		en: "to hope / hope",
 		l: 20,
 		tags: ["npcr", "hsk2"],
+		sec: 2,
+		ord: 12,
 	},
 	{
 		h: "习惯",
@@ -3466,6 +4039,8 @@ export const B2_VOCAB = [
 		en: "to get used to / habit",
 		l: 20,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 17,
 	},
 	{
 		h: "虾",
@@ -3475,6 +4050,8 @@ export const B2_VOCAB = [
 		en: "shrimp",
 		l: 15,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 13,
 	},
 	{
 		h: "下半场",
@@ -3484,6 +4061,8 @@ export const B2_VOCAB = [
 		en: "second half (of a game)",
 		l: 16,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 12,
 	},
 	{
 		h: "下边",
@@ -3502,6 +4081,8 @@ export const B2_VOCAB = [
 		en: "to finish class",
 		l: 16,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 17,
 	},
 	{
 		h: "箱子",
@@ -3511,6 +4092,8 @@ export const B2_VOCAB = [
 		en: "suitcase; box",
 		l: 13,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 6,
 	},
 	{
 		h: "像",
@@ -3529,6 +4112,8 @@ export const B2_VOCAB = [
 		en: "news",
 		l: 19,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 13,
 	},
 	{
 		h: "小吃",
@@ -3538,6 +4123,8 @@ export const B2_VOCAB = [
 		en: "snack; local delicacy",
 		l: 11,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 12,
 	},
 	{
 		h: "小说",
@@ -3547,6 +4134,8 @@ export const B2_VOCAB = [
 		en: "novel",
 		l: 17,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 7,
 	},
 	{
 		h: "小提琴",
@@ -3556,6 +4145,8 @@ export const B2_VOCAB = [
 		en: "violin",
 		l: 17,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 15,
 	},
 	{
 		h: "小偷儿",
@@ -3565,6 +4156,8 @@ export const B2_VOCAB = [
 		en: "thief",
 		l: 19,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 6,
 	},
 	{
 		h: "小燕子",
@@ -3574,6 +4167,8 @@ export const B2_VOCAB = [
 		en: "Xiaoyanzi (little swallow)",
 		l: 20,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 23,
 	},
 	{
 		h: "笑",
@@ -3583,6 +4178,8 @@ export const B2_VOCAB = [
 		en: "to laugh; to smile",
 		l: 19,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 14,
 	},
 	{
 		h: "鞋",
@@ -3601,6 +4198,8 @@ export const B2_VOCAB = [
 		en: "shoes",
 		l: 20,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 13,
 	},
 	{
 		h: "写作",
@@ -3610,6 +4209,8 @@ export const B2_VOCAB = [
 		en: "to write; writing",
 		l: 14,
 		tags: ["npcr", "hsk6"],
+		sec: 1,
+		ord: 21,
 	},
 	{
 		h: "辛苦",
@@ -3619,6 +4220,8 @@ export const B2_VOCAB = [
 		en: "hard; laborious",
 		l: 12,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 19,
 	},
 	{
 		h: "欣赏",
@@ -3628,6 +4231,8 @@ export const B2_VOCAB = [
 		en: "to admire; to appreciate",
 		l: 18,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 13,
 	},
 	{
 		h: "新华剧院",
@@ -3637,6 +4242,8 @@ export const B2_VOCAB = [
 		en: "Xinhua Theater",
 		l: 17,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 17,
 	},
 	{
 		h: "新实用汉语课本",
@@ -3646,6 +4253,8 @@ export const B2_VOCAB = [
 		en: "New Practical Chinese Reader",
 		l: 12,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 20,
 	},
 	{
 		h: "信",
@@ -3664,6 +4273,8 @@ export const B2_VOCAB = [
 		en: "luggage",
 		l: 20,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 4,
 	},
 	{
 		h: "行李箱",
@@ -3673,6 +4284,8 @@ export const B2_VOCAB = [
 		en: "suitcase",
 		l: 20,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 6,
 	},
 	{
 		h: "兴趣",
@@ -3691,6 +4304,8 @@ export const B2_VOCAB = [
 		en: "full name",
 		l: 12,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 17,
 	},
 	{
 		h: "需要",
@@ -3700,6 +4315,8 @@ export const B2_VOCAB = [
 		en: "to need",
 		l: 14,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 2,
 	},
 	{
 		h: "徐悲鸿",
@@ -3709,6 +4326,8 @@ export const B2_VOCAB = [
 		en: "Xu Beihong (painter)",
 		l: 15,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 17,
 	},
 	{
 		h: "选",
@@ -3718,6 +4337,8 @@ export const B2_VOCAB = [
 		en: "to choose",
 		l: 14,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 9,
 	},
 	{
 		h: "学生证",
@@ -3727,6 +4348,8 @@ export const B2_VOCAB = [
 		en: "student ID",
 		l: 13,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 13,
 	},
 	{
 		h: "颜色",
@@ -3736,6 +4359,8 @@ export const B2_VOCAB = [
 		en: "color",
 		l: 14,
 		tags: ["npcr", "hsk2"],
+		sec: 2,
+		ord: 10,
 	},
 	{ h: "眼", p: "yǎn", pos: "S", es: "ojo", en: "eye", l: 15, tags: ["npcr"] },
 	{
@@ -3755,6 +4380,8 @@ export const B2_VOCAB = [
 		en: "to perform; performance",
 		l: 17,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 9,
 	},
 	{
 		h: "演员",
@@ -3764,6 +4391,8 @@ export const B2_VOCAB = [
 		en: "actor; actress",
 		l: 17,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 2,
 	},
 	{
 		h: "要",
@@ -3773,6 +4402,8 @@ export const B2_VOCAB = [
 		en: "to be about to",
 		l: 18,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 1,
 	},
 	{
 		h: "业务",
@@ -3782,6 +4413,8 @@ export const B2_VOCAB = [
 		en: "business; professional work",
 		l: 20,
 		tags: ["npcr", "hsk5"],
+		sec: 2,
+		ord: 16,
 	},
 	{
 		h: "夜景",
@@ -3791,6 +4424,8 @@ export const B2_VOCAB = [
 		en: "night view",
 		l: 11,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 5,
 	},
 	{
 		h: "医药",
@@ -3800,6 +4435,8 @@ export const B2_VOCAB = [
 		en: "medicine (medical)",
 		l: 19,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 19,
 	},
 	{
 		h: "一定",
@@ -3809,6 +4446,8 @@ export const B2_VOCAB = [
 		en: "certainly; surely",
 		l: 12,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 4,
 	},
 	{
 		h: "一样",
@@ -3818,6 +4457,8 @@ export const B2_VOCAB = [
 		en: "same",
 		l: 15,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 6,
 	},
 	{
 		h: "已经",
@@ -3827,6 +4468,8 @@ export const B2_VOCAB = [
 		en: "already",
 		l: 15,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 9,
 	},
 	{
 		h: "以后",
@@ -3836,6 +4479,8 @@ export const B2_VOCAB = [
 		en: "after; later",
 		l: 12,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 5,
 	},
 	{
 		h: "以为",
@@ -3845,6 +4490,8 @@ export const B2_VOCAB = [
 		en: "to (mistakenly) think",
 		l: 12,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 18,
 	},
 	{
 		h: "椅子",
@@ -3854,6 +4501,8 @@ export const B2_VOCAB = [
 		en: "chair",
 		l: 19,
 		tags: ["npcr", "hsk1"],
+		sec: 2,
+		ord: 3,
 	},
 	{
 		h: "一般",
@@ -3863,6 +4512,8 @@ export const B2_VOCAB = [
 		en: "generally; ordinary",
 		l: 12,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 12,
 	},
 	{
 		h: "一些",
@@ -3872,6 +4523,8 @@ export const B2_VOCAB = [
 		en: "some",
 		l: 17,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 3,
 	},
 	{
 		h: "因祸得福",
@@ -3881,6 +4534,8 @@ export const B2_VOCAB = [
 		en: "a blessing in disguise",
 		l: 19,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 18,
 	},
 	{
 		h: "因为",
@@ -3890,6 +4545,8 @@ export const B2_VOCAB = [
 		en: "because",
 		l: 16,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 5,
 	},
 	{
 		h: "阴",
@@ -3908,6 +4565,8 @@ export const B2_VOCAB = [
 		en: "cloudy day",
 		l: 18,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 12,
 	},
 	{
 		h: "音乐",
@@ -3917,6 +4576,9 @@ export const B2_VOCAB = [
 		en: "music",
 		l: 12,
 		tags: ["npcr", "hsk3"],
+		sec: 4,
+		ord: 1,
+		extra: true,
 	},
 	{
 		h: "音乐会",
@@ -3944,6 +4606,8 @@ export const B2_VOCAB = [
 		en: "pound sterling",
 		l: 11,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 3,
 	},
 	{
 		h: "营业",
@@ -3962,6 +4626,8 @@ export const B2_VOCAB = [
 		en: "clerk; shop assistant",
 		l: 11,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 16,
 	},
 	{
 		h: "赢",
@@ -3971,6 +4637,8 @@ export const B2_VOCAB = [
 		en: "to win",
 		l: 16,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 20,
 	},
 	{
 		h: "优美",
@@ -3980,6 +4648,8 @@ export const B2_VOCAB = [
 		en: "graceful; exquisite",
 		l: 18,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 9,
 	},
 	{
 		h: "邮费",
@@ -3989,6 +4659,8 @@ export const B2_VOCAB = [
 		en: "postage",
 		l: 12,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 15,
 	},
 	{
 		h: "油",
@@ -4016,6 +4688,8 @@ export const B2_VOCAB = [
 		en: "oil painting",
 		l: 15,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 12,
 	},
 	{
 		h: "游",
@@ -4034,6 +4708,8 @@ export const B2_VOCAB = [
 		en: "swimming pool",
 		l: 16,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 15,
 	},
 	{
 		h: "有的",
@@ -4043,6 +4719,8 @@ export const B2_VOCAB = [
 		en: "some (of them)",
 		l: 16,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 13,
 	},
 	{
 		h: "又",
@@ -4052,6 +4730,8 @@ export const B2_VOCAB = [
 		en: "again; also",
 		l: 11,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 6,
 	},
 	{
 		h: "预订",
@@ -4061,6 +4741,8 @@ export const B2_VOCAB = [
 		en: "to book; to reserve",
 		l: 18,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 15,
 	},
 	{
 		h: "遇",
@@ -4070,6 +4752,8 @@ export const B2_VOCAB = [
 		en: "to encounter",
 		l: 13,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 11,
 	},
 	{
 		h: "原来",
@@ -4079,6 +4763,8 @@ export const B2_VOCAB = [
 		en: "originally; so it turns out",
 		l: 19,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 17,
 	},
 	{
 		h: "远",
@@ -4097,6 +4783,8 @@ export const B2_VOCAB = [
 		en: "right in front of you",
 		l: 15,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 22,
 	},
 	{
 		h: "愿意",
@@ -4106,6 +4794,8 @@ export const B2_VOCAB = [
 		en: "to be willing",
 		l: 17,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 12,
 	},
 	{
 		h: "越来越",
@@ -4115,6 +4805,8 @@ export const B2_VOCAB = [
 		en: "more and more",
 		l: 20,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 10,
 	},
 	{
 		h: "运",
@@ -4133,6 +4825,8 @@ export const B2_VOCAB = [
 		en: "sport / to exercise",
 		l: 16,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 8,
 	},
 	{
 		h: "运气",
@@ -4142,6 +4836,8 @@ export const B2_VOCAB = [
 		en: "luck",
 		l: 19,
 		tags: ["npcr", "hsk5"],
+		sec: 2,
+		ord: 16,
 	},
 	{
 		h: "杂技",
@@ -4151,6 +4847,8 @@ export const B2_VOCAB = [
 		en: "acrobatics",
 		l: 17,
 		tags: ["npcr", "hsk6"],
+		sec: 1,
+		ord: 3,
 	},
 	{
 		h: "灾",
@@ -4169,6 +4867,8 @@ export const B2_VOCAB = [
 		en: "besides",
 		l: 14,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 16,
 	},
 	{
 		h: "在",
@@ -4178,6 +4878,8 @@ export const B2_VOCAB = [
 		en: "(progressive marker)",
 		l: 16,
 		tags: ["npcr", "hsk1"],
+		sec: 2,
+		ord: 1,
 	},
 	{
 		h: "糟",
@@ -4196,6 +4898,8 @@ export const B2_VOCAB = [
 		en: "terrible; too bad",
 		l: 19,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 23,
 	},
 	{
 		h: "早日",
@@ -4205,6 +4909,8 @@ export const B2_VOCAB = [
 		en: "soon; at an early date",
 		l: 19,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 19,
 	},
 	{
 		h: "增加",
@@ -4214,6 +4920,8 @@ export const B2_VOCAB = [
 		en: "to increase",
 		l: 16,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 7,
 	},
 	{
 		h: "站",
@@ -4223,6 +4931,8 @@ export const B2_VOCAB = [
 		en: "to stand",
 		l: 18,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 17,
 	},
 	{
 		h: "站",
@@ -4232,6 +4942,8 @@ export const B2_VOCAB = [
 		en: "station; stop",
 		l: 19,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 11,
 	},
 	{
 		h: "找",
@@ -4250,6 +4962,8 @@ export const B2_VOCAB = [
 		en: "so; this (degree)",
 		l: 11,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 11,
 	},
 	{
 		h: "这些",
@@ -4259,6 +4973,8 @@ export const B2_VOCAB = [
 		en: "these",
 		l: 15,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 1,
 	},
 	{
 		h: "这样",
@@ -4268,6 +4984,8 @@ export const B2_VOCAB = [
 		en: "this way",
 		l: 14,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 13,
 	},
 	{
 		h: "着",
@@ -4277,6 +4995,8 @@ export const B2_VOCAB = [
 		en: "(continuous-state particle)",
 		l: 19,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 6,
 	},
 	{
 		h: "真丝",
@@ -4286,6 +5006,8 @@ export const B2_VOCAB = [
 		en: "pure silk",
 		l: 14,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 16,
 	},
 	{
 		h: "正",
@@ -4304,6 +5026,8 @@ export const B2_VOCAB = [
 		en: "just right; as it happens",
 		l: 18,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 12,
 	},
 	{
 		h: "正在",
@@ -4313,6 +5037,8 @@ export const B2_VOCAB = [
 		en: "in the process of",
 		l: 16,
 		tags: ["npcr", "hsk2"],
+		sec: 2,
+		ord: 4,
 	},
 	{
 		h: "证",
@@ -4331,6 +5057,8 @@ export const B2_VOCAB = [
 		en: "ID documents",
 		l: 19,
 		tags: ["npcr", "hsk5"],
+		sec: 2,
+		ord: 11,
 	},
 	{
 		h: "中国画",
@@ -4340,6 +5068,8 @@ export const B2_VOCAB = [
 		en: "traditional Chinese painting",
 		l: 15,
 		tags: ["npcr"],
+		sec: 1,
+		ord: 4,
 	},
 	{
 		h: "中国通",
@@ -4349,6 +5079,8 @@ export const B2_VOCAB = [
 		en: "China expert",
 		l: 20,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 22,
 	},
 	{
 		h: "终于",
@@ -4358,6 +5090,8 @@ export const B2_VOCAB = [
 		en: "finally",
 		l: 18,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 20,
 	},
 	{
 		h: "重",
@@ -4376,6 +5110,8 @@ export const B2_VOCAB = [
 		en: "leading role",
 		l: 17,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 1,
 	},
 	{
 		h: "主要",
@@ -4385,6 +5121,8 @@ export const B2_VOCAB = [
 		en: "main",
 		l: 15,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 6,
 	},
 	{
 		h: "注意",
@@ -4394,6 +5132,8 @@ export const B2_VOCAB = [
 		en: "to pay attention to",
 		l: 19,
 		tags: ["npcr", "hsk3"],
+		sec: 1,
+		ord: 16,
 	},
 	{
 		h: "著名",
@@ -4403,6 +5143,8 @@ export const B2_VOCAB = [
 		en: "famous",
 		l: 17,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 5,
 	},
 	{
 		h: "抓",
@@ -4412,6 +5154,8 @@ export const B2_VOCAB = [
 		en: "to catch; to arrest",
 		l: 19,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 15,
 	},
 	{
 		h: "专门",
@@ -4421,6 +5165,8 @@ export const B2_VOCAB = [
 		en: "specially",
 		l: 12,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 1,
 	},
 	{
 		h: "装",
@@ -4430,6 +5176,8 @@ export const B2_VOCAB = [
 		en: "to install; to load",
 		l: 13,
 		tags: ["npcr", "hsk5"],
+		sec: 1,
+		ord: 16,
 	},
 	{
 		h: "撞",
@@ -4439,6 +5187,8 @@ export const B2_VOCAB = [
 		en: "to bump into; to hit",
 		l: 19,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 3,
 	},
 	{
 		h: "桌子",
@@ -4448,6 +5198,8 @@ export const B2_VOCAB = [
 		en: "table; desk",
 		l: 19,
 		tags: ["npcr", "hsk1"],
+		sec: 2,
+		ord: 4,
 	},
 	{
 		h: "自己",
@@ -4457,6 +5209,8 @@ export const B2_VOCAB = [
 		en: "oneself",
 		l: 12,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 16,
 	},
 	{
 		h: "字",
@@ -4475,6 +5229,8 @@ export const B2_VOCAB = [
 		en: "always",
 		l: 13,
 		tags: ["npcr"],
+		sec: 2,
+		ord: 21,
 	},
 	{
 		h: "总是",
@@ -4484,6 +5240,8 @@ export const B2_VOCAB = [
 		en: "always",
 		l: 13,
 		tags: ["npcr", "hsk3"],
+		sec: 2,
+		ord: 10,
 	},
 	{
 		h: "走",
@@ -4493,6 +5251,8 @@ export const B2_VOCAB = [
 		en: "to walk; to leave",
 		l: 14,
 		tags: ["npcr", "hsk2"],
+		sec: 1,
+		ord: 26,
 	},
 	{
 		h: "租",
@@ -4502,6 +5262,8 @@ export const B2_VOCAB = [
 		en: "to rent",
 		l: 14,
 		tags: ["npcr", "hsk4"],
+		sec: 2,
+		ord: 6,
 	},
 	{
 		h: "足球",
@@ -4520,6 +5282,8 @@ export const B2_VOCAB = [
 		en: "to organize / organization",
 		l: 17,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 4,
 	},
 	{
 		h: "最后",
@@ -4529,6 +5293,8 @@ export const B2_VOCAB = [
 		en: "finally; last",
 		l: 12,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 21,
 	},
 	{
 		h: "左右",
@@ -4538,6 +5304,8 @@ export const B2_VOCAB = [
 		en: "around; approximately",
 		l: 12,
 		tags: ["npcr", "hsk6"],
+		sec: 1,
+		ord: 11,
 	},
 	{
 		h: "座位",
@@ -4547,5 +5315,7 @@ export const B2_VOCAB = [
 		en: "seat",
 		l: 20,
 		tags: ["npcr", "hsk4"],
+		sec: 1,
+		ord: 4,
 	},
 ];

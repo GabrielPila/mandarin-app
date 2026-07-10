@@ -8,6 +8,8 @@ export const B2_SUP = [
 		en: "hobby; to be keen on",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 14,
 	},
 	{
 		h: "安检",
@@ -17,6 +19,8 @@ export const B2_SUP = [
 		en: "security check",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 3,
 	},
 	{
 		h: "澳门",
@@ -26,6 +30,8 @@ export const B2_SUP = [
 		en: "Macau",
 		l: 18,
 		sup: 1,
+		sec: 3,
+		ord: 1,
 	},
 	{
 		h: "被子",
@@ -35,6 +41,8 @@ export const B2_SUP = [
 		en: "quilt; blanket",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 15,
 	},
 	{
 		h: "变成",
@@ -44,6 +52,8 @@ export const B2_SUP = [
 		en: "to turn into",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 13,
 	},
 	{
 		h: "变化",
@@ -53,6 +63,8 @@ export const B2_SUP = [
 		en: "to change / change",
 		l: 11,
 		sup: 1,
+		sec: 3,
+		ord: 9,
 	},
 	{
 		h: "不过",
@@ -62,6 +74,8 @@ export const B2_SUP = [
 		en: "however",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 7,
 	},
 	{
 		h: "不怎么样",
@@ -71,6 +85,8 @@ export const B2_SUP = [
 		en: "not that great",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 9,
 	},
 	{
 		h: "猜",
@@ -80,6 +96,8 @@ export const B2_SUP = [
 		en: "to guess",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 12,
 	},
 	{
 		h: "曹雪芹",
@@ -89,6 +107,8 @@ export const B2_SUP = [
 		en: "Cao Xueqin (author)",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 5,
 	},
 	{
 		h: "吵",
@@ -98,6 +118,8 @@ export const B2_SUP = [
 		en: "to make noise",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 19,
 	},
 	{
 		h: "车祸",
@@ -107,6 +129,8 @@ export const B2_SUP = [
 		en: "traffic accident",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 5,
 	},
 	{
 		h: "成人",
@@ -116,6 +140,8 @@ export const B2_SUP = [
 		en: "adult",
 		l: 11,
 		sup: 1,
+		sec: 3,
+		ord: 10,
 	},
 	{
 		h: "城市",
@@ -125,6 +151,8 @@ export const B2_SUP = [
 		en: "city",
 		l: 11,
 		sup: 1,
+		sec: 3,
+		ord: 15,
 	},
 	{
 		h: "出口",
@@ -134,6 +162,8 @@ export const B2_SUP = [
 		en: "exit",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 8,
 	},
 	{
 		h: "出租车",
@@ -143,6 +173,8 @@ export const B2_SUP = [
 		en: "taxi",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 18,
 	},
 	{
 		h: "传统文化",
@@ -152,6 +184,8 @@ export const B2_SUP = [
 		en: "traditional culture",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 13,
 	},
 	{
 		h: "窗帘",
@@ -161,6 +195,8 @@ export const B2_SUP = [
 		en: "curtain",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 16,
 	},
 	{
 		h: "闯红灯",
@@ -170,6 +206,8 @@ export const B2_SUP = [
 		en: "to run a red light",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 3,
 	},
 	{
 		h: "打扫",
@@ -179,6 +217,8 @@ export const B2_SUP = [
 		en: "to clean; to sweep",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 11,
 	},
 	{
 		h: "黛玉葬花",
@@ -188,6 +228,8 @@ export const B2_SUP = [
 		en: "Daiyu Buries Flowers (scene)",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 6,
 	},
 	{
 		h: "导演",
@@ -197,6 +239,8 @@ export const B2_SUP = [
 		en: "director (film/theater)",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 23,
 	},
 	{
 		h: "倒",
@@ -206,6 +250,8 @@ export const B2_SUP = [
 		en: "to fall over",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 2,
 	},
 	{
 		h: "灯",
@@ -215,6 +261,8 @@ export const B2_SUP = [
 		en: "lamp; light",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 25,
 	},
 	{
 		h: "登机口",
@@ -224,8 +272,20 @@ export const B2_SUP = [
 		en: "boarding gate",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 4,
 	},
-	{ h: "低", p: "dī", pos: "Adj.", es: "bajo", en: "low", l: 18, sup: 1 },
+	{
+		h: "低",
+		p: "dī",
+		pos: "Adj.",
+		es: "bajo",
+		en: "low",
+		l: 18,
+		sup: 1,
+		sec: 3,
+		ord: 10,
+	},
 	{
 		h: "电视剧",
 		p: "diàn shì jù",
@@ -234,6 +294,8 @@ export const B2_SUP = [
 		en: "TV series",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 24,
 	},
 	{
 		h: "电子",
@@ -243,6 +305,8 @@ export const B2_SUP = [
 		en: "electronic",
 		l: 15,
 		sup: 1,
+		sec: 3,
+		ord: 21,
 	},
 	{
 		h: "电子游戏",
@@ -252,6 +316,8 @@ export const B2_SUP = [
 		en: "video game",
 		l: 15,
 		sup: 1,
+		sec: 3,
+		ord: 22,
 	},
 	{
 		h: "动漫",
@@ -261,6 +327,8 @@ export const B2_SUP = [
 		en: "anime; animation",
 		l: 15,
 		sup: 1,
+		sec: 3,
+		ord: 2,
 	},
 	{
 		h: "队长",
@@ -270,6 +338,8 @@ export const B2_SUP = [
 		en: "team captain",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 24,
 	},
 	{
 		h: "对……来说",
@@ -279,8 +349,20 @@ export const B2_SUP = [
 		en: "as for; for (someone)",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 34,
 	},
-	{ h: "儿童", p: "ér tóng", pos: "S", es: "niño", en: "child", l: 11, sup: 1 },
+	{
+		h: "儿童",
+		p: "ér tóng",
+		pos: "S",
+		es: "niño",
+		en: "child",
+		l: 11,
+		sup: 1,
+		sec: 3,
+		ord: 11,
+	},
 	{
 		h: "发票",
 		p: "fā piào",
@@ -289,6 +371,8 @@ export const B2_SUP = [
 		en: "receipt; invoice",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 17,
 	},
 	{
 		h: "发烧",
@@ -307,8 +391,20 @@ export const B2_SUP = [
 		en: "direction",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 21,
 	},
-	{ h: "飞", p: "fēi", pos: "V", es: "volar", en: "to fly", l: 17, sup: 1 },
+	{
+		h: "飞",
+		p: "fēi",
+		pos: "V",
+		es: "volar",
+		en: "to fly",
+		l: 17,
+		sup: 1,
+		sec: 3,
+		ord: 12,
+	},
 	{
 		h: "非洲",
 		p: "Fēi zhōu",
@@ -317,6 +413,8 @@ export const B2_SUP = [
 		en: "Africa",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 19,
 	},
 	{
 		h: "坟墓",
@@ -326,6 +424,8 @@ export const B2_SUP = [
 		en: "tomb; grave",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 13,
 	},
 	{
 		h: "封",
@@ -335,6 +435,8 @@ export const B2_SUP = [
 		en: "(measure for letters)",
 		l: 12,
 		sup: 1,
+		sec: 3,
+		ord: 2,
 	},
 	{
 		h: "改签",
@@ -344,6 +446,8 @@ export const B2_SUP = [
 		en: "to rebook",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 5,
 	},
 	{
 		h: "古代",
@@ -353,6 +457,8 @@ export const B2_SUP = [
 		en: "ancient times",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 16,
 	},
 	{
 		h: "故宫",
@@ -362,6 +468,8 @@ export const B2_SUP = [
 		en: "Forbidden City",
 		l: 18,
 		sup: 1,
+		sec: 3,
+		ord: 5,
 	},
 	{
 		h: "挂号信",
@@ -371,6 +479,8 @@ export const B2_SUP = [
 		en: "registered mail",
 		l: 12,
 		sup: 1,
+		sec: 3,
+		ord: 3,
 	},
 	{
 		h: "挂失",
@@ -380,8 +490,20 @@ export const B2_SUP = [
 		en: "to report a loss",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 8,
 	},
-	{ h: "关", p: "guān", pos: "V", es: "cerrar", en: "to close", l: 19, sup: 1 },
+	{
+		h: "关",
+		p: "guān",
+		pos: "V",
+		es: "cerrar",
+		en: "to close",
+		l: 19,
+		sup: 1,
+		sec: 3,
+		ord: 15,
+	},
 	{
 		h: "关门",
 		p: "guān mén",
@@ -390,6 +512,8 @@ export const B2_SUP = [
 		en: "to close (doors/business)",
 		l: 11,
 		sup: 1,
+		sec: 3,
+		ord: 13,
 	},
 	{
 		h: "逛",
@@ -399,6 +523,8 @@ export const B2_SUP = [
 		en: "to stroll; to go shopping",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 10,
 	},
 	{
 		h: "哈尔滨",
@@ -408,6 +534,8 @@ export const B2_SUP = [
 		en: "Harbin",
 		l: 15,
 		sup: 1,
+		sec: 3,
+		ord: 7,
 	},
 	{
 		h: "海关",
@@ -417,6 +545,8 @@ export const B2_SUP = [
 		en: "customs",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 6,
 	},
 	{
 		h: "害怕",
@@ -426,6 +556,8 @@ export const B2_SUP = [
 		en: "to be afraid",
 		l: 18,
 		sup: 1,
+		sec: 3,
+		ord: 15,
 	},
 	{
 		h: "韩元",
@@ -435,6 +567,8 @@ export const B2_SUP = [
 		en: "Korean won",
 		l: 11,
 		sup: 1,
+		sec: 3,
+		ord: 4,
 	},
 	{
 		h: "航空信",
@@ -444,6 +578,8 @@ export const B2_SUP = [
 		en: "airmail",
 		l: 12,
 		sup: 1,
+		sec: 3,
+		ord: 4,
 	},
 	{
 		h: "候车室",
@@ -453,6 +589,8 @@ export const B2_SUP = [
 		en: "waiting room (station)",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 1,
 	},
 	{
 		h: "蝴蝶",
@@ -462,6 +600,8 @@ export const B2_SUP = [
 		en: "butterfly",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 11,
 	},
 	{
 		h: "花轿",
@@ -471,6 +611,8 @@ export const B2_SUP = [
 		en: "bridal sedan chair",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 10,
 	},
 	{
 		h: "画布",
@@ -480,6 +622,8 @@ export const B2_SUP = [
 		en: "canvas",
 		l: 15,
 		sup: 1,
+		sec: 3,
+		ord: 20,
 	},
 	{
 		h: "黄梅戏",
@@ -489,6 +633,8 @@ export const B2_SUP = [
 		en: "Huangmei opera",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 18,
 	},
 	{ h: "汇", p: "huì", pos: "V", es: "remitir", en: "to remit", l: 12, sup: 1 },
 	{
@@ -499,6 +645,8 @@ export const B2_SUP = [
 		en: "to remit money",
 		l: 12,
 		sup: 1,
+		sec: 3,
+		ord: 8,
 	},
 	{
 		h: "汇率",
@@ -508,6 +656,8 @@ export const B2_SUP = [
 		en: "exchange rate",
 		l: 11,
 		sup: 1,
+		sec: 3,
+		ord: 6,
 	},
 	{
 		h: "火车站",
@@ -539,11 +689,13 @@ export const B2_SUP = [
 	{
 		h: "纪念邮票",
 		p: "jì niàn yóu piào",
-		pos: "",
+		pos: "S",
 		es: "sello conmemorativo",
 		en: "commemorative stamp",
 		l: 12,
 		sup: 1,
+		sec: 3,
+		ord: 6,
 	},
 	{
 		h: "寄件人",
@@ -553,6 +705,8 @@ export const B2_SUP = [
 		en: "sender",
 		l: 12,
 		sup: 1,
+		sec: 3,
+		ord: 1,
 	},
 	{
 		h: "剪纸",
@@ -562,6 +716,8 @@ export const B2_SUP = [
 		en: "paper cutting",
 		l: 15,
 		sup: 1,
+		sec: 3,
+		ord: 15,
 	},
 	{
 		h: "健身",
@@ -571,6 +727,8 @@ export const B2_SUP = [
 		en: "to work out",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 2,
 	},
 	{
 		h: "降落",
@@ -580,6 +738,8 @@ export const B2_SUP = [
 		en: "to land",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 8,
 	},
 	{
 		h: "交流",
@@ -589,6 +749,8 @@ export const B2_SUP = [
 		en: "to communicate; to exchange",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 13,
 	},
 	{
 		h: "教师",
@@ -598,6 +760,8 @@ export const B2_SUP = [
 		en: "teacher",
 		l: 15,
 		sup: 1,
+		sec: 3,
+		ord: 12,
 	},
 	{
 		h: "结束",
@@ -607,6 +771,8 @@ export const B2_SUP = [
 		en: "to end; to finish",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 10,
 	},
 	{
 		h: "借书证",
@@ -616,6 +782,8 @@ export const B2_SUP = [
 		en: "library card",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 7,
 	},
 	{
 		h: "竟然",
@@ -625,6 +793,8 @@ export const B2_SUP = [
 		en: "unexpectedly",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 22,
 	},
 	{
 		h: "剧团",
@@ -634,6 +804,8 @@ export const B2_SUP = [
 		en: "theater troupe",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 22,
 	},
 	{
 		h: "开心",
@@ -643,6 +815,8 @@ export const B2_SUP = [
 		en: "happy; delighted",
 		l: 11,
 		sup: 1,
+		sec: 3,
+		ord: 14,
 	},
 	{
 		h: "可不是",
@@ -652,6 +826,8 @@ export const B2_SUP = [
 		en: "exactly; isn't that so",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 1,
 	},
 	{
 		h: "刻印章",
@@ -661,6 +837,8 @@ export const B2_SUP = [
 		en: "to carve a seal",
 		l: 15,
 		sup: 1,
+		sec: 3,
+		ord: 16,
 	},
 	{
 		h: "空姐",
@@ -670,6 +848,8 @@ export const B2_SUP = [
 		en: "flight attendant",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 12,
 	},
 	{
 		h: "空儿",
@@ -679,9 +859,31 @@ export const B2_SUP = [
 		en: "free time",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 19,
 	},
-	{ h: "哭", p: "kū", pos: "V", es: "llorar", en: "to cry", l: 17, sup: 1 },
-	{ h: "辣", p: "là", pos: "Adj.", es: "picante", en: "spicy", l: 11, sup: 1 },
+	{
+		h: "哭",
+		p: "kū",
+		pos: "V",
+		es: "llorar",
+		en: "to cry",
+		l: 17,
+		sup: 1,
+		sec: 3,
+		ord: 26,
+	},
+	{
+		h: "辣",
+		p: "là",
+		pos: "Adj.",
+		es: "picante",
+		en: "spicy",
+		l: 11,
+		sup: 1,
+		sec: 3,
+		ord: 17,
+	},
 	{
 		h: "篮球",
 		p: "lán qiú",
@@ -699,6 +901,8 @@ export const B2_SUP = [
 		en: "to read aloud",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 13,
 	},
 	{
 		h: "离",
@@ -708,6 +912,8 @@ export const B2_SUP = [
 		en: "to be (distance) from",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 14,
 	},
 	{
 		h: "历史",
@@ -726,6 +932,8 @@ export const B2_SUP = [
 		en: "another; other",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 8,
 	},
 	{
 		h: "流行歌曲",
@@ -735,6 +943,8 @@ export const B2_SUP = [
 		en: "pop songs",
 		l: 15,
 		sup: 1,
+		sec: 3,
+		ord: 5,
 	},
 	{
 		h: "旅客",
@@ -744,6 +954,8 @@ export const B2_SUP = [
 		en: "passenger",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 11,
 	},
 	{
 		h: "洛杉矶",
@@ -753,6 +965,8 @@ export const B2_SUP = [
 		en: "Los Angeles",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 22,
 	},
 	{
 		h: "没想到",
@@ -762,6 +976,8 @@ export const B2_SUP = [
 		en: "unexpectedly; never thought",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 4,
 	},
 	{
 		h: "没准儿",
@@ -771,6 +987,8 @@ export const B2_SUP = [
 		en: "maybe; not sure",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 9,
 	},
 	{
 		h: "美元",
@@ -780,6 +998,8 @@ export const B2_SUP = [
 		en: "US dollar",
 		l: 11,
 		sup: 1,
+		sec: 3,
+		ord: 1,
 	},
 	{
 		h: "免票",
@@ -789,6 +1009,8 @@ export const B2_SUP = [
 		en: "free admission",
 		l: 11,
 		sup: 1,
+		sec: 3,
+		ord: 12,
 	},
 	{
 		h: "面试",
@@ -798,6 +1020,8 @@ export const B2_SUP = [
 		en: "to interview",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 18,
 	},
 	{
 		h: "面试官",
@@ -807,6 +1031,8 @@ export const B2_SUP = [
 		en: "interviewer",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 15,
 	},
 	{
 		h: "女士",
@@ -816,8 +1042,20 @@ export const B2_SUP = [
 		en: "lady; madam",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 10,
 	},
-	{ h: "欧元", p: "ōu yuán", pos: "S", es: "euro", en: "euro", l: 11, sup: 1 },
+	{
+		h: "欧元",
+		p: "ōu yuán",
+		pos: "S",
+		es: "euro",
+		en: "euro",
+		l: 11,
+		sup: 1,
+		sec: 3,
+		ord: 2,
+	},
 	{
 		h: "欧洲",
 		p: "Ōu zhōu",
@@ -826,8 +1064,20 @@ export const B2_SUP = [
 		en: "Europe",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 20,
 	},
-	{ h: "排", p: "pái", pos: "S", es: "fila; hilera", en: "row", l: 17, sup: 1 },
+	{
+		h: "排",
+		p: "pái",
+		pos: "S",
+		es: "fila; hilera",
+		en: "row",
+		l: 17,
+		sup: 1,
+		sec: 3,
+		ord: 27,
+	},
 	{
 		h: "排球",
 		p: "pái qiú",
@@ -845,6 +1095,8 @@ export const B2_SUP = [
 		en: "(measure for essays)",
 		l: 15,
 		sup: 1,
+		sec: 3,
+		ord: 9,
 	},
 	{
 		h: "乒乓球",
@@ -854,6 +1106,8 @@ export const B2_SUP = [
 		en: "table tennis",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 4,
 	},
 	{
 		h: "平信",
@@ -863,6 +1117,8 @@ export const B2_SUP = [
 		en: "regular mail",
 		l: 12,
 		sup: 1,
+		sec: 3,
+		ord: 5,
 	},
 	{
 		h: "评剧",
@@ -872,6 +1128,8 @@ export const B2_SUP = [
 		en: "Pingju opera",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 19,
 	},
 	{
 		h: "起飞",
@@ -881,6 +1139,8 @@ export const B2_SUP = [
 		en: "to take off",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 7,
 	},
 	{
 		h: "汽车站",
@@ -890,6 +1150,8 @@ export const B2_SUP = [
 		en: "bus station",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 3,
 	},
 	{
 		h: "晴",
@@ -908,6 +1170,8 @@ export const B2_SUP = [
 		en: "sunny day",
 		l: 18,
 		sup: 1,
+		sec: 3,
+		ord: 11,
 	},
 	{
 		h: "然后",
@@ -917,6 +1181,8 @@ export const B2_SUP = [
 		en: "then; afterwards",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 11,
 	},
 	{
 		h: "人行道",
@@ -926,6 +1192,8 @@ export const B2_SUP = [
 		en: "sidewalk",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 4,
 	},
 	{ h: "日记", p: "rì jì", pos: "S", es: "diario", en: "diary", l: 19, sup: 1 },
 	{
@@ -936,6 +1204,8 @@ export const B2_SUP = [
 		en: "Japanese yen",
 		l: 11,
 		sup: 1,
+		sec: 3,
+		ord: 3,
 	},
 	{
 		h: "入口",
@@ -945,6 +1215,8 @@ export const B2_SUP = [
 		en: "entrance",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 9,
 	},
 	{
 		h: "三国演义",
@@ -954,8 +1226,20 @@ export const B2_SUP = [
 		en: "Romance of the Three Kingdoms",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 2,
 	},
-	{ h: "沙发", p: "shā fā", pos: "S", es: "sofá", en: "sofa", l: 20, sup: 1 },
+	{
+		h: "沙发",
+		p: "shā fā",
+		pos: "S",
+		es: "sofá",
+		en: "sofa",
+		l: 20,
+		sup: 1,
+		sec: 3,
+		ord: 19,
+	},
 	{
 		h: "声音",
 		p: "shēng yīn",
@@ -964,6 +1248,8 @@ export const B2_SUP = [
 		en: "voice; sound",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 14,
 	},
 	{
 		h: "师傅",
@@ -982,6 +1268,8 @@ export const B2_SUP = [
 		en: "to suit",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 15,
 	},
 	{
 		h: "手续",
@@ -991,6 +1279,8 @@ export const B2_SUP = [
 		en: "procedure; formalities",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 2,
 	},
 	{
 		h: "首",
@@ -1000,6 +1290,8 @@ export const B2_SUP = [
 		en: "(measure for songs/poems)",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 6,
 	},
 	{
 		h: "首都",
@@ -1009,6 +1301,8 @@ export const B2_SUP = [
 		en: "capital (city)",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 10,
 	},
 	{
 		h: "售票员",
@@ -1027,6 +1321,8 @@ export const B2_SUP = [
 		en: "bookshelf",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 20,
 	},
 	{
 		h: "书桌",
@@ -1036,6 +1332,8 @@ export const B2_SUP = [
 		en: "desk",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 16,
 	},
 	{
 		h: "输",
@@ -1045,6 +1343,8 @@ export const B2_SUP = [
 		en: "to lose (a game)",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 8,
 	},
 	{
 		h: "摔",
@@ -1054,6 +1354,8 @@ export const B2_SUP = [
 		en: "to fall; to tumble",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 1,
 	},
 	{
 		h: "水浒传",
@@ -1063,6 +1365,8 @@ export const B2_SUP = [
 		en: "Water Margin",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 3,
 	},
 	{
 		h: "四大名著",
@@ -1072,6 +1376,8 @@ export const B2_SUP = [
 		en: "the Four Great Classic Novels",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 1,
 	},
 	{
 		h: "台湾",
@@ -1081,6 +1387,8 @@ export const B2_SUP = [
 		en: "Taiwan",
 		l: 18,
 		sup: 1,
+		sec: 3,
+		ord: 2,
 	},
 	{
 		h: "太巧了",
@@ -1090,6 +1398,8 @@ export const B2_SUP = [
 		en: "what a coincidence",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 5,
 	},
 	{
 		h: "泰铢",
@@ -1099,6 +1409,8 @@ export const B2_SUP = [
 		en: "Thai baht",
 		l: 11,
 		sup: 1,
+		sec: 3,
+		ord: 5,
 	},
 	{
 		h: "提醒",
@@ -1108,6 +1420,8 @@ export const B2_SUP = [
 		en: "to remind",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 17,
 	},
 	{
 		h: "体育场",
@@ -1117,6 +1431,8 @@ export const B2_SUP = [
 		en: "stadium",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 11,
 	},
 	{
 		h: "天气预报",
@@ -1126,6 +1442,8 @@ export const B2_SUP = [
 		en: "weather forecast",
 		l: 18,
 		sup: 1,
+		sec: 3,
+		ord: 3,
 	},
 	{
 		h: "天坛",
@@ -1135,8 +1453,20 @@ export const B2_SUP = [
 		en: "Temple of Heaven",
 		l: 18,
 		sup: 1,
+		sec: 3,
+		ord: 12,
 	},
-	{ h: "甜", p: "tián", pos: "Adj.", es: "dulce", en: "sweet", l: 11, sup: 1 },
+	{
+		h: "甜",
+		p: "tián",
+		pos: "Adj.",
+		es: "dulce",
+		en: "sweet",
+		l: 11,
+		sup: 1,
+		sec: 3,
+		ord: 18,
+	},
 	{
 		h: "通过",
 		p: "tōng guò",
@@ -1145,6 +1475,8 @@ export const B2_SUP = [
 		en: "to pass (an exam)",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 23,
 	},
 	{
 		h: "退票",
@@ -1154,8 +1486,20 @@ export const B2_SUP = [
 		en: "to refund a ticket",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 6,
 	},
-	{ h: "玩具", p: "wán jù", pos: "S", es: "juguete", en: "toy", l: 20, sup: 1 },
+	{
+		h: "玩具",
+		p: "wán jù",
+		pos: "S",
+		es: "juguete",
+		en: "toy",
+		l: 20,
+		sup: 1,
+		sec: 3,
+		ord: 17,
+	},
 	{
 		h: "网站",
 		p: "wǎng zhàn",
@@ -1164,6 +1508,8 @@ export const B2_SUP = [
 		en: "website",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 9,
 	},
 	{
 		h: "危险",
@@ -1173,6 +1519,8 @@ export const B2_SUP = [
 		en: "dangerous",
 		l: 18,
 		sup: 1,
+		sec: 3,
+		ord: 8,
 	},
 	{
 		h: "乌龙球",
@@ -1182,6 +1530,8 @@ export const B2_SUP = [
 		en: "own goal",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 5,
 	},
 	{
 		h: "武术",
@@ -1191,6 +1541,8 @@ export const B2_SUP = [
 		en: "martial arts",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 1,
 	},
 	{
 		h: "西游记",
@@ -1200,6 +1552,8 @@ export const B2_SUP = [
 		en: "Journey to the West",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 4,
 	},
 	{
 		h: "下次",
@@ -1209,6 +1563,8 @@ export const B2_SUP = [
 		en: "next time",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 16,
 	},
 	{
 		h: "现代",
@@ -1218,6 +1574,8 @@ export const B2_SUP = [
 		en: "modern times",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 25,
 	},
 	{
 		h: "相爱",
@@ -1227,6 +1585,8 @@ export const B2_SUP = [
 		en: "to fall in love",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 14,
 	},
 	{
 		h: "相反",
@@ -1236,6 +1596,8 @@ export const B2_SUP = [
 		en: "opposite",
 		l: 12,
 		sup: 1,
+		sec: 3,
+		ord: 15,
 	},
 	{
 		h: "香港",
@@ -1245,6 +1607,8 @@ export const B2_SUP = [
 		en: "Hong Kong",
 		l: 15,
 		sup: 1,
+		sec: 3,
+		ord: 8,
 	},
 	{
 		h: "香山",
@@ -1254,6 +1618,8 @@ export const B2_SUP = [
 		en: "Fragrant Hills",
 		l: 18,
 		sup: 1,
+		sec: 3,
+		ord: 4,
 	},
 	{
 		h: "相声",
@@ -1263,6 +1629,8 @@ export const B2_SUP = [
 		en: "crosstalk (comic dialogue)",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 21,
 	},
 	{
 		h: "新年",
@@ -1281,6 +1649,8 @@ export const B2_SUP = [
 		en: "news",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 14,
 	},
 	{
 		h: "信用卡",
@@ -1290,6 +1660,8 @@ export const B2_SUP = [
 		en: "credit card",
 		l: 11,
 		sup: 1,
+		sec: 3,
+		ord: 8,
 	},
 	{
 		h: "醒",
@@ -1299,6 +1671,8 @@ export const B2_SUP = [
 		en: "to wake up",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 18,
 	},
 	{
 		h: "幸会",
@@ -1308,8 +1682,20 @@ export const B2_SUP = [
 		en: "pleased to meet you (formal)",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 1,
 	},
-	{ h: "熊", p: "xióng", pos: "S", es: "oso", en: "bear", l: 18, sup: 1 },
+	{
+		h: "熊",
+		p: "xióng",
+		pos: "S",
+		es: "oso",
+		en: "bear",
+		l: 18,
+		sup: 1,
+		sec: 3,
+		ord: 7,
+	},
 	{
 		h: "熊猫",
 		p: "xióng māo",
@@ -1318,6 +1704,8 @@ export const B2_SUP = [
 		en: "panda",
 		l: 12,
 		sup: 1,
+		sec: 3,
+		ord: 9,
 	},
 	{
 		h: "修",
@@ -1327,6 +1715,8 @@ export const B2_SUP = [
 		en: "to repair",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 13,
 	},
 	{
 		h: "修理",
@@ -1336,6 +1726,8 @@ export const B2_SUP = [
 		en: "to repair; to fix",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 14,
 	},
 	{
 		h: "宣纸",
@@ -1345,6 +1737,8 @@ export const B2_SUP = [
 		en: "Xuan paper",
 		l: 15,
 		sup: 1,
+		sec: 3,
+		ord: 1,
 	},
 	{
 		h: "严格",
@@ -1354,6 +1748,8 @@ export const B2_SUP = [
 		en: "strict",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 5,
 	},
 	{
 		h: "延误",
@@ -1363,6 +1759,8 @@ export const B2_SUP = [
 		en: "to be delayed",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 9,
 	},
 	{
 		h: "羊肉",
@@ -1372,6 +1770,8 @@ export const B2_SUP = [
 		en: "lamb; mutton",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 16,
 	},
 	{
 		h: "羊肉泡馍",
@@ -1381,6 +1781,8 @@ export const B2_SUP = [
 		en: "lamb soup with bread (paomo)",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 17,
 	},
 	{
 		h: "阳台",
@@ -1399,6 +1801,8 @@ export const B2_SUP = [
 		en: "rock (music)",
 		l: 15,
 		sup: 1,
+		sec: 3,
+		ord: 6,
 	},
 	{
 		h: "业余",
@@ -1408,6 +1812,8 @@ export const B2_SUP = [
 		en: "spare-time; amateur",
 		l: 15,
 		sup: 1,
+		sec: 3,
+		ord: 4,
 	},
 	{
 		h: "颐和园",
@@ -1417,6 +1823,8 @@ export const B2_SUP = [
 		en: "Summer Palace",
 		l: 18,
 		sup: 1,
+		sec: 3,
+		ord: 6,
 	},
 	{
 		h: "音响",
@@ -1426,6 +1834,8 @@ export const B2_SUP = [
 		en: "sound system",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 18,
 	},
 	{
 		h: "邮递员",
@@ -1435,6 +1845,8 @@ export const B2_SUP = [
 		en: "mail carrier",
 		l: 12,
 		sup: 1,
+		sec: 3,
+		ord: 11,
 	},
 	{
 		h: "邮件",
@@ -1444,6 +1856,8 @@ export const B2_SUP = [
 		en: "mail; email",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 26,
 	},
 	{
 		h: "邮局",
@@ -1453,6 +1867,8 @@ export const B2_SUP = [
 		en: "post office",
 		l: 12,
 		sup: 1,
+		sec: 3,
+		ord: 10,
 	},
 	{
 		h: "邮票",
@@ -1462,8 +1878,20 @@ export const B2_SUP = [
 		en: "stamp",
 		l: 12,
 		sup: 1,
+		sec: 3,
+		ord: 7,
 	},
-	{ h: "游戏", p: "yóu xì", pos: "S", es: "juego", en: "game", l: 15, sup: 1 },
+	{
+		h: "游戏",
+		p: "yóu xì",
+		pos: "S",
+		es: "juego",
+		en: "game",
+		l: 15,
+		sup: 1,
+		sec: 3,
+		ord: 3,
+	},
 	{
 		h: "游泳馆",
 		p: "yóu yǒng guǎn",
@@ -1472,6 +1900,8 @@ export const B2_SUP = [
 		en: "indoor swimming pool",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 17,
 	},
 	{
 		h: "有名",
@@ -1481,6 +1911,8 @@ export const B2_SUP = [
 		en: "famous",
 		l: 11,
 		sup: 1,
+		sec: 3,
+		ord: 16,
 	},
 	{
 		h: "永远",
@@ -1490,8 +1922,20 @@ export const B2_SUP = [
 		en: "forever",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 15,
 	},
-	{ h: "瑜伽", p: "yú jiā", pos: "S", es: "yoga", en: "yoga", l: 16, sup: 1 },
+	{
+		h: "瑜伽",
+		p: "yú jiā",
+		pos: "S",
+		es: "yoga",
+		en: "yoga",
+		l: 16,
+		sup: 1,
+		sec: 3,
+		ord: 3,
+	},
 	{
 		h: "豫剧",
 		p: "yù jù",
@@ -1500,6 +1944,8 @@ export const B2_SUP = [
 		en: "Yuju opera",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 20,
 	},
 	{
 		h: "越剧",
@@ -1509,6 +1955,8 @@ export const B2_SUP = [
 		en: "Yueju (Shaoxing) opera",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 17,
 	},
 	{
 		h: "招聘",
@@ -1518,6 +1966,8 @@ export const B2_SUP = [
 		en: "to recruit",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 20,
 	},
 	{
 		h: "整理",
@@ -1527,6 +1977,8 @@ export const B2_SUP = [
 		en: "to tidy up",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 12,
 	},
 	{
 		h: "支",
@@ -1536,6 +1988,8 @@ export const B2_SUP = [
 		en: "(measure for teams, bands)",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 12,
 	},
 	{
 		h: "植物",
@@ -1545,6 +1999,8 @@ export const B2_SUP = [
 		en: "plant",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 21,
 	},
 	{
 		h: "转机",
@@ -1554,6 +2010,8 @@ export const B2_SUP = [
 		en: "to transfer (flights)",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 7,
 	},
 	{
 		h: "准时",
@@ -1563,6 +2021,8 @@ export const B2_SUP = [
 		en: "on time",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 10,
 	},
 	{
 		h: "仔细",
@@ -1572,6 +2032,8 @@ export const B2_SUP = [
 		en: "careful; attentive",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 20,
 	},
 	{
 		h: "足球场",
@@ -1581,6 +2043,8 @@ export const B2_SUP = [
 		en: "soccer field",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 23,
 	},
 	{
 		h: "工作人员",
@@ -1590,6 +2054,8 @@ export const B2_SUP = [
 		en: "staff member",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 23,
 	},
 	{
 		h: "座",
@@ -1599,6 +2065,8 @@ export const B2_SUP = [
 		en: "(measure for buildings, mountains)",
 		l: 11,
 		sup: 1,
+		sec: 3,
+		ord: 19,
 	},
 	{
 		h: "乘坐",
@@ -1608,6 +2076,8 @@ export const B2_SUP = [
 		en: "to take (a flight/train)",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 24,
 	},
 	{
 		h: "随身",
@@ -1617,6 +2087,8 @@ export const B2_SUP = [
 		en: "carry-on; on one's person",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 25,
 	},
 	{
 		h: "物品",
@@ -1626,6 +2098,8 @@ export const B2_SUP = [
 		en: "items; belongings",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 26,
 	},
 	{
 		h: "出示",
@@ -1635,6 +2109,8 @@ export const B2_SUP = [
 		en: "to show; to present",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 27,
 	},
 	{
 		h: "旅途",
@@ -1644,6 +2120,8 @@ export const B2_SUP = [
 		en: "journey",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 28,
 	},
 	{
 		h: "愉快",
@@ -1653,6 +2131,8 @@ export const B2_SUP = [
 		en: "pleasant; happy",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 29,
 	},
 	{
 		h: "外国",
@@ -1671,6 +2151,8 @@ export const B2_SUP = [
 		en: "foreigner",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 16,
 	},
 	{
 		h: "出去",
@@ -1680,6 +2162,8 @@ export const B2_SUP = [
 		en: "to go out",
 		l: 12,
 		sup: 1,
+		sec: 3,
+		ord: 13,
 	},
 	{
 		h: "出来",
@@ -1689,6 +2173,8 @@ export const B2_SUP = [
 		en: "to come out",
 		l: 18,
 		sup: 1,
+		sec: 3,
+		ord: 13,
 	},
 	{
 		h: "事",
@@ -1698,8 +2184,20 @@ export const B2_SUP = [
 		en: "matter; affair",
 		l: 12,
 		sup: 1,
+		sec: 3,
+		ord: 14,
 	},
-	{ h: "小时", p: "xiǎo shí", pos: "S", es: "hora", en: "hour", l: 13, sup: 1 },
+	{
+		h: "小时",
+		p: "xiǎo shí",
+		pos: "S",
+		es: "hora",
+		en: "hour",
+		l: 13,
+		sup: 1,
+		sec: 3,
+		ord: 22,
+	},
 	{
 		h: "分钟",
 		p: "fēn zhōng",
@@ -1708,6 +2206,8 @@ export const B2_SUP = [
 		en: "minute",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 23,
 	},
 	{
 		h: "钟",
@@ -1717,6 +2217,8 @@ export const B2_SUP = [
 		en: "clock; bell",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 24,
 	},
 	{
 		h: "天儿",
@@ -1726,6 +2228,8 @@ export const B2_SUP = [
 		en: "chat (in 聊天儿)",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 28,
 	},
 	{
 		h: "觉",
@@ -1735,6 +2239,8 @@ export const B2_SUP = [
 		en: "sleep (in 睡觉)",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 29,
 	},
 	{
 		h: "见",
@@ -1744,6 +2250,8 @@ export const B2_SUP = [
 		en: "to see; to meet",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 21,
 	},
 	{
 		h: "前面",
@@ -1753,6 +2261,8 @@ export const B2_SUP = [
 		en: "in front; ahead",
 		l: 15,
 		sup: 1,
+		sec: 3,
+		ord: 13,
 	},
 	{
 		h: "里面",
@@ -1762,8 +2272,20 @@ export const B2_SUP = [
 		en: "inside",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 30,
 	},
-	{ h: "周", p: "zhōu", pos: "S", es: "semana", en: "week", l: 16, sup: 1 },
+	{
+		h: "周",
+		p: "zhōu",
+		pos: "S",
+		es: "semana",
+		en: "week",
+		l: 16,
+		sup: 1,
+		sec: 3,
+		ord: 20,
+	},
 	{
 		h: "帮助",
 		p: "bāng zhù",
@@ -1772,6 +2294,8 @@ export const B2_SUP = [
 		en: "to help",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 21,
 	},
 	{
 		h: "宝玉",
@@ -1781,6 +2305,8 @@ export const B2_SUP = [
 		en: "Baoyu (short for Jia Baoyu)",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 7,
 	},
 	{
 		h: "黛玉",
@@ -1790,6 +2316,8 @@ export const B2_SUP = [
 		en: "Daiyu (short for Lin Daiyu)",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 8,
 	},
 	{
 		h: "考",
@@ -1799,6 +2327,8 @@ export const B2_SUP = [
 		en: "to take an exam",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 24,
 	},
 	{
 		h: "由",
@@ -1808,6 +2338,8 @@ export const B2_SUP = [
 		en: "by; via",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 31,
 	},
 	{
 		h: "燕",
@@ -1817,6 +2349,8 @@ export const B2_SUP = [
 		en: "swallow (in names)",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 32,
 	},
 	{
 		h: "阿拉",
@@ -1826,6 +2360,8 @@ export const B2_SUP = [
 		en: "(Shanghainese) I; we",
 		l: 11,
 		sup: 1,
+		sec: 3,
+		ord: 20,
 	},
 	{
 		h: "勿",
@@ -1835,6 +2371,8 @@ export const B2_SUP = [
 		en: "(Shanghainese/classical) not",
 		l: 11,
 		sup: 1,
+		sec: 3,
+		ord: 21,
 	},
 	{
 		h: "中国移动",
@@ -1844,6 +2382,8 @@ export const B2_SUP = [
 		en: "China Mobile",
 		l: 13,
 		sup: 1,
+		sec: 3,
+		ord: 27,
 	},
 	{
 		h: "房子",
@@ -1853,6 +2393,8 @@ export const B2_SUP = [
 		en: "house",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 23,
 	},
 	{
 		h: "居室",
@@ -1862,6 +2404,8 @@ export const B2_SUP = [
 		en: "room (in X-room flat)",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 24,
 	},
 	{
 		h: "房租",
@@ -1871,6 +2415,8 @@ export const B2_SUP = [
 		en: "rent",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 25,
 	},
 	{
 		h: "房东",
@@ -1880,6 +2426,8 @@ export const B2_SUP = [
 		en: "landlord",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 26,
 	},
 	{
 		h: "家具",
@@ -1889,6 +2437,8 @@ export const B2_SUP = [
 		en: "furniture",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 27,
 	},
 	{
 		h: "冰箱",
@@ -1898,6 +2448,8 @@ export const B2_SUP = [
 		en: "fridge",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 28,
 	},
 	{
 		h: "洗衣机",
@@ -1907,9 +2459,31 @@ export const B2_SUP = [
 		en: "washing machine",
 		l: 14,
 		sup: 1,
+		sec: 3,
+		ord: 29,
 	},
-	{ h: "艺术", p: "yì shù", pos: "S", es: "arte", en: "art", l: 15, sup: 1 },
-	{ h: "花", p: "huā", pos: "S", es: "flor", en: "flower", l: 15, sup: 1 },
+	{
+		h: "艺术",
+		p: "yì shù",
+		pos: "S",
+		es: "arte",
+		en: "art",
+		l: 15,
+		sup: 1,
+		sec: 3,
+		ord: 11,
+	},
+	{
+		h: "花",
+		p: "huā",
+		pos: "S",
+		es: "flor",
+		en: "flower",
+		l: 15,
+		sup: 1,
+		sec: 3,
+		ord: 17,
+	},
 	{
 		h: "人物",
 		p: "rén wù",
@@ -1918,6 +2492,8 @@ export const B2_SUP = [
 		en: "figure; character",
 		l: 15,
 		sup: 1,
+		sec: 3,
+		ord: 18,
 	},
 	{
 		h: "毛笔",
@@ -1927,6 +2503,8 @@ export const B2_SUP = [
 		en: "writing brush",
 		l: 15,
 		sup: 1,
+		sec: 3,
+		ord: 14,
 	},
 	{
 		h: "举行",
@@ -1936,6 +2514,8 @@ export const B2_SUP = [
 		en: "to hold (an event)",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 19,
 	},
 	{
 		h: "好处",
@@ -1945,6 +2525,8 @@ export const B2_SUP = [
 		en: "benefit",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 22,
 	},
 	{
 		h: "名",
@@ -1954,6 +2536,8 @@ export const B2_SUP = [
 		en: "place (ranking); person",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 18,
 	},
 	{
 		h: "长安大戏院",
@@ -1963,6 +2547,8 @@ export const B2_SUP = [
 		en: "Chang'an Grand Theatre",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 28,
 	},
 	{
 		h: "场",
@@ -1972,6 +2558,8 @@ export const B2_SUP = [
 		en: "(measure for shows, games)",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 29,
 	},
 	{
 		h: "化妆",
@@ -1981,6 +2569,8 @@ export const B2_SUP = [
 		en: "to put on makeup / makeup",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 30,
 	},
 	{
 		h: "舞台",
@@ -1990,6 +2580,8 @@ export const B2_SUP = [
 		en: "stage",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 31,
 	},
 	{
 		h: "来自",
@@ -1999,6 +2591,8 @@ export const B2_SUP = [
 		en: "to come from",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 32,
 	},
 	{
 		h: "激动",
@@ -2008,6 +2602,8 @@ export const B2_SUP = [
 		en: "excited",
 		l: 18,
 		sup: 1,
+		sec: 3,
+		ord: 9,
 	},
 	{
 		h: "市区",
@@ -2017,6 +2613,8 @@ export const B2_SUP = [
 		en: "urban area",
 		l: 18,
 		sup: 1,
+		sec: 3,
+		ord: 14,
 	},
 	{
 		h: "好汉",
@@ -2026,6 +2624,8 @@ export const B2_SUP = [
 		en: "true man; hero",
 		l: 18,
 		sup: 1,
+		sec: 3,
+		ord: 16,
 	},
 	{
 		h: "非",
@@ -2035,6 +2635,8 @@ export const B2_SUP = [
 		en: "not (classical)",
 		l: 18,
 		sup: 1,
+		sec: 3,
+		ord: 17,
 	},
 	{
 		h: "纪念品",
@@ -2044,6 +2646,8 @@ export const B2_SUP = [
 		en: "souvenir",
 		l: 18,
 		sup: 1,
+		sec: 3,
+		ord: 18,
 	},
 	{
 		h: "发生",
@@ -2053,6 +2657,8 @@ export const B2_SUP = [
 		en: "to happen",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 25,
 	},
 	{
 		h: "突然",
@@ -2062,6 +2668,8 @@ export const B2_SUP = [
 		en: "suddenly",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 26,
 	},
 	{
 		h: "辆",
@@ -2071,6 +2679,8 @@ export const B2_SUP = [
 		en: "(measure for vehicles)",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 27,
 	},
 	{
 		h: "闯",
@@ -2080,6 +2690,8 @@ export const B2_SUP = [
 		en: "to rush; to run (a light)",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 28,
 	},
 	{
 		h: "警察",
@@ -2089,6 +2701,8 @@ export const B2_SUP = [
 		en: "police",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 29,
 	},
 	{
 		h: "赔",
@@ -2098,6 +2712,8 @@ export const B2_SUP = [
 		en: "to compensate",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 30,
 	},
 	{
 		h: "安全",
@@ -2107,6 +2723,8 @@ export const B2_SUP = [
 		en: "safe / safety",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 31,
 	},
 	{
 		h: "小心",
@@ -2116,6 +2734,8 @@ export const B2_SUP = [
 		en: "to be careful",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 32,
 	},
 	{
 		h: "一路平安",
@@ -2125,6 +2745,8 @@ export const B2_SUP = [
 		en: "have a safe trip!",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 33,
 	},
 	{
 		h: "舍不得",
@@ -2134,6 +2756,8 @@ export const B2_SUP = [
 		en: "to hate to part with",
 		l: 20,
 		sup: 1,
+		sec: 3,
+		ord: 34,
 	},
 	{
 		h: "橘子",
@@ -2143,6 +2767,8 @@ export const B2_SUP = [
 		en: "tangerine",
 		l: 16,
 		sup: 1,
+		sec: 3,
+		ord: 25,
 	},
 	{
 		h: "摸",
@@ -2152,6 +2778,8 @@ export const B2_SUP = [
 		en: "to touch; to feel",
 		l: 19,
 		sup: 1,
+		sec: 3,
+		ord: 33,
 	},
 	{
 		h: "小时候",
@@ -2161,6 +2789,8 @@ export const B2_SUP = [
 		en: "in childhood",
 		l: 17,
 		sup: 1,
+		sec: 3,
+		ord: 33,
 	},
 	{
 		h: "出",
@@ -2170,6 +2800,8 @@ export const B2_SUP = [
 		en: "to go out; to produce",
 		l: 12,
 		sup: 1,
+		sec: 3,
+		ord: 16,
 	},
 	{
 		h: "风景",
@@ -2179,6 +2811,8 @@ export const B2_SUP = [
 		en: "scenery; landscape",
 		l: 15,
 		sup: 1,
+		sec: 3,
+		ord: 19,
 	},
 	{
 		h: "风景画",
@@ -2188,5 +2822,15 @@ export const B2_SUP = [
 		en: "landscape painting",
 		l: 15,
 		sup: 1,
+	},
+	{
+		h: "上万",
+		p: "shàng wàn",
+		es: "más de diez mil; decenas de miles",
+		en: "tens of thousands; more than ten thousand",
+		l: 14,
+		tags: ["npcr"],
+		sec: 3,
+		ord: 9,
 	},
 ];
