@@ -110,13 +110,13 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  background-color: var(--bg-base);
 }
 
 body {
   font-family:
     "Plus Jakarta Sans", "Inter", -apple-system, "PingFang SC", "Hiragino Sans GB", "Noto Sans SC",
     sans-serif;
-  background-color: var(--bg-base);
   background-image: var(--bg-pattern);
   background-size: 8px 8px;
   background-attachment: fixed;
