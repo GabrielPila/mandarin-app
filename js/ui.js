@@ -10,6 +10,9 @@ export function setView(html) {
 	const v = $("#view");
 	v.innerHTML = html;
 	v.scrollTop = 0;
+	if (window.lucide) {
+		lucide.createIcons({ root: v });
+	}
 	return v;
 }
 

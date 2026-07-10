@@ -90,18 +90,18 @@ const GAMES = [
 	[
 		"hardWords",
 		"hardWordsDesc",
-		"🎯",
+		'<i data-lucide="target"></i>',
 		() => {
 			const l = SRS.leeches(cardPool(ALL));
 			if (l.length) startCram(l);
 			else alert(T("noDue"));
 		},
 	],
-	["cloze", "clozeDesc", "✏️", renderCloze],
-	["builder", "builderDesc", "🧩", renderBuilder],
-	["pairs", "pairsDesc", "🔗", renderPairs],
-	["toneGame", "toneGameDesc", "🎵", renderTones],
-	["numbers", "numbersDesc", "🔢", renderNumbers],
+	["cloze", "clozeDesc", '<i data-lucide="pen-line"></i>', renderCloze],
+	["builder", "builderDesc", '<i data-lucide="puzzle"></i>', renderBuilder],
+	["pairs", "pairsDesc", '<i data-lucide="link"></i>', renderPairs],
+	["toneGame", "toneGameDesc", '<i data-lucide="music"></i>', renderTones],
+	["numbers", "numbersDesc", '<i data-lucide="hash"></i>', renderNumbers],
 ];
 
 export function renderStudy() {

@@ -3,6 +3,7 @@ import { settings } from "./store.js";
 
 export const UI = {
 	es: {
+		appTitle: "Chino Práctico",
 		study: "Estudiar",
 		texts: "Textos",
 		vocab: "Vocabulario",
@@ -117,6 +118,7 @@ export const UI = {
 		reveal: "Mostrar respuesta",
 	},
 	en: {
+		appTitle: "Practical Chinese",
 		study: "Study",
 		texts: "Texts",
 		vocab: "Vocabulary",

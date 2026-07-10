@@ -28,7 +28,7 @@ export function resetAll() {
 }
 
 export const settings = {
-	lang: "es",
+	lang: "en",
 	includeSup: false,
 	newPerDay: 10,
 	maxLesson: 20,

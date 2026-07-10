@@ -113,11 +113,13 @@ function play(cards, mode, lesson) {
 				sel = null;
 				done++;
 				matched++;
+				if (navigator.vibrate) navigator.vibrate(50);
 				if (done === group.length) setTimeout(round, 400);
 			} else {
 				const bad = sel.btn;
 				btn.classList.add("bad");
 				bad.classList.add("bad");
+				if (navigator.vibrate) navigator.vibrate([50, 50, 50]);
 				setTimeout(() => {
 					btn.classList.remove("bad");
 					bad.classList.remove("bad", "sel");
