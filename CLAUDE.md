@@ -7,8 +7,10 @@ code in this repository.
 
 A vanilla-JS PWA for studying Mandarin with _El Nuevo Libro de Chino Práctico_
 (NPCR, 3rd ed. Spanish). No framework, no bundler, no package.json — plain
-script tags loading globals. Deployed to GitHub Pages at
-https://gabrielpila.github.io/mandarin-app/ directly from `main`.
+script tags loading globals. Deployed to Vercel at
+https://mandarin-app-three.vercel.app/ — auto-deployed from `main` via
+Vercel's Git integration (no build step; the static repo root is served
+as-is).
 
 ## Commands
 
@@ -22,7 +24,9 @@ https://gabrielpila.github.io/mandarin-app/ directly from `main`.
   editing any `data/*.js`.
 - **Unit tests**: `node --test 'tests/*.test.mjs'` (segmenter, pinyin, SRS
   scheduling, number→hanzi). Plain Node, no deps.
-- **Deploy**: push to `main`. GitHub Pages serves the repo root (no CI).
+- **Deploy**: push to `main`. Vercel auto-deploys the repo root as a static
+  site (no build command, no CI). The app is path-agnostic (`start_url:"."`,
+  no hardcoded subpath).
 - No bundler, no package.json.
 - **Code formatting:** When writing or modifying JS and CSS, wrap all code to
   80-character lines and respect standard formatting conventions from the start.

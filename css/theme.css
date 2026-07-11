@@ -1,0 +1,108 @@
+/* theme.css — fonts, theme variables (light/dark) and text sizes.
+   Load FIRST: everything else depends on these custom properties. */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap");
+
+/* ====== THEME: DAY (Light) ====== */
+:root,
+body.theme-light {
+	/* Clean Minimal Background with Texture */
+	--bg-gradient: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+	--bg-pattern:
+		linear-gradient(rgba(0, 0, 0, 0.015) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(0, 0, 0, 0.015) 1px, transparent 1px);
+	--bg-base: #f8fafc;
+
+	--card-bg: rgba(255, 255, 255, 0.65);
+	--card-border: rgba(255, 255, 255, 0.8);
+	--glass-nav: rgba(255, 255, 255, 0.75);
+	--ink: #1e293b;
+	--muted: #64748b;
+
+	--primary: #3b82f6;
+	--primary-dark: #2563eb;
+	--accent: #334155;
+	--blue: #0ea5e9;
+
+	--line: rgba(0, 0, 0, 0.05);
+	--shadow:
+		0 10px 40px -10px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+	--shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+	--shadow-glow: 0 0 20px rgba(59, 130, 246, 0.3);
+
+	--font-base: 16px;
+	--font-md: 18px;
+	--font-lg: 24px;
+	--font-xl: 34px;
+	--font-xxl: 56px;
+	--font-ruby: 14px;
+}
+
+/* ====== THEME: NIGHT (Dark) ====== */
+@media (prefers-color-scheme: dark) {
+	:root:not(.theme-light) {
+		/* Deep Neutral Dark Background */
+		--bg-gradient: #111827;
+		--bg-pattern: none;
+		--bg-base: #111827;
+
+		--card-bg: rgba(31, 41, 55, 0.95);
+		--card-border: rgba(255, 255, 255, 0.05);
+		--glass-nav: rgba(17, 24, 39, 0.85);
+		--ink: #f8fafc;
+		--muted: #94a3b8;
+
+		--primary: #3b82f6;
+		--primary-dark: #2563eb;
+		--accent: #60a5fa;
+		--blue: #38bdf8;
+
+		--line: rgba(255, 255, 255, 0.1);
+		--shadow:
+			0 10px 40px -10px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3);
+		--shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
+		--shadow-glow: 0 0 20px rgba(59, 130, 246, 0.3);
+	}
+}
+
+body.theme-dark {
+	/* Deep Neutral Dark Background */
+	--bg-gradient: #111827;
+	--bg-pattern: none;
+	--bg-base: #111827;
+
+	--card-bg: rgba(31, 41, 55, 0.95);
+	--card-border: rgba(255, 255, 255, 0.05);
+	--glass-nav: rgba(17, 24, 39, 0.85);
+	--ink: #f8fafc;
+	--muted: #94a3b8;
+
+	--primary: #3b82f6;
+	--primary-dark: #2563eb;
+	--accent: #60a5fa;
+	--blue: #38bdf8;
+
+	--line: rgba(255, 255, 255, 0.1);
+	--shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3);
+	--shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
+	--shadow-glow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+/* ====== TEXT SIZES ====== */
+body.text-small {
+	--font-base: 14px;
+	--font-md: 16px;
+	--font-lg: 20px;
+	--font-xl: 28px;
+	--font-xxl: 46px;
+	--font-ruby: 12px;
+}
+
+body.text-large {
+	--font-base: 19px;
+	--font-md: 22px;
+	--font-lg: 28px;
+	--font-xl: 40px;
+	--font-xxl: 64px;
+	--font-ruby: 17px;
+}

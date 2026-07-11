@@ -1,8 +1,10 @@
-const CACHE = "mandarin-v0.8.5";
+const CACHE = "mandarin-v0.8.6";
 const ASSETS = [
 	".",
 	"index.html",
-	"css/app.css",
+	"css/theme.css",
+	"css/layout.css",
+	"css/components.css",
 	"js/main.js",
 	"js/router.js",
 	"js/dict.js",
