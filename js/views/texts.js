@@ -67,10 +67,12 @@ let readerMode = "none",
 
 function renderReader(t, kind) {
 	player.stop();
+	let activePart = 0;
 	const v = setView(`
     <button id="back" class="back-btn">← ${T("back")}</button>
     <h2 class="reader-title">${t.t}</h2>
     <p class="reader-sub">${settings.lang === "en" ? t.ten : t.tes} · ${T("lesson")} ${t.l}</p>
+    <div id="part-tabs" class="reader-toggles" style="margin-top:12px; margin-bottom:12px; display:none;"></div>
     <div class="reader-toggles">
       <button id="tg-pinyin">${T("pinyin")}</button>
       <button id="tg-tones">${T("tones")}</button>
@@ -79,6 +81,25 @@ function renderReader(t, kind) {
     </div>
     <div id="reader"></div>`);
 	$("#back").addEventListener("click", renderTextList);
+	
+	if (kind === "dialog" && t.parts && t.parts.length > 1) {
+		const pt = $("#part-tabs");
+		pt.style.display = "flex";
+		t.parts.forEach((p, i) => {
+			const btn = document.createElement("button");
+			btn.textContent = `${T("text1")} ${i + 1}`;
+			if (i === activePart) btn.classList.add("on");
+			btn.addEventListener("click", () => {
+				pt.querySelectorAll("button").forEach(b => b.classList.remove("on"));
+				btn.classList.add("on");
+				activePart = i;
+				player.stop();
+				update();
+			});
+			pt.appendChild(btn);
+		});
+	}
+
 	player.onStateChange((playing) => {
 		const b = $("#tg-audio");
 		if (b) b.textContent = playing ? "⏹️" : "🔊";
@@ -91,7 +112,7 @@ function renderReader(t, kind) {
 		$("#tg-pinyin").classList.toggle("on", readerMode === "pinyin");
 		$("#tg-tones").classList.toggle("on", readerMode === "tones");
 		$("#tg-trans").classList.toggle("on", readerTrans);
-		drawReader(t, kind);
+		drawReader(t, kind, activePart);
 	};
 	$("#tg-pinyin").addEventListener("click", () => {
 		readerMode = readerMode === "pinyin" ? "none" : "pinyin";
@@ -108,16 +129,28 @@ function renderReader(t, kind) {
 	update();
 }
 
-function drawReader(t, kind) {
+function drawReader(t, kind, activePart = 0) {
 	const r = $("#reader");
 	r.innerHTML = "";
 	const lineObjs = [];
-	const parts = kind === "dialog" ? t.parts : [{ lines: t.lines }];
-	parts.forEach((p, pi) => {
+	
+	let partsToRender = [];
+	if (kind === "dialog") {
+		if (t.parts && t.parts.length > 1) {
+			partsToRender = [t.parts[activePart]];
+		} else {
+			partsToRender = t.parts;
+		}
+	} else {
+		partsToRender = [{ lines: t.lines }];
+	}
+	
+	partsToRender.forEach((p, pi) => {
 		if (kind === "dialog") {
 			const h = document.createElement("div");
 			h.className = "part-head";
-			h.textContent = `${T("text1")} ${pi + 1} — ${settings.lang === "en" ? p.ien : p.ies}`;
+			const partNum = (t.parts && t.parts.length > 1) ? activePart + 1 : pi + 1;
+			h.textContent = `${T("text1")} ${partNum} — ${settings.lang === "en" ? p.ien : p.ies}`;
 			r.appendChild(h);
 		}
 		for (const line of p.lines) {

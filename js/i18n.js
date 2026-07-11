@@ -27,6 +27,12 @@ export const UI = {
 		readingsDesc:
 			"Relatos narrados por una sola persona, generados usando " +
 			"exclusivamente el vocabulario visto hasta cada lección.",
+		bookLects: "Lecturas del libro",
+		bookLectsDesc:
+			"Textos de la sección «Comprensión de Lectura» de cada lección " +
+			"del libro.",
+		bookLectTag: "Lectura",
+		questions: "Responde las siguientes preguntas:",
 		pinyin: "Pinyin",
 		tones: "Tonos",
 		trans: "Traducción",
@@ -34,6 +40,7 @@ export const UI = {
 		search: "Buscar…",
 		lang: "Idioma de los significados",
 		includeSup: "Incluir palabras suplementarias en las tarjetas",
+		includeExtraVocab: "Incluir vocabulario adicional (sec: 4) en las tarjetas",
 		newPerDay: "Tarjetas nuevas por sesión",
 		maxLesson: "Estudiar hasta la lección",
 		exportBtn: "Exportar progreso",
@@ -68,6 +75,15 @@ export const UI = {
 		voice: "Voz preferida",
 		testVoice: "🔊 Probar",
 		autoVoice: "Automático (Recomendado)",
+		sortBy: "Ordenar por",
+		sortBook: "Orden del libro",
+		sortAlpha: "Alfabético",
+		sec1: "Palabras Nuevas (1)",
+		sec2: "Palabras Nuevas (2)",
+		sec3: "Palabras Suplementarias",
+		sec4: "Vocabulario Adicional",
+		secIndex: "Solo índice",
+		extraTag: "extra",
 		// dashboard + stats
 		progress: "Progreso",
 		known: "conocidas",
@@ -142,6 +158,12 @@ export const UI = {
 		readingsDesc:
 			"Single-person narratives generated using strictly the " +
 			"vocabulary learned up to each lesson.",
+		bookLects: "Book readings",
+		bookLectsDesc:
+			"Texts from the \"Reading Comprehension\" section of each " +
+			"lesson in the textbook.",
+		bookLectTag: "Reading",
+		questions: "Answer the following questions:",
 		pinyin: "Pinyin",
 		tones: "Tones",
 		trans: "Translation",
@@ -149,6 +171,7 @@ export const UI = {
 		search: "Search…",
 		lang: "Language for meanings",
 		includeSup: "Include supplementary words in flashcards",
+		includeExtraVocab: "Include additional vocabulary (sec: 4) in flashcards",
 		newPerDay: "New cards per session",
 		maxLesson: "Study up to lesson",
 		exportBtn: "Export progress",
@@ -182,6 +205,15 @@ export const UI = {
 		voice: "Preferred voice",
 		testVoice: "🔊 Test",
 		autoVoice: "Auto (Recommended)",
+		sortBy: "Sort by",
+		sortBook: "Book order",
+		sortAlpha: "Alphabetical",
+		sec1: "New Words (1)",
+		sec2: "New Words (2)",
+		sec3: "Supplementary Words",
+		sec4: "Additional Vocabulary",
+		secIndex: "Index only",
+		extraTag: "extra",
 		progress: "Progress",
 		known: "known",
 		mature: "mature",

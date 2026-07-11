@@ -244,6 +244,11 @@ for (const [name, lects] of [
 			if (!ln.es || !ln.en) err(`${where}: falta traducción`);
 			checkLine(ln.zh, where);
 		});
+		(t.preguntas || []).forEach((q, qi) => {
+			const where = `${name} L${t.l} pregunta ${qi + 1}`;
+			if (!q.es || !q.en) err(`${where}: falta traducción`);
+			checkLine(q.zh, where);
+		});
 	});
 }
 

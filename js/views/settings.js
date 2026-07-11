@@ -30,6 +30,8 @@ export function renderSettings() {
       <input type="range" id="new-per-day" min="0" max="40" step="5" value="${settings.newPerDay}"></div>
     <div class="setting row"><label>${T("includeSup")}</label>
       <input type="checkbox" id="inc-sup" ${settings.includeSup ? "checked" : ""}></div>
+    <div class="setting row"><label>${T("includeExtraVocab")}</label>
+      <input type="checkbox" id="inc-extra" ${settings.includeExtraVocab !== false ? "checked" : ""}></div>
     <div class="setting row"><label>${T("reverse")} (${T("reverseDesc")})</label>
       <input type="checkbox" id="rev-cards" ${settings.reverseCards ? "checked" : ""}></div>
     <div class="setting"><label>${T("voiceSpeed")}: <b id="vs-val">${settings.voiceSpeed || 1.0}x</b></label>
@@ -105,6 +107,10 @@ export function renderSettings() {
 	});
 	$("#inc-sup").addEventListener("change", (e) => {
 		settings.includeSup = e.target.checked;
+		saveSettings();
+	});
+	$("#inc-extra").addEventListener("change", (e) => {
+		settings.includeExtraVocab = e.target.checked;
 		saveSettings();
 	});
 	$("#rev-cards").addEventListener("change", (e) => {

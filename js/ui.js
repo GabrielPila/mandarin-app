@@ -22,7 +22,8 @@ export function cardPool(ALL) {
 		(e) =>
 			!e._deleted &&
 			e.l <= settings.maxLesson &&
-			(settings.includeSup || !e.sup),
+			(settings.includeSup || !e.sup) &&
+			(settings.includeExtraVocab !== false || !e.extra),
 	);
 }
 

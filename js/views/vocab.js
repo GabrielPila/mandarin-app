@@ -17,16 +17,30 @@ export function renderVocab() {
           <select id="vfilter" class="filter-select"></select>
         </div>
       </div>
-      <div style="display:flex; gap:20px; align-items:center; padding: 0 4px;">
-        <label class="vocab-chk"><input type="checkbox" id="chk-core" checked> CORE</label>
-        <label class="vocab-chk"><input type="checkbox" id="chk-sup" checked> SUP</label>
+      <div style="display:flex; gap:20px; align-items:center; padding: 0 4px; flex-wrap:wrap;">
+        <div style="display:flex; gap:10px; align-items:center;">
+          <span style="font-size:12px; color:var(--text-light);">${T("sortBy")}:</span>
+          <select id="vsort" class="filter-select" style="min-width:auto; padding:4px 24px 4px 8px; font-size:13px;">
+            <option value="book">${T("sortBook")}</option>
+            <option value="alpha">${T("sortAlpha")}</option>
+          </select>
+        </div>
+        <div style="display:flex; gap:10px; margin-left:auto;">
+          <label class="vocab-chk"><input type="checkbox" id="chk-core1" checked> CORE 1</label>
+          <label class="vocab-chk"><input type="checkbox" id="chk-core2" checked> CORE 2</label>
+          <label class="vocab-chk"><input type="checkbox" id="chk-sup" checked> SUP</label>
+          <label class="vocab-chk"><input type="checkbox" id="chk-extra" checked> EXTRA</label>
+        </div>
       </div>
     </div>
     <div id="vlist" class="vlist"></div>
     <div id="vtext"></div>`);
 	let activeFilter = "all";
-	let showCore = true;
+	let showCore1 = true;
+	let showCore2 = true;
 	let showSup = true;
+	let showExtra = true;
+	let sortMode = "book";
 	const sel = $("#vfilter");
 	const filters = [
 		"all",
@@ -76,12 +90,31 @@ export function renderVocab() {
 					: parseInt(ev.target.value);
 		draw();
 	});
-	$("#chk-core").addEventListener("change", (e) => {
-		showCore = e.target.checked;
-		draw();
+	const filterToggles = [
+		{ id: "chk-core1", set: (v) => (showCore1 = v) },
+		{ id: "chk-core2", set: (v) => (showCore2 = v) },
+		{ id: "chk-sup", set: (v) => (showSup = v) },
+		{ id: "chk-extra", set: (v) => (showExtra = v) },
+	];
+
+	filterToggles.forEach((t) => {
+		const el = $(`#${t.id}`);
+		el.addEventListener("change", (e) => {
+			t.set(e.target.checked);
+			draw();
+		});
+		el.parentElement.addEventListener("dblclick", (e) => {
+			e.preventDefault();
+			filterToggles.forEach((other) => {
+				const isTarget = other.id === t.id;
+				$(`#${other.id}`).checked = isTarget;
+				other.set(isTarget);
+			});
+			draw();
+		});
 	});
-	$("#chk-sup").addEventListener("change", (e) => {
-		showSup = e.target.checked;
+	$("#vsort").addEventListener("change", (e) => {
+		sortMode = e.target.value;
 		draw();
 	});
 	$("#vsearch").addEventListener("input", draw);
@@ -91,8 +124,16 @@ export function renderVocab() {
 		const list = $("#vlist");
 		list.innerHTML = "";
 		let items = ALL.filter((e) => {
-			if (!showCore && !e.sup) return false;
-			if (!showSup && e.sup) return false;
+			const isExtra = !!e.extra || (!e.sup && e.sec !== 1 && e.sec !== 2);
+			const isSup = !!e.sup && !isExtra;
+			const isCore1 = !e.sup && !isExtra && e.sec === 1;
+			const isCore2 = !e.sup && !isExtra && e.sec === 2;
+
+			if (!showCore1 && isCore1) return false;
+			if (!showCore2 && isCore2) return false;
+			if (!showSup && isSup) return false;
+			if (!showExtra && isExtra) return false;
+
 			if (activeFilter === "all") return true;
 			if (typeof activeFilter === "string")
 				return e.tags && e.tags.includes(activeFilter);
@@ -108,12 +149,51 @@ export function renderVocab() {
 					(e.en && e.en.toLowerCase().includes(q)),
 			);
 		}
+
+		if (sortMode === "alpha") {
+			items.sort((a, b) => normPinyin(a.p).localeCompare(normPinyin(b.p)));
+		} else {
+			items.sort((a, b) => {
+				if (a.l !== b.l) return a.l - b.l;
+				const sa = a.sec || 99;
+				const sb = b.sec || 99;
+				if (sa !== sb) return sa - sb;
+				return (a.ord || 999) - (b.ord || 999);
+			});
+		}
+
+		let currentSec = -1;
+
 		items.slice(0, 400).forEach((e) => {
+			if (sortMode === "book" && typeof activeFilter === "number" && !q) {
+				const sec = e.sec || 99;
+				if (sec !== currentSec) {
+					currentSec = sec;
+					const header = document.createElement("div");
+					header.className = "vocab-sec-header";
+					header.style = "font-weight:600; font-size:13px; color:var(--primary); margin: 12px 0 4px 4px; padding-bottom: 4px; border-bottom: 1px solid var(--line);";
+					let title = T("secIndex");
+					if (sec === 1) title = T("sec1");
+					else if (sec === 2) title = T("sec2");
+					else if (sec === 3) title = T("sec3");
+					else if (sec === 4) title = T("sec4");
+					header.textContent = title;
+					list.appendChild(header);
+				}
+			}
+
 			const d = document.createElement("div");
-			d.className = "vrow" + (e.sup ? " sup" : "");
-			const tag = e.sup
-				? `<span class="vtag sup-tag">SUP</span>`
-				: `<span class="vtag core-tag">CORE</span>`;
+			d.className = "vrow" + (e.sup ? " sup" : "") + (e.extra ? " extra" : "");
+			const isExtra = !!e.extra || (!e.sup && e.sec !== 1 && e.sec !== 2);
+			let tag = "";
+			if (isExtra) {
+				tag = `<span class="vtag sup-tag">${T("extraTag").toUpperCase()}</span>`;
+			} else if (e.sup) {
+				tag = `<span class="vtag sup-tag">SUP</span>`;
+			} else {
+				const coreText = e.sec === 2 ? "CORE 2" : "CORE 1";
+				tag = `<span class="vtag core-tag">${coreText}</span>`;
+			}
 			d.innerHTML = `<span class="vh">${e.h}</span><span class="vp">${e.p}</span>
         <span class="vg">${gloss(e)}</span>
         <div style="display:flex; gap:6px; align-items:center;">
