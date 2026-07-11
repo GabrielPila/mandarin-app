@@ -1,0 +1,624 @@
+
+========== Book 1 Lesson 1 ==========
+### G1 用"吗"的是非问句 — Preguntas de sí-no con "ma 吗"
+Cuando se agrega la partícula modal interrogativa "吗" al final de una oración declarativa esta se convierte en una pregunta de "sí-no". La respuesta es la forma afirmativa o negativa de la oración declarativa sin "吗". Por ejemplo,
+我叫马大为。→ 你叫马大为吗？
+林娜在。→ 林娜在吗？
+他很忙。→ 他忙吗？
+
+### G2 形容词谓语句 — Oraciones con predicado adjetival
+En chino, un adjetivo puede funcionar directamente como predicado y puede ser modificado por adverbios como "hěn 很" (muy) y/o "yě 也" (también), etc., como por ejemplo: "Wǒ hěn hǎo. 我很好。" (Estoy bien.), "Dàwéi yě hěn hǎo. 大为也很好。" (Dawei también está bien.) La forma negativa se construye al colocar el adverbio "bù 不" (no) antes del adjetivo, como "Wǒ bù máng. 我不忙。" (No estoy ocupado.)
+Notas:
+① Los adverbios "很", "也", "不", etc. deben colocarse antes del adjetivo al que modifican.
+② Si una oración no tiene otro adverbio (por ejemplo, "不", "也", "tài 太", etc.), se agrega por lo general el adverbio "很". Por ejemplo, para responder "Nǐ zuìjìn zěnmeyàng? 你最近怎么样?" (¿Cómo estás recientemente?), la respuesta no es "* Wǒ hǎo. 我好。" o "* Wǒ máng. 我忙。"; sino "Wǒ hěn hǎo. 我很好。" (Estoy muy bien.) o "Wǒ hěn máng. 我很忙。" (Estoy muy ocupado.) "很" en este contexto, no tiene necesariamente el significado literal de "muy".
+③ Cuando una oración con predicado adjetival se transforma en una pregunta que termina con "吗", "很" generalmente se elimina. Por ejemplo, "我很好。" (Estoy muy bien.) → "Nǐ hǎo ma? 你好吗？" (¿Cómo estás?). No se pregunta "* Nǐ hěn hǎo ma? 你很好吗？".
+Ejemplos:
+我 很 好。
+大为 也很 好。
+我 不 忙。
+
+### G3 副词"也"的位置 — La posición del adverbio "yě 也" (también)
+El adverbio "也" debe colocarse después del sujeto pero antes del verbo o adjetivo que funciona como predicado. Por ejemplo, "Wǒ yě hěn hǎo. 我也很好。" (Estoy bien también.), pero no se dice "*Yě wǒ hěn hǎo. 也我很好。" o "*Wǒ hěn hǎo yě. 我很好也。" Además, "也" no puede funcionar como predicado por sí mismo, por ejemplo, no es correcto decir "* wǒ yě 我也".
+En una oración negativa, "也" debe ponerse antes de "不".
+Ejemplos:
+他 也 姓宋。
+林娜 也很 高兴。
+他 也不 姓宋。
+力波 也不 忙。
+
+### G4 汉语的语序 — Orden de las palabras en chino
+La gramática china cuenta con varias características principales. Estrictamente hablando, no presenta cambios pronombres personales, tiempos verbales, género, singular o plural, etc. Gramaticalmente, el orden de las palabras desempeña un papel extremadamente importante. En chino, el sujeto, es decir, el tema que se describe se pone generalmente al principio; y el predicado, que describe al sujeto, se coloca detrás. Por ejemplo,
+我 很忙。
+他 姓宋。
+
+========== Book 1 Lesson 2 ==========
+### G1 "是"字句（1）— Oraciones con "shì 是" (ser) (1)
+En una oración con "是", el verbo "是" se usa para vincular dos partes relacionadas, que pueden ser sustantivos, pronombres o frases nominales. El modo negativo se forma al agregar "bù 不" (no; leído en segundo tono bú) antes de "是". Si no se enfatiza particularmente, "是" generalmente se pronuncia ligeramente.
+Nota: El adverbio negativo "不" debe colocarse antes de "是".
+Ejemplos:
+这 是 马大为。
+那 不是 饺子。
+他 不是 陈老师。
+你 也是 上海人 吗？
+
+### G2 用疑问代词的问句（1）：什么、哪 — Oraciones interrogativas con pronombre interrogativo (1): "shénme 什么" (qué) o "nǎ 哪" (cuál)
+En chino, el orden de las palabras de una oración interrogativa con pronombre interrogativo es igual al orden de las palabras de una oración declarativa.
+Ejemplos:
+这是饺子。→ 这是什么？
+北京人喜欢吃面条儿和饺子。→ 北京人喜欢吃什么？
+他是美国人。→ 他是哪国人？
+
+### G3 连词"和" — La conjunción "hé 和" (y)
+La conjunción "和" generalmente conecta pronombres, sustantivos o frases nominales, como "tā hé tā 她和他" (ella y él), "bàba hé māma 爸爸和妈妈" (papá y mamá), y "wǒ māma hé nǐ māma 我妈妈和你妈妈" (mi mamá y tu mamá). La conjunción "和" no puede conectar dos oraciones y raramente se usa para conectar dos verbos o dos adjetivos.
+
+### G4 副词"都"的位置 — La posición del adverbio "dōu 都" (todos; ambos)
+Al igual que "yě 也" (también), el adverbio "都" debe colocarse después del sujeto pero antes del verbo o adjetivo del predicado. Por ejemplo, "Bāozi hé jiǎozi dōu hěn hǎochī. 包子和饺子都很好吃。" (Tanto el baozi como el jiaozi son deliciosos.) No puedes decir "* Dōu bāozi hé jiǎozi hěn hǎochī. 都包子和饺子很好吃。" porque es incorrecto gramaticalmente. Cuando "都" y "也" aparecen en la misma oración, "也" precede a "都", por ejemplo, "Wǒ bàba hé wǒ māma yě dōu hěn máng. 我爸爸和我妈妈也都很忙。" (Mi papá y mamá también están muy ocupados.)
+Ejemplos:
+丁力波和马大为 都很 好。
+我和林娜 都不太 忙。
+你爸爸和你妈妈 都 是北京人吗？
+王小云和宋华 也都不 喜欢吃面条儿。
+
+========== Book 1 Lesson 3 ==========
+### G1 "有"字句 — Oraciones con "yǒu 有" (tener)
+Una oración con el verbo "有" en el predicado generalmente expresa posesión. El negativo se forma al poner "méi 没" delante de "有". Nota: No se usa "bù 不" antes de "有".
+Si el sujeto de una oración con "有" comienza con una organización, un lugar o una ubicación, el verbo "有" también significa "haber, hay", por ejemplo: "Nǐmen jiā yǒu jǐ kǒu rén? 你们家有几口人？" (¿Cuántas personas hay en tu familia?)
+Ejemplos:
+我 有 一个哥哥。
+我们家 有 四口人。
+她 没有 妹妹。
+丁力波 没有 咖啡。
+他女儿 今天有 英语课 吗？
+你们家 有 小狗 吗？
+
+### G2 表领属关系的定语 — Modificadores que expresan posesión
+En chino, un modificador, también conocido como atributo, se coloca siempre antes de la palabra que modifica. Cuando se usa un pronombre o un sustantivo como modificador para expresar posesión, generalmente se requiere la partícula estructural "de 的".
+Cuando un pronombre personal modifica un sustantivo que se refiere a un familiar, lugar de trabajo o residencia, se puede omitir "的". Por ejemplo, "wǒ māma 我妈妈" (mi mamá), "nǐ nǚ'ér 你女儿" (tu hija), "tāmen jiā 他们家" (su casa/familia).
+Ejemplos:
+我 的 工作
+我们家 的 照片
+陆雨平 的 女儿
+
+### G3 数量词做定语 — "Numeral + clasificador" como modificador del sustantivo
+En el chino moderno, generalmente un número no puede modificar un sustantivo por sí solo, para ello debe combinarse con un clasificador. Usualmente cada sustantivo tiene su propio clasificador.
+El clasificador "个" se usa comúnmente delante de los sustantivos que se refieren a personas, cosas, lugares de trabajo, etc. Se lee en tono neutro. El clasificador "张" se usa generalmente para objetos de superficie plana como papel, imágenes y tarjetas de visita. El clasificador "口" se usa para expresar el número de personas en una familia. En otros casos, se debe usar "个".
+Nota: Cuando el pronombre demostrativo "zhè 这" (éste) o "nà 那" (aquél) se usa como modificador, también debe haber un clasificador antes del sustantivo modificado.
+Ejemplos:
+六口人
+两个姐姐
+一个朋友
+三张照片
+这张照片
+那个朋友
+
+### G4 用疑问代词的问句（2）：谁、几 — Oraciones interrogativas con pronombre interrogativo (2): "shéi 谁" (quién) o "jǐ 几" (cuánto)
+En una oración interrogativa con el pronombre "谁" o "几", el orden de las palabras es el mismo que en una oración declarativa. Solo necesitas usar la palabra interrogativa "谁" o "几" para reemplazar lo que no sabes y quieres preguntar. La palabra "谁" se usa para preguntar sobre personas, mientras que "几" se usa para preguntar sobre un número menor a 10.
+Ejemplos:
+那是我哥哥。→ 那是谁？
+王小云喜欢吃点心。→ 谁喜欢吃点心？
+这是林娜的照片。→ 这是谁的照片？
+我们家有四口人。→ 你们家有几口人？
+她今年五岁。→ 她今年几岁？
+
+### G5 还（1）：表示补充、追加 — El adverbio "hái 还" (1): Indica "además"
+Uno de los usos de "还" es para hacer un comentario adicional. Por ejemplo, "Wǒ yǒu liǎng gè jiějie, hái yǒu yí gè gēge. 我有两个姐姐，还有一个哥哥。" (Tengo dos hermanas mayores y un hermano mayor.)
+
+========== Book 1 Lesson 4 ==========
+### G1 11～100的称数法 — Números del 11 al 100
+11 十一, 12 十二, 13 十三, …, 19 十九, 20 二十
+21 二十一, 22 二十二, 23 二十三, …, 29 二十九, 30 三十
+31 三十一, …, 39 三十九, 40 四十
+…
+81 八十一, 82 八十二, 83 八十三, …, 89 八十九, 90 九十
+91 九十一, 92 九十二, 93 九十三, …, 99 九十九, 100 一百
+Cuando haces una pregunta referida a un número mayor o igual a "shí 十" (diez), debes usar el pronombre interrogativo "duōshao 多少". El clasificador después de "多少" a menudo se omite.
+
+### G2 钟点读法 — Cómo decir la hora
+Estas palabras se usan para indicar la hora en chino: "diǎn (zhōng) 点钟" (en punto), "kè 刻" (cuarto), y "fēn 分" (minuto). Por ejemplo, "bā diǎn èrshíwǔ fēn 八点二十五分" (las ocho y veinticinco).
+2:00 → 两点（钟）
+2:05 → 两点零五分 （Cuando "分" se usa con un número menor a 10, se debe añadir "零" antes del número.）
+2:10 → 两点十分
+2:12 → 两点十二（分）（Cuando "分" se usa con un número mayor a 10, "分" puede omitirse.）
+2:15 → 两点一刻 o 两点十五（分）
+2:30 → 两点半 o 两点三十（分）
+2:45 → 两点四十五（分）o 差一刻三点
+2:55 → 两点五十五（分）o 差五分三点
+
+### G3 表时间的词语做状语 — Expresiones de tiempo utilizadas como complemento circunstancial
+Las expresiones de tiempo, como "xiànzài 现在" (ahora), "jīntiān 今天" (hoy), "xiàwǔ 下午" (tarde), pueden funcionar como complemento circunstancial para indicar el momento de una acción o un estado. Se puede colocar un complemento circunstancial de tiempo antes o inmediatamente después del sujeto.
+Notas:
+① Nunca se puede colocar un complemento circunstancial de tiempo después del predicado. Por ejemplo, uno no puede decir "* Wǒ yǒu kè jīntiān. 我有课今天。"
+② Si hay más de una palabra de tiempo en un complemento circunstancial, la unidad de tiempo más grande se debe poner antes de la más pequeña. Por ejemplo, "jīntiān xiàwǔ 今天下午" (esta tarde) y "míngtiān shàngwǔ bā diǎn bàn 明天上午八点半" (mañana a las 8:30 por la mañana).
+Ejemplos:
+我 明天 有很多课。
+林娜 今天下午三点半 练习口语。
+你 明天晚上 有时间吗？
+力波 今天 不忙。
+七点半 我们班 有活动。
+明天晚上 你 做什么？
+下午四点 我 还有口语课。
+今天 马大为 很累。
+
+### G4 正反疑问句 — Preguntas afirmativo-negativas: verbo/adjetivo-no-verbo/adjetivo
+La forma afirmativa y negativa del predicado de una oración también se pueden yuxtaponer para formar una pregunta. En otras palabras, un verbo o un adjetivo más "no" más el mismo verbo o adjetivo también pueden formar una pregunta.
+Una respuesta a este tipo de pregunta puede ser una oración completa (afirmativa o negativa) o una oración con su sujeto u objeto omitido.
+Para responder a una pregunta "shì bu shì 是不是" como la que se muestra en el último ejemplo de la tabla, se puede decir "是" (respuesta afirmativa) o "不是" (respuesta negativa).
+Ejemplos:
+你 要不要 咖啡？
+他 明天来不来？
+林娜 累不累？
+宋华 有没有 时间？
+他妈妈 是不是 老师？
+
+### G5 动词谓语句 — Oraciones con predicado verbal
+En una frase con un predicado verbal, la parte principal del predicado es el verbo, incluyendo los verbos "shì 是" (ser) y "yǒu 有" (tener; haber) que hemos aprendido. La estructura de la oración suele ser "Sujeto + Verbo + Objeto" (SVO). La forma negativa se construye colocando "bù 不" (no) antes del verbo. Para una oración con "有" como verbo, la forma negativa se construye al colocar "méiyǒu 没有 / méi 没" (no) antes del verbo.
+Ejemplos:
+马大为 是 美国人。
+林娜 喝 茶。
+你 来 我们班。
+他朋友 不姓 陈。
+女儿 不在 家。
+她 今天没有 时间。
+马大为和丁力波 都学习 汉语。
+你 明天做 什么？
+她爸爸 喜欢吃 点心。
+你 要 咖啡 吗？
+我们 一起练习 口语 吧。
+
+### G6 用"呢"构成的省略问句 — Preguntas elípticas terminadas en "ne 呢"
+Al poner "呢" después de un pronombre o un sustantivo (frase) esta se transformará en una pregunta elíptica. El contenido ya debe haberse expresado claramente antes de que puedas hacer la pregunta que termina con "呢".
+Ejemplos:
+我很好。你呢？（你呢？= 你好吗？）
+王小云学英语专业。马大为呢？（马大为呢？= 马大为学什么专业？）
+我们班有二十六个女生。你们班呢？（你们班呢？= 你们班有多少个女生？）
+
+========== Book 1 Lesson 5 ==========
+### G1 年、月、日和星期的读法 — Expresar la fecha y los días de la semana
+En chino, los cuatro números que forman el nombre de un año se leen como cuatro dígitos separados con "nián 年" al final. Por ejemplo,
+一九八八年 yī jiǔ bā bā nián (1988)
+二〇〇〇年 èr líng líng líng nián (2000)
+二〇〇二年 èr líng líng èr nián (2002)
+二〇二〇年 èr líng èr líng nián (2020)
+Los números que forman el nombre de un mes se leen con "yuè 月" al final:
+一月 Yīyuè (enero), 二月 Èryuè (febrero), 三月 Sānyuè (marzo), 四月 Sìyuè (abril), 五月 Wǔyuè (mayo), 六月 Liùyuè (junio), 七月 Qīyuè (julio), 八月 Bāyuè (agosto), 九月 Jiǔyuè (septiembre), 十月 Shíyuè (octubre), 十一月 Shíyīyuè (noviembre), 十二月 Shí'èryuè (diciembre).
+Las fechas se forman combinando un número del 1 al 31 con "hào 号" en la forma hablada o "rì 日" en la forma escrita. Si es una fecha del mes actual, uno puede omitir "月" y decir simplemente "号".
+Los nombres de los días de la semana comienzan con la palabra "xīngqī 星期", seguida por un número del uno al seis. El domingo se llama "Xīngqīrì 星期日" o "Xīngqītiān 星期天". El sábado y el domingo son días de descanso y se llaman "zhōumò 周末" (fin de semana).
+星期一 Xīngqīyī (lunes), 星期二 Xīngqī'èr (martes), 星期三 Xīngqīsān (miércoles), 星期四 Xīngqīsì (jueves), 星期五 Xīngqīwǔ (viernes), 星期六 Xīngqīliù (sábado), 星期日 Xīngqīrì (domingo), 星期天 Xīngqītiān (domingo).
+El orden de la fecha y la hora: 年 + 月 + 日 + 星期 + 上午/下午/晚上 + 钟点.
+Ejemplo: 二〇二〇年 十二月 二十五日 星期五 晚上 八点二十五 (8:25 de la noche, viernes, 25 de diciembre de 2020).
+
+### G2 名词谓语句 — Oraciones con predicado nominal
+Los sustantivos, las frases nominales y los compuestos de número y clasificador pueden actuar como el predicado de una oración sin el verbo "shì 是". Este tipo de oración se utiliza especialmente en el lenguaje hablado para expresar edad, tiempo, etc. También se utiliza para expresar precio o lugar de nacimiento.
+La forma negativa de una oración con un predicado nominal usa "bú shì 不是".
+Ejemplos:
+你女儿 今年 几岁？
+林强 今年 多大？
+他 今年 二十岁。
+现在 几点？
+现在 差五分十点。
+今天 几号？
+这个星期日 十月二十五号。
+今天 不是 五号。
+她 不是 三十二岁。
+
+### G3 双宾语动词谓语句（1）：送、教 — Oraciones con un predicado verbal de dos objetos (1): "sòng 送" (dar como regalo) o "jiāo 教" (enseñar)
+Los verbos como "送", "教", entre otras cosas, pueden tener dos objetos. El primer objeto se refiere a las personas y el segundo se refiere a las cosas.
+Notas:
+① El verbo o una frase verbal puede actuar como el objeto de un verbo, como "Lǎoshī jiāo wǒ xiě. 老师教我写。" (El maestro me enseñó a escribir.), "Xiǎoyún jiāo wǒ zuò shòumiàn. 小云教我做寿面。" (Xiaoyun me enseñó a hacer tallarines de la longevidad.)
+② En chino, solo algunos verbos pueden tener dos objetos.
+Ejemplos:
+林娜 送 她哥哥 一个大蛋糕。
+她 教 我 英语。
+他们 教 林娜 说汉语。
+
+### G4 "就"（1）：表示强调 — El adverbio "jiù 就" (1): Expresar énfasis
+El adverbio "就" colocado antes de un verbo enfatiza lo que le sigue. Por ejemplo, "Tā jiù shì wǒ gēge. 他就是我哥哥。" (Él es mi hermano mayor.), "Zhè jiù shì shòumiàn. 这就是寿面。" (Estos son tallarines de la longevidad.)
+
+### G5 疑问语调句 — Oraciones con tono ascendente
+Una declaración con un tono ascendente, sin un final "ma 吗", también puede formar una pregunta. En la escritura, se debe agregar un signo de interrogación al final de la oración. Este tipo de pregunta a menudo expresa incertidumbre o incredulidad.
+Ejemplos:
+你认识我妹妹？ ¿Conoces a mi hermana menor?
+你来我们班？ ¿Vienes a nuestra clase?
+你学习英语？ ¿Estás estudiando inglés?
+
+### G6 语法小结（1）：主语、谓语、宾语、定语和状语 — Resumen de gramática (1): sujeto, predicado, objeto, modificador y complemento circunstancial
+Una frase en chino generalmente se puede dividir en sujeto y predicado. El componente principal del sujeto es a menudo un sustantivo o un pronombre. El componente principal del predicado es a menudo un verbo o un adjetivo. El sujeto generalmente se coloca antes del predicado. En una conversación, el sujeto a menudo se omite. Si el contexto es claro, el predicado también se puede omitir.
+El objeto es parte del predicado y generalmente se coloca después del verbo. En general, el objeto es un sustantivo o un pronombre, y también puede ser un verbo o una frase verbal. Algunos verbos pueden tener dos objetos.
+Un modificador modifica principalmente un sustantivo. Un sustantivo, un pronombre, un adjetivo, un compuesto de número y clasificador, etc. pueden actuar como un modificador, que debe colocarse antes del sustantivo que modifica.
+Un complemento circunstancial modifica principalmente un verbo o adjetivo. Un adverbio, un adjetivo, un sustantivo y una construcción preposicional pueden actuar como complemento circunstancial. Este debe colocarse antes del verbo o adjetivo que modifica.
+Ejemplos:
+我 是学生。
+林娜 不看电影。
+饺子 很好吃。
+他 是 美国人。
+我 认识 他。
+我 喜欢 吃面条儿。
+陈老师 教 我汉语。
+我们 都很 忙。
+他 星期天 去学校。
+我朋友 在学校 写汉字。
+
+========== Book 1 Lesson 6 ==========
+### G1 方位词 — Sustantivos locativos
+Palabras como "lǐbiān 里边" (dentro), "wàibian 外边" (afuera), "zuǒbiān 左边" (izquierda), "yòubiān 右边" (derecha), "pángbiān 旁边" (al lado), "shàngbiān 上边" (arriba), "xiàbiān 下边" (abajo), "qiánbiān 前边" (adelante), "hòubiān 后边" (atrás; detrás), "dōngbiān 东边" (este), "xībiān 西边" (oeste), "nánbiān 南边" (sur), "běibiān 北边" (norte), y "duìmiàn 对面" (enfrente) son sustantivos locativos. Se pueden utilizar como sujeto, objeto o modificador. También pueden ser modificados.
+Notas:
+① Cuando se usa un sustantivo locativo como modificador, se debe usar "de 的" entre el modificador y el modificado. Por ejemplo, "yòubian de lóu 右边的楼" (el edificio de la derecha) y "qiánbian de chāoshì 前边的超市" (el supermercado de enfrente). Cuando el sustantivo locativo es la palabra modificada, generalmente no hay "的" antes de ella. Por ejemplo, "xuéxiào lǐbian 学校里边" (dentro de la escuela) y "shítáng pángbiān 食堂旁边" (al lado del comedor).
+② La palabra "lǐbiān 里边" generalmente no se usa después del nombre de un país o un lugar muy grande. Por ejemplo, uno puede decir "zài Zhōngguó 在中国" (en China) y "zài Běijīng 在北京" (en Beijing), pero no "* 在中国里边" o "* 在北京里边".
+③ Usualmente palabras monosilábicas como "lǐ 里" (dentro; adentro), "wài 外" (fuera; afuera), "qián 前" (adelante), "hòu 后" (atrás), "shàng 上" (arriba), "xià 下" (abajo), "dōng 东" (este), "xī 西" (oeste), etc. no se usan solas, sino que a menudo son modificadas por otros sustantivos, como por ejemplo: "xuéxiào lǐ 学校里" (en la escuela), "xiàomén wài 校门外" (fuera de la puerta de la escuela), "lóu shàng 楼上" (piso de arriba), "lóu xià 楼下" (piso de abajo), "lù dōng 路东" (este de la calle), entre otras cosas.
+Ejemplos:
+前边 有没有一个饭馆？
+银行 在图书馆 东边。
+右边的楼 是新同学的宿舍楼。
+
+### G2 用"在"表方位的句子 — Oraciones con "zài 在" (estar) que indican una ubicación
+Para expresar la idea de que alguien o algo está ubicado en un lugar determinado, generalmente se usa "在" como verbo principal de la oración. El sujeto de este tipo de oración usualmente es una persona o cosa. El objeto es el sustantivo que indica la ubicación.
+Ejemplos:
+我 在 他右边。
+大为的宿舍 在 学校里边吗？
+图书馆 不在 食堂西边。
+
+### G3 用"有""是"表存在的句子 — Oraciones con "yǒu 有" (hay) o "shì 是" (ser/estar) que indican existencia
+Para indicar la existencia de alguien o algo en un lugar determinado, "有" o "是" se utilizan a menudo como verbo principal del predicado. El sujeto (tema) de este tipo de oración usualmente es un sustantivo o frase nominal locativa. El objeto suele ser un sustantivo o una frase nominal que indica a la persona o la cosa.
+Nota: Una oración con "是" y una oración con "有" se diferencian de las siguientes maneras: El objeto de una oración con "有" hace referencia a lugares, personas o cosas en general, mientras que el objeto de una oración con "是" hace referencia a un lugar, persona o cosa específica.
+Ejemplos:
+学校里边 有 银行。
+办公楼对面 没有 超市。
+前边 有没有 一个小饭馆？
+食堂旁边 是 办公楼。
+图书馆东边 不是 教学楼。
+你对面 是不是 一个银行？
+你前边 是 谁？
+
+### G4 介词结构（1）：跟/给＋代词/名词 — La construcción preposicional (1): "gēn 跟" (con) / "gěi 给" (a; para) + Pronombre/Sustantivo
+La preposición "跟" a menudo se combina con un sustantivo o un pronombre para formar una frase preposicional. Se coloca delante del verbo, indicando el modo de realizar una acción.
+La preposición "给", al combinarse con un sustantivo o una frase nominal, forma una frase preposicional. Cuando se coloca antes del verbo, la frase preposicional indica el receptor de la acción.
+Nota: La frase preposicional que usa "跟……" o "给……" debe colocarse antes del verbo. Solo puede decir "Nǐ gēn wǒ lái. 你跟我来。" (Ven conmigo.) o "Wǒ gěi nǐ jièshào yīxià. 我给你介绍一下。" (Te presento.)
+Ejemplos:
+你 跟我 来。
+我 跟老师 学 中文。
+林娜 跟同学 去 食堂。
+我 给你 介绍一下。
+马大为 给大家 唱 英语歌。
+林娜 给哥哥 做 寿面。
+
+### G5 用"……，好吗？""……，对吗？"提问 — Preguntas con "……, hǎo ma 好吗?" o "……, duì ma 对吗?"
+La pregunta "……, hǎo ma 好吗？" se usa a menudo para hacer una sugerencia y solicitar la opinión de otras personas. La primera mitad de la oración es una sugerencia. La respuesta afirmativa puede ser "hǎo a 好啊" o "hǎo 好", etc. La respuesta negativa normalmente no es "*bù hǎo 不好", sino "zhēn bù hǎoyìsi 真不好意思，……", "duìbuqǐ 对不起……", "kǒngpà bùxíng 恐怕不行", etc.
+La pregunta "……, duì ma 对吗？" se usa a menudo para indicar que el hablante está preguntando con cierta seguridad y confianza. La primera parte de la oración puede ser afirmativa o negativa. La respuesta podría ser "duì 对" o "bú shì 不是".
+Ejemplos:
+我们买一个大蛋糕，好吗？
+你教我汉语，好吗？
+你是中国人，对吗？
+
+========== Book 1 Lesson 7 ==========
+### G1 百、千的称数法 — Números del 100 al 9.999
+100 一百; 101-109 一百零一……一百零九; 110-199 一百一十、一百一十一……一百九十九
+200 二百; 201-209 二百零一……二百零九; 210-299 二百一十、二百一十一……二百九十九
+900 九百; 901-909 九百零一……九百零九; 910-999 九百一十、九百一十一……九百九十九
+1000 一千; 1001 一千零一; 1010 一千零一十; 1052 一千零五十二
+1100 一千一百; 2109 两千一百零九; 2543 两千五百四十三
+4222 四千二百二十二; 8990 八千九百九十; 9999 九千九百九十九
+Nota: Cuando "2" aparece antes de "qiān 千", se lee como "liǎng 两".
+
+### G2 能愿动词谓语句（1）：想、可以 — Oraciones con verbos auxiliares (1): "xiǎng 想" (gustaría) o "kěyǐ 可以" (poder, ser posible)
+Los verbos auxiliares como "想", "可以", "yào 要" (querer), "néng 能" (poder), y "yīnggāi 应该" (deber) a menudo se colocan antes de un verbo, expresando intención, posibilidad o capacidad. La palabra "想" expresa la intención subjetiva o la esperanza de uno. Su forma negativa es "bù xiǎng 不想".
+La palabra "可以" a menudo expresa condiciones objetivas que permiten o prohíben a alguien hacer algo. La forma negativa es "bù kěyǐ 不可以" (no se puede).
+Notas:
+① En una oración con un verbo auxiliar, la pregunta afirmativo-negativa de verbo/adjetivo-no-verbo/adjetivo se aplica al verbo auxiliar en lugar de al verbo de la acción. Por ejemplo, "Nǐ xiǎng bu xiǎng kàn diànyǐng? 你想不想看电影？" (¿Te gustaría ver una película?)
+② Para dar una respuesta simple a una pregunta, se puede decir solamente el verbo auxiliar. Por ejemplo, "Kěyǐ shuākǎ ma? 可以刷卡吗？ B: 可以。"
+③ Algunos verbos auxiliares son simplemente verbos, como "想" en "xiǎng wèntí 想问题" (pensar en una pregunta/problema) y "xiǎng yǔfǎ 想语法" (pensar en la gramática).
+Ejemplos:
+丁力波 想 买 一件绿色的羽绒服。
+林娜 想不想 看 北京的胡同？
+我 不想 去 上海。
+您 可以 给我介绍一下吗？
+我 可以不可以 试一下 这件衣服？
+现在 不能/不可以 过 马路。
+
+### G3 双宾语动词谓语句（2）：给、问、找 — Oraciones con un predicado verbal de dos objetos (2): "gěi 给" (dar), "wèn 问" (preguntar), y "zhǎo 找" (dar el cambio)
+Los verbos "给", "问" y "找" pueden estar seguidos de dos objetos, entre los cuales el primero indica el destinatario y el segundo indica la cosa dada.
+Ejemplos:
+您 给 我 六十（块）。
+老板 给 大为 两个草莓。
+妈妈 给 儿子 一盒巧克力。
+马大为 问 老板 一个问题。
+他 问 她 明天的课。
+医生 问 你 什么？
+我 找 您 八块。
+
+### G4 用疑问代词的问句（3）：怎么 — Oraciones interrogativas con pronombre interrogativo (3): "zěnme 怎么" (cómo)
+El pronombre interrogativo "怎么" colocado antes de un verbo forma una oración interrogativa. El modelo "怎么 + verbo" se usa a menudo para preguntar sobre una acción determinada o sobre cómo se hace algo, como "zěnme shuō 怎么说" (cómo se dice), "zěnme zuò 怎么做" (cómo se hace), "zěnme qù 怎么去" (cómo se va), "zěnme xiě 怎么写" (cómo se escribe), entre otras cosas.
+Nota: En este tipo de oración, el sujeto a menudo es el receptor de la acción, pero también es el tema del comentario.
+Ejemplos:
+草莓 怎么卖？
+寿面 怎么做？
+这个汉字 怎么写？
+"descuento" 汉语怎么说？
+这个 汉语怎么说？
+
+========== Book 1 Lesson 8 ==========
+### G1 主谓谓语句 — Oraciones con una frase sujeto-predicado como predicado
+Este tipo de oración, en el primer nivel, se compone de un sujeto (sujeto₁) y un predicado (predicado₁). El predicado por sí mismo, en el segundo nivel, también se compone de un sujeto (sujeto₂) y un predicado (predicado₂). El sujeto₂ bajo el predicado₁ es a menudo una parte o un aspecto del sujeto (sujeto₁) de la frase completa.
+En la forma negativa, el adverbio "bù 不" se coloca en el segundo nivel. La pregunta afirmativo-negativa verbo/adjetivo-no-verbo/adjetivo también puede aparecer en el segundo nivel.
+Ejemplos:
+马大为 头 疼。
+他 全身 都不舒服。
+你 身体 好吗？
+宋华 学习 怎么样？
+今天 天气 冷不冷？
+这个 汉语 怎么说？
+
+### G2 选择疑问句 — Preguntas de elección
+Las preguntas de elección utilizan "háishi 还是" (o) para conectar la opción A y la opción B. Al responder uno debe elegir entre A y B.
+Ejemplos:
+现在去 还是 下午去？→ 现在去。
+内科在一层 还是 二层？→ 在二层。
+你是老师 还是 学生？→ 我是学生。
+她学习汉语 还是 学习英语？→ 她学习汉语。
+
+### G3 连动句（1）：表示目的 — Oraciones con verbos en serie (1): Expresar un propósito
+En una oración con verbos en serie (1), el sujeto tiene dos verbos en serie o frases verbales como predicado. El orden de los verbos es fijo. El verbo₂ explica el propósito del verbo₁. El adverbio negativo "bù 不" generalmente se coloca antes del verbo₁.
+Nota: Cuando hay un verbo auxiliar en una frase, el adverbio negativo "不" debe colocarse antes del verbo auxiliar. Por ejemplo: "Nǐ bù yīnggāi qù fànguǎn chī fàn. 你不应该去饭馆吃饭。" (No debes comer en el restaurante.)
+Ejemplos:
+马大为 去医院 看病。
+他 下午不 回学校 运动。
+你们 明天去不去超市 买苹果？
+
+### G4 能愿动词谓语句（2）：应该、要、能 — Oraciones con verbos auxiliares (2): "yīnggāi 应该" (deber), "yào 要" (necesitar; querer), y "néng 能" (poder; ser capaz de)
+El verbo auxiliar "应该" expresa que "es necesario hacer algo".
+El verbo auxiliar "要" a menudo expresa que "hace falta hacer algo". La forma negativa es "búyòng 不用" (no hace falta).
+El verbo auxiliar "能" a menudo expresa el significado de "poder; ser capaz de". La forma negativa es "bù néng 不能" (no poder; no ser capaz de).
+Ejemplos (应该):
+马大为 应该 去医院看病。
+你 不应该 买那件很贵的衬衫。
+Ejemplos (要):
+马大为 要不要 验血？
+马大为 不用 验血。
+我 要 给他女儿买礼物吗？
+你 要 给她买点儿巧克力。
+Ejemplos (能):
+大为 明天 能 上课吗？
+我 晚上 不能 来学校。
+小云 星期六 能 参加聚会吗？
+
+### G5 介词结构（2）：在＋代词/名词 — La construcción preposicional (2): "zài 在" (en) + Pronombre/Sustantivo
+La palabra "在" es un verbo y también una preposición. La preposición "在" seguida de un sustantivo o una frase, que generalmente es una palabra de lugar, forma una construcción preposicional. Se coloca antes del predicado verbal, indicando el lugar donde ocurre la acción.
+Ejemplos:
+你 在这儿 等一下。
+她爸爸 在哪儿 工作？
+她爸爸 在医院 工作。
+张老师 不在我们班 上课。
+
+========== Book 1 Lesson 9 ==========
+### G1 助词"了"在句尾（1）：表示情况的变化 — La partícula "le 了" al final de una oración (1): Expresar un cambio de estado
+La partícula "了" al final de una frase expresa un cambio de estado o una nueva situación. Este uso aparece a menudo en una frase con un adjetivo o un sustantivo como predicado, así como en una oración con el verbo "shì 是" (ser) o "yǒu 有" (tener; haber), etc.
+Para saber si el estado ha cambiado o no, a menudo usamos la pregunta que termina con "吗". Si el estado no ha cambiado, a menudo usamos "méiyǒu 没有" (consulta la primera, segunda y cuarta frase). Si la frase lleva el verbo "是", la respuesta negativa es "bú shì 不是".
+Ejemplos:
+天气凉快了。（天气凉快了吗？/ 天气没有凉快。）
+树都绿了。（树绿了吗？/ 树没有绿。）
+现在是秋天了。（现在是秋天了吗？/ 现在不是秋天。）
+今天我（也）有时间了。（今天你有时间了吗？/ 今天我没有时间。）
+
+### G2 连动句（2）：表示方式 — Oraciones con verbos en serie (2): Expresar medios o maneras
+En esta lección, el primer verbo de la oración con verbos en serie generalmente expresa el medio o la manera del segundo verbo.
+Ejemplos:
+他每天 坐公共汽车 回家。
+我们 开车去 王府井。
+大为可以 游（泳）回国 吗？
+
+### G3 能愿动词谓语句（3）：会、可能 — Oraciones con verbos auxiliares (3): "huì 会" (poder, ser capaz de) y "kěnéng 可能" (ser posible)
+El verbo auxiliar "会" se usa a menudo antes de un verbo para expresar una habilidad que se puede conseguir a través del estudio o la práctica. Por ejemplo, "huì kāichē 会开车" (poder conducir), "huì yóuyǒng 会游泳" (poder nadar), y "huì shuō Hànyǔ 会说汉语" (poder hablar chino).
+El verbo auxiliar "可能" expresa "posibilidad" y suele ser una estimación con incertidumbre.
+Ejemplos (会):
+你 会不会 说汉语？
+宋华 不会 开车。
+丁力波 会 写这个汉字。
+谁 会 滑雪？
+Ejemplos (可能):
+陆雨平 八月 可能 去上海。
+马大为 现在 不可能 睡觉。
+王小云 明天 可能 来学校吗？
+打车去 可能 很慢。
+
+### G4 用疑问代词的问句（4）：怎么样 — Oraciones interrogativas con pronombre interrogativo (4): "zěnmeyàng 怎么样" (¿Cómo es/son...? / ¿Qué tal...?)
+El uso de "……，怎么样" es similar al uso de "……，好吗？" al final de una frase. A menudo se utiliza para hacer una sugerencia o para saber la opinión de otros. La primera mitad de la oración es una declaración que expresa una sugerencia.
+La respuesta afirmativa es a menudo "hǎo a 好啊", "hǎo好", "hǎo de 好的", "hǎo ba 好吧", o "tài hǎo le 太好了", etc.; la respuesta negativa puede ser "bùxíng 不行" (no) o "zhēn bù hǎoyìsi 真不好意思，……" (lo siento mucho), o "duìbuqǐ 对不起，……" (lo siento), etc., explicando la razón de esta respuesta.
+Ejemplos:
+我们买一个大蛋糕，怎么样？¿Qué te parece si compramos un pastel grande?
+现在去，怎么样？¿Qué te parece si vamos ahora?
+
+========== Book 1 Lesson 10 ==========
+### G1 — 助词"了"在句尾（2）：肯定事情的发生或实现
+La partícula "了" al final de una oración confirma que algo ha sucedido o se ha completado.
+Negación: "méi (yǒu) 没（有）" antes del verbo, sin "了".
+Preguntas: "……了吗？", "……了没有？" o "verbo-没-verbo".
+Ejercicio G1-I — Sustituye las partes subrayadas y completa los diálogos.
+Ejercicio G1-II — En grupos de dos, haz preguntas y escribe las respuestas.
+
+### G2 — 兼语句 Oraciones pivotales
+El objeto del primer verbo (Sujeto₂) también es el sujeto del segundo verbo. El primer verbo
+suele ser "qǐng 请" (pedir/invitar) o "ràng 让" (dejar/mandar). Negación con "bú bù 不" o
+"méi (yǒu) 没（有）" antes del primer verbo.
+Ejercicio G2-I — Sustituye las partes subrayadas y completa los diálogos.
+Ejercicio G2-II — Mira las imágenes y completa las oraciones con 让 o 请.
+
+### G3 — 用"……，是不是？"提问
+"……，是不是？" o "……，是吗？" expresan una suposición del hablante. Respuesta
+afirmativa: "shì a 是啊"; negativa: "bú shì 不是" o "bù 不".
+Ejercicio G3-I — Sustituye las partes subrayadas y completa los diálogos.
+Ejercicio G3-II — En grupos de dos, haz diálogos usando 是不是.
+
+### G4 — 语法小结（2）：四种汉语句子和常用的六种提问方法
+Resumen: cuatro tipos de oraciones (动词谓语句, 形容词谓语句, 名词谓语句, 主谓谓语句)
+y seis tipos de preguntas (吗, 正反疑问句, 疑问代词, 还是, 好吗/怎么样/是不是/是吗, 呢).
+Ejercicio G4-I — Haz preguntas sobre las partes subrayadas.
+Ejercicio G4-II — Haz preguntas a partir de las oraciones dadas.
+
+========== Book 2 Lesson 11 ==========
+### G1 — 结构补语(1) El complemento modal (1)
+Después de algunos verbos y adjetivos, se añade "得" para expresar el complemento modal.
+El complemento modal está formado por un adjetivo o una frase adjetival. "得" debe usar
+la partícula "得" para conectar el verbo y el complemento modal.
+Estructura: V + 得 + Adj/V; negativa: V + 得 + 不 + Adj/V
+Si el verbo lleva objeto, se repite el verbo: (V + O) + V + 得 + Adj.
+Ejercicio G1-I — Práctica de sustitución.
+Ejercicio G1-II — Basándose en el ejemplo de abajo, forma oraciones usando las palabras dadas.
+Ejercicio G1-III — Describe las siguientes imágenes.
+
+### G2 — 助词"了"在动词后，表示动作行为的完成或实现
+La partícula "了" después del verbo confirma la finalización o realización de una acción.
+Forma: V + Núm-Clas/Pron/Adj. + O; negativa: 没（有）+ V
+Ejercicio G2-I — Práctica de sustitución.
+Ejercicio G2-II — Observa las imágenes y completa las oraciones usando la partícula "了".
+
+### G3 — 动词重叠 Reduplicación del verbo
+Un verbo chino puede repetirse como AA o A-A. La reduplicación de un verbo monosilábico
+es "AA" o "A-A". Para verbos de dos sílabas: "ABAB". A veces en forma "AB了AB".
+La reduplicación generalmente representa la breve duración o el intento de una acción.
+Ejercicio G3-I — Dibuja una línea para conectar cada verbo con su forma reduplicada correcta.
+
+========== Book 2 Lesson 12 ==========
+### G1 — 结果补语 El complemento de resultado
+El complemento de resultado indica el resultado de una acción. Puede ser un adjetivo o un
+verbo. El verbo y el complemento se unen sin pausa.
+Estructura: V + O + V/Adj.; negativa: 没(有) + V; pregunta: V + O + 了没有?
+Ejercicio G1-I — Práctica de sustitución.
+Ejercicio G1-II — Basándose en el ejemplo, forma oraciones usando las palabras dadas.
+Ejercicio G1-III — Describe las siguientes imágenes.
+
+### G2 — 结果补语/方向补语 Complemento direccional simple
+Los verbos "来" y "去" se usan como complementos de dirección. "来" indica dirección
+hacia el hablante; "去" indica dirección alejándose del hablante.
+Si el verbo tiene objeto, puede colocarse entre verbo y complemento o después.
+Estructura: V + O/Pt.aux. + 来/去; con objeto: V + 来/去 + O o V + O + 来/去
+Ejercicio G2-I — Práctica de sustitución.
+Ejercicio G2-II — Basándose en el ejemplo, forma oraciones usando las palabras dadas.
+Ejercicio G2-III — Describe las siguientes imágenes.
+
+========== Book 2 Lesson 13 ==========
+### G1 — 把字句 La oración con "把"
+"把" se coloca antes del objeto para indicar que la acción lo dispone o afecta de
+manera específica. La acción debe tener un resultado o duración.
+Estructura: S + 把 + O + V + Pt.aux. "了"; negativa: 没有 + V (sin 把)
+Ejercicio G1-I — Práctica de sustitución.
+Ejercicio G1-II — Basándose en el ejemplo, forma oraciones.
+
+### G2 — 时间补语 El complemento de duración
+El complemento de duración indica la extensión de tiempo de una acción. Se añade
+directamente después del verbo. Si el verbo lleva objeto, se repite el verbo.
+Estructura: S + (M) + V + (Pt.aux.) + Complemento de duración + (了) + O
+Ejercicio G2-I — Práctica de sustitución.
+Ejercicio G2-II — Traduce las siguientes oraciones al chino.
+
+========== Book 2 Lesson 14 ==========
+### G1 — 比较句(1) Comparaciones con "比" (1)
+Estructura básica: X + 比 + Y + Adj. (indica que X supera a Y en cierto grado)
+Negativa: X + 没有 + Y + Adj. (o "不如")
+Ejercicio G1-I — Práctica de sustitución.
+Ejercicio G1-II — Lena los espacios en blanco con la palabra más apropiada.
+
+### G2 — 比较句(2) Comparaciones con "比" (2): X + 比 + Y + Adj. + Complemento
+Se puede añadir un complemento de cantidad o resultado después del adjetivo para
+indicar la diferencia específica entre dos cosas.
+Ejercicio G2-I — Práctica de sustitución.
+Ejercicio G2-II — Traduce las siguientes oraciones al chino.
+
+========== Book 2 Lesson 15 ==========
+### G1 — 比较句(1) 同类比较"跟/和...一样" Comparaciones de igualdad con "跟/和...一样"
+Estructura: X + 跟/和 + Y + 一样 + Adj.; negativa: X + 跟/和 + Y + 不一样
+Ejercicio G1-I — Práctica de sustitución.
+Ejercicio G1-II — Basándose en el ejemplo, forma oraciones con 一样.
+
+### G2 — 比较句(3) 用"比": X + 比 + Y + Adj. + FV Comparaciones con "比" (3): con complemento verbal
+El adjetivo puede llevar un complemento verbal que expresa la diferencia específica.
+Ejercicio G2-I — Usa "比" para reescribir las siguientes oraciones.
+Ejercicio G2-II — Basándose en el ejemplo, escribe oraciones con "比".
+
+### G3 — 语法小结(3): 六个基本句子成分和谓语动词(1) Resumen de gramática (3)
+Resumen de los seis elementos básicos de las oraciones en chino con predicado verbal.
+Ejercicio G3-I — Práctica de sustitución.
+Ejercicio G3-II — Escribe oraciones con "比".
+
+========== Book 2 Lesson 16 ==========
+### G1 — 正在/在/正 + V (construcción progresiva)
+Indica que una acción está en progreso en el momento del habla. Partícula "呢" al final refuerza.
+Estructura: (正在/在/正) + V + (呢)
+Ejercicio G1-I — Práctica de sustitución.
+Ejercicio G1-II — Observa las imágenes y escribe oraciones.
+
+### G2 — 因为…所以 / 所以 Oraciones de causa y efecto
+"因为…所以…" conecta la primera cláusula (causa) con la segunda (resultado). "所以"
+aparece en la segunda parte. A veces se usa solo "因为" o solo "所以".
+Ejercicio G2-I — Usa "因为…所以" para conectar oraciones.
+Ejercicio G2-II — Observa las imágenes y escribe oraciones.
+
+### G3 — 语法小结(3): Los seis elementos básicos de las oraciones en chino (1)
+Resumen de los elementos básicos: sujeto, predicado verbal, objeto, complemento, etc.
+Ejercicio G3-I — Práctica de sustitución.
+
+========== Book 2 Lesson 17 ==========
+### G1 — 动词"过"表示过去的经验或经历 La partícula "过" para expresar experiencias pasadas
+"过" se coloca después del verbo indicando que cierta acción ha sucedido en el pasado.
+Negativa: 没(有)…过; Pregunta: …过没有?
+Ejercicio G1-I — Práctica de sustitución.
+Ejercicio G1-II — Observa las imágenes y escribe oraciones.
+
+### G2 — "好" + V (好听, 好看, 好吃, 好玩)
+El adjetivo "好" se usa antes de "听", "看", "吃", "玩" para indicar que algo es
+agradable al sentido correspondiente.
+Ejercicio G2-I — Práctica de sustitución.
+
+### G3 — 虽然…但是… / 但是 Aunque / A pesar de que
+"虽然…但是…" indica una relación adversativa entre las dos cláusulas. "虽然" puede
+colocarse antes o después del sujeto de la primera cláusula.
+Ejercicio G3-I — Traza líneas para conectar las cláusulas.
+Ejercicio G3-II — Observa las imágenes y completa las oraciones.
+
+========== Book 2 Lesson 18 ==========
+### G1 — 复合趋向补语(1) Complemento direccional compuesto (1)
+Los verbos direccionales como "上", "下", "进", "出", etc. pueden combinarse con "来"
+o "去" para formar complementos direccionales compuestos.
+Ejercicio G1-I — Práctica de sustitución.
+Ejercicio G1-II — Completa los siguientes diálogos.
+Ejercicio G1-III — Describe las siguientes imágenes.
+
+### G2 — 复合趋向补语(2) Complemento direccional compuesto (2)
+Con objeto: el objeto puede colocarse entre el verbo y el complemento o después.
+Ejercicio G2-I — Práctica de sustitución.
+Ejercicio G2-II — Completa los siguientes diálogos.
+
+### G3 — 不…也… / 不但…而且… Conectores de adición
+"不但…而且…" conecta dos oraciones complementarias que van en escalada.
+Ejercicio G3: Basándose en el ejemplo de abajo, reescribe las siguientes oraciones.
+
+### G4 — 无主句 Frases sin sujeto
+Las frases sin sujeto expresan fenómenos de la naturaleza u otros estados que ocurren sin
+agente. La acción no puede tener objeto.
+Ejercicio G4-I — Práctica de sustitución.
+Ejercicio G4-II — Traza líneas para conectar las oraciones.
+
+========== Book 2 Lesson 19 ==========
+### G1 — 被字句 La oración con "被" (voz pasiva)
+"被" + Agente + V indica que el sujeto es el receptor de la acción.
+Estructura: S + 被 + Agente + V + resultado/補
+La negativa usa 没有 antes de 被; pregunta con 了没有 o 没有 al final.
+Ejercicio G1-I — Práctica de sustitución.
+Ejercicio G1-II — Completa las siguientes oraciones usando "被".
+
+### G2 — 结果补语 Complemento de resultado: "住" y "上"
+"住" como complemento de resultado indica firmeza o inmovilidad. "上" indica logro.
+Ejercicio G2-I — Práctica de sustitución.
+
+### G3 — 比较句 Comparaciones
+Ejercicio G3: Basándose en el ejemplo de abajo, reescribe las siguientes oraciones.
+
+========== Book 2 Lesson 20 ==========
+### G1 — 语法小结(4): 把字句用法综合 Resumen gramatical (4): Uso completo de la construcción con "把"
+Repaso completo de: 把字句, 补语 (tipos), progresiva (正在/在/正), 被字句.
+Ejercicio G1-I — Práctica de sustitución.
+Ejercicio G1-II — Completa los siguientes diálogos.
+
+### G2 — 几种补语 Varios tipos de complemento
+Repaso: complemento modal (得), de resultado (住/上/到等), direccional (来/去/起来等),
+de cantidad/duración/frecuencia. Referencias a las lecciones donde se enseñaron.
+Ejercicio G2-I — Traza líneas para conectar las oraciones.
+Ejercicio G2-II — Escribe oraciones usando los tipos de complemento indicados.

@@ -4,10 +4,11 @@ import { settings } from "./store.js";
 export const UI = {
 	es: {
 		appTitle: "Chino Práctico",
-		study: "Estudiar",
-		texts: "Textos",
+		study: "Práctica",
+		texts: "Lectura",
 		vocab: "Vocabulario",
 		grammar: "Gramática",
+		tutor: "Tutor",
 		settings: "Ajustes",
 		due: "para repasar",
 		fresh: "nuevas",
@@ -39,6 +40,7 @@ export const UI = {
 		example: "Ejemplo",
 		search: "Buscar…",
 		lang: "Idioma de los significados",
+
 		includeSup: "Incluir palabras suplementarias en las tarjetas",
 		includeExtraVocab: "Incluir vocabulario adicional (sec: 4) en las tarjetas",
 		newPerDay: "Tarjetas nuevas por sesión",
@@ -135,10 +137,11 @@ export const UI = {
 	},
 	en: {
 		appTitle: "Practical Chinese",
-		study: "Study",
-		texts: "Texts",
+		study: "Practice",
+		texts: "Reading",
 		vocab: "Vocabulary",
 		grammar: "Grammar",
+		tutor: "Tutor",
 		settings: "Settings",
 		due: "to review",
 		fresh: "new",
@@ -170,6 +173,7 @@ export const UI = {
 		example: "Example",
 		search: "Search…",
 		lang: "Language for meanings",
+
 		includeSup: "Include supplementary words in flashcards",
 		includeExtraVocab: "Include additional vocabulary (sec: 4) in flashcards",
 		newPerDay: "New cards per session",

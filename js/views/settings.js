@@ -36,6 +36,7 @@ export function renderSettings() {
       <input type="checkbox" id="rev-cards" ${settings.reverseCards ? "checked" : ""}></div>
     <div class="setting"><label>${T("voiceSpeed")}: <b id="vs-val">${settings.voiceSpeed || 1.0}x</b></label>
       <input type="range" id="voice-speed" min="0.5" max="1.5" step="0.1" value="${settings.voiceSpeed || 1.0}"></div>
+
     <div class="setting"><label>${T("voice")}</label>
       <div style="display:flex; gap:8px;">
         <select id="voice-select" style="flex:1; padding:8px; border-radius:8px; border:1px solid var(--line); background:var(--card-bg); color:var(--ink); font-size:14px;"></select>

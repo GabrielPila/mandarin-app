@@ -39,6 +39,7 @@ export const settings = {
 	voiceURI: "",
 	reverseCards: false,
 	pairsBest: {},
+	aiProvider: "gemini",
 };
 try {
 	const local = JSON.parse(localStorage.getItem(SETTINGS_KEY) || "{}");

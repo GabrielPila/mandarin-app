@@ -1,4 +1,8 @@
 .claude/
 .DS_Store
+.env
+.env.local
 books/
 *.pdf
+.vercel
+.env*

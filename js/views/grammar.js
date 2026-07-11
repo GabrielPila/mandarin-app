@@ -2,11 +2,18 @@
 import { GRAMMAR } from "../../data/index.js";
 import { settings } from "../store.js";
 import { speak } from "../audio.js";
-import { $, setView } from "../ui.js";
+import { $, setView, renderTokens } from "../ui.js";
 import { register } from "../router.js";
+import { T } from "../i18n.js";
+
+let grammarRubyMode = "none"; // 'none', 'pinyin', 'tones'
 
 export function renderGrammar() {
 	setView(`
+    <div class="reader-toggles" style="margin-bottom: 12px; padding: 0 16px;">
+      <button id="tg-pinyin">${T("pinyin")}</button>
+      <button id="tg-tones">${T("tones")}</button>
+    </div>
     <div id="gfilter" class="scroll-row">
        <button class="lesson-btn on" data-tag="all"><b>Todas</b></button>
        <button class="lesson-btn" data-tag="hsk1"><b>HSK 1</b></button>
@@ -15,7 +22,28 @@ export function renderGrammar() {
        <button class="lesson-btn" data-tag="npcr"><b>NPCR</b></button>
     </div>
     <div id="glist" class="glist"></div>`);
+    
 	let currentTag = "all";
+	
+	const updateToggles = () => {
+		$("#tg-pinyin").classList.toggle("on", grammarRubyMode === "pinyin");
+		$("#tg-tones").classList.toggle("on", grammarRubyMode === "tones");
+	};
+
+	$("#tg-pinyin").addEventListener("click", () => {
+		grammarRubyMode = grammarRubyMode === "pinyin" ? "none" : "pinyin";
+		updateToggles();
+		draw();
+	});
+	
+	$("#tg-tones").addEventListener("click", () => {
+		grammarRubyMode = grammarRubyMode === "tones" ? "none" : "tones";
+		updateToggles();
+		draw();
+	});
+	
+	updateToggles();
+
 	const grid = $("#gfilter");
 	grid.querySelectorAll("button").forEach((b) =>
 		b.addEventListener("click", () => {
@@ -39,27 +67,51 @@ export function renderGrammar() {
 		items.forEach((g) => {
 			const card = document.createElement("div");
 			card.className = "grammar-card";
-			let exHTML = "";
-			g.examples.forEach((ex, i) => {
-				exHTML += `<div class="g-ex" data-id="${g.id}" data-idx="${i}">
-           <div class="g-ex-zh">${ex.zh} <span class="g-speaker">(${ex.s}) 🔊</span></div>
-           <div class="g-ex-tr">${settings.lang === "en" ? ex.en : ex.es}</div>
-        </div>`;
-			});
+			
 			card.innerHTML = `
         <div class="g-title">${g.title}</div>
         <div class="g-tags">${g.tags.map((t) => `<span class="g-tag">${t.toUpperCase()}</span>`).join("")}</div>
-        <div class="g-desc">${g.desc}</div>
-        <div class="g-examples">${exHTML}</div>`;
+        <div class="g-desc">${g.desc.replace(/\n/g, '<br>')}</div>
+        <div class="g-examples-container"></div>`;
+        
+            const exContainer = card.querySelector(".g-examples-container");
+            exContainer.className = "g-examples";
+            
+			g.examples.forEach((ex) => {
+			    const exDiv = document.createElement("div");
+			    exDiv.className = "g-ex";
+			    
+			    const zhDiv = document.createElement("div");
+			    zhDiv.className = "g-ex-zh";
+			    
+			    const textSpan = document.createElement("span");
+			    textSpan.className = "line-zh";
+			    textSpan.style.flex = "1";
+			    // Render tokens with pinyin/tones
+			    textSpan.appendChild(renderTokens(ex.zh, grammarRubyMode));
+			    zhDiv.appendChild(textSpan);
+			    
+			    const speakerSpan = document.createElement("span");
+			    speakerSpan.className = "g-speaker";
+			    speakerSpan.innerHTML = ` ${ex.s && ex.s !== 'Generic' ? `(${ex.s}) ` : ''}🔊`;
+			    zhDiv.appendChild(speakerSpan);
+			    
+			    const trDiv = document.createElement("div");
+			    trDiv.className = "g-ex-tr";
+			    trDiv.textContent = settings.lang === "en" ? ex.en : ex.es;
+			    
+			    exDiv.appendChild(zhDiv);
+			    exDiv.appendChild(trDiv);
+			    
+			    exDiv.addEventListener("click", () => {
+			        speak(ex.zh, null, ex.s);
+			    });
+			    
+			    exContainer.appendChild(exDiv);
+			});
+			
 			list.appendChild(card);
 		});
-		list.querySelectorAll(".g-ex").forEach((el) =>
-			el.addEventListener("click", () => {
-				const g = GRAMMAR.find((x) => x.id === el.dataset.id);
-				const ex = g.examples[el.dataset.idx];
-				speak(ex.zh, null, ex.s);
-			}),
-		);
 	}
 	draw();
 }

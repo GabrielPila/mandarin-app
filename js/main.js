@@ -8,15 +8,17 @@ import "./views/study.js";
 import "./views/texts.js";
 import "./views/vocab.js";
 import "./views/grammar.js";
+import "./views/tutor.js";
 import { setLangChangeHandler } from "./views/settings.js";
 
-const TABS = ["study", "texts", "vocab", "grammar", "settings"];
+const TABS = ["texts", "vocab", "grammar", "study", "tutor", "settings"];
 
 function renderTabs() {
 	$("#tab-study .tab-label").textContent = T("study");
 	$("#tab-texts .tab-label").textContent = T("texts");
 	$("#tab-vocab .tab-label").textContent = T("vocab");
 	$("#tab-grammar .tab-label").textContent = T("grammar");
+	$("#tab-tutor .tab-label").textContent = T("tutor");
 	$("#tab-settings .tab-label").textContent = T("settings");
 	nav(current);
 }
@@ -48,7 +50,7 @@ window
 	});
 
 renderTabs();
-nav("study");
+nav("texts");
 if (window.lucide) {
 	lucide.createIcons();
 }
