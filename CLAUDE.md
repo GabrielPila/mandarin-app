@@ -41,7 +41,7 @@ https://gabrielpila.github.io/mandarin-app/ directly from `main`.
   stale files. (Note: Local development on `localhost` automatically unregisters 
   the service worker to prevent stale caching).
 - **SRS card ids are array positions** (`b1:<i>`, `b1s:<i>`, `b2:<i>`,
-  `b2s:<i>`, assigned in `js/core.js` from the order of
+  `b2s:<i>`, assigned in `js/dict.js` from the order of
   `B1_VOCAB`/`B1_SUP`/`B2_VOCAB`/`B2_SUP`). **Only append to these arrays —
   never reorder or delete entries**, or every user's review schedule silently
   attaches to the wrong words. Editing an entry **in place** (fixing or
@@ -59,12 +59,12 @@ https://gabrielpila.github.io/mandarin-app/ directly from `main`.
   their lesson. See `docs/EXTRACTION-PLAN.md` for how these fields get
   populated.
 - **Every hanzi token appearing in texts must exist in some vocab array.** The
-  reader has no external dictionary: `js/core.js` builds `DICT` from the vocab
+  reader has no external dictionary: `js/dict.js` builds `DICT` from the vocab
   arrays and segments text by greedy longest-match. An unknown character renders
   as a plain, untappable token. Missing tokens (e.g. a word used in a dialogue
   but absent from the book's index) get added to the `*-sup.js` file of the
   corresponding book.
-- **Pinyin/character alignment**: `syllables()` in `core.js` splits an entry's
+- **Pinyin/character alignment**: `syllables()` in `dict.js` splits an entry's
   `p` field on spaces, hyphens and apostrophes and maps syllables 1:1 onto
   characters (with an erhua special case: a trailing 儿 with one fewer syllable
   gets an empty ruby). When adding vocab, write pinyin with one space-separated
@@ -75,10 +75,12 @@ https://gabrielpila.github.io/mandarin-app/ directly from `main`.
 
 ## Architecture
 
-Native ES modules; `index.html` loads only the hanzi-writer CDN (classic global
-`window.HanziWriter`) plus `<script type="module" src="js/main.js">`. Everything
-else is `import`/`export`. Data files are `export const X = [...]`;
-`data/index.js` re-exports all nine.
+Native ES modules; `index.html` loads two CDN scripts — the hanzi-writer
+(classic global `window.HanziWriter`) and Lucide icons — plus
+`<script type="module" src="js/main.js">`. Everything else is
+`import`/`export`. Data files are `export const X = [...]`; `data/index.js`
+re-exports all of them (vocab/sup/texts/readings/notes/grammar-book/exercises/
+phonetics/lecturas for each book, plus the shared `GRAMMAR`).
 
 **Shared modules** (`js/`):
 
