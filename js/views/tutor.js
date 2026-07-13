@@ -152,7 +152,12 @@ export function renderTutor() {
 			chatHistory.push({ role: "agent", content: fullResponse });
 		} catch (err) {
 			typingEl.classList.add("hidden");
-			addMessage("agent", "❌ Error: " + err.message);
+			addMessage("agent", "❌ " + err.message);
+			// Remove the failed user message from history so they can try again without breaking the strict user/model alternation required by Gemini
+			if (chatHistory.length > 0 && chatHistory[chatHistory.length - 1].role === "user") {
+				chatHistory.pop();
+			}
+			submitBtn.disabled = false;
 		} finally {
 			typingEl.classList.add("hidden");
 			submitBtn.disabled = false;
