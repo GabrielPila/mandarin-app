@@ -1669,7 +1669,6 @@
 }
 
 .chat-msg.agent {
-	align-self: flex-start;
 	background: var(--card-bg);
 	color: var(--ink);
 	border: 1px solid var(--line);
@@ -1677,6 +1676,30 @@
 	box-shadow: var(--shadow-sm);
 	backdrop-filter: blur(12px);
 	-webkit-backdrop-filter: blur(12px);
+}
+
+.agent-row {
+	display: flex;
+	align-items: flex-end;
+	gap: 10px;
+	align-self: flex-start;
+	max-width: 90%;
+	animation: slideInUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.agent-row.typing-row {
+	margin-bottom: 10px;
+}
+
+.agent-avatar {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	object-fit: cover;
+	flex-shrink: 0;
+	background: var(--card-bg);
+	border: 2px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .chat-msg.agent strong {
@@ -1742,9 +1765,8 @@
 }
 
 /* Typing indicator */
-.typing-indicator {
+.typing-indicator-bubble {
 	display: inline-block;
-	align-self: flex-start;
 	padding: 12px 18px;
 	background: var(--card-bg);
 	border-radius: 18px;
@@ -1753,7 +1775,6 @@
 	box-shadow: var(--shadow-sm);
 	backdrop-filter: blur(12px);
 	-webkit-backdrop-filter: blur(12px);
-	animation: slideInUp 0.3s ease;
 }
 
 .typing-dot {
@@ -1773,4 +1794,17 @@
 @keyframes typing {
 	0%, 80%, 100% { transform: scale(0); }
 	40% { transform: scale(1); }
+}
+
+/* Ruby Tags (Hanzi & Pinyin) */
+.chat-msg ruby {
+	ruby-align: center;
+	margin: 0 2px;
+}
+
+.chat-msg rt {
+	font-size: 11px;
+	color: var(--muted);
+	font-weight: 500;
+	letter-spacing: 0.5px;
 }

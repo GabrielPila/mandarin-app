@@ -10,10 +10,13 @@ export function renderTutor() {
 	setView(`
 		<div class="chat-container">
 			<div class="chat-history" id="chat-history"></div>
-			<div class="typing-indicator hidden" id="typing-indicator">
-				<span class="typing-dot"></span>
-				<span class="typing-dot"></span>
-				<span class="typing-dot"></span>
+			<div class="agent-row typing-row hidden" id="typing-indicator">
+				<img src="./icons/panda-bot.png" class="agent-avatar">
+				<div class="typing-indicator-bubble">
+					<span class="typing-dot"></span>
+					<span class="typing-dot"></span>
+					<span class="typing-dot"></span>
+				</div>
 			</div>
 			<form class="chat-input-area" id="chat-form">
 				<input type="text" id="chat-input" placeholder="Escribe en español, inglés, pinyin o hanzi..." autocomplete="off">
@@ -35,6 +38,7 @@ export function renderTutor() {
 			.replace(/## (.*)/g, '<h2>$1</h2>')
 			.replace(/# (.*)/g, '<h1>$1</h1>')
 			.replace(/^(?:[\*\-]\s)(.*)/gm, '<li>$1</li>')
+			.replace(/([\u4e00-\u9fa5]+)\[([^\]]+)\]/g, '<ruby>$1<rt>$2</rt></ruby>')
 			.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
 			.replace(/\*(.*?)\*/g, '<em>$1</em>')
 			.replace(/\n/g, '<br>');
@@ -49,7 +53,23 @@ export function renderTutor() {
 		const msg = document.createElement("div");
 		msg.className = "chat-msg " + role;
 		msg.innerHTML = parseMarkdown(content);
-		historyEl.appendChild(msg);
+
+		if (role === "agent") {
+			const row = document.createElement("div");
+			row.className = "agent-row";
+			
+			const avatar = document.createElement("img");
+			avatar.src = "./icons/panda-bot.png";
+			avatar.className = "agent-avatar";
+			
+			row.appendChild(avatar);
+			row.appendChild(msg);
+			
+			historyEl.appendChild(row);
+		} else {
+			historyEl.appendChild(msg);
+		}
+
 		historyEl.scrollTop = historyEl.scrollHeight;
 		return msg;
 	}
