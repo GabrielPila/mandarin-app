@@ -10,7 +10,11 @@ export function renderTutor() {
 	setView(`
 		<div class="chat-container">
 			<div class="chat-history" id="chat-history"></div>
-			<div class="typing-indicator hidden" id="typing-indicator">El tutor está escribiendo...</div>
+			<div class="typing-indicator hidden" id="typing-indicator">
+				<span class="typing-dot"></span>
+				<span class="typing-dot"></span>
+				<span class="typing-dot"></span>
+			</div>
 			<form class="chat-input-area" id="chat-form">
 				<input type="text" id="chat-input" placeholder="Escribe en español, inglés, pinyin o hanzi..." autocomplete="off">
 				<button type="submit" id="chat-submit"><i data-lucide="send"></i></button>
@@ -24,20 +28,37 @@ export function renderTutor() {
 	const submitBtn = $("#chat-submit");
 	const typingEl = $("#typing-indicator");
 
+	function parseMarkdown(text) {
+		if (!text) return "";
+		let html = text
+			.replace(/### (.*)/g, '<h3>$1</h3>')
+			.replace(/## (.*)/g, '<h2>$1</h2>')
+			.replace(/# (.*)/g, '<h1>$1</h1>')
+			.replace(/^(?:[\*\-]\s)(.*)/gm, '<li>$1</li>')
+			.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+			.replace(/\*(.*?)\*/g, '<em>$1</em>')
+			.replace(/\n/g, '<br>');
+
+		html = html.replace(/(<li>.*<\/li>(?:<br>)*)+/g, match => {
+			return `<ul style="margin: 4px 0 4px 20px; padding: 0;">${match.replace(/<br>/g, '')}</ul>`;
+		});
+		return html;
+	}
+
 	function addMessage(role, content) {
 		const msg = document.createElement("div");
 		msg.className = "chat-msg " + role;
-		// Simple text rendering, could be expanded to parse markdown
-		msg.textContent = content;
+		msg.innerHTML = parseMarkdown(content);
 		historyEl.appendChild(msg);
 		historyEl.scrollTop = historyEl.scrollHeight;
+		return msg;
 	}
 
 	// Render existing history
 	if (chatHistory.length === 0) {
 		chatHistory.push({
 			role: "agent",
-			content: "¡Hola! Soy tu tutor de mandarín. ¿En qué puedo ayudarte hoy?"
+			content: "¡Hola! Soy XiongMao (熊猫), tu tutor de mandarín. ¿En qué puedo ayudarte hoy?"
 		});
 	}
 	chatHistory.forEach(m => addMessage(m.role, m.content));
@@ -67,12 +88,50 @@ export function renderTutor() {
 				})
 			});
 
-			const data = await res.json();
-			if (!res.ok) throw new Error(data.error || "Error de red");
+			if (!res.ok) {
+				const errorData = await res.json();
+				throw new Error(errorData.error || "Error de red");
+			}
 
-			addMessage("agent", data.reply);
-			chatHistory.push({ role: "agent", content: data.reply });
+			typingEl.classList.add("hidden");
+			const agentMsgEl = addMessage("agent", "");
+			let fullResponse = "";
+
+			const reader = res.body.getReader();
+			const decoder = new TextDecoder();
+			let buffer = "";
+			
+			while (true) {
+				const { done, value } = await reader.read();
+				if (done) break;
+				
+				buffer += decoder.decode(value, { stream: true });
+				const lines = buffer.split('\n');
+				
+				buffer = lines.pop() || "";
+				
+				for (const line of lines) {
+					if (line.startsWith('data: ')) {
+						const dataStr = line.slice(6);
+						if (dataStr === '[DONE]') continue;
+						try {
+							const data = JSON.parse(dataStr);
+							const textChunk = data.candidates?.[0]?.content?.parts?.[0]?.text;
+							if (textChunk) {
+								fullResponse += textChunk;
+								agentMsgEl.innerHTML = parseMarkdown(fullResponse);
+								historyEl.scrollTop = historyEl.scrollHeight;
+							}
+						} catch (e) {
+							// Ignorar errores de parseo por chunks incompletos
+						}
+					}
+				}
+			}
+
+			chatHistory.push({ role: "agent", content: fullResponse });
 		} catch (err) {
+			typingEl.classList.add("hidden");
 			addMessage("agent", "❌ Error: " + err.message);
 		} finally {
 			typingEl.classList.add("hidden");
