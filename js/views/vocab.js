@@ -1,6 +1,6 @@
 // views/vocab.js — explorador de vocabulario con búsqueda y concordancia
 import { ALL, normPinyin } from "../dict.js";
-import { settings } from "../store.js";
+import { settings, saveSettings } from "../store.js";
 import { T, gloss } from "../i18n.js";
 import { speak } from "../audio.js";
 import { $, setView, popupEntry, renderTokens } from "../ui.js";
@@ -25,7 +25,8 @@ export function renderVocab() {
             <option value="alpha">${T("sortAlpha")}</option>
           </select>
         </div>
-        <div style="display:flex; gap:10px; margin-left:auto;">
+        <div style="display:flex; gap:10px; margin-left:auto; align-items:center;">
+          <button id="btn-select-mode" class="lesson-chip" style="margin-right: 10px;">Select</button>
           <label class="vocab-chk"><input type="checkbox" id="chk-core1" checked> CORE 1</label>
           <label class="vocab-chk"><input type="checkbox" id="chk-core2" checked> CORE 2</label>
           <label class="vocab-chk"><input type="checkbox" id="chk-sup" checked> SUP</label>
@@ -34,13 +35,24 @@ export function renderVocab() {
       </div>
     </div>
     <div id="vlist" class="vlist"></div>
-    <div id="vtext"></div>`);
+    <div id="vtext"></div>
+    <div id="floating-bar" class="floating-bar hidden">
+      <span id="floating-count">0 words selected</span>
+      <div style="margin-left:auto; display:flex; gap: 8px;">
+        <button id="btn-select-all" class="btn small" style="background: rgba(255,255,255,0.1); border: 1px solid var(--line);">Select All Visible</button>
+        <button id="btn-save-block" class="btn primary small">Save Block</button>
+      </div>
+    </div>`);
 	let activeFilter = "all";
 	let showCore1 = true;
 	let showCore2 = true;
 	let showSup = true;
 	let showExtra = true;
 	let sortMode = "book";
+	let selectMode = false;
+	const selectedIds = new Set();
+	let filteredItems = [];
+
 	const sel = $("#vfilter");
 	const filters = [
 		"all",
@@ -119,6 +131,57 @@ export function renderVocab() {
 	});
 	$("#vsearch").addEventListener("input", draw);
 
+	function updateFloatingBar() {
+		const bar = $("#floating-bar");
+		if (selectMode) {
+			bar.classList.remove("hidden");
+			$("#floating-count").textContent = `${selectedIds.size} words selected`;
+		} else {
+			bar.classList.add("hidden");
+		}
+	}
+
+	$("#btn-select-mode").addEventListener("click", (e) => {
+		selectMode = !selectMode;
+		e.target.classList.toggle("active", selectMode);
+		if (!selectMode) {
+			selectedIds.clear();
+		}
+		updateFloatingBar();
+		draw();
+	});
+
+	$("#btn-select-all").addEventListener("click", () => {
+		// If everything visible is selected, then unselect them. Otherwise, select all.
+		const allVisibleSelected = filteredItems.every(e => selectedIds.has(e.id));
+		if (allVisibleSelected) {
+			filteredItems.forEach(e => selectedIds.delete(e.id));
+		} else {
+			filteredItems.forEach(e => selectedIds.add(e.id));
+		}
+		updateFloatingBar();
+		draw();
+	});
+
+	$("#btn-save-block").addEventListener("click", () => {
+		const name = prompt("Enter a name for this Learning Block:");
+		if (name && name.trim() !== "") {
+			settings.customBlocks.push({
+				id: "block_" + Date.now(),
+				name: name.trim(),
+				date: Date.now(),
+				dictIds: Array.from(selectedIds)
+			});
+			saveSettings();
+			alert("Block saved! You can study it in the Practice session.");
+			selectMode = false;
+			selectedIds.clear();
+			$("#btn-select-mode").classList.remove("active");
+			updateFloatingBar();
+			draw();
+		}
+	});
+
 	function draw() {
 		const q = $("#vsearch").value.trim().toLowerCase();
 		const list = $("#vlist");
@@ -163,8 +226,9 @@ export function renderVocab() {
 		}
 
 		let currentSec = -1;
+		filteredItems = items.slice(0, 400);
 
-		items.slice(0, 400).forEach((e) => {
+		filteredItems.forEach((e) => {
 			if (sortMode === "book" && typeof activeFilter === "number" && !q) {
 				const sec = e.sec || 99;
 				if (sec !== currentSec) {
@@ -200,7 +264,30 @@ export function renderVocab() {
           ${tag}
           <span class="vl">L${e.l === 0 ? "✦" : e.l}</span>
         </div>`;
-			d.addEventListener("click", () => popupEntry(e.h));
+
+			if (selectMode) {
+				const chk = document.createElement("input");
+				chk.type = "checkbox";
+				chk.checked = selectedIds.has(e.id);
+				chk.style.marginLeft = "8px";
+				chk.style.pointerEvents = "none";
+				
+				// Append to the flex container (4th grid item) to avoid breaking the 4-column grid layout
+				d.lastElementChild.appendChild(chk);
+
+				if (selectedIds.has(e.id)) d.classList.add("selected");
+
+				d.addEventListener("click", (ev) => {
+					ev.stopPropagation();
+					if (selectedIds.has(e.id)) selectedIds.delete(e.id);
+					else selectedIds.add(e.id);
+					chk.checked = selectedIds.has(e.id);
+					d.classList.toggle("selected", chk.checked);
+					updateFloatingBar();
+				});
+			} else {
+				d.addEventListener("click", () => popupEntry(e.h));
+			}
 			list.appendChild(d);
 		});
 		// concordancia: si la búsqueda es hanzi, mostrar líneas de los textos

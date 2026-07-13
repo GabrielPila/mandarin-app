@@ -1,6 +1,7 @@
 // views/study.js — pantalla principal: estadísticas, panel de progreso, cram y práctica
 import { ALL } from "../dict.js";
-import { settings } from "../store.js";
+import { settings, saveSettings } from "../store.js";
+import { renderBlocks } from "./blocks.js";
 import * as SRS from "../srs.js";
 import { T } from "../i18n.js";
 import { $, setView, cardPool } from "../ui.js";
@@ -115,12 +116,16 @@ export function renderStudy() {
     </div>
     ${heatmapHTML()}
     ${dashboardHTML()}
-    <button id="start-srs" class="big-btn">${T("start")}</button>
+    <div style="display:flex; flex-direction:column; gap:12px;">
+      <button id="start-blocks" class="big-btn">Study vocabulary blocks</button>
+      <button id="start-srs" class="big-btn" style="background:rgba(255,255,255,0.05); color:var(--text); border:1px solid var(--line);">Daily SRS Review</button>
+    </div>
     <h3>${T("practice")}</h3>
-    <div id="games" class="game-grid"></div>
+    <div id="games" class="game-grid" style="margin-bottom: 20px;"></div>
     <h3>${T("cram")}</h3>
     <div id="cram-container"></div>`);
 	$("#start-srs").addEventListener("click", startSRS);
+	$("#start-blocks").addEventListener("click", renderBlocks);
 
 	const gg = $("#games");
 	GAMES.forEach(([name, desc, icon, fn]) => {

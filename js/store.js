@@ -40,6 +40,7 @@ export const settings = {
 	reverseCards: false,
 	pairsBest: {},
 	aiProvider: "gemini",
+	customBlocks: [],
 };
 try {
 	const local = JSON.parse(localStorage.getItem(SETTINGS_KEY) || "{}");
@@ -52,6 +53,7 @@ try {
 } catch (e) {}
 if (!settings.history) settings.history = {};
 if (!settings.pairsBest) settings.pairsBest = {};
+if (!settings.customBlocks) settings.customBlocks = [];
 
 export function saveSettings() {
 	localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
