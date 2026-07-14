@@ -21,8 +21,17 @@
     <span class="zh">中文</span> <span data-i18n="appTitle">Practical Chinese</span>
   </div>
   <div class="header-actions">
+    <div style="position:relative;">
+      <button id="voice-btn" class="header-icon-btn" style="font-size:12px; padding:4px 8px; border-radius:6px; background:rgba(128,128,128,0.1); max-width:90px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;"></button>
+      <div id="voice-menu" class="hidden" style="position:absolute; top:100%; right:0; margin-top:4px; background:var(--card-bg); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); z-index:100; max-height:60vh; overflow-y:auto; min-width:180px; display:flex; flex-direction:column; padding:4px;"></div>
+    </div>
+    <div style="position:relative; display:flex; align-items:center;">
+      <i data-lucide="volume-2" style="width:14px; height:14px; color:var(--muted); margin-right:2px; flex-shrink:0;"></i>
+      <button id="speed-btn" class="header-icon-btn" style="font-size:13px; font-weight:700; padding:4px; color:var(--primary);"></button>
+      <div id="speed-menu" class="hidden" style="position:absolute; top:100%; right:0; margin-top:4px; background:var(--card-bg); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); z-index:100; max-height:60vh; overflow-y:auto; display:flex; flex-direction:column; padding:4px; min-width:60px;"></div>
+    </div>
     <button id="lang-toggle" class="header-icon-btn" aria-label="Toggle Language"><span class="lang-txt"></span></button>
-    <button id="ts-toggle" class="header-icon-btn" aria-label="Toggle Text Size"><i data-lucide="a-large-small"></i></button>
+    <button id="ts-toggle" class="header-icon-btn" aria-label="Toggle Text Size" style="font-weight:700; font-size:15px; padding-bottom: 2px;">Aa</button>
     <button id="theme-toggle" class="header-icon-btn" aria-label="Toggle Theme"><i data-lucide="moon"></i></button>
   </div>
 </header>
@@ -33,7 +42,6 @@
   <button id="tab-grammar"><div class="tab-icon-row"><span class="tab-zh">法</span><i data-lucide="pencil"></i></div><span class="tab-label">Gramática</span></button>
   <button id="tab-study"><div class="tab-icon-row"><span class="tab-zh">练</span><i data-lucide="graduation-cap"></i></div><span class="tab-label">Práctica</span></button>
   <button id="tab-tutor"><div class="tab-icon-row"><span class="tab-zh">师</span><i data-lucide="bot"></i></div><span class="tab-label">Tutor</span></button>
-  <button id="tab-settings"><div class="tab-icon-row"><span class="tab-zh">设</span><i data-lucide="settings"></i></div><span class="tab-label">Ajustes</span></button>
 </nav>
 <div id="quiz-modal" class="hidden"><div class="quiz-content"><button id="quiz-close"><i data-lucide="x"></i></button><div class="quiz-status"></div><div id="quiz-hw"></div></div></div>
 <div id="popup"><div class="popup-sheet"><button id="popup-close"><i data-lucide="x"></i></button><div id="popup-body"></div></div></div>

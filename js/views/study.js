@@ -1,6 +1,6 @@
 // views/study.js — pantalla principal: estadísticas, panel de progreso, cram y práctica
 import { ALL } from "../dict.js";
-import { settings, saveSettings } from "../store.js";
+import { settings, saveSettings, exportData, importData, resetAll } from "../store.js";
 import { renderBlocks } from "./blocks.js";
 import * as SRS from "../srs.js";
 import { T } from "../i18n.js";
@@ -116,16 +116,37 @@ export function renderStudy() {
     </div>
     ${heatmapHTML()}
     ${dashboardHTML()}
-    <div style="display:flex; flex-wrap:wrap; gap:16px; margin-bottom: 16px; font-size: 13px; color: var(--muted); background: var(--card-bg); padding: 12px; border-radius: 12px; border: 1px solid var(--card-border);">
-      <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
-        <input type="checkbox" id="study-random" checked> 🔀 ${T("randomOrder")}
-      </label>
-      <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
-        <input type="checkbox" id="study-reverse" ${settings.reverseCards ? 'checked' : ''}> ⇄ ${T("reverse") || "Reverse Cards"}
-      </label>
-      <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
-        <input type="checkbox" id="study-listening" ${settings.listeningMode ? 'checked' : ''}> 🎧 ${T("listeningMode") || "Listening Mode"}
-      </label>
+    <div style="display:flex; flex-direction:column; gap:16px; margin-bottom: 16px; font-size: 13px; color: var(--muted); background: var(--card-bg); padding: 16px; border-radius: 12px; border: 1px solid var(--card-border);">
+      <div style="display:flex; flex-wrap:wrap; gap:16px;">
+        <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
+          <input type="checkbox" id="study-random" checked> 🔀 ${T("randomOrder")}
+        </label>
+        <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
+          <input type="checkbox" id="study-reverse" ${settings.reverseCards ? 'checked' : ''}> ⇄ ${T("reverse") || "Reverse Cards"}
+        </label>
+        <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
+          <input type="checkbox" id="study-listening" ${settings.listeningMode ? 'checked' : ''}> 🎧 ${T("listeningMode") || "Listening Mode"}
+        </label>
+      </div>
+      
+      <div style="height: 1px; background: var(--line); opacity: 0.5;"></div>
+
+      <div style="display:flex; flex-wrap:wrap; gap:24px;">
+        <div style="flex:1; min-width:200px;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+            <label>${T("maxLesson")}</label>
+            <b id="ml-val" style="color:var(--text);">${settings.maxLesson}</b>
+          </div>
+          <input type="range" id="max-lesson" min="1" max="20" value="${settings.maxLesson}" style="width:100%;">
+        </div>
+        <div style="flex:1; min-width:200px;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+            <label>${T("newPerDay")}</label>
+            <b id="npd-val" style="color:var(--text);">${settings.newPerDay}</b>
+          </div>
+          <input type="range" id="new-per-day" min="0" max="40" step="5" value="${settings.newPerDay}" style="width:100%;">
+        </div>
+      </div>
     </div>
     <div style="display:flex; flex-direction:column; gap:12px;">
       <button id="start-blocks" class="big-btn">Study vocabulary blocks</button>
@@ -134,9 +155,34 @@ export function renderStudy() {
     <h3>${T("practice")}</h3>
     <div id="games" class="game-grid" style="margin-bottom: 20px;"></div>
     <h3>${T("cram")}</h3>
-    <div id="cram-container"></div>`);
+    <div id="cram-container" style="margin-bottom: 24px;"></div>
+    
+    <div style="height: 1px; background: var(--line); opacity: 0.5; margin: 32px 0;"></div>
+    
+    <div style="display:flex; flex-direction:column; gap:12px; margin-bottom: 40px;">
+      <h3 style="margin:0;">Data Management</h3>
+      <p style="font-size:13px; color:var(--muted); margin:0 0 8px 0;">Backup or reset your progress.</p>
+      <button id="export" class="big-btn secondary" style="background:var(--card-bg); border:1px solid var(--line);">${T("exportBtn") || "Export progress"}</button>
+      <button id="import" class="big-btn secondary" style="background:var(--card-bg); border:1px solid var(--line);">${T("importBtn") || "Import progress"}</button>
+      <input type="file" id="import-file" accept=".json" style="display:none">
+      <button id="reset" class="big-btn danger" style="background:rgba(239,68,68,0.1); color:#ef4444; border:1px solid rgba(239,68,68,0.2);">${T("resetBtn") || "Reset all progress"}</button>
+    </div>`);
 	v.querySelector("#start-srs").addEventListener("click", startSRS);
 	v.querySelector("#start-blocks").addEventListener("click", renderBlocks);
+
+	v.querySelector("#max-lesson").addEventListener("input", (e) => {
+		settings.maxLesson = +e.target.value;
+		v.querySelector("#ml-val").textContent = e.target.value;
+		saveSettings();
+		
+		// Optionally, re-render dashboard stats to reflect the new global maxLesson pool
+		// but since they haven't started studying, they can just refresh or we leave it.
+	});
+	v.querySelector("#new-per-day").addEventListener("input", (e) => {
+		settings.newPerDay = +e.target.value;
+		v.querySelector("#npd-val").textContent = e.target.value;
+		saveSettings();
+	});
 
 	v.querySelector("#study-reverse").addEventListener("change", e => {
 		settings.reverseCards = e.target.checked;
@@ -196,6 +242,54 @@ export function renderStudy() {
 		);
 		(l <= 10 ? $("#cram-b1") : $("#cram-b2")).appendChild(b);
 	}
+	// CRAM setup
+	const cramSet = (name, cnd, emptyMsg = "") => {
+		const arr = pool.filter(cnd);
+		const el = document.createElement("button");
+		el.className = "game-card";
+		el.innerHTML = `<span class="icon">📚</span><span class="label">${name} (${arr.length})</span>`;
+		el.onclick = () => {
+			if (!arr.length && emptyMsg) return alert(emptyMsg);
+			startCram(arr);
+		};
+		v.querySelector("#cram-container").appendChild(el);
+	};
+	cramSet(T("dueCram"), (i) => {
+		const c = SRS.get(i.id);
+		return c && c.due <= Date.now();
+	});
+	cramSet(T("allCram"), () => true);
+	cramSet(T("diffCram"), (i) => i.score < 0, T("noDiffMsg"));
+
+	// Data Management
+	v.querySelector("#export").addEventListener("click", () => {
+		const blob = new Blob([exportData()], { type: "application/json" });
+		const a = document.createElement("a");
+		a.href = URL.createObjectURL(blob);
+		a.download = `mandarin-progress-${new Date().toISOString().slice(0, 10)}.json`;
+		a.click();
+	});
+	v.querySelector("#import").addEventListener("click", () => v.querySelector("#import-file").click());
+	v.querySelector("#import-file").addEventListener("change", (e) => {
+		const file = e.target.files[0];
+		if (!file) return;
+		const reader = new FileReader();
+		reader.onload = (e) => {
+			if (importData(e.target.result)) {
+				alert(T("importOk") || "Progress imported correctly. Restarting...");
+				location.reload();
+			} else {
+				alert(T("importErr") || "Invalid backup file.");
+			}
+		};
+		reader.readAsText(file);
+	});
+	v.querySelector("#reset").addEventListener("click", () => {
+		if (confirm(T("resetConf") || "Are you absolutely sure you want to reset all your progress?")) {
+			resetAll();
+			location.reload();
+		}
+	});
 }
 
 register("study", renderStudy);

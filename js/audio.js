@@ -72,7 +72,8 @@ export function speak(text, onEnd, speaker) {
 // Todas las voces de mandarín disponibles, ordenadas por calidad (Google/mejoradas primero).
 // Excluye cantonés (HK/yue). Se usa tanto para la selección automática como para el selector.
 export function chineseVoices() {
-	const voices = speechSynthesis.getVoices().filter((v) => {
+	if (!window.speechSynthesis) return [];
+	const voices = window.speechSynthesis.getVoices().filter((v) => {
 		const lang = v.lang.toLowerCase();
 		if (!lang.includes("zh")) return false;
 		const n = v.name.toLowerCase();
