@@ -16,14 +16,11 @@ export function setView(html) {
 	return v;
 }
 
-// Conjunto de tarjetas activas según ajustes
 export function cardPool(ALL) {
 	return ALL.filter(
 		(e) =>
 			!e._deleted &&
-			e.l <= settings.maxLesson &&
-			(settings.includeSup || !e.sup) &&
-			(settings.includeExtraVocab !== false || !e.extra),
+			e.l <= settings.maxLesson
 	);
 }
 

@@ -11,30 +11,15 @@ import { speak, chineseVoices } from "../audio.js";
 import { $, setView, applyTheme } from "../ui.js";
 import { register, nav } from "../router.js";
 
-let onLangChange = () => {};
-export function setLangChangeHandler(fn) {
-	onLangChange = fn;
-}
+// Removed setLangChangeHandler
 
 export function renderSettings() {
 	setView(`
-    <div class="setting"><label>${T("lang")}</label>
-      <div class="seg"><button id="lang-es">Español</button><button id="lang-en">English</button></div></div>
-    <div class="setting"><label>${T("textSize")}</label>
-      <div class="seg"><button id="ts-small">${T("sizeSmall")}</button><button id="ts-medium">${T("sizeMedium")}</button><button id="ts-large">${T("sizeLarge")}</button></div></div>
-    <div class="setting"><label>${T("theme")}</label>
-      <div class="seg"><button id="th-light">${T("light")}</button><button id="th-dark">${T("dark")}</button><button id="th-system">${T("system")}</button></div></div>
     <div class="setting"><label>${T("maxLesson")}: <b id="ml-val">${settings.maxLesson}</b></label>
       <input type="range" id="max-lesson" min="1" max="20" value="${settings.maxLesson}"></div>
     <div class="setting"><label>${T("newPerDay")}: <b id="npd-val">${settings.newPerDay}</b></label>
       <input type="range" id="new-per-day" min="0" max="40" step="5" value="${settings.newPerDay}"></div>
-    <div class="setting row"><label>${T("includeSup")}</label>
-      <input type="checkbox" id="inc-sup" ${settings.includeSup ? "checked" : ""}></div>
-    <div class="setting row"><label>${T("includeExtraVocab")}</label>
-      <input type="checkbox" id="inc-extra" ${settings.includeExtraVocab !== false ? "checked" : ""}></div>
-    <div class="setting row"><label>${T("reverse")} (${T("reverseDesc")})</label>
-      <input type="checkbox" id="rev-cards" ${settings.reverseCards ? "checked" : ""}></div>
-    <div class="setting"><label>${T("voiceSpeed")}: <b id="vs-val">${settings.voiceSpeed || 1.0}x</b></label>
+		<div class="setting"><label>${T("voiceSpeed")}: <b id="vs-val">${settings.voiceSpeed || 1.0}x</b></label>
       <input type="range" id="voice-speed" min="0.5" max="1.5" step="0.1" value="${settings.voiceSpeed || 1.0}"></div>
 
     <div class="setting"><label>${T("voice")}</label>
@@ -60,42 +45,7 @@ export function renderSettings() {
 				ids.forEach(([i, v]) => $("#" + i).classList.toggle("on", get() === v));
 			});
 		});
-	seg(
-		[
-			["lang-es", "es"],
-			["lang-en", "en"],
-		],
-		() => settings.lang,
-		(v) => {
-			settings.lang = v;
-			onLangChange();
-		},
-	);
-	seg(
-		[
-			["ts-small", "small"],
-			["ts-medium", "medium"],
-			["ts-large", "large"],
-		],
-		() => settings.textSize,
-		(v) => {
-			settings.textSize = v;
-			applyTheme();
-		},
-	);
-	seg(
-		[
-			["th-light", "light"],
-			["th-dark", "dark"],
-			["th-system", "system"],
-		],
-		() => settings.theme,
-		(v) => {
-			settings.theme = v;
-			applyTheme();
-		},
-	);
-
+	// removed seg for lang and text size
 	$("#max-lesson").addEventListener("input", (e) => {
 		settings.maxLesson = +e.target.value;
 		$("#ml-val").textContent = e.target.value;
@@ -106,19 +56,6 @@ export function renderSettings() {
 		$("#npd-val").textContent = e.target.value;
 		saveSettings();
 	});
-	$("#inc-sup").addEventListener("change", (e) => {
-		settings.includeSup = e.target.checked;
-		saveSettings();
-	});
-	$("#inc-extra").addEventListener("change", (e) => {
-		settings.includeExtraVocab = e.target.checked;
-		saveSettings();
-	});
-	$("#rev-cards").addEventListener("change", (e) => {
-		settings.reverseCards = e.target.checked;
-		saveSettings();
-	});
-
 	const populateVoices = () => {
 		const sel = $("#voice-select");
 		if (!sel) return;

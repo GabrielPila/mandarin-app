@@ -38,6 +38,7 @@ export const settings = {
 	voiceSpeed: 0.7,
 	voiceURI: "",
 	reverseCards: false,
+	listeningMode: false,
 	pairsBest: {},
 	aiProvider: "gemini",
 	customBlocks: [],

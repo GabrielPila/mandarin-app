@@ -40,9 +40,6 @@ export const UI = {
 		example: "Ejemplo",
 		search: "Buscar…",
 		lang: "Idioma de los significados",
-
-		includeSup: "Incluir palabras suplementarias en las tarjetas",
-		includeExtraVocab: "Incluir vocabulario adicional (sec: 4) en las tarjetas",
 		newPerDay: "Tarjetas nuevas por sesión",
 		maxLesson: "Estudiar hasta la lección",
 		exportBtn: "Exportar progreso",
@@ -173,9 +170,6 @@ export const UI = {
 		example: "Example",
 		search: "Search…",
 		lang: "Language for meanings",
-
-		includeSup: "Include supplementary words in flashcards",
-		includeExtraVocab: "Include additional vocabulary (sec: 4) in flashcards",
 		newPerDay: "New cards per session",
 		maxLesson: "Study up to lesson",
 		exportBtn: "Export progress",

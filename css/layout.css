@@ -38,8 +38,15 @@ header {
 	font-size: 20px;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	gap: 8px;
 	z-index: 10;
+}
+
+header .title-group {
+	display: flex;
+	align-items: center;
+	gap: 8px;
 }
 
 header .zh {
@@ -49,8 +56,48 @@ header .zh {
 	color: var(--primary);
 }
 
+header .header-actions {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.header-icon-btn {
+	background: transparent;
+	border: none;
+	color: var(--muted);
+	padding: 6px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: background 0.2s, color 0.2s;
+	min-width: 32px;
+	min-height: 32px;
+}
+
+.header-icon-btn:hover,
+.header-icon-btn:active {
+	background: var(--line);
+	color: var(--ink);
+}
+
+.header-icon-btn svg {
+	width: 20px;
+	height: 20px;
+}
+
+.header-icon-btn .lang-txt {
+	font-size: 13px;
+	font-weight: 800;
+	font-family: var(--font-mono, monospace);
+}
+
 #view {
 	flex: 1;
+	display: flex;
+	flex-direction: column;
 	overflow-y: auto;
 	padding: 16px;
 	padding-bottom: calc(80px + env(safe-area-inset-bottom));

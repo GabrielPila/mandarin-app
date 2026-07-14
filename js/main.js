@@ -1,5 +1,5 @@
 // main.js — arranque de la aplicación
-import { settings } from "./store.js";
+import { settings, saveSettings } from "./store.js";
 import { T } from "./i18n.js";
 import { $, applyTheme } from "./ui.js";
 import { nav, current } from "./router.js";
@@ -9,8 +9,7 @@ import "./views/texts.js";
 import "./views/vocab.js";
 import "./views/grammar.js";
 import "./views/tutor.js";
-import { setLangChangeHandler } from "./views/settings.js";
-
+import "./views/settings.js";
 const TABS = ["texts", "vocab", "grammar", "study", "tutor", "settings"];
 
 function renderTabs() {
@@ -23,9 +22,25 @@ function renderTabs() {
 	nav(current);
 }
 
-// cambiar idioma re-renderiza todas las etiquetas
-setLangChangeHandler(() => {
-	renderTabs();
+const updateLangIcon = () => {
+	const txt = settings.lang === "es" ? "ES" : "EN";
+	$("#lang-toggle .lang-txt").textContent = txt;
+};
+
+$("#lang-toggle").addEventListener("click", () => {
+	settings.lang = settings.lang === "es" ? "en" : "es";
+	saveSettings();
+	updateLangIcon();
+	renderTabs(); // This naturally acts as the old LangChangeHandler
+});
+
+$("#ts-toggle").addEventListener("click", () => {
+	const sizes = ["small", "medium", "large"];
+	let idx = sizes.indexOf(settings.textSize);
+	if (idx === -1) idx = 1;
+	settings.textSize = sizes[(idx + 1) % sizes.length];
+	saveSettings();
+	applyTheme();
 });
 
 TABS.forEach((t) => $("#tab-" + t).addEventListener("click", () => nav(t)));
@@ -41,12 +56,32 @@ $("#quiz-close").addEventListener("click", () =>
 	$("#quiz-modal").classList.add("hidden"),
 );
 
+const updateThemeIcon = () => {
+	const isDark = document.body.classList.contains("theme-dark") || (settings.theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+	const icon = isDark ? "sun" : "moon";
+	$("#theme-toggle").innerHTML = `<i data-lucide="${icon}"></i>`;
+	if (window.lucide) lucide.createIcons({ root: $("#theme-toggle") });
+};
+
+$("#theme-toggle").addEventListener("click", () => {
+	const isDark = document.body.classList.contains("theme-dark") || (settings.theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+	settings.theme = isDark ? "light" : "dark";
+	saveSettings();
+	applyTheme();
+	updateThemeIcon();
+});
+
 // tema + reacción al esquema del sistema
 applyTheme();
+updateThemeIcon();
+updateLangIcon();
 window
 	.matchMedia("(prefers-color-scheme: dark)")
 	.addEventListener("change", () => {
-		if (settings.theme === "system") applyTheme();
+		if (settings.theme === "system") {
+			applyTheme();
+			updateThemeIcon();
+		}
 	});
 
 renderTabs();

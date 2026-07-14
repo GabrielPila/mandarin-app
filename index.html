@@ -16,7 +16,16 @@
 <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
-<header><span class="zh">中文</span> <span data-i18n="appTitle">Practical Chinese</span></header>
+<header>
+  <div class="title-group">
+    <span class="zh">中文</span> <span data-i18n="appTitle">Practical Chinese</span>
+  </div>
+  <div class="header-actions">
+    <button id="lang-toggle" class="header-icon-btn" aria-label="Toggle Language"><span class="lang-txt"></span></button>
+    <button id="ts-toggle" class="header-icon-btn" aria-label="Toggle Text Size"><i data-lucide="a-large-small"></i></button>
+    <button id="theme-toggle" class="header-icon-btn" aria-label="Toggle Theme"><i data-lucide="moon"></i></button>
+  </div>
+</header>
 <main id="view"></main>
 <nav>
   <button id="tab-texts"><div class="tab-icon-row"><span class="tab-zh">文</span><i data-lucide="book-open"></i></div><span class="tab-label">Lectura</span></button>

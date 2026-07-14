@@ -54,7 +54,7 @@ function dashboardHTML() {
 	h += `<h4>${T("byLesson")}</h4><div class="prog-list">`;
 	for (let l = 0; l <= 20; l++) {
 		const cards = ALL.filter(
-			(e) => e.l === l && (settings.includeSup || !e.sup),
+			(e) => e.l === l
 		);
 		if (!cards.length) continue;
 		const s = SRS.stats(cards);
@@ -65,7 +65,7 @@ function dashboardHTML() {
 	h += `<h4>${T("byHsk")}</h4><div class="prog-list">`;
 	for (const tag of ["hsk1", "hsk2", "hsk3", "hsk4", "hsk5"]) {
 		const cards = ALL.filter(
-			(e) => e.tags && e.tags.includes(tag) && (settings.includeSup || !e.sup),
+			(e) => e.tags && e.tags.includes(tag)
 		);
 		if (!cards.length) continue;
 		const s = SRS.stats(cards);
@@ -116,6 +116,17 @@ export function renderStudy() {
     </div>
     ${heatmapHTML()}
     ${dashboardHTML()}
+    <div style="display:flex; flex-wrap:wrap; gap:16px; margin-bottom: 16px; font-size: 13px; color: var(--muted); background: var(--card-bg); padding: 12px; border-radius: 12px; border: 1px solid var(--card-border);">
+      <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
+        <input type="checkbox" id="study-random" checked> 🔀 ${T("randomOrder")}
+      </label>
+      <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
+        <input type="checkbox" id="study-reverse" ${settings.reverseCards ? 'checked' : ''}> ⇄ ${T("reverse") || "Reverse Cards"}
+      </label>
+      <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
+        <input type="checkbox" id="study-listening" ${settings.listeningMode ? 'checked' : ''}> 🎧 ${T("listeningMode") || "Listening Mode"}
+      </label>
+    </div>
     <div style="display:flex; flex-direction:column; gap:12px;">
       <button id="start-blocks" class="big-btn">Study vocabulary blocks</button>
       <button id="start-srs" class="big-btn" style="background:rgba(255,255,255,0.05); color:var(--text); border:1px solid var(--line);">Daily SRS Review</button>
@@ -124,8 +135,25 @@ export function renderStudy() {
     <div id="games" class="game-grid" style="margin-bottom: 20px;"></div>
     <h3>${T("cram")}</h3>
     <div id="cram-container"></div>`);
-	$("#start-srs").addEventListener("click", startSRS);
-	$("#start-blocks").addEventListener("click", renderBlocks);
+	v.querySelector("#start-srs").addEventListener("click", startSRS);
+	v.querySelector("#start-blocks").addEventListener("click", renderBlocks);
+
+	v.querySelector("#study-reverse").addEventListener("change", e => {
+		settings.reverseCards = e.target.checked;
+		if (e.target.checked && settings.listeningMode) {
+			settings.listeningMode = false;
+			v.querySelector("#study-listening").checked = false;
+		}
+		saveSettings();
+	});
+	v.querySelector("#study-listening").addEventListener("change", e => {
+		settings.listeningMode = e.target.checked;
+		if (e.target.checked && settings.reverseCards) {
+			settings.reverseCards = false;
+			v.querySelector("#study-reverse").checked = false;
+		}
+		saveSettings();
+	});
 
 	const gg = $("#games");
 	GAMES.forEach(([name, desc, icon, fn]) => {
@@ -138,35 +166,33 @@ export function renderStudy() {
 
 	const container = $("#cram-container");
 	container.innerHTML = `
-    <div style="margin-bottom: 20px;">
-      <label class="vocab-chk" style="display:inline-flex;"><input type="checkbox" id="cram-random"> ${T("randomOrder")}</label>
-    </div>
     <h4>HSK</h4><div id="cram-hsk" class="lesson-grid" style="margin-bottom:20px;"></div>
     <h4>${T("book1")} (1-10)</h4><div id="cram-b1" class="lesson-grid"></div>
     <h4>${T("book2")} (11-20)</h4><div id="cram-b2" class="lesson-grid"></div>`;
+
 	["hsk1", "hsk2", "hsk3"].forEach((tag) => {
 		const cards = ALL.filter(
-			(e) => e.tags && e.tags.includes(tag) && (settings.includeSup || !e.sup),
+			(e) => e.tags && e.tags.includes(tag)
 		);
 		if (!cards.length) return;
 		const b = document.createElement("button");
 		b.className = "lesson-btn";
 		b.innerHTML = `<b>${tag.toUpperCase()}</b><span>${cards.length}</span>`;
 		b.addEventListener("click", () =>
-			startCram(cards, $("#cram-random").checked),
+			startCram(cards, $("#study-random").checked),
 		);
 		$("#cram-hsk").appendChild(b);
 	});
 	for (let l = 0; l <= 20; l++) {
 		const cards = ALL.filter(
-			(e) => e.l === l && (settings.includeSup || !e.sup),
+			(e) => e.l === l
 		);
 		if (!cards.length) continue;
 		const b = document.createElement("button");
 		b.className = "lesson-btn";
 		b.innerHTML = `<b>${l === 0 ? "✦" : l}</b><span>${cards.length}</span>`;
 		b.addEventListener("click", () =>
-			startCram(cards, $("#cram-random").checked),
+			startCram(cards, $("#study-random").checked),
 		);
 		(l <= 10 ? $("#cram-b1") : $("#cram-b2")).appendChild(b);
 	}
