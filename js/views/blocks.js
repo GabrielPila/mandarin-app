@@ -88,7 +88,7 @@ export function renderBlocks() {
                 return;
             }
             if (e.target.closest('.study-block-btn') || !e.target.closest('.block-actions')) {
-                startCram(block.dictIds.map(id => ({ id })));
+                startCram(block.dictIds.map(id => ({ id })), settings.studyRandom !== false);
             }
         });
         blocksContainer.appendChild(b);

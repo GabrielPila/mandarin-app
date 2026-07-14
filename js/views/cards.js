@@ -52,7 +52,10 @@ export function startSRS() {
 }
 
 export function startCram(cards, randomize = true) {
-	const mapped = cards.map((e) => ({ id: e.id }));
+	let mapped = cards.map((e) => ({ id: e.id }));
+	if (settings.reverseCards) {
+		mapped = mapped.concat(cards.map((e) => ({ id: "rev:" + e.id })));
+	}
 	runCards(randomize ? shuffle(mapped) : mapped, false, randomize);
 }
 
@@ -390,6 +393,7 @@ export function runCards(items, srsMode, isRandom = true) {
 			};
 			
 			const start = (e) => {
+				if (settings.stylusOnly && e.pointerType === "touch") return;
 				if (placeholder) placeholder.style.display = "none";
 				drawing = true;
 				ctx.beginPath();

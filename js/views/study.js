@@ -119,13 +119,16 @@ export function renderStudy() {
     <div style="display:flex; flex-direction:column; gap:16px; margin-bottom: 16px; font-size: 13px; color: var(--muted); background: var(--card-bg); padding: 16px; border-radius: 12px; border: 1px solid var(--card-border);">
       <div style="display:flex; flex-wrap:wrap; gap:16px;">
         <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
-          <input type="checkbox" id="study-random" checked> 🔀 ${T("randomOrder")}
+          <input type="checkbox" id="study-random" ${settings.studyRandom !== false ? 'checked' : ''}> 🔀 ${T("randomOrder")}
         </label>
         <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
           <input type="checkbox" id="study-reverse" ${settings.reverseCards ? 'checked' : ''}> ⇄ ${T("reverse") || "Reverse Cards"}
         </label>
         <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
           <input type="checkbox" id="study-listening" ${settings.listeningMode ? 'checked' : ''}> 🎧 ${T("listeningMode") || "Listening Mode"}
+        </label>
+        <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
+          <input type="checkbox" id="study-stylus" ${settings.stylusOnly ? 'checked' : ''}> ✏️ ${T("stylusOnly") || "Stylus Only"}
         </label>
       </div>
       
@@ -184,6 +187,10 @@ export function renderStudy() {
 		saveSettings();
 	});
 
+	v.querySelector("#study-random").addEventListener("change", e => {
+		settings.studyRandom = e.target.checked;
+		saveSettings();
+	});
 	v.querySelector("#study-reverse").addEventListener("change", e => {
 		settings.reverseCards = e.target.checked;
 		if (e.target.checked && settings.listeningMode) {
@@ -198,6 +205,10 @@ export function renderStudy() {
 			settings.reverseCards = false;
 			v.querySelector("#study-reverse").checked = false;
 		}
+		saveSettings();
+	});
+	v.querySelector("#study-stylus").addEventListener("change", e => {
+		settings.stylusOnly = e.target.checked;
 		saveSettings();
 	});
 
@@ -250,7 +261,7 @@ export function renderStudy() {
 		el.innerHTML = `<span class="icon">📚</span><span class="label">${name} (${arr.length})</span>`;
 		el.onclick = () => {
 			if (!arr.length && emptyMsg) return alert(emptyMsg);
-			startCram(arr);
+			startCram(arr, $("#study-random").checked);
 		};
 		v.querySelector("#cram-container").appendChild(el);
 	};
