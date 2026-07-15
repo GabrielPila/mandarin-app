@@ -1,14 +1,29 @@
 export const GRAMMAR_B1 = [
-{
+	{
 		id: "g-b1-l1-ma",
 		tags: ["hsk1", "npcr1"],
 		title: "L1: Preguntas de sí-no con 吗 (ma)",
 		desc: "Cuando se agrega la partícula modal interrogativa 吗 al final de una oración declarativa, esta se convierte en una pregunta de 'sí-no'. La respuesta es simplemente la forma afirmativa o negativa de la oración, sin el 吗.",
 		examples: [
-			{ zh: "你叫马大为吗？", es: "¿Te llamas Ma Dawei?", en: "Are you called Ma Dawei?", s: "Generic" },
-			{ zh: "林娜在吗？", es: "¿Está Lin Na?", en: "Is Lin Na here?", s: "Generic" },
-			{ zh: "他忙吗？", es: "¿Él está ocupado?", en: "Is he busy?", s: "Generic" }
-		]
+			{
+				zh: "你叫马大为吗？",
+				es: "¿Te llamas Ma Dawei?",
+				en: "Are you called Ma Dawei?",
+				s: "Generic",
+			},
+			{
+				zh: "林娜在吗？",
+				es: "¿Está Lin Na?",
+				en: "Is Lin Na here?",
+				s: "Generic",
+			},
+			{
+				zh: "他忙吗？",
+				es: "¿Él está ocupado?",
+				en: "Is he busy?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l1-adj-pred",
@@ -17,9 +32,19 @@ export const GRAMMAR_B1 = [
 		desc: "En chino, un adjetivo puede funcionar directamente como predicado sin usar el verbo 'ser' (是). \n\nSuele ir acompañado del adverbio 很 (muy) como enlace neutro, aunque no siempre signifique literalmente 'muy'. Si no usas 很 u otro adverbio (como 也 o 不), la oración puede sonar incompleta o implicar una comparación.\n\nPara negar, se usa 不 (no) antes del adjetivo.",
 		examples: [
 			{ zh: "我很好。", es: "Estoy bien.", en: "I am fine.", s: "Generic" },
-			{ zh: "大为也很好。", es: "Dawei también está bien.", en: "Dawei is also fine.", s: "Generic" },
-			{ zh: "我不忙。", es: "No estoy ocupado.", en: "I am not busy.", s: "Generic" }
-		]
+			{
+				zh: "大为也很好。",
+				es: "Dawei también está bien.",
+				en: "Dawei is also fine.",
+				s: "Generic",
+			},
+			{
+				zh: "我不忙。",
+				es: "No estoy ocupado.",
+				en: "I am not busy.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l1-ye",
@@ -27,11 +52,31 @@ export const GRAMMAR_B1 = [
 		title: "L1: Posición del adverbio 也 (yě - también)",
 		desc: "El adverbio 也 (también) SIEMPRE se coloca después del sujeto pero antes del verbo o adjetivo. \n\nNunca se puede colocar al final de la oración ni al principio. En oraciones negativas, 也 se coloca antes de 不 (no).",
 		examples: [
-			{ zh: "他也姓宋。", es: "Él también se apellida Song.", en: "His surname is also Song.", s: "Generic" },
-			{ zh: "林娜也很高兴。", es: "Lin Na también está muy contenta.", en: "Lin Na is also very happy.", s: "Generic" },
-			{ zh: "他也不姓宋。", es: "Él tampoco se apellida Song.", en: "His surname is not Song either.", s: "Generic" },
-			{ zh: "力波也不忙。", es: "Libo tampoco está ocupado.", en: "Libo is not busy either.", s: "Generic" }
-		]
+			{
+				zh: "他也姓宋。",
+				es: "Él también se apellida Song.",
+				en: "His surname is also Song.",
+				s: "Generic",
+			},
+			{
+				zh: "林娜也很高兴。",
+				es: "Lin Na también está muy contenta.",
+				en: "Lin Na is also very happy.",
+				s: "Generic",
+			},
+			{
+				zh: "他也不姓宋。",
+				es: "Él tampoco se apellida Song.",
+				en: "His surname is not Song either.",
+				s: "Generic",
+			},
+			{
+				zh: "力波也不忙。",
+				es: "Libo tampoco está ocupado.",
+				en: "Libo is not busy either.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l2-shi",
@@ -39,11 +84,31 @@ export const GRAMMAR_B1 = [
 		title: "L2: Oraciones con 是 (shì - ser)",
 		desc: "El verbo 是 (ser) se usa para conectar dos sustantivos, pronombres o frases nominales (A es B). \n\nNo se usa para describir con adjetivos. Su forma negativa es 不是 (bú shì).",
 		examples: [
-			{ zh: "这是马大为。", es: "Este es Ma Dawei.", en: "This is Ma Dawei.", s: "Generic" },
-			{ zh: "那不是饺子。", es: "Eso no es jiaozi (empanadilla).", en: "That is not a dumpling.", s: "Generic" },
-			{ zh: "他不是陈老师。", es: "Él no es el profesor Chen.", en: "He is not teacher Chen.", s: "Generic" },
-			{ zh: "你也是上海人吗？", es: "¿Tú también eres de Shanghái?", en: "Are you also from Shanghai?", s: "Generic" }
-		]
+			{
+				zh: "这是马大为。",
+				es: "Este es Ma Dawei.",
+				en: "This is Ma Dawei.",
+				s: "Generic",
+			},
+			{
+				zh: "那不是饺子。",
+				es: "Eso no es jiaozi (empanadilla).",
+				en: "That is not a dumpling.",
+				s: "Generic",
+			},
+			{
+				zh: "他不是陈老师。",
+				es: "Él no es el profesor Chen.",
+				en: "He is not teacher Chen.",
+				s: "Generic",
+			},
+			{
+				zh: "你也是上海人吗？",
+				es: "¿Tú también eres de Shanghái?",
+				en: "Are you also from Shanghai?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l2-shenme-na",
@@ -51,10 +116,25 @@ export const GRAMMAR_B1 = [
 		title: "L2: Preguntas con 什么 (shénme - qué) o 哪 (nǎ - cuál)",
 		desc: "El orden de las palabras en una pregunta china es el mismo que en la respuesta. Simplemente reemplaza la palabra desconocida con el pronombre interrogativo correspondiente.",
 		examples: [
-			{ zh: "这是什么？", es: "¿Qué es esto?", en: "What is this?", s: "Generic" },
-			{ zh: "北京人喜欢吃什么？", es: "¿Qué les gusta comer a los pequineses?", en: "What do people from Beijing like to eat?", s: "Generic" },
-			{ zh: "他是哪国人？", es: "¿De qué país es él?", en: "Which country is he from?", s: "Generic" }
-		]
+			{
+				zh: "这是什么？",
+				es: "¿Qué es esto?",
+				en: "What is this?",
+				s: "Generic",
+			},
+			{
+				zh: "北京人喜欢吃什么？",
+				es: "¿Qué les gusta comer a los pequineses?",
+				en: "What do people from Beijing like to eat?",
+				s: "Generic",
+			},
+			{
+				zh: "他是哪国人？",
+				es: "¿De qué país es él?",
+				en: "Which country is he from?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l2-dou",
@@ -62,10 +142,25 @@ export const GRAMMAR_B1 = [
 		title: "L2: Posición del adverbio 都 (dōu - todos/ambos)",
 		desc: "Al igual que 也, el adverbio 都 (todos, ambos) se coloca después del sujeto pero antes del verbo. \n\nSi aparecen juntos, 也 siempre va antes de 都 (e.g., 也都 - también todos).",
 		examples: [
-			{ zh: "丁力波和马大为都很好。", es: "Ding Libo y Ma Dawei están (ambos) muy bien.", en: "Ding Libo and Ma Dawei are both very well.", s: "Generic" },
-			{ zh: "我和林娜都不太忙。", es: "Lin Na y yo no estamos (ninguno de los dos) muy ocupados.", en: "Lin Na and I are both not too busy.", s: "Generic" },
-			{ zh: "王小云和宋华也都不喜欢吃面条儿。", es: "A Wang Xiaoyun y a Song Hua tampoco les gusta (a ninguno) comer fideos.", en: "Neither Wang Xiaoyun nor Song Hua likes to eat noodles either.", s: "Generic" }
-		]
+			{
+				zh: "丁力波和马大为都很好。",
+				es: "Ding Libo y Ma Dawei están (ambos) muy bien.",
+				en: "Ding Libo and Ma Dawei are both very well.",
+				s: "Generic",
+			},
+			{
+				zh: "我和林娜都不太忙。",
+				es: "Lin Na y yo no estamos (ninguno de los dos) muy ocupados.",
+				en: "Lin Na and I are both not too busy.",
+				s: "Generic",
+			},
+			{
+				zh: "王小云和宋华也都不喜欢吃面条儿。",
+				es: "A Wang Xiaoyun y a Song Hua tampoco les gusta (a ninguno) comer fideos.",
+				en: "Neither Wang Xiaoyun nor Song Hua likes to eat noodles either.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l3-you",
@@ -73,10 +168,25 @@ export const GRAMMAR_B1 = [
 		title: "L3: Oraciones con 有 (yǒu - tener/haber) y su negación",
 		desc: "El verbo 有 significa 'tener' o 'haber'. \n\n¡EXCEPCIÓN CRÍTICA!: Es el único verbo en chino que NO se puede negar con 不 (bù). Siempre se niega con 没 (méi) para formar 没有 (méiyǒu).",
 		examples: [
-			{ zh: "我有一个哥哥。", es: "Tengo un hermano mayor.", en: "I have an older brother.", s: "Generic" },
-			{ zh: "我们家有四口人。", es: "En nuestra familia hay cuatro personas.", en: "There are four people in our family.", s: "Generic" },
-			{ zh: "她没有妹妹。", es: "Ella no tiene hermana menor.", en: "She does not have a younger sister.", s: "Generic" }
-		]
+			{
+				zh: "我有一个哥哥。",
+				es: "Tengo un hermano mayor.",
+				en: "I have an older brother.",
+				s: "Generic",
+			},
+			{
+				zh: "我们家有四口人。",
+				es: "En nuestra familia hay cuatro personas.",
+				en: "There are four people in our family.",
+				s: "Generic",
+			},
+			{
+				zh: "她没有妹妹。",
+				es: "Ella no tiene hermana menor.",
+				en: "She does not have a younger sister.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l3-de-possession",
@@ -85,10 +195,20 @@ export const GRAMMAR_B1 = [
 		desc: "La partícula 的 conecta un sustantivo con su modificador (indicando posesión, como el 's en inglés). \n\nNota: Se suele omitir el 的 cuando se habla de familiares cercanos (我妈妈 en lugar de 我的妈妈) o instituciones a las que se pertenece (我们家).",
 		examples: [
 			{ zh: "我的工作", es: "Mi trabajo", en: "My work", s: "Generic" },
-			{ zh: "我们家的照片", es: "La foto de nuestra familia", en: "Our family's photo", s: "Generic" },
-			{ zh: "陆雨平的女儿", es: "La hija de Lu Yuping", en: "Lu Yuping's daughter", s: "Generic" },
-			{ zh: "我妈妈", es: "Mi mamá (se omite 的)", en: "My mom", s: "Generic" }
-		]
+			{
+				zh: "我们家的照片",
+				es: "La foto de nuestra familia",
+				en: "Our family's photo",
+				s: "Generic",
+			},
+			{
+				zh: "陆雨平的女儿",
+				es: "La hija de Lu Yuping",
+				en: "Lu Yuping's daughter",
+				s: "Generic",
+			},
+			{ zh: "我妈妈", es: "Mi mamá (se omite 的)", en: "My mom", s: "Generic" },
+		],
 	},
 	{
 		id: "g-b1-l3-measure-words",
@@ -96,11 +216,31 @@ export const GRAMMAR_B1 = [
 		title: "L3: Clasificadores (Número + Clasificador + Sustantivo)",
 		desc: "En chino, no puedes unir un número directamente a un sustantivo (no puedes decir 'dos personas'). Siempre necesitas un clasificador en medio.\n\n- 个 (gè) es el más común.\n- 口 (kǒu) se usa para miembros de la familia.\n- 张 (zhāng) se usa para objetos planos (papel, fotos, mesas).",
 		examples: [
-			{ zh: "六口人", es: "Seis personas (en una familia)", en: "Six family members", s: "Generic" },
-			{ zh: "两个姐姐", es: "Dos hermanas mayores", en: "Two older sisters", s: "Generic" },
-			{ zh: "三张照片", es: "Tres fotografías", en: "Three photographs", s: "Generic" },
-			{ zh: "那个朋友", es: "Ese amigo (los demostrativos 这 y 那 también requieren clasificador)", en: "That friend", s: "Generic" }
-		]
+			{
+				zh: "六口人",
+				es: "Seis personas (en una familia)",
+				en: "Six family members",
+				s: "Generic",
+			},
+			{
+				zh: "两个姐姐",
+				es: "Dos hermanas mayores",
+				en: "Two older sisters",
+				s: "Generic",
+			},
+			{
+				zh: "三张照片",
+				es: "Tres fotografías",
+				en: "Three photographs",
+				s: "Generic",
+			},
+			{
+				zh: "那个朋友",
+				es: "Ese amigo (los demostrativos 这 y 那 también requieren clasificador)",
+				en: "That friend",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l4-time-words",
@@ -108,10 +248,25 @@ export const GRAMMAR_B1 = [
 		title: "L4: Posición de las palabras de tiempo",
 		desc: "¡REGLA DE ORO!: Las palabras que indican tiempo (hoy, mañana, a las 8:00) SIEMPRE se colocan al principio de la oración, antes o inmediatamente después del sujeto. ¡Nunca se ponen al final de la oración como en español o inglés!\n\nSi hay varias unidades de tiempo, se ordenan de mayor a menor (Año -> Mes -> Día -> Mañana/Tarde -> Hora).",
 		examples: [
-			{ zh: "我明天有很多课。", es: "Mañana tengo muchas clases.", en: "I have many classes tomorrow.", s: "Generic" },
-			{ zh: "林娜今天下午三点半练习口语。", es: "Lin Na practica expresión oral hoy a las 3:30 pm.", en: "Lin Na practices speaking today at 3:30 pm.", s: "Generic" },
-			{ zh: "明天晚上你做什么？", es: "¿Qué haces mañana por la noche?", en: "What are you doing tomorrow night?", s: "Generic" }
-		]
+			{
+				zh: "我明天有很多课。",
+				es: "Mañana tengo muchas clases.",
+				en: "I have many classes tomorrow.",
+				s: "Generic",
+			},
+			{
+				zh: "林娜今天下午三点半练习口语。",
+				es: "Lin Na practica expresión oral hoy a las 3:30 pm.",
+				en: "Lin Na practices speaking today at 3:30 pm.",
+				s: "Generic",
+			},
+			{
+				zh: "明天晚上你做什么？",
+				es: "¿Qué haces mañana por la noche?",
+				en: "What are you doing tomorrow night?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l4-affirmative-negative",
@@ -119,10 +274,25 @@ export const GRAMMAR_B1 = [
 		title: "L4: Preguntas afirmativo-negativas (V-不-V)",
 		desc: "En lugar de usar 吗, puedes hacer una pregunta juntando la forma afirmativa y negativa del verbo o adjetivo (ej. 是不是, 忙不忙, 去不去).",
 		examples: [
-			{ zh: "你要不要咖啡？", es: "¿Quieres café (o no)?", en: "Do you want coffee (or not)?", s: "Generic" },
-			{ zh: "他明天来不来？", es: "¿Él viene mañana?", en: "Is he coming tomorrow?", s: "Generic" },
-			{ zh: "他妈妈是不是老师？", es: "¿Su mamá es profesora?", en: "Is his mom a teacher?", s: "Generic" }
-		]
+			{
+				zh: "你要不要咖啡？",
+				es: "¿Quieres café (o no)?",
+				en: "Do you want coffee (or not)?",
+				s: "Generic",
+			},
+			{
+				zh: "他明天来不来？",
+				es: "¿Él viene mañana?",
+				en: "Is he coming tomorrow?",
+				s: "Generic",
+			},
+			{
+				zh: "他妈妈是不是老师？",
+				es: "¿Su mamá es profesora?",
+				en: "Is his mom a teacher?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l4-ne",
@@ -130,9 +300,19 @@ export const GRAMMAR_B1 = [
 		title: "L4: Preguntas elípticas con 呢 (ne)",
 		desc: "La partícula 呢 se pone después de un pronombre o sustantivo para devolver una pregunta ('¿Y tú?', '¿Y esto?'). El contexto debe estar claro previamente.",
 		examples: [
-			{ zh: "我很好。你呢？", es: "Estoy bien. ¿Y tú?", en: "I'm fine. And you?", s: "Generic" },
-			{ zh: "王小云学英语。马大为呢？", es: "Wang Xiaoyun estudia inglés. ¿Y Ma Dawei?", en: "Wang Xiaoyun studies English. What about Ma Dawei?", s: "Generic" }
-		]
+			{
+				zh: "我很好。你呢？",
+				es: "Estoy bien. ¿Y tú?",
+				en: "I'm fine. And you?",
+				s: "Generic",
+			},
+			{
+				zh: "王小云学英语。马大为呢？",
+				es: "Wang Xiaoyun estudia inglés. ¿Y Ma Dawei?",
+				en: "Wang Xiaoyun studies English. What about Ma Dawei?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l5-nominal-predicates",
@@ -140,10 +320,25 @@ export const GRAMMAR_B1 = [
 		title: "L5: Oraciones con predicado nominal (sin verbo)",
 		desc: "En situaciones específicas del lenguaje hablado (para expresar edad, fecha, hora o precio), un sustantivo o número puede actuar como predicado directamente sin necesidad del verbo 是 (shì). \n\nSin embargo, para negar estas oraciones, SIEMPRE se debe añadir 不是.",
 		examples: [
-			{ zh: "他今年二十岁。", es: "Él tiene veinte años este año. (Literal: Él este-año veinte-años)", en: "He is twenty years old this year.", s: "Generic" },
-			{ zh: "现在几点？现在差五分十点。", es: "¿Qué hora es ahora? Ahora son las diez menos cinco.", en: "What time is it now? It is five to ten now.", s: "Generic" },
-			{ zh: "今天不是五号。", es: "Hoy no es día 5. (Nota el uso de 不是 para negar)", en: "Today is not the 5th.", s: "Generic" }
-		]
+			{
+				zh: "他今年二十岁。",
+				es: "Él tiene veinte años este año. (Literal: Él este-año veinte-años)",
+				en: "He is twenty years old this year.",
+				s: "Generic",
+			},
+			{
+				zh: "现在几点？现在差五分十点。",
+				es: "¿Qué hora es ahora? Ahora son las diez menos cinco.",
+				en: "What time is it now? It is five to ten now.",
+				s: "Generic",
+			},
+			{
+				zh: "今天不是五号。",
+				es: "Hoy no es día 5. (Nota el uso de 不是 para negar)",
+				en: "Today is not the 5th.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l5-double-object",
@@ -151,20 +346,45 @@ export const GRAMMAR_B1 = [
 		title: "L5: Verbos con doble objeto (送, 教)",
 		desc: "Algunos verbos como 送 (sòng - regalar/dar) y 教 (jiāo - enseñar) pueden tomar dos objetos seguidos: primero la persona (quién recibe) y luego la cosa (qué recibe).",
 		examples: [
-			{ zh: "林娜送她哥哥一个大蛋糕。", es: "Lin Na le regala a su hermano mayor un gran pastel.", en: "Lin Na gives her older brother a big cake.", s: "Generic" },
-			{ zh: "陈老师教我汉语。", es: "El profesor Chen me enseña chino.", en: "Teacher Chen teaches me Chinese.", s: "Generic" }
-		]
+			{
+				zh: "林娜送她哥哥一个大蛋糕。",
+				es: "Lin Na le regala a su hermano mayor un gran pastel.",
+				en: "Lin Na gives her older brother a big cake.",
+				s: "Generic",
+			},
+			{
+				zh: "陈老师教我汉语。",
+				es: "El profesor Chen me enseña chino.",
+				en: "Teacher Chen teaches me Chinese.",
+				s: "Generic",
+			},
+		],
 	},
-{
+	{
 		id: "g-b1-l6-locative",
 		tags: ["hsk1", "hsk2", "npcr6"],
 		title: "L6: Sustantivos locativos y ubicación",
 		desc: "Palabras como 里边 (dentro), 外边 (fuera), 左边 (izquierda), 右边 (derecha), 旁边 (al lado), 上边 (arriba), y 下边 (abajo) funcionan como sustantivos.\n\nCuando modifican a otro sustantivo, llevan 的 (ej. 右边的楼 - el edificio de la derecha). Pero si indican el lugar de algo, suelen ir sin 的 (ej. 学校里边 - dentro de la escuela).",
 		examples: [
-			{ zh: "右边的楼是新宿舍。", es: "El edificio de la derecha es el nuevo dormitorio.", en: "The building on the right is the new dorm.", s: "Generic" },
-			{ zh: "银行在图书馆东边。", es: "El banco está al este de la biblioteca.", en: "The bank is east of the library.", s: "Generic" },
-			{ zh: "前边有没有饭馆？", es: "¿Hay algún restaurante adelante?", en: "Is there a restaurant ahead?", s: "Generic" }
-		]
+			{
+				zh: "右边的楼是新宿舍。",
+				es: "El edificio de la derecha es el nuevo dormitorio.",
+				en: "The building on the right is the new dorm.",
+				s: "Generic",
+			},
+			{
+				zh: "银行在图书馆东边。",
+				es: "El banco está al este de la biblioteca.",
+				en: "The bank is east of the library.",
+				s: "Generic",
+			},
+			{
+				zh: "前边有没有饭馆？",
+				es: "¿Hay algún restaurante adelante?",
+				en: "Is there a restaurant ahead?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l6-zai",
@@ -172,10 +392,25 @@ export const GRAMMAR_B1 = [
 		title: "L6: Oraciones con 在 (zài - estar)",
 		desc: "Para expresar que alguien o algo está ubicado en un lugar, se usa 在 como el verbo principal de la oración. La estructura es: [Sujeto] + 在 + [Lugar / Locativo].",
 		examples: [
-			{ zh: "我在他右边。", es: "Yo estoy a su derecha.", en: "I am on his right.", s: "Generic" },
-			{ zh: "大为的宿舍在学校里边吗？", es: "¿El dormitorio de Dawei está dentro de la escuela?", en: "Is Dawei's dorm inside the school?", s: "Generic" },
-			{ zh: "图书馆不在食堂西边。", es: "La biblioteca no está al oeste del comedor.", en: "The library is not west of the dining hall.", s: "Generic" }
-		]
+			{
+				zh: "我在他右边。",
+				es: "Yo estoy a su derecha.",
+				en: "I am on his right.",
+				s: "Generic",
+			},
+			{
+				zh: "大为的宿舍在学校里边吗？",
+				es: "¿El dormitorio de Dawei está dentro de la escuela?",
+				en: "Is Dawei's dorm inside the school?",
+				s: "Generic",
+			},
+			{
+				zh: "图书馆不在食堂西边。",
+				es: "La biblioteca no está al oeste del comedor.",
+				en: "The library is not west of the dining hall.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l6-you-shi",
@@ -183,10 +418,25 @@ export const GRAMMAR_B1 = [
 		title: "L6: Existencia (有 vs 是)",
 		desc: "Para indicar que hay algo en un lugar, se usa 有 (haber) o 是 (ser/estar).\n\nDiferencia principal: 有 se usa para cosas indefinidas ('hay UN banco'), mientras que 是 se usa para identificar cosas específicas ('ahí está EL banco' o 'lo que hay ahí es...').",
 		examples: [
-			{ zh: "学校里边有银行。", es: "Dentro de la escuela hay un banco (indefinido).", en: "There is a bank inside the school.", s: "Generic" },
-			{ zh: "食堂旁边是办公楼。", es: "Al lado del comedor está el edificio de oficinas (específico).", en: "Next to the dining hall is the office building.", s: "Generic" },
-			{ zh: "前边有没有一个小饭馆？", es: "¿Hay un pequeño restaurante adelante?", en: "Is there a small restaurant ahead?", s: "Generic" }
-		]
+			{
+				zh: "学校里边有银行。",
+				es: "Dentro de la escuela hay un banco (indefinido).",
+				en: "There is a bank inside the school.",
+				s: "Generic",
+			},
+			{
+				zh: "食堂旁边是办公楼。",
+				es: "Al lado del comedor está el edificio de oficinas (específico).",
+				en: "Next to the dining hall is the office building.",
+				s: "Generic",
+			},
+			{
+				zh: "前边有没有一个小饭馆？",
+				es: "¿Hay un pequeño restaurante adelante?",
+				en: "Is there a small restaurant ahead?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l6-gen-gei",
@@ -194,11 +444,31 @@ export const GRAMMAR_B1 = [
 		title: "L6: Preposiciones 跟 (con) y 给 (para/a)",
 		desc: "Las preposiciones 跟 (gēn - con) y 给 (gěi - para, a) siempre se combinan con un sustantivo/pronombre y se colocan ANTES del verbo principal.\n\nEstructura: [Sujeto] + (跟/给 + Persona) + Verbo.",
 		examples: [
-			{ zh: "你跟我来。", es: "Ven conmigo.", en: "Come with me.", s: "Generic" },
-			{ zh: "我跟老师学中文。", es: "Estudio chino con el profesor.", en: "I study Chinese with the teacher.", s: "Generic" },
-			{ zh: "我给你介绍一下。", es: "Te lo presento. (Literal: Yo para ti presento un poco)", en: "Let me introduce you.", s: "Generic" },
-			{ zh: "林娜给哥哥做寿面。", es: "Lin Na le prepara a su hermano fideos de la longevidad.", en: "Lin Na makes longevity noodles for her brother.", s: "Generic" }
-		]
+			{
+				zh: "你跟我来。",
+				es: "Ven conmigo.",
+				en: "Come with me.",
+				s: "Generic",
+			},
+			{
+				zh: "我跟老师学中文。",
+				es: "Estudio chino con el profesor.",
+				en: "I study Chinese with the teacher.",
+				s: "Generic",
+			},
+			{
+				zh: "我给你介绍一下。",
+				es: "Te lo presento. (Literal: Yo para ti presento un poco)",
+				en: "Let me introduce you.",
+				s: "Generic",
+			},
+			{
+				zh: "林娜给哥哥做寿面。",
+				es: "Lin Na le prepara a su hermano fideos de la longevidad.",
+				en: "Lin Na makes longevity noodles for her brother.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l6-hao-ma",
@@ -206,9 +476,19 @@ export const GRAMMAR_B1 = [
 		title: "L6: Sugerencias con 好吗 (hǎo ma) y 对吗 (duì ma)",
 		desc: "Para hacer una sugerencia o pedir confirmación suavemente, puedes añadir 好吗 (¿qué te parece? / ¿está bien?) o 对吗 (¿es correcto?) al final de una oración completa.",
 		examples: [
-			{ zh: "我们买一个大蛋糕，好吗？", es: "Compramos un gran pastel, ¿qué te parece?", en: "Let's buy a big cake, ok?", s: "Generic" },
-			{ zh: "你是中国人，对吗？", es: "Tú eres chino, ¿cierto?", en: "You are Chinese, right?", s: "Generic" }
-		]
+			{
+				zh: "我们买一个大蛋糕，好吗？",
+				es: "Compramos un gran pastel, ¿qué te parece?",
+				en: "Let's buy a big cake, ok?",
+				s: "Generic",
+			},
+			{
+				zh: "你是中国人，对吗？",
+				es: "Tú eres chino, ¿cierto?",
+				en: "You are Chinese, right?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l7-aux-xiang",
@@ -216,10 +496,25 @@ export const GRAMMAR_B1 = [
 		title: "L7: Verbos auxiliares: 想 (gustaría) y 可以 (poder)",
 		desc: "Los verbos auxiliares se colocan ANTES del verbo principal.\n- 想 (xiǎng): Expresa el deseo subjetivo (Me gustaría / quiero).\n- 可以 (kěyǐ): Expresa permiso o posibilidad objetiva (Se puede / está permitido).",
 		examples: [
-			{ zh: "丁力波想买一件绿色的羽绒服。", es: "A Ding Libo le gustaría comprar una chaqueta de plumas verde.", en: "Ding Libo would like to buy a green down jacket.", s: "Generic" },
-			{ zh: "您可以给我介绍一下吗？", es: "¿Puede usted presentarme un poco?", en: "Can you introduce me?", s: "Generic" },
-			{ zh: "现在不能过马路。", es: "Ahora no se puede cruzar la calle.", en: "You cannot cross the street now.", s: "Generic" }
-		]
+			{
+				zh: "丁力波想买一件绿色的羽绒服。",
+				es: "A Ding Libo le gustaría comprar una chaqueta de plumas verde.",
+				en: "Ding Libo would like to buy a green down jacket.",
+				s: "Generic",
+			},
+			{
+				zh: "您可以给我介绍一下吗？",
+				es: "¿Puede usted presentarme un poco?",
+				en: "Can you introduce me?",
+				s: "Generic",
+			},
+			{
+				zh: "现在不能过马路。",
+				es: "Ahora no se puede cruzar la calle.",
+				en: "You cannot cross the street now.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l7-zenme",
@@ -227,10 +522,25 @@ export const GRAMMAR_B1 = [
 		title: "L7: Preguntar cómo hacer algo con 怎么 (zěnme)",
 		desc: "Colocar 怎么 (cómo) antes de un verbo es la forma estándar de preguntar por el método o manera de realizar una acción.\n\nEjemplos clave: 怎么说 (cómo se dice), 怎么做 (cómo se hace), 怎么写 (cómo se escribe).",
 		examples: [
-			{ zh: "草莓怎么卖？", es: "¿A cómo se venden las fresas?", en: "How are the strawberries sold?", s: "Generic" },
-			{ zh: "这个汉字怎么写？", es: "¿Cómo se escribe este carácter chino?", en: "How do you write this Chinese character?", s: "Generic" },
-			{ zh: "这个汉语怎么说？", es: "¿Cómo se dice esto en chino?", en: "How do you say this in Chinese?", s: "Generic" }
-		]
+			{
+				zh: "草莓怎么卖？",
+				es: "¿A cómo se venden las fresas?",
+				en: "How are the strawberries sold?",
+				s: "Generic",
+			},
+			{
+				zh: "这个汉字怎么写？",
+				es: "¿Cómo se escribe este carácter chino?",
+				en: "How do you write this Chinese character?",
+				s: "Generic",
+			},
+			{
+				zh: "这个汉语怎么说？",
+				es: "¿Cómo se dice esto en chino?",
+				en: "How do you say this in Chinese?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l8-topic-comment",
@@ -238,10 +548,25 @@ export const GRAMMAR_B1 = [
 		title: "L8: Oraciones Tema-Comentario",
 		desc: "En chino es muy común que el 'sujeto' de una oración sea en realidad un tema principal (persona), y el 'predicado' sea otra pequeña oración (parte del cuerpo + estado).\n\nEstructura: [Tema Principal] + [Sub-Sujeto + Adjetivo/Verbo].",
 		examples: [
-			{ zh: "马大为头疼。", es: "A Ma Dawei le duele la cabeza. (Lit: Ma Dawei cabeza duele)", en: "Ma Dawei has a headache.", s: "Generic" },
-			{ zh: "你身体好吗？", es: "¿Estás bien de salud? (Lit: Tú cuerpo bueno?)", en: "Is your health good?", s: "Generic" },
-			{ zh: "今天天气冷不冷？", es: "¿Hace frío hoy? (Lit: Hoy clima frío no frío?)", en: "Is the weather cold today?", s: "Generic" }
-		]
+			{
+				zh: "马大为头疼。",
+				es: "A Ma Dawei le duele la cabeza. (Lit: Ma Dawei cabeza duele)",
+				en: "Ma Dawei has a headache.",
+				s: "Generic",
+			},
+			{
+				zh: "你身体好吗？",
+				es: "¿Estás bien de salud? (Lit: Tú cuerpo bueno?)",
+				en: "Is your health good?",
+				s: "Generic",
+			},
+			{
+				zh: "今天天气冷不冷？",
+				es: "¿Hace frío hoy? (Lit: Hoy clima frío no frío?)",
+				en: "Is the weather cold today?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l8-haishi",
@@ -249,9 +574,19 @@ export const GRAMMAR_B1 = [
 		title: "L8: Preguntas de elección con 还是 (háishì)",
 		desc: "Para hacer una pregunta de opción múltiple (¿A o B?), se usa 还是 (o).\n\nImportante: 还是 SOLO se usa en preguntas. Para decir 'o' en oraciones afirmativas, se debe usar 或者 (huòzhě).",
 		examples: [
-			{ zh: "现在去还是下午去？", es: "¿Vamos ahora o vamos en la tarde?", en: "Are we going now or in the afternoon?", s: "Generic" },
-			{ zh: "你是老师还是学生？", es: "¿Eres profesor o estudiante?", en: "Are you a teacher or a student?", s: "Generic" }
-		]
+			{
+				zh: "现在去还是下午去？",
+				es: "¿Vamos ahora o vamos en la tarde?",
+				en: "Are we going now or in the afternoon?",
+				s: "Generic",
+			},
+			{
+				zh: "你是老师还是学生？",
+				es: "¿Eres profesor o estudiante?",
+				en: "Are you a teacher or a student?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l8-serial-verbs-1",
@@ -259,9 +594,19 @@ export const GRAMMAR_B1 = [
 		title: "L8: Verbos en serie para propósito",
 		desc: "Cuando hay dos verbos consecutivos sin conjunciones, el segundo verbo suele indicar el PROPÓSITO del primero (generalmente ir a un lugar para hacer algo).\n\nEstructura: [Ir/Venir a un lugar] + [Hacer una acción].",
 		examples: [
-			{ zh: "马大为去医院看病。", es: "Ma Dawei va al hospital a ver al médico.", en: "Ma Dawei goes to the hospital to see a doctor.", s: "Generic" },
-			{ zh: "你们明天去超市买苹果吗？", es: "¿Ustedes van mañana al supermercado a comprar manzanas?", en: "Are you going to the supermarket tomorrow to buy apples?", s: "Generic" }
-		]
+			{
+				zh: "马大为去医院看病。",
+				es: "Ma Dawei va al hospital a ver al médico.",
+				en: "Ma Dawei goes to the hospital to see a doctor.",
+				s: "Generic",
+			},
+			{
+				zh: "你们明天去超市买苹果吗？",
+				es: "¿Ustedes van mañana al supermercado a comprar manzanas?",
+				en: "Are you going to the supermarket tomorrow to buy apples?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l8-aux-yinggai-yao-neng",
@@ -269,10 +614,25 @@ export const GRAMMAR_B1 = [
 		title: "L8: Verbos auxiliares 应该, 要 y 能",
 		desc: "- 应该 (yīnggāi): Deber o ser necesario (consejo fuerte).\n- 要 (yào): Necesitar, querer, o ir a (futuro). Su negación suele ser 不用 (búyòng - no hace falta).\n- 能 (néng): Poder, capacidad física o permiso situacional.",
 		examples: [
-			{ zh: "马大为应该去医院看病。", es: "Ma Dawei debería ir al hospital a ver al médico.", en: "Ma Dawei should go to the hospital to see a doctor.", s: "Generic" },
-			{ zh: "马大为不用验血。", es: "Ma Dawei no necesita hacerse un análisis de sangre. (Negación de 要)", en: "Ma Dawei doesn't need to get a blood test.", s: "Generic" },
-			{ zh: "大为明天能上课吗？", es: "¿Dawei puede asistir a clase mañana?", en: "Can Dawei attend class tomorrow?", s: "Generic" }
-		]
+			{
+				zh: "马大为应该去医院看病。",
+				es: "Ma Dawei debería ir al hospital a ver al médico.",
+				en: "Ma Dawei should go to the hospital to see a doctor.",
+				s: "Generic",
+			},
+			{
+				zh: "马大为不用验血。",
+				es: "Ma Dawei no necesita hacerse un análisis de sangre. (Negación de 要)",
+				en: "Ma Dawei doesn't need to get a blood test.",
+				s: "Generic",
+			},
+			{
+				zh: "大为明天能上课吗？",
+				es: "¿Dawei puede asistir a clase mañana?",
+				en: "Can Dawei attend class tomorrow?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l9-le-change",
@@ -280,10 +640,25 @@ export const GRAMMAR_B1 = [
 		title: "L9: La partícula 了 (le) para Cambio de Estado",
 		desc: "Cuando se coloca 了 al final de una oración, puede indicar que se ha producido un cambio de estado o una nueva situación (como el 'ya' en español). \n\nPara preguntar si ha ocurrido, se añade 吗 al final. Si no ha cambiado, se responde con 没有 (méiyǒu).",
 		examples: [
-			{ zh: "天气凉快了。", es: "El clima se ha refrescado (ya hace fresco).", en: "The weather has gotten cool.", s: "Generic" },
-			{ zh: "现在是秋天了。", es: "Ahora ya es otoño.", en: "It is autumn now.", s: "Generic" },
-			{ zh: "今天我有时间了。", es: "Hoy ya tengo tiempo (antes no lo tenía).", en: "I have time today (I didn't before).", s: "Generic" }
-		]
+			{
+				zh: "天气凉快了。",
+				es: "El clima se ha refrescado (ya hace fresco).",
+				en: "The weather has gotten cool.",
+				s: "Generic",
+			},
+			{
+				zh: "现在是秋天了。",
+				es: "Ahora ya es otoño.",
+				en: "It is autumn now.",
+				s: "Generic",
+			},
+			{
+				zh: "今天我有时间了。",
+				es: "Hoy ya tengo tiempo (antes no lo tenía).",
+				en: "I have time today (I didn't before).",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l9-serial-verbs-2",
@@ -291,9 +666,19 @@ export const GRAMMAR_B1 = [
 		title: "L9: Verbos en serie para medios/manera",
 		desc: "Otra función de tener dos verbos en serie es indicar cómo (el medio) se realiza la acción principal.\n\nPor ejemplo, 'tomar el bus para volver' o 'conducir para ir'. El verbo que indica el medio (tomar bus, conducir) va primero.",
 		examples: [
-			{ zh: "他每天坐公共汽车回家。", es: "Él vuelve a casa en autobús todos los días. (Lit: se sienta en bus y vuelve)", en: "He goes home by bus every day.", s: "Generic" },
-			{ zh: "我们开车去王府井。", es: "Nosotros vamos a Wangfujing conduciendo (en coche).", en: "We drive to Wangfujing.", s: "Generic" }
-		]
+			{
+				zh: "他每天坐公共汽车回家。",
+				es: "Él vuelve a casa en autobús todos los días. (Lit: se sienta en bus y vuelve)",
+				en: "He goes home by bus every day.",
+				s: "Generic",
+			},
+			{
+				zh: "我们开车去王府井。",
+				es: "Nosotros vamos a Wangfujing conduciendo (en coche).",
+				en: "We drive to Wangfujing.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l9-aux-hui",
@@ -301,10 +686,25 @@ export const GRAMMAR_B1 = [
 		title: "L9: Verbo auxiliar 会 (huì) - Habilidad aprendida",
 		desc: "El verbo 会 significa 'saber hacer algo' o 'poder', pero se usa específicamente para habilidades que se han ADQUIRIDO mediante aprendizaje o práctica (idiomas, conducir, nadar).",
 		examples: [
-			{ zh: "你能不能说汉语？", es: "¿Sabes hablar chino? (O puedes decir 你会不会说汉语？)", en: "Can you speak Chinese?", s: "Generic" },
-			{ zh: "宋华不会开车。", es: "Song Hua no sabe conducir.", en: "Song Hua doesn't know how to drive.", s: "Generic" },
-			{ zh: "丁力波会写这个汉字。", es: "Ding Libo sabe escribir este carácter.", en: "Ding Libo knows how to write this character.", s: "Generic" }
-		]
+			{
+				zh: "你能不能说汉语？",
+				es: "¿Sabes hablar chino? (O puedes decir 你会不会说汉语？)",
+				en: "Can you speak Chinese?",
+				s: "Generic",
+			},
+			{
+				zh: "宋华不会开车。",
+				es: "Song Hua no sabe conducir.",
+				en: "Song Hua doesn't know how to drive.",
+				s: "Generic",
+			},
+			{
+				zh: "丁力波会写这个汉字。",
+				es: "Ding Libo sabe escribir este carácter.",
+				en: "Ding Libo knows how to write this character.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l10-le-completion",
@@ -312,10 +712,25 @@ export const GRAMMAR_B1 = [
 		title: "L10: La partícula 了 (le) de finalización",
 		desc: "La partícula 了 también puede colocarse justo después del verbo o al final de la frase para confirmar que una acción ha sucedido o se ha completado (pasado o perfectivo).\n\nPara negar esta acción en el pasado, se usa 没 o 没有 ANTES del verbo, y ¡EL 了 SE ELIMINA!",
 		examples: [
-			{ zh: "我买了三本书。", es: "Compré tres libros.", en: "I bought three books.", s: "Generic" },
-			{ zh: "他昨天没去学校。", es: "Él no fue a la escuela ayer. (Nota: No hay 了)", en: "He didn't go to school yesterday.", s: "Generic" },
-			{ zh: "你吃早饭了吗？", es: "¿Has desayunado?", en: "Have you eaten breakfast?", s: "Generic" }
-		]
+			{
+				zh: "我买了三本书。",
+				es: "Compré tres libros.",
+				en: "I bought three books.",
+				s: "Generic",
+			},
+			{
+				zh: "他昨天没去学校。",
+				es: "Él no fue a la escuela ayer. (Nota: No hay 了)",
+				en: "He didn't go to school yesterday.",
+				s: "Generic",
+			},
+			{
+				zh: "你吃早饭了吗？",
+				es: "¿Has desayunado?",
+				en: "Have you eaten breakfast?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b1-l10-pivotal",
@@ -323,9 +738,24 @@ export const GRAMMAR_B1 = [
 		title: "L10: Oraciones pivotales con 请 (qǐng) y 让 (ràng)",
 		desc: "En una oración pivotal, el objeto del primer verbo funciona al mismo tiempo como el sujeto del segundo verbo.\n\nSuele ocurrir con verbos causativos como 请 (pedir/invitar a alguien a hacer algo) o 让 (dejar/mandar a alguien hacer algo).",
 		examples: [
-			{ zh: "妈妈让我去买东西。", es: "Mamá me mandó a comprar cosas. (Yo soy el objeto de 让 y el sujeto de 去)", en: "Mom made me go shopping.", s: "Generic" },
-			{ zh: "请你给我一杯水。", es: "Por favor, dame un vaso de agua. (Invitarte a ti a que me des agua)", en: "Please give me a glass of water.", s: "Generic" },
-			{ zh: "老师让学生看书。", es: "El profesor hace que los estudiantes lean.", en: "The teacher makes the students read.", s: "Generic" }
-		]
-	}
+			{
+				zh: "妈妈让我去买东西。",
+				es: "Mamá me mandó a comprar cosas. (Yo soy el objeto de 让 y el sujeto de 去)",
+				en: "Mom made me go shopping.",
+				s: "Generic",
+			},
+			{
+				zh: "请你给我一杯水。",
+				es: "Por favor, dame un vaso de agua. (Invitarte a ti a que me des agua)",
+				en: "Please give me a glass of water.",
+				s: "Generic",
+			},
+			{
+				zh: "老师让学生看书。",
+				es: "El profesor hace que los estudiantes lean.",
+				en: "The teacher makes the students read.",
+				s: "Generic",
+			},
+		],
+	},
 ];

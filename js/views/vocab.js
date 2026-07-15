@@ -153,11 +153,13 @@ export function renderVocab() {
 
 	$("#btn-select-all").addEventListener("click", () => {
 		// If everything visible is selected, then unselect them. Otherwise, select all.
-		const allVisibleSelected = filteredItems.every(e => selectedIds.has(e.id));
+		const allVisibleSelected = filteredItems.every((e) =>
+			selectedIds.has(e.id),
+		);
 		if (allVisibleSelected) {
-			filteredItems.forEach(e => selectedIds.delete(e.id));
+			filteredItems.forEach((e) => selectedIds.delete(e.id));
 		} else {
-			filteredItems.forEach(e => selectedIds.add(e.id));
+			filteredItems.forEach((e) => selectedIds.add(e.id));
 		}
 		updateFloatingBar();
 		draw();
@@ -170,7 +172,7 @@ export function renderVocab() {
 				id: "block_" + Date.now(),
 				name: name.trim(),
 				date: Date.now(),
-				dictIds: Array.from(selectedIds)
+				dictIds: Array.from(selectedIds),
 			});
 			saveSettings();
 			alert("Block saved! You can study it in the Practice session.");
@@ -235,7 +237,8 @@ export function renderVocab() {
 					currentSec = sec;
 					const header = document.createElement("div");
 					header.className = "vocab-sec-header";
-					header.style = "font-weight:600; font-size:13px; color:var(--primary); margin: 12px 0 4px 4px; padding-bottom: 4px; border-bottom: 1px solid var(--line);";
+					header.style =
+						"font-weight:600; font-size:13px; color:var(--primary); margin: 12px 0 4px 4px; padding-bottom: 4px; border-bottom: 1px solid var(--line);";
 					let title = T("secIndex");
 					if (sec === 1) title = T("sec1");
 					else if (sec === 2) title = T("sec2");
@@ -271,7 +274,7 @@ export function renderVocab() {
 				chk.checked = selectedIds.has(e.id);
 				chk.style.marginLeft = "8px";
 				chk.style.pointerEvents = "none";
-				
+
 				// Append to the flex container (4th grid item) to avoid breaking the 4-column grid layout
 				d.lastElementChild.appendChild(chk);
 

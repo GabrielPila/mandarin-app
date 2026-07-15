@@ -160,7 +160,7 @@ export const UI = {
 			"vocabulary learned up to each lesson.",
 		bookLects: "Book readings",
 		bookLectsDesc:
-			"Texts from the \"Reading Comprehension\" section of each " +
+			'Texts from the "Reading Comprehension" section of each ' +
 			"lesson in the textbook.",
 		bookLectTag: "Reading",
 		questions: "Answer the following questions:",

@@ -5,11 +5,31 @@ export const GRAMMAR_B2 = [
 		title: "L11: Complemento de grado/modal con 得 (de)",
 		desc: "Se usa para describir CÓMO se realiza o se realizó una acción, evaluando su calidad o nivel. La partícula 得 (de) conecta el verbo con un adjetivo o frase que lo describe.\n\nEstructura básica: [Verbo] + 得 + [Adjetivo/Frase].\n¡Regla crítica!: Si el verbo tiene un objeto, el verbo DEBE repetirse antes del 得: [V] + [O] + [V] + 得 + [Adj].",
 		examples: [
-			{ zh: "他跑得很快。", es: "Él corre muy rápido.", en: "He runs very fast.", s: "Generic" },
-			{ zh: "你汉语说得真好。", es: "Hablas chino realmente bien. (Aquí el primer 说 se omite a menudo, pero la estructura real es 说汉语说得...)", en: "You speak Chinese really well.", s: "Generic" },
-			{ zh: "他写汉字写得很漂亮。", es: "Él escribe caracteres chinos muy hermosamente. (Se repite el verbo 写)", en: "He writes Chinese characters very beautifully.", s: "Generic" },
-			{ zh: "我昨天晚上睡得不好。", es: "Anoche no dormí bien.", en: "I didn't sleep well last night.", s: "Generic" }
-		]
+			{
+				zh: "他跑得很快。",
+				es: "Él corre muy rápido.",
+				en: "He runs very fast.",
+				s: "Generic",
+			},
+			{
+				zh: "你汉语说得真好。",
+				es: "Hablas chino realmente bien. (Aquí el primer 说 se omite a menudo, pero la estructura real es 说汉语说得...)",
+				en: "You speak Chinese really well.",
+				s: "Generic",
+			},
+			{
+				zh: "他写汉字写得很漂亮。",
+				es: "Él escribe caracteres chinos muy hermosamente. (Se repite el verbo 写)",
+				en: "He writes Chinese characters very beautifully.",
+				s: "Generic",
+			},
+			{
+				zh: "我昨天晚上睡得不好。",
+				es: "Anoche no dormí bien.",
+				en: "I didn't sleep well last night.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b2-l11-verb-reduplication",
@@ -17,11 +37,31 @@ export const GRAMMAR_B2 = [
 		title: "L11: Reduplicación de verbos",
 		desc: "Los verbos a menudo se repiten en el lenguaje hablado para suavizar el tono. Indica que una acción es breve, casual, un 'intento', o que se hace de manera relajada (equivalente a 'darle un vistazo' o 'descansar un poco').\n\nPatrones:\n- Monosílabos: AA (看看) o A一A (看一看).\n- Bisílabos: ABAB (休息休息).\n- En pasado: A了A (看了看).",
 		examples: [
-			{ zh: "你看看这件衣服怎么样？", es: "Échale un vistazo a esta ropa, ¿qué te parece?", en: "Take a look at this clothing, how is it?", s: "Generic" },
-			{ zh: "太累了，我想休息休息。", es: "Estoy muy cansado, me gustaría descansar un poquito.", en: "Too tired, I would like to rest a bit.", s: "Generic" },
-			{ zh: "你可以去问一问老师。", es: "Puedes ir a preguntarle un momento al profesor.", en: "You can go and ask the teacher briefly.", s: "Generic" },
-			{ zh: "他笑了笑，没有说话。", es: "Él sonrió levemente y no dijo nada. (Acción breve en pasado)", en: "He smiled briefly and didn't speak.", s: "Generic" }
-		]
+			{
+				zh: "你看看这件衣服怎么样？",
+				es: "Échale un vistazo a esta ropa, ¿qué te parece?",
+				en: "Take a look at this clothing, how is it?",
+				s: "Generic",
+			},
+			{
+				zh: "太累了，我想休息休息。",
+				es: "Estoy muy cansado, me gustaría descansar un poquito.",
+				en: "Too tired, I would like to rest a bit.",
+				s: "Generic",
+			},
+			{
+				zh: "你可以去问一问老师。",
+				es: "Puedes ir a preguntarle un momento al profesor.",
+				en: "You can go and ask the teacher briefly.",
+				s: "Generic",
+			},
+			{
+				zh: "他笑了笑，没有说话。",
+				es: "Él sonrió levemente y no dijo nada. (Acción breve en pasado)",
+				en: "He smiled briefly and didn't speak.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b2-l12-result-complement",
@@ -29,11 +69,31 @@ export const GRAMMAR_B2 = [
 		title: "L12: Complemento de resultado",
 		desc: "A diferencia del español, en chino no basta con decir que hiciste una acción (ej. mirar, escuchar, buscar). Debes añadir un 'Complemento de resultado' pegado al verbo para indicar si la acción tuvo ÉXITO o cuál fue su desenlace final.\n\nEjemplos de resultados: 完 (terminar), 到 (lograr/alcanzar), 懂 (entender), 好 (hacer algo bien/listo), 见 (percibir).\nEstructura: [Verbo] + [Resultado] + [Objeto].",
 		examples: [
-			{ zh: "我听懂了老师的话。", es: "Escuché y entendí lo que dijo el profesor.", en: "I understood what the teacher said.", s: "Generic" },
-			{ zh: "他没看到我的书。", es: "Él miró pero no logró ver (no encontró) mi libro.", en: "He didn't see my book.", s: "Generic" },
-			{ zh: "今天的作业做完了吗？", es: "¿Has terminado de hacer los deberes de hoy?", en: "Have you finished doing today's homework?", s: "Generic" },
-			{ zh: "饭已经做好了。", es: "La comida ya está hecha (lista).", en: "The meal is already prepared.", s: "Generic" }
-		]
+			{
+				zh: "我听懂了老师的话。",
+				es: "Escuché y entendí lo que dijo el profesor.",
+				en: "I understood what the teacher said.",
+				s: "Generic",
+			},
+			{
+				zh: "他没看到我的书。",
+				es: "Él miró pero no logró ver (no encontró) mi libro.",
+				en: "He didn't see my book.",
+				s: "Generic",
+			},
+			{
+				zh: "今天的作业做完了吗？",
+				es: "¿Has terminado de hacer los deberes de hoy?",
+				en: "Have you finished doing today's homework?",
+				s: "Generic",
+			},
+			{
+				zh: "饭已经做好了。",
+				es: "La comida ya está hecha (lista).",
+				en: "The meal is already prepared.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b2-l12-directional-simple",
@@ -41,10 +101,25 @@ export const GRAMMAR_B2 = [
 		title: "L12: Complemento direccional simple (来/去)",
 		desc: "Si un verbo implica movimiento, se le suele añadir 来 (venir) o 去 (ir) justo después para indicar la dirección de la acción respecto al hablante.\n- 来 (lái): El movimiento se ACERCA al hablante.\n- 去 (qù): El movimiento se ALEJA del hablante.",
 		examples: [
-			{ zh: "你在楼下等我，我马上下来。", es: "Espérame abajo, bajo enseguida. (El que escucha está abajo, así que el movimiento va hacia él: 来)", en: "Wait for me downstairs, I'll come down immediately.", s: "Generic" },
-			{ zh: "他出去了。", es: "Él salió. (Alejándose de donde estoy yo)", en: "He went out.", s: "Generic" },
-			{ zh: "请给我买一杯咖啡来。", es: "Por favor, cómprame un café y tráemelo.", en: "Please buy a coffee and bring it to me.", s: "Generic" }
-		]
+			{
+				zh: "你在楼下等我，我马上下来。",
+				es: "Espérame abajo, bajo enseguida. (El que escucha está abajo, así que el movimiento va hacia él: 来)",
+				en: "Wait for me downstairs, I'll come down immediately.",
+				s: "Generic",
+			},
+			{
+				zh: "他出去了。",
+				es: "Él salió. (Alejándose de donde estoy yo)",
+				en: "He went out.",
+				s: "Generic",
+			},
+			{
+				zh: "请给我买一杯咖啡来。",
+				es: "Por favor, cómprame un café y tráemelo.",
+				en: "Please buy a coffee and bring it to me.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b2-l13-ba-sentence",
@@ -52,11 +127,31 @@ export const GRAMMAR_B2 = [
 		title: "L13: La estructura pasiva-activa con 把 (bǎ)",
 		desc: "La oración con 把 es una de las estructuras más vitales del chino. Se usa para enfatizar cómo una acción DISPONE, cambia o afecta a un objeto específico.\n\nEstructura: [Sujeto] + 把 + [Objeto] + [Verbo] + [Complemento / 了].\nReglas de oro:\n1. El objeto debe ser conocido (el libro, no un libro).\n2. El verbo NUNCA puede ir solo; debe llevar un complemento, un 了, o estar reduplicado, porque debe mostrar qué le pasó al objeto.",
 		examples: [
-			{ zh: "我把书放在桌子上了。", es: "He puesto el libro sobre la mesa.", en: "I put the book on the table.", s: "Generic" },
-			{ zh: "请您把门打开。", es: "Por favor abra la puerta. (Lit: Agarre la puerta y ábrala)", en: "Please open the door.", s: "Generic" },
-			{ zh: "他把我的咖啡喝完了。", es: "Él se bebió (terminó) mi café.", en: "He drank up my coffee.", s: "Generic" },
-			{ zh: "你可以把手机给我吗？", es: "¿Puedes darme el celular?", en: "Can you give me the phone?", s: "Generic" }
-		]
+			{
+				zh: "我把书放在桌子上了。",
+				es: "He puesto el libro sobre la mesa.",
+				en: "I put the book on the table.",
+				s: "Generic",
+			},
+			{
+				zh: "请您把门打开。",
+				es: "Por favor abra la puerta. (Lit: Agarre la puerta y ábrala)",
+				en: "Please open the door.",
+				s: "Generic",
+			},
+			{
+				zh: "他把我的咖啡喝完了。",
+				es: "Él se bebió (terminó) mi café.",
+				en: "He drank up my coffee.",
+				s: "Generic",
+			},
+			{
+				zh: "你可以把手机给我吗？",
+				es: "¿Puedes darme el celular?",
+				en: "Can you give me the phone?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b2-l13-duration",
@@ -64,11 +159,31 @@ export const GRAMMAR_B2 = [
 		title: "L13: Complemento de duración temporal",
 		desc: "Para indicar cuánto TIEMPO dura una acción (ej. 'por tres horas', 'durante un año'), la duración se coloca DESPUÉS del verbo principal, no antes como las palabras de tiempo (hoy, mañana).\n\nEstructura: [Verbo] + (了) + [Duración].\nSi hay un objeto: [Verbo] + [Objeto] + [Verbo repetido] + (了) + [Duración].",
 		examples: [
-			{ zh: "我学了一年汉语。", es: "He estudiado chino durante un año.", en: "I studied Chinese for a year.", s: "Generic" },
-			{ zh: "他在北京住了三个多月。", es: "Él vivió en Beijing durante más de tres meses.", en: "He lived in Beijing for over three months.", s: "Generic" },
-			{ zh: "我看书看了一个小时。", es: "Leí durante una hora. (Repitiendo el verbo 看)", en: "I read a book for an hour.", s: "Generic" },
-			{ zh: "每天我都运动半个小时。", es: "Todos los días hago ejercicio durante media hora.", en: "I exercise for half an hour every day.", s: "Generic" }
-		]
+			{
+				zh: "我学了一年汉语。",
+				es: "He estudiado chino durante un año.",
+				en: "I studied Chinese for a year.",
+				s: "Generic",
+			},
+			{
+				zh: "他在北京住了三个多月。",
+				es: "Él vivió en Beijing durante más de tres meses.",
+				en: "He lived in Beijing for over three months.",
+				s: "Generic",
+			},
+			{
+				zh: "我看书看了一个小时。",
+				es: "Leí durante una hora. (Repitiendo el verbo 看)",
+				en: "I read a book for an hour.",
+				s: "Generic",
+			},
+			{
+				zh: "每天我都运动半个小时。",
+				es: "Todos los días hago ejercicio durante media hora.",
+				en: "I exercise for half an hour every day.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b2-l14-bi-comparison-1",
@@ -76,10 +191,25 @@ export const GRAMMAR_B2 = [
 		title: "L14: Comparaciones básicas con 比 (bǐ)",
 		desc: "Para decir que A es más 'adjetivo' que B, se usa 比 (que / en comparación con). ¡En chino no se usa la palabra 'más' (更 o 最) en esta estructura básica!\n\nEstructura: [A] + 比 + [B] + [Adjetivo].\nPara negar (A no es tan... como B), se usa 没有 (méiyǒu) en lugar de 比.",
 		examples: [
-			{ zh: "今天比昨天冷。", es: "Hoy hace más frío que ayer.", en: "Today is colder than yesterday.", s: "Generic" },
-			{ zh: "飞机比火车快。", es: "El avión es más rápido que el tren.", en: "Planes are faster than trains.", s: "Generic" },
-			{ zh: "我没有他高。", es: "Yo no soy tan alto como él. (Negación)", en: "I am not as tall as he is.", s: "Generic" }
-		]
+			{
+				zh: "今天比昨天冷。",
+				es: "Hoy hace más frío que ayer.",
+				en: "Today is colder than yesterday.",
+				s: "Generic",
+			},
+			{
+				zh: "飞机比火车快。",
+				es: "El avión es más rápido que el tren.",
+				en: "Planes are faster than trains.",
+				s: "Generic",
+			},
+			{
+				zh: "我没有他高。",
+				es: "Yo no soy tan alto como él. (Negación)",
+				en: "I am not as tall as he is.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b2-l14-bi-comparison-2",
@@ -87,10 +217,25 @@ export const GRAMMAR_B2 = [
 		title: "L14: Comparaciones específicas (Diferencias exactas)",
 		desc: "Si quieres especificar la DIFERENCIA exacta entre A y B (ej. '3 años mayor', 'un poco más caro'), esa cantidad o grado se coloca DESPUÉS del adjetivo.\n\nEstructura: [A] + 比 + [B] + [Adjetivo] + [Cantidad exacta / 一点儿 (un poco) / 得多 (mucho)].",
 		examples: [
-			{ zh: "我哥哥比我大三岁。", es: "Mi hermano mayor es 3 años mayor que yo.", en: "My older brother is 3 years older than me.", s: "Generic" },
-			{ zh: "这件衣服比那件贵一点儿。", es: "Esta ropa es un poco más cara que aquella.", en: "This clothing is a bit more expensive than that one.", s: "Generic" },
-			{ zh: "今天比昨天热得多。", es: "Hoy hace mucho más calor que ayer.", en: "Today is much hotter than yesterday.", s: "Generic" }
-		]
+			{
+				zh: "我哥哥比我大三岁。",
+				es: "Mi hermano mayor es 3 años mayor que yo.",
+				en: "My older brother is 3 years older than me.",
+				s: "Generic",
+			},
+			{
+				zh: "这件衣服比那件贵一点儿。",
+				es: "Esta ropa es un poco más cara que aquella.",
+				en: "This clothing is a bit more expensive than that one.",
+				s: "Generic",
+			},
+			{
+				zh: "今天比昨天热得多。",
+				es: "Hoy hace mucho más calor que ayer.",
+				en: "Today is much hotter than yesterday.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b2-l15-yiyang",
@@ -98,10 +243,25 @@ export const GRAMMAR_B2 = [
 		title: "L15: Igualdad con 跟/和...一样 (yíyàng)",
 		desc: "Para decir que dos cosas son iguales, usamos 和...一样 o 跟...一样 (igual que). Puedes añadir un adjetivo al final para especificar en qué son iguales.\n\nEstructura: [A] + 跟/和 + [B] + 一样 + (Adjetivo).",
 		examples: [
-			{ zh: "这辆车跟那辆车一样贵。", es: "Este coche es igual de caro que ese coche.", en: "This car is as expensive as that one.", s: "Generic" },
-			{ zh: "他的性格和我一样。", es: "Su personalidad es igual que la mía.", en: "His personality is the same as mine.", s: "Generic" },
-			{ zh: "北京的天气跟上海不一样。", es: "El clima de Beijing no es igual al de Shanghái. (Negación)", en: "Beijing's weather is not the same as Shanghai's.", s: "Generic" }
-		]
+			{
+				zh: "这辆车跟那辆车一样贵。",
+				es: "Este coche es igual de caro que ese coche.",
+				en: "This car is as expensive as that one.",
+				s: "Generic",
+			},
+			{
+				zh: "他的性格和我一样。",
+				es: "Su personalidad es igual que la mía.",
+				en: "His personality is the same as mine.",
+				s: "Generic",
+			},
+			{
+				zh: "北京的天气跟上海不一样。",
+				es: "El clima de Beijing no es igual al de Shanghái. (Negación)",
+				en: "Beijing's weather is not the same as Shanghai's.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b2-l16-progressive",
@@ -109,10 +269,25 @@ export const GRAMMAR_B2 = [
 		title: "L16: Acción en progreso (正在/在/正 + V)",
 		desc: "Para indicar que una acción está ocurriendo en este mismo instante (el equivalente al gerundio -ando/-iendo), se coloca 正在, 在 o 正 antes del verbo.\n\nFrecuentemente se añade la partícula 呢 al final de la oración para enfatizar el tono continuo.",
 		examples: [
-			{ zh: "大为正在看书。", es: "Dawei está leyendo un libro (en este preciso instante).", en: "Dawei is reading a book.", s: "Generic" },
-			{ zh: "外面在下雨呢。", es: "Está lloviendo afuera.", en: "It is raining outside.", s: "Generic" },
-			{ zh: "你昨天晚上八点在做什么呢？", es: "¿Qué estabas haciendo ayer a las ocho de la noche?", en: "What were you doing at 8 PM last night?", s: "Generic" }
-		]
+			{
+				zh: "大为正在看书。",
+				es: "Dawei está leyendo un libro (en este preciso instante).",
+				en: "Dawei is reading a book.",
+				s: "Generic",
+			},
+			{
+				zh: "外面在下雨呢。",
+				es: "Está lloviendo afuera.",
+				en: "It is raining outside.",
+				s: "Generic",
+			},
+			{
+				zh: "你昨天晚上八点在做什么呢？",
+				es: "¿Qué estabas haciendo ayer a las ocho de la noche?",
+				en: "What were you doing at 8 PM last night?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b2-l16-yinwei-suoyi",
@@ -120,10 +295,25 @@ export const GRAMMAR_B2 = [
 		title: "L16: Causa y efecto (因为...所以...)",
 		desc: "Para conectar la causa (porque) con el efecto (por lo tanto), se usa la estructura pareada 因为... (yīnwèi) y 所以... (suǒyǐ).\n\nEn chino, es muy común usar ambas partes en la misma oración, aunque también se puede omitir una de ellas si el contexto es claro.",
 		examples: [
-			{ zh: "因为下雨，所以我没去。", es: "Como llovió, por lo tanto no fui.", en: "Because it rained, I didn't go.", s: "Generic" },
-			{ zh: "他没来上课，因为他生病了。", es: "Él no vino a clase, porque está enfermo.", en: "He didn't come to class because he is sick.", s: "Generic" },
-			{ zh: "因为我太忙了，所以没有时间看电影。", es: "Como estoy muy ocupado, no tengo tiempo de ver películas.", en: "Because I am too busy, I don't have time to watch movies.", s: "Generic" }
-		]
+			{
+				zh: "因为下雨，所以我没去。",
+				es: "Como llovió, por lo tanto no fui.",
+				en: "Because it rained, I didn't go.",
+				s: "Generic",
+			},
+			{
+				zh: "他没来上课，因为他生病了。",
+				es: "Él no vino a clase, porque está enfermo.",
+				en: "He didn't come to class because he is sick.",
+				s: "Generic",
+			},
+			{
+				zh: "因为我太忙了，所以没有时间看电影。",
+				es: "Como estoy muy ocupado, no tengo tiempo de ver películas.",
+				en: "Because I am too busy, I don't have time to watch movies.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b2-l17-guo",
@@ -131,10 +321,25 @@ export const GRAMMAR_B2 = [
 		title: "L17: Experiencias pasadas con 过 (guò)",
 		desc: "Se coloca 过 inmediatamente después del verbo para indicar que alguna vez en la vida has tenido esa experiencia (equivalente a 'he hecho algo' o 'alguna vez'). Destaca la experiencia, no el tiempo exacto.\n\nNegación: Se usa 没(有) + V + 过 (Nunca he...).",
 		examples: [
-			{ zh: "我吃过北京烤鸭。", es: "He comido (alguna vez) pato asado de Beijing.", en: "I have eaten Peking duck.", s: "Generic" },
-			{ zh: "他没去过中国。", es: "Él nunca ha ido a China.", en: "He has never been to China.", s: "Generic" },
-			{ zh: "你看过这个电影吗？", es: "¿Has visto esta película alguna vez?", en: "Have you ever seen this movie?", s: "Generic" }
-		]
+			{
+				zh: "我吃过北京烤鸭。",
+				es: "He comido (alguna vez) pato asado de Beijing.",
+				en: "I have eaten Peking duck.",
+				s: "Generic",
+			},
+			{
+				zh: "他没去过中国。",
+				es: "Él nunca ha ido a China.",
+				en: "He has never been to China.",
+				s: "Generic",
+			},
+			{
+				zh: "你看过这个电影吗？",
+				es: "¿Has visto esta película alguna vez?",
+				en: "Have you ever seen this movie?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b2-l17-hao-adjectives",
@@ -142,10 +347,25 @@ export const GRAMMAR_B2 = [
 		title: "L17: Adjetivos formados con 好 (hǎo) + Verbo",
 		desc: "En chino se pueden crear adjetivos muy descriptivos colocando 好 (bueno) delante de verbos relacionados con los sentidos.\n\n- 好吃 (hǎochī): Delicioso (bueno de comer)\n- 好看 (hǎokàn): Bonito / Interesante (bueno de ver)\n- 好听 (hǎotīng): Agradable al oído (bueno de escuchar)\n- 好玩儿 (hǎowánr): Divertido (bueno para jugar)",
 		examples: [
-			{ zh: "中国菜很好吃。", es: "La comida china es muy deliciosa.", en: "Chinese food is very delicious.", s: "Generic" },
-			{ zh: "这首歌很好听。", es: "Esta canción es muy agradable de escuchar.", en: "This song sounds very nice.", s: "Generic" },
-			{ zh: "那本小说好看吗？", es: "¿Es interesante (buena para leer) esa novela?", en: "Is that novel good?", s: "Generic" }
-		]
+			{
+				zh: "中国菜很好吃。",
+				es: "La comida china es muy deliciosa.",
+				en: "Chinese food is very delicious.",
+				s: "Generic",
+			},
+			{
+				zh: "这首歌很好听。",
+				es: "Esta canción es muy agradable de escuchar.",
+				en: "This song sounds very nice.",
+				s: "Generic",
+			},
+			{
+				zh: "那本小说好看吗？",
+				es: "¿Es interesante (buena para leer) esa novela?",
+				en: "Is that novel good?",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b2-l17-suiran-danshi",
@@ -153,10 +373,25 @@ export const GRAMMAR_B2 = [
 		title: "L17: Aunque / Pero (虽然...但是...)",
 		desc: "Se usa para expresar una relación adversativa o concesiva. Aunque (虽然 suīrán) suceda la condición A, sin embargo/pero (但是 dànshì) el resultado es B.\n\nAmbas conjunciones suelen usarse juntas en chino (a diferencia del español).",
 		examples: [
-			{ zh: "虽然汉语很难，但是很有意思。", es: "Aunque el chino es difícil, (pero) es muy interesante.", en: "Although Chinese is difficult, it is very interesting.", s: "Generic" },
-			{ zh: "虽然外面下雪，他还是出去跑步了。", es: "Aunque nevaba afuera, él igual salió a correr.", en: "Even though it was snowing outside, he still went out for a run.", s: "Generic" },
-			{ zh: "虽然我很累，但是我睡不着。", es: "Aunque estoy muy cansado, no me puedo dormir.", en: "Although I am very tired, I cannot fall asleep.", s: "Generic" }
-		]
+			{
+				zh: "虽然汉语很难，但是很有意思。",
+				es: "Aunque el chino es difícil, (pero) es muy interesante.",
+				en: "Although Chinese is difficult, it is very interesting.",
+				s: "Generic",
+			},
+			{
+				zh: "虽然外面下雪，他还是出去跑步了。",
+				es: "Aunque nevaba afuera, él igual salió a correr.",
+				en: "Even though it was snowing outside, he still went out for a run.",
+				s: "Generic",
+			},
+			{
+				zh: "虽然我很累，但是我睡不着。",
+				es: "Aunque estoy muy cansado, no me puedo dormir.",
+				en: "Although I am very tired, I cannot fall asleep.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b2-l18-directional-compound",
@@ -164,11 +399,31 @@ export const GRAMMAR_B2 = [
 		title: "L18: Complemento direccional compuesto",
 		desc: "Se forma combinando un verbo de dirección (上, 下, 进, 出, 回, 过, 起) con 来 (venir) o 去 (ir). Esto da una descripción 3D muy precisa de cómo se mueve alguien.\n\nEjemplo: 进去 (entrar alejándose), 出来 (salir hacia mí), 回来 (volver hacia mí).\nEstructura: [Verbo Principal] + [Direccional 1] + [来/去].",
 		examples: [
-			{ zh: "他跑进去了。", es: "Él entró corriendo. (Alejándose de mí)", en: "He ran in.", s: "Generic" },
-			{ zh: "请把书拿出来。", es: "Por favor saca el libro. (Hacia mí)", en: "Please take out the book.", s: "Generic" },
-			{ zh: "她从楼上走下来了。", es: "Ella bajó caminando desde el piso de arriba.", en: "She walked down from upstairs.", s: "Generic" },
-			{ zh: "老师走进教室来了。", es: "El profesor entró caminando al aula. (Acercándose)", en: "The teacher walked into the classroom.", s: "Generic" }
-		]
+			{
+				zh: "他跑进去了。",
+				es: "Él entró corriendo. (Alejándose de mí)",
+				en: "He ran in.",
+				s: "Generic",
+			},
+			{
+				zh: "请把书拿出来。",
+				es: "Por favor saca el libro. (Hacia mí)",
+				en: "Please take out the book.",
+				s: "Generic",
+			},
+			{
+				zh: "她从楼上走下来了。",
+				es: "Ella bajó caminando desde el piso de arriba.",
+				en: "She walked down from upstairs.",
+				s: "Generic",
+			},
+			{
+				zh: "老师走进教室来了。",
+				es: "El profesor entró caminando al aula. (Acercándose)",
+				en: "The teacher walked into the classroom.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b2-l18-budan-erqie",
@@ -176,9 +431,19 @@ export const GRAMMAR_B2 = [
 		title: "L18: No solo... sino también (不但...而且...)",
 		desc: "Se usa para agregar información que intensifica o complementa la primera cláusula.\n\nEstructura: 不但 (búdàn) [A], 而且 (érqiě) [B].",
 		examples: [
-			{ zh: "他不但会说英语，而且会说汉语。", es: "Él no solo sabe hablar inglés, sino que también sabe hablar chino.", en: "He can speak not only English, but also Chinese.", s: "Generic" },
-			{ zh: "这个菜不但好看，而且很好吃。", es: "Este plato no solo se ve bien, sino que también es muy delicioso.", en: "This dish not only looks good, but also tastes delicious.", s: "Generic" }
-		]
+			{
+				zh: "他不但会说英语，而且会说汉语。",
+				es: "Él no solo sabe hablar inglés, sino que también sabe hablar chino.",
+				en: "He can speak not only English, but also Chinese.",
+				s: "Generic",
+			},
+			{
+				zh: "这个菜不但好看，而且很好吃。",
+				es: "Este plato no solo se ve bien, sino que también es muy delicioso.",
+				en: "This dish not only looks good, but also tastes delicious.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b2-l18-subjectless",
@@ -186,10 +451,25 @@ export const GRAMMAR_B2 = [
 		title: "L18: Oraciones sin sujeto (Fenómenos naturales)",
 		desc: "En chino, cuando se describen fenómenos meteorológicos o cambios de estado natural, no se utiliza un sujeto (como el 'it' en inglés). La oración simplemente comienza con el verbo.",
 		examples: [
-			{ zh: "下雪了。", es: "Está nevando. / Ha empezado a nevar.", en: "It is snowing.", s: "Generic" },
-			{ zh: "刮风了。", es: "Está soplando el viento.", en: "It's windy.", s: "Generic" },
-			{ zh: "下雨了，我们走吧。", es: "Está lloviendo, vámonos.", en: "It's raining, let's go.", s: "Generic" }
-		]
+			{
+				zh: "下雪了。",
+				es: "Está nevando. / Ha empezado a nevar.",
+				en: "It is snowing.",
+				s: "Generic",
+			},
+			{
+				zh: "刮风了。",
+				es: "Está soplando el viento.",
+				en: "It's windy.",
+				s: "Generic",
+			},
+			{
+				zh: "下雨了，我们走吧。",
+				es: "Está lloviendo, vámonos.",
+				en: "It's raining, let's go.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b2-l19-bei-passive",
@@ -197,11 +477,31 @@ export const GRAMMAR_B2 = [
 		title: "L19: Voz pasiva con 被 (bèi)",
 		desc: "En una oración pasiva, el receptor de la acción se convierte en el sujeto. Suele usarse para indicar resultados adversos, daños o acciones inesperadas.\n\nEstructura: [Receptor] + 被 + [Agente/Quién lo hizo] + [Verbo] + [Complemento/了].\nA veces el agente puede omitirse si no es importante (ej. 被打破了 - fue roto).",
 		examples: [
-			{ zh: "我的钱包被小偷摸走了。", es: "Mi cartera fue robada (lit: tocada y llevada) por un ladrón.", en: "My wallet was stolen by a thief.", s: "Generic" },
-			{ zh: "那个苹果被我吃了。", es: "Esa manzana fue comida por mí.", en: "That apple was eaten by me.", s: "Generic" },
-			{ zh: "杯子被打破了。", es: "El vaso fue roto. (El agente se omitió)", en: "The glass was broken.", s: "Generic" },
-			{ zh: "他的自行车被借走了。", es: "Su bicicleta fue tomada prestada (y llevada).", en: "His bicycle was borrowed.", s: "Generic" }
-		]
+			{
+				zh: "我的钱包被小偷摸走了。",
+				es: "Mi cartera fue robada (lit: tocada y llevada) por un ladrón.",
+				en: "My wallet was stolen by a thief.",
+				s: "Generic",
+			},
+			{
+				zh: "那个苹果被我吃了。",
+				es: "Esa manzana fue comida por mí.",
+				en: "That apple was eaten by me.",
+				s: "Generic",
+			},
+			{
+				zh: "杯子被打破了。",
+				es: "El vaso fue roto. (El agente se omitió)",
+				en: "The glass was broken.",
+				s: "Generic",
+			},
+			{
+				zh: "他的自行车被借走了。",
+				es: "Su bicicleta fue tomada prestada (y llevada).",
+				en: "His bicycle was borrowed.",
+				s: "Generic",
+			},
+		],
 	},
 	{
 		id: "g-b2-l19-result-zhu-shang",
@@ -209,10 +509,30 @@ export const GRAMMAR_B2 = [
 		title: "L19: Complementos de resultado 住 y 上",
 		desc: "Dos complementos de resultado muy comunes:\n- 住 (zhù): Indica inmovilidad, firmeza o fijación (detener, recordar, sostener).\n- 上 (shàng): Indica logro, cierre o contacto (cerrar, conectar, poner).",
 		examples: [
-			{ zh: "你记住这个词了吗？", es: "¿Has recordado (fijado en la memoria) esta palabra?", en: "Have you memorized this word?", s: "Generic" },
-			{ zh: "车停住了。", es: "El coche se detuvo (y se quedó quieto).", en: "The car stopped.", s: "Generic" },
-			{ zh: "请关上门。", es: "Por favor, cierra la puerta (contacto/cierre).", en: "Please close the door.", s: "Generic" },
-			{ zh: "穿上外套吧。", es: "Ponte (sobre tu cuerpo) el abrigo.", en: "Put on the coat.", s: "Generic" }
-		]
-	}
+			{
+				zh: "你记住这个词了吗？",
+				es: "¿Has recordado (fijado en la memoria) esta palabra?",
+				en: "Have you memorized this word?",
+				s: "Generic",
+			},
+			{
+				zh: "车停住了。",
+				es: "El coche se detuvo (y se quedó quieto).",
+				en: "The car stopped.",
+				s: "Generic",
+			},
+			{
+				zh: "请关上门。",
+				es: "Por favor, cierra la puerta (contacto/cierre).",
+				en: "Please close the door.",
+				s: "Generic",
+			},
+			{
+				zh: "穿上外套吧。",
+				es: "Ponte (sobre tu cuerpo) el abrigo.",
+				en: "Put on the coat.",
+				s: "Generic",
+			},
+		],
+	},
 ];

@@ -57,11 +57,24 @@ as-is).
 - **Book order lives in `sec`/`ord` fields, never in array order.** Vocab
   entries carry optional `sec` (which "Palabras Nuevas" block within the
   lesson: 1 = after Texto 1, 2 = after Texto 2, 3 = in-lesson Palabras
-  Suplementarias) and `ord` (1-based position within that block). Any UI
-  that wants to show vocabulary "as in the book" must sort by
-  `(l, sec, ord)`; entries without `sec` (index-only words) sort last within
-  their lesson. See `docs/EXTRACTION-PLAN.md` for how these fields get
-  populated.
+  Suplementarias, 4 = Additional / Vocabulario Adicional) and `ord` (1-based
+  sequential position within that block). Any UI that wants to show vocabulary
+  "as in the book" must sort by `(l, sec, ord)`; entries without `sec`
+  (index-only words) sort last within their lesson. See
+  `docs/EXTRACTION-PLAN.md` for how these fields get populated.
+- **Handling of Cross-Lesson Duplicate Entries:** If a word appears in the raw
+  vocabulary blocks of multiple lessons (e.g. `开` in L13 and L15), the database
+  must contain independent entries for each lesson (with the corresponding `l`
+  value). This ensures that the word is correctly matched and shown in the
+  vocabulary explorer of all chapters where it is taught. Missing cross-lesson
+  duplicates must be appended to the end of the JS database files rather than
+  using single shared records.
+- **Proper Nouns & Reading-Only Words (No `sec`/`ord`):** Proper nouns,
+  note-only words, or reading comprehension words (e.g. `成龙`, `姚明`) that
+  are not part of the formal textbook vocabulary blocks must have
+  `sec: undefined`, `ord: undefined`, and `extra: undefined`. This excludes
+  them from SRS review and the vocabulary explorer list while keeping them in
+  the reader's dictionary for text segmentation and translation.
 - **Every hanzi token appearing in texts must exist in some vocab array.** The
   reader has no external dictionary: `js/dict.js` builds `DICT` from the vocab
   arrays and segments text by greedy longest-match. An unknown character renders

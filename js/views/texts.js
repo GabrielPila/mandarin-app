@@ -81,7 +81,7 @@ function renderReader(t, kind) {
     </div>
     <div id="reader"></div>`);
 	$("#back").addEventListener("click", renderTextList);
-	
+
 	if (kind === "dialog" && t.parts && t.parts.length > 1) {
 		const pt = $("#part-tabs");
 		pt.style.display = "flex";
@@ -90,7 +90,7 @@ function renderReader(t, kind) {
 			btn.textContent = `${T("text1")} ${i + 1}`;
 			if (i === activePart) btn.classList.add("on");
 			btn.addEventListener("click", () => {
-				pt.querySelectorAll("button").forEach(b => b.classList.remove("on"));
+				pt.querySelectorAll("button").forEach((b) => b.classList.remove("on"));
 				btn.classList.add("on");
 				activePart = i;
 				player.stop();
@@ -133,7 +133,7 @@ function drawReader(t, kind, activePart = 0) {
 	const r = $("#reader");
 	r.innerHTML = "";
 	const lineObjs = [];
-	
+
 	let partsToRender = [];
 	if (kind === "dialog") {
 		if (t.parts && t.parts.length > 1) {
@@ -144,12 +144,12 @@ function drawReader(t, kind, activePart = 0) {
 	} else {
 		partsToRender = [{ lines: t.lines }];
 	}
-	
+
 	partsToRender.forEach((p, pi) => {
 		if (kind === "dialog") {
 			const h = document.createElement("div");
 			h.className = "part-head";
-			const partNum = (t.parts && t.parts.length > 1) ? activePart + 1 : pi + 1;
+			const partNum = t.parts && t.parts.length > 1 ? activePart + 1 : pi + 1;
 			h.textContent = `${T("text1")} ${partNum} — ${settings.lang === "en" ? p.ien : p.ies}`;
 			r.appendChild(h);
 		}

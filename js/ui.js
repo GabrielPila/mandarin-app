@@ -17,11 +17,7 @@ export function setView(html) {
 }
 
 export function cardPool(ALL) {
-	return ALL.filter(
-		(e) =>
-			!e._deleted &&
-			e.l <= settings.maxLesson
-	);
+	return ALL.filter((e) => !e._deleted && e.l <= settings.maxLesson);
 }
 
 // ---------- render de texto chino con ruby ----------

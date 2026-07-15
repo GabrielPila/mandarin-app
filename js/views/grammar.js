@@ -22,9 +22,9 @@ export function renderGrammar() {
        <button class="lesson-btn" data-tag="npcr"><b>NPCR</b></button>
     </div>
     <div id="glist" class="glist"></div>`);
-    
+
 	let currentTag = "all";
-	
+
 	const updateToggles = () => {
 		$("#tg-pinyin").classList.toggle("on", grammarRubyMode === "pinyin");
 		$("#tg-tones").classList.toggle("on", grammarRubyMode === "tones");
@@ -35,13 +35,13 @@ export function renderGrammar() {
 		updateToggles();
 		draw();
 	});
-	
+
 	$("#tg-tones").addEventListener("click", () => {
 		grammarRubyMode = grammarRubyMode === "tones" ? "none" : "tones";
 		updateToggles();
 		draw();
 	});
-	
+
 	updateToggles();
 
 	const grid = $("#gfilter");
@@ -67,49 +67,49 @@ export function renderGrammar() {
 		items.forEach((g) => {
 			const card = document.createElement("div");
 			card.className = "grammar-card";
-			
+
 			card.innerHTML = `
         <div class="g-title">${g.title}</div>
         <div class="g-tags">${g.tags.map((t) => `<span class="g-tag">${t.toUpperCase()}</span>`).join("")}</div>
-        <div class="g-desc">${g.desc.replace(/\n/g, '<br>')}</div>
+        <div class="g-desc">${g.desc.replace(/\n/g, "<br>")}</div>
         <div class="g-examples-container"></div>`;
-        
-            const exContainer = card.querySelector(".g-examples-container");
-            exContainer.className = "g-examples";
-            
+
+			const exContainer = card.querySelector(".g-examples-container");
+			exContainer.className = "g-examples";
+
 			g.examples.forEach((ex) => {
-			    const exDiv = document.createElement("div");
-			    exDiv.className = "g-ex";
-			    
-			    const zhDiv = document.createElement("div");
-			    zhDiv.className = "g-ex-zh";
-			    
-			    const textSpan = document.createElement("span");
-			    textSpan.className = "line-zh";
-			    textSpan.style.flex = "1";
-			    // Render tokens with pinyin/tones
-			    textSpan.appendChild(renderTokens(ex.zh, grammarRubyMode));
-			    zhDiv.appendChild(textSpan);
-			    
-			    const speakerSpan = document.createElement("span");
-			    speakerSpan.className = "g-speaker";
-			    speakerSpan.innerHTML = ` ${ex.s && ex.s !== 'Generic' ? `(${ex.s}) ` : ''}🔊`;
-			    zhDiv.appendChild(speakerSpan);
-			    
-			    const trDiv = document.createElement("div");
-			    trDiv.className = "g-ex-tr";
-			    trDiv.textContent = settings.lang === "en" ? ex.en : ex.es;
-			    
-			    exDiv.appendChild(zhDiv);
-			    exDiv.appendChild(trDiv);
-			    
-			    exDiv.addEventListener("click", () => {
-			        speak(ex.zh, null, ex.s);
-			    });
-			    
-			    exContainer.appendChild(exDiv);
+				const exDiv = document.createElement("div");
+				exDiv.className = "g-ex";
+
+				const zhDiv = document.createElement("div");
+				zhDiv.className = "g-ex-zh";
+
+				const textSpan = document.createElement("span");
+				textSpan.className = "line-zh";
+				textSpan.style.flex = "1";
+				// Render tokens with pinyin/tones
+				textSpan.appendChild(renderTokens(ex.zh, grammarRubyMode));
+				zhDiv.appendChild(textSpan);
+
+				const speakerSpan = document.createElement("span");
+				speakerSpan.className = "g-speaker";
+				speakerSpan.innerHTML = ` ${ex.s && ex.s !== "Generic" ? `(${ex.s}) ` : ""}🔊`;
+				zhDiv.appendChild(speakerSpan);
+
+				const trDiv = document.createElement("div");
+				trDiv.className = "g-ex-tr";
+				trDiv.textContent = settings.lang === "en" ? ex.en : ex.es;
+
+				exDiv.appendChild(zhDiv);
+				exDiv.appendChild(trDiv);
+
+				exDiv.addEventListener("click", () => {
+					speak(ex.zh, null, ex.s);
+				});
+
+				exContainer.appendChild(exDiv);
 			});
-			
+
 			list.appendChild(card);
 		});
 	}

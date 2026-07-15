@@ -1,6 +1,12 @@
 // views/study.js — pantalla principal: estadísticas, panel de progreso, cram y práctica
 import { ALL } from "../dict.js";
-import { settings, saveSettings, exportData, importData, resetAll } from "../store.js";
+import {
+	settings,
+	saveSettings,
+	exportData,
+	importData,
+	resetAll,
+} from "../store.js";
 import { renderBlocks } from "./blocks.js";
 import * as SRS from "../srs.js";
 import { T } from "../i18n.js";
@@ -53,9 +59,7 @@ function dashboardHTML() {
 	// por lección
 	h += `<h4>${T("byLesson")}</h4><div class="prog-list">`;
 	for (let l = 0; l <= 20; l++) {
-		const cards = ALL.filter(
-			(e) => e.l === l
-		);
+		const cards = ALL.filter((e) => e.l === l);
 		if (!cards.length) continue;
 		const s = SRS.stats(cards);
 		h += `<div class="prog-row"><span class="prog-lbl">${l === 0 ? "✦" : l}</span>${bar(s.learned, s.mature, s.total)}<span class="prog-num">${s.learned}/${s.total}</span></div>`;
@@ -64,9 +68,7 @@ function dashboardHTML() {
 	// por HSK
 	h += `<h4>${T("byHsk")}</h4><div class="prog-list">`;
 	for (const tag of ["hsk1", "hsk2", "hsk3", "hsk4", "hsk5"]) {
-		const cards = ALL.filter(
-			(e) => e.tags && e.tags.includes(tag)
-		);
+		const cards = ALL.filter((e) => e.tags && e.tags.includes(tag));
 		if (!cards.length) continue;
 		const s = SRS.stats(cards);
 		h += `<div class="prog-row"><span class="prog-lbl">${tag.toUpperCase()}</span>${bar(s.learned, s.mature, s.total)}<span class="prog-num">${s.learned}/${s.total}</span></div>`;
@@ -119,16 +121,16 @@ export function renderStudy() {
     <div style="display:flex; flex-direction:column; gap:16px; margin-bottom: 16px; font-size: 13px; color: var(--muted); background: var(--card-bg); padding: 16px; border-radius: 12px; border: 1px solid var(--card-border);">
       <div style="display:flex; flex-wrap:wrap; gap:16px;">
         <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
-          <input type="checkbox" id="study-random" ${settings.studyRandom !== false ? 'checked' : ''}> 🔀 ${T("randomOrder")}
+          <input type="checkbox" id="study-random" ${settings.studyRandom !== false ? "checked" : ""}> 🔀 ${T("randomOrder")}
         </label>
         <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
-          <input type="checkbox" id="study-reverse" ${settings.reverseCards ? 'checked' : ''}> ⇄ ${T("reverse") || "Reverse Cards"}
+          <input type="checkbox" id="study-reverse" ${settings.reverseCards ? "checked" : ""}> ⇄ ${T("reverse") || "Reverse Cards"}
         </label>
         <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
-          <input type="checkbox" id="study-listening" ${settings.listeningMode ? 'checked' : ''}> 🎧 ${T("listeningMode") || "Listening Mode"}
+          <input type="checkbox" id="study-listening" ${settings.listeningMode ? "checked" : ""}> 🎧 ${T("listeningMode") || "Listening Mode"}
         </label>
         <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
-          <input type="checkbox" id="study-stylus" ${settings.stylusOnly ? 'checked' : ''}> ✏️ ${T("stylusOnly") || "Stylus Only"}
+          <input type="checkbox" id="study-stylus" ${settings.stylusOnly ? "checked" : ""}> ✏️ ${T("stylusOnly") || "Stylus Only"}
         </label>
       </div>
       
@@ -177,7 +179,7 @@ export function renderStudy() {
 		settings.maxLesson = +e.target.value;
 		v.querySelector("#ml-val").textContent = e.target.value;
 		saveSettings();
-		
+
 		// Optionally, re-render dashboard stats to reflect the new global maxLesson pool
 		// but since they haven't started studying, they can just refresh or we leave it.
 	});
@@ -187,11 +189,11 @@ export function renderStudy() {
 		saveSettings();
 	});
 
-	v.querySelector("#study-random").addEventListener("change", e => {
+	v.querySelector("#study-random").addEventListener("change", (e) => {
 		settings.studyRandom = e.target.checked;
 		saveSettings();
 	});
-	v.querySelector("#study-reverse").addEventListener("change", e => {
+	v.querySelector("#study-reverse").addEventListener("change", (e) => {
 		settings.reverseCards = e.target.checked;
 		if (e.target.checked && settings.listeningMode) {
 			settings.listeningMode = false;
@@ -199,7 +201,7 @@ export function renderStudy() {
 		}
 		saveSettings();
 	});
-	v.querySelector("#study-listening").addEventListener("change", e => {
+	v.querySelector("#study-listening").addEventListener("change", (e) => {
 		settings.listeningMode = e.target.checked;
 		if (e.target.checked && settings.reverseCards) {
 			settings.reverseCards = false;
@@ -207,7 +209,7 @@ export function renderStudy() {
 		}
 		saveSettings();
 	});
-	v.querySelector("#study-stylus").addEventListener("change", e => {
+	v.querySelector("#study-stylus").addEventListener("change", (e) => {
 		settings.stylusOnly = e.target.checked;
 		saveSettings();
 	});
@@ -228,9 +230,7 @@ export function renderStudy() {
     <h4>${T("book2")} (11-20)</h4><div id="cram-b2" class="lesson-grid"></div>`;
 
 	["hsk1", "hsk2", "hsk3"].forEach((tag) => {
-		const cards = ALL.filter(
-			(e) => e.tags && e.tags.includes(tag)
-		);
+		const cards = ALL.filter((e) => e.tags && e.tags.includes(tag));
 		if (!cards.length) return;
 		const b = document.createElement("button");
 		b.className = "lesson-btn";
@@ -241,9 +241,7 @@ export function renderStudy() {
 		$("#cram-hsk").appendChild(b);
 	});
 	for (let l = 0; l <= 20; l++) {
-		const cards = ALL.filter(
-			(e) => e.l === l
-		);
+		const cards = ALL.filter((e) => e.l === l);
 		if (!cards.length) continue;
 		const b = document.createElement("button");
 		b.className = "lesson-btn";
@@ -280,7 +278,9 @@ export function renderStudy() {
 		a.download = `mandarin-progress-${new Date().toISOString().slice(0, 10)}.json`;
 		a.click();
 	});
-	v.querySelector("#import").addEventListener("click", () => v.querySelector("#import-file").click());
+	v.querySelector("#import").addEventListener("click", () =>
+		v.querySelector("#import-file").click(),
+	);
 	v.querySelector("#import-file").addEventListener("change", (e) => {
 		const file = e.target.files[0];
 		if (!file) return;
@@ -296,7 +296,12 @@ export function renderStudy() {
 		reader.readAsText(file);
 	});
 	v.querySelector("#reset").addEventListener("click", () => {
-		if (confirm(T("resetConf") || "Are you absolutely sure you want to reset all your progress?")) {
+		if (
+			confirm(
+				T("resetConf") ||
+					"Are you absolutely sure you want to reset all your progress?",
+			)
+		) {
 			resetAll();
 			location.reload();
 		}

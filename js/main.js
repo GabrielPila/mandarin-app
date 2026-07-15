@@ -56,14 +56,20 @@ $("#quiz-close").addEventListener("click", () =>
 );
 
 const updateThemeIcon = () => {
-	const isDark = document.body.classList.contains("theme-dark") || (settings.theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+	const isDark =
+		document.body.classList.contains("theme-dark") ||
+		(settings.theme === "system" &&
+			window.matchMedia("(prefers-color-scheme: dark)").matches);
 	const icon = isDark ? "sun" : "moon";
 	$("#theme-toggle").innerHTML = `<i data-lucide="${icon}"></i>`;
 	if (window.lucide) lucide.createIcons({ root: $("#theme-toggle") });
 };
 
 $("#theme-toggle").addEventListener("click", () => {
-	const isDark = document.body.classList.contains("theme-dark") || (settings.theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+	const isDark =
+		document.body.classList.contains("theme-dark") ||
+		(settings.theme === "system" &&
+			window.matchMedia("(prefers-color-scheme: dark)").matches);
 	settings.theme = isDark ? "light" : "dark";
 	saveSettings();
 	applyTheme();
@@ -82,52 +88,77 @@ const initAudioSettings = () => {
 	const spdBtn = $("#speed-btn");
 	const spdMenu = $("#speed-menu");
 	if (!vBtn || !spdBtn) return;
-	
+
 	const speeds = [1.5, 1.4, 1.3, 1.2, 1.1, 1.0, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4];
 	const renderSpeed = () => {
 		spdBtn.textContent = (settings.voiceSpeed || 1.0).toFixed(1) + "x";
-		spdMenu.innerHTML = speeds.map(s => 
-			`<button style="padding:8px 12px; text-align:right; border-radius:8px; font-weight:600; color:${settings.voiceSpeed === s ? 'var(--primary)' : 'var(--ink)'}; background:${settings.voiceSpeed === s ? 'rgba(128,128,128,0.1)' : 'transparent'}; border:none; cursor:pointer;" data-val="${s}">${s.toFixed(1)}x</button>`
-		).join("");
-		spdMenu.querySelectorAll("button").forEach(b => b.addEventListener("click", (e) => {
-			settings.voiceSpeed = +e.target.dataset.val;
-			saveSettings();
-			renderSpeed();
-			spdMenu.classList.add("hidden");
-		}));
+		spdMenu.innerHTML = speeds
+			.map(
+				(s) =>
+					`<button style="padding:8px 12px; text-align:right; border-radius:8px; font-weight:600; color:${settings.voiceSpeed === s ? "var(--primary)" : "var(--ink)"}; background:${settings.voiceSpeed === s ? "rgba(128,128,128,0.1)" : "transparent"}; border:none; cursor:pointer;" data-val="${s}">${s.toFixed(1)}x</button>`,
+			)
+			.join("");
+		spdMenu.querySelectorAll("button").forEach((b) =>
+			b.addEventListener("click", (e) => {
+				settings.voiceSpeed = +e.target.dataset.val;
+				saveSettings();
+				renderSpeed();
+				spdMenu.classList.add("hidden");
+			}),
+		);
 	};
 	renderSpeed();
 
 	const pop = () => {
 		const voices = chineseVoices();
-		let html = `<button style="padding:8px 12px; text-align:left; border-radius:8px; font-size:13px; color:${!settings.voiceURI ? 'var(--primary)' : 'var(--ink)'}; background:${!settings.voiceURI ? 'rgba(128,128,128,0.1)' : 'transparent'}; border:none; cursor:pointer;" data-val="">${T("autoVoice")}</button>`;
+		let html = `<button style="padding:8px 12px; text-align:left; border-radius:8px; font-size:13px; color:${!settings.voiceURI ? "var(--primary)" : "var(--ink)"}; background:${!settings.voiceURI ? "rgba(128,128,128,0.1)" : "transparent"}; border:none; cursor:pointer;" data-val="">${T("autoVoice")}</button>`;
 		let currName = T("autoVoice");
-		
-		html += [...voices].reverse().map(v => {
-			let source = "Local";
-			const uri = (v.voiceURI || "").toLowerCase(), nm = v.name.toLowerCase();
-			if (nm.includes("google")) source = "Google";
-			else if (uri.includes("microsoft") || nm.includes("xiaoxiao") || nm.includes("yunxi") || nm.includes("yunyang")) source = "Microsoft";
-			else if (uri.includes("apple") || nm.includes("tingting")) source = "Apple";
-			else if (!v.localService) source = "Cloud";
-			
-			const cleanName = v.name.replace(/\s*\(Chinese[\s\S]*$/i, "").replace(/\s*（[^）]*）\s*$/, "").trim();
-			if (settings.voiceURI === v.voiceURI) currName = cleanName;
-			
-			return `<button style="padding:8px 12px; text-align:left; border-radius:8px; font-size:13px; color:${settings.voiceURI === v.voiceURI ? 'var(--primary)' : 'var(--ink)'}; background:${settings.voiceURI === v.voiceURI ? 'rgba(128,128,128,0.1)' : 'transparent'}; border:none; cursor:pointer;" data-val="${v.voiceURI}">${cleanName} <span style="opacity:0.5; font-size:11px;">(${source})</span></button>`;
-		}).join("");
-		
+
+		html += [...voices]
+			.reverse()
+			.map((v) => {
+				let source = "Local";
+				const uri = (v.voiceURI || "").toLowerCase(),
+					nm = v.name.toLowerCase();
+				if (nm.includes("google")) source = "Google";
+				else if (
+					uri.includes("microsoft") ||
+					nm.includes("xiaoxiao") ||
+					nm.includes("yunxi") ||
+					nm.includes("yunyang")
+				)
+					source = "Microsoft";
+				else if (uri.includes("apple") || nm.includes("tingting"))
+					source = "Apple";
+				else if (!v.localService) source = "Cloud";
+
+				const cleanName = v.name
+					.replace(/\s*\(Chinese[\s\S]*$/i, "")
+					.replace(/\s*（[^）]*）\s*$/, "")
+					.trim();
+				if (settings.voiceURI === v.voiceURI) currName = cleanName;
+
+				return `<button style="padding:8px 12px; text-align:left; border-radius:8px; font-size:13px; color:${settings.voiceURI === v.voiceURI ? "var(--primary)" : "var(--ink)"}; background:${settings.voiceURI === v.voiceURI ? "rgba(128,128,128,0.1)" : "transparent"}; border:none; cursor:pointer;" data-val="${v.voiceURI}">${cleanName} <span style="opacity:0.5; font-size:11px;">(${source})</span></button>`;
+			})
+			.join("");
+
 		vBtn.textContent = currName;
 		vMenu.innerHTML = html;
-		vMenu.querySelectorAll("button").forEach(b => b.addEventListener("click", (e) => {
-			settings.voiceURI = e.currentTarget.dataset.val;
-			saveSettings();
-			pop();
-			vMenu.classList.add("hidden");
-		}));
+		vMenu.querySelectorAll("button").forEach((b) =>
+			b.addEventListener("click", (e) => {
+				settings.voiceURI = e.currentTarget.dataset.val;
+				saveSettings();
+				pop();
+				vMenu.classList.add("hidden");
+			}),
+		);
 	};
 	pop();
-	if (window.speechSynthesis && window.speechSynthesis.onvoiceschanged !== undefined) window.speechSynthesis.onvoiceschanged = pop;
+	if (
+		window.speechSynthesis &&
+		window.speechSynthesis.onvoiceschanged !== undefined
+	)
+		window.speechSynthesis.onvoiceschanged = pop;
 
 	spdBtn.addEventListener("click", (e) => {
 		e.stopPropagation();

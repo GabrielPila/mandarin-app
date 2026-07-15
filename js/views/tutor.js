@@ -34,17 +34,17 @@ export function renderTutor() {
 	function parseMarkdown(text) {
 		if (!text) return "";
 		let html = text
-			.replace(/### (.*)/g, '<h3>$1</h3>')
-			.replace(/## (.*)/g, '<h2>$1</h2>')
-			.replace(/# (.*)/g, '<h1>$1</h1>')
-			.replace(/^(?:[\*\-]\s)(.*)/gm, '<li>$1</li>')
-			.replace(/([\u4e00-\u9fa5]+)\[([^\]]+)\]/g, '<ruby>$1<rt>$2</rt></ruby>')
-			.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-			.replace(/\*(.*?)\*/g, '<em>$1</em>')
-			.replace(/\n/g, '<br>');
+			.replace(/### (.*)/g, "<h3>$1</h3>")
+			.replace(/## (.*)/g, "<h2>$1</h2>")
+			.replace(/# (.*)/g, "<h1>$1</h1>")
+			.replace(/^(?:[\*\-]\s)(.*)/gm, "<li>$1</li>")
+			.replace(/([\u4e00-\u9fa5]+)\[([^\]]+)\]/g, "<ruby>$1<rt>$2</rt></ruby>")
+			.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+			.replace(/\*(.*?)\*/g, "<em>$1</em>")
+			.replace(/\n/g, "<br>");
 
-		html = html.replace(/(<li>.*<\/li>(?:<br>)*)+/g, match => {
-			return `<ul style="margin: 4px 0 4px 20px; padding: 0;">${match.replace(/<br>/g, '')}</ul>`;
+		html = html.replace(/(<li>.*<\/li>(?:<br>)*)+/g, (match) => {
+			return `<ul style="margin: 4px 0 4px 20px; padding: 0;">${match.replace(/<br>/g, "")}</ul>`;
 		});
 		return html;
 	}
@@ -57,14 +57,14 @@ export function renderTutor() {
 		if (role === "agent") {
 			const row = document.createElement("div");
 			row.className = "agent-row";
-			
+
 			const avatar = document.createElement("img");
 			avatar.src = "./icons/panda-bot.png";
 			avatar.className = "agent-avatar";
-			
+
 			row.appendChild(avatar);
 			row.appendChild(msg);
-			
+
 			historyEl.appendChild(row);
 		} else {
 			historyEl.appendChild(msg);
@@ -78,10 +78,11 @@ export function renderTutor() {
 	if (chatHistory.length === 0) {
 		chatHistory.push({
 			role: "agent",
-			content: "¡Hola! Soy XiongMao (熊猫), tu tutor de mandarín. ¿En qué puedo ayudarte hoy?"
+			content:
+				"¡Hola! Soy XiongMao (熊猫), tu tutor de mandarín. ¿En qué puedo ayudarte hoy?",
 		});
 	}
-	chatHistory.forEach(m => addMessage(m.role, m.content));
+	chatHistory.forEach((m) => addMessage(m.role, m.content));
 
 	formEl.addEventListener("submit", async (e) => {
 		e.preventDefault();
@@ -90,10 +91,10 @@ export function renderTutor() {
 
 		inputEl.value = "";
 		submitBtn.disabled = true;
-		
+
 		addMessage("user", text);
 		chatHistory.push({ role: "user", content: text });
-		
+
 		typingEl.classList.remove("hidden");
 		historyEl.scrollTop = historyEl.scrollHeight;
 
@@ -104,8 +105,8 @@ export function renderTutor() {
 				body: JSON.stringify({
 					messages: chatHistory,
 					provider: settings.aiProvider || "gemini",
-					lang: settings.lang
-				})
+					lang: settings.lang,
+				}),
 			});
 
 			if (!res.ok) {
@@ -120,20 +121,20 @@ export function renderTutor() {
 			const reader = res.body.getReader();
 			const decoder = new TextDecoder();
 			let buffer = "";
-			
+
 			while (true) {
 				const { done, value } = await reader.read();
 				if (done) break;
-				
+
 				buffer += decoder.decode(value, { stream: true });
-				const lines = buffer.split('\n');
-				
+				const lines = buffer.split("\n");
+
 				buffer = lines.pop() || "";
-				
+
 				for (const line of lines) {
-					if (line.startsWith('data: ')) {
+					if (line.startsWith("data: ")) {
 						const dataStr = line.slice(6);
-						if (dataStr === '[DONE]') continue;
+						if (dataStr === "[DONE]") continue;
 						try {
 							const data = JSON.parse(dataStr);
 							const textChunk = data.candidates?.[0]?.content?.parts?.[0]?.text;
@@ -154,7 +155,10 @@ export function renderTutor() {
 			typingEl.classList.add("hidden");
 			addMessage("agent", "❌ " + err.message);
 			// Remove the failed user message from history so they can try again without breaking the strict user/model alternation required by Gemini
-			if (chatHistory.length > 0 && chatHistory[chatHistory.length - 1].role === "user") {
+			if (
+				chatHistory.length > 0 &&
+				chatHistory[chatHistory.length - 1].role === "user"
+			) {
 				chatHistory.pop();
 			}
 			submitBtn.disabled = false;

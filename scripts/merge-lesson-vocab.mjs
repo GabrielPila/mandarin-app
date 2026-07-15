@@ -68,11 +68,11 @@ const onlyHan = (s) =>
 		.join("");
 const pinyinKey = (s) => normPinyin(String(s).replace(/[()]/gu, ""));
 
-// entradas candidatas: todas las no borradas de ambos arrays del libro
+// entradas candidatas: todas las de ambos arrays del libro (incluyendo duplicadas/borradas a nivel runtime)
 const entries = [];
 for (const src of sources)
 	src.arr.forEach((e, idx) => {
-		if (!e._deleted) entries.push({ src, idx, e });
+		entries.push({ src, idx, e });
 	});
 // arrays del otro libro, solo para avisar de posibles duplicados cross-book
 const otherBook = [
@@ -87,7 +87,8 @@ const discrepancies = [];
 const crossLesson = [];
 
 for (const block of raw.vocabBlocks) {
-	for (const item of block.items) {
+	for (let i = 0; i < block.items.length; i++) {
+		const item = block.items[i];
 		let cands = entries.filter((c) => c.e.h === item.h);
 		if (!cands.length)
 			cands = entries.filter(
@@ -104,7 +105,7 @@ for (const block of raw.vocabBlocks) {
 			if (byLesson.length) cands = byLesson;
 		}
 		if (!cands.length) {
-			toAppend.push({ item, sec: block.sec });
+			toAppend.push({ item, sec: block.sec, itemIndex: i });
 			continue;
 		}
 		if (cands.length > 1) {
@@ -113,7 +114,7 @@ for (const block of raw.vocabBlocks) {
 		}
 		const c = cands[0];
 		const isCrossLesson = c.e.l !== raw.lesson;
-		matched.push({ ...c, item, sec: block.sec, isCrossLesson });
+		matched.push({ ...c, item, sec: block.sec, isCrossLesson, itemIndex: i });
 		if (isCrossLesson)
 			crossLesson.push(
 				`${item.h}: el índice lo asigna a L${c.e.l}, el bloque es de L${raw.lesson}`,
@@ -130,9 +131,10 @@ for (const block of raw.vocabBlocks) {
 			discrepancies.push(
 				`${item.h}: POS difiere — data '${c.e.pos || "∅"}' vs libro '${item.pos}'`,
 			);
-		if (c.e.sec != null && (c.e.sec !== block.sec || c.e.ord !== item.n))
+		const expectedOrd = i + 1;
+		if (c.e.sec != null && (c.e.sec !== block.sec || c.e.ord !== expectedOrd))
 			discrepancies.push(
-				`${item.h}: ya tenía sec/ord ${c.e.sec}/${c.e.ord}, ahora ${block.sec}/${item.n}`,
+				`${item.h}: ya tenía sec/ord ${c.e.sec}/${c.e.ord}, ahora ${block.sec}/${expectedOrd}`,
 			);
 	}
 }
@@ -224,9 +226,7 @@ if (WRITE) {
 		for (const m of mine) {
 			// cross-lesson: sec/ord are relative to l; never write across lessons
 			if (m.isCrossLesson) continue;
-			// sub-entries (5a, 5b) lack an independent book number
-			if (/[a-z]$/.test(m.item.n)) continue;
-			const fields = { sec: m.sec, ord: parseInt(m.item.n, 10) };
+			const fields = { sec: m.sec, ord: m.itemIndex + 1 };
 			if (m.sec === 4) fields.extra = true;
 			text = upsertFields(text, src.name, m.idx, fields);
 		}
@@ -250,7 +250,7 @@ if (APPEND && toAppend.length) {
 				l: raw.lesson,
 				tags: ["npcr"],
 				sec: t.sec,
-				ord: parseInt(t.item.n, 10),
+				ord: t.itemIndex + 1,
 				...(t.sec === 4 ? { extra: true } : {}),
 			}),
 		);

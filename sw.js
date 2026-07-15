@@ -1,4 +1,4 @@
-const CACHE = "mandarin-v0.8.7";
+const CACHE = "mandarin-v0.8.8";
 const ASSETS = [
 	".",
 	"index.html",
@@ -20,7 +20,8 @@ const ASSETS = [
 	"js/views/texts.js",
 	"js/views/vocab.js",
 	"js/views/grammar.js",
-	"js/views/settings.js",
+	"js/views/blocks.js",
+	"js/views/tutor.js",
 	"js/views/practice/corpus.js",
 	"js/views/practice/cloze.js",
 	"js/views/practice/builder.js",
@@ -29,6 +30,8 @@ const ASSETS = [
 	"js/views/practice/numbers.js",
 	"data/index.js",
 	"data/grammar.js",
+	"data/book1-grammar.js",
+	"data/book2-grammar.js",
 	"data/book1-vocab.js",
 	"data/book1-sup.js",
 	"data/book1-texts.js",

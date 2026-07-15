@@ -149,8 +149,8 @@ export function runCards(items, srsMode, isRandom = true) {
 		const front = listening
 			? `<div class="card-h-row listening-front" style="justify-content:center; padding: 40px 0;"><button class="spk-btn large card-spk">🔊</button></div>`
 			: reverse
-			? `<div class="card-g rev-front">${gloss(e)}</div><div class="card-pos">${e.pos || ""}</div>`
-			: `<div class="card-h-row"><div class="card-h">${e.h}</div>
+				? `<div class="card-g rev-front">${gloss(e)}</div><div class="card-pos">${e.pos || ""}</div>`
+				: `<div class="card-h-row"><div class="card-h">${e.h}</div>
           <button class="spk-btn large card-spk">🔊</button>
           <div class="hw-container card-hw" style="display:flex; gap: 4px; cursor: pointer;" title="${T("drawHint") || "Animate stroke order"}"></div></div>`;
 		const back = listening
@@ -164,11 +164,11 @@ export function runCards(items, srsMode, isRandom = true) {
                </div>
                <div class="card-ex"></div>`
 			: reverse
-			? `<div class="card-h-row"><div class="card-h">${e.h}</div>
+				? `<div class="card-h-row"><div class="card-h">${e.h}</div>
           <button class="spk-btn large card-spk">🔊</button>
           <div class="hw-container card-hw" style="display:flex; gap: 4px; cursor: pointer;" title="${T("drawHint") || "Animate stroke order"}"></div></div>
           <div class="card-p">${e.p}</div>`
-			: `<div class="card-p">${e.p}</div><div class="card-pos">${e.pos || ""}</div>
+				: `<div class="card-p">${e.p}</div><div class="card-pos">${e.pos || ""}</div>
          <div class="card-g">${gloss(e)}</div>
          <div class="card-ex"></div>`;
 
@@ -277,12 +277,12 @@ export function runCards(items, srsMode, isRandom = true) {
 				exd.appendChild(tr);
 			}
 		}
-		
+
 		const inlineArea = v.querySelector("#inline-drawing-area");
 		const drawToolbar = v.querySelector("#draw-toolbar");
 		const eraseBtn = v.querySelector("#erase-drawing");
 		const placeholder = v.querySelector("#draw-placeholder");
-		
+
 		if (inlineArea) {
 			drawToolbar.classList.remove("hidden");
 			const canvas = document.createElement("canvas");
@@ -294,50 +294,57 @@ export function runCards(items, srsMode, isRandom = true) {
 			canvas.style.borderRadius = "16px";
 			canvas.style.touchAction = "none";
 			inlineArea.appendChild(canvas);
-			
+
 			const ctx = canvas.getContext("2d", { willReadFrequently: true });
-			const defaultColor = document.body.classList.contains("theme-dark") ? "#e53935" : "#d32f2f";
-			
+			const defaultColor = document.body.classList.contains("theme-dark")
+				? "#e53935"
+				: "#d32f2f";
+
 			// Setup ResizeObserver to fix canvas stretching
 			let canvasState = null;
 			const ro = new ResizeObserver(() => {
 				const rect = canvas.getBoundingClientRect();
 				if (rect.width === 0 || rect.height === 0) return;
 				const dpr = window.devicePixelRatio || 1;
-				
+
 				if (canvas.width > 0 && canvas.height > 0) {
 					canvasState = ctx.getImageData(0, 0, canvas.width, canvas.height);
 				}
-				
+
 				canvas.width = rect.width * dpr;
 				canvas.height = rect.height * dpr;
 				ctx.scale(dpr, dpr);
-				
+
 				const activeColorBtn = v.querySelector(".draw-btn[data-color].active");
 				const activeEraseBtn = v.querySelector("#draw-erase-tool.active");
 				const sizeSlider = v.querySelector("#draw-size-slider");
-				
-				ctx.strokeStyle = activeColorBtn?.dataset.color === "default" ? defaultColor : (activeColorBtn?.dataset.color || defaultColor);
+
+				ctx.strokeStyle =
+					activeColorBtn?.dataset.color === "default"
+						? defaultColor
+						: activeColorBtn?.dataset.color || defaultColor;
 				ctx.lineWidth = parseInt(sizeSlider?.value || "6");
 				ctx.lineCap = "round";
 				ctx.lineJoin = "round";
-				ctx.globalCompositeOperation = activeEraseBtn ? "destination-out" : "source-over";
-				
+				ctx.globalCompositeOperation = activeEraseBtn
+					? "destination-out"
+					: "source-over";
+
 				if (canvasState) {
 					ctx.putImageData(canvasState, 0, 0);
 				}
 			});
 			ro.observe(canvas);
-			
+
 			const colorBtns = v.querySelectorAll(".draw-btn[data-color]");
 			const eraseToolBtn = v.querySelector("#draw-erase-tool");
-			
+
 			const resetTools = () => {
-				colorBtns.forEach(b => b.classList.remove("active"));
+				colorBtns.forEach((b) => b.classList.remove("active"));
 				if (eraseToolBtn) eraseToolBtn.classList.remove("active");
 			};
 
-			colorBtns.forEach(btn => {
+			colorBtns.forEach((btn) => {
 				btn.addEventListener("click", (ev) => {
 					ev.stopPropagation();
 					resetTools();
@@ -361,14 +368,17 @@ export function runCards(items, srsMode, isRandom = true) {
 			const sizePopup = v.querySelector("#size-slider-popup");
 			const sizeSlider = v.querySelector("#draw-size-slider");
 			const sizeIndicator = v.querySelector("#current-size-indicator");
-			
+
 			if (sizeToolBtn && sizePopup) {
 				sizeToolBtn.addEventListener("click", (ev) => {
 					ev.stopPropagation();
 					sizePopup.classList.toggle("open");
 				});
 				document.addEventListener("click", (ev) => {
-					if (!sizePopup.contains(ev.target) && !sizeToolBtn.contains(ev.target)) {
+					if (
+						!sizePopup.contains(ev.target) &&
+						!sizeToolBtn.contains(ev.target)
+					) {
 						sizePopup.classList.remove("open");
 					}
 				});
@@ -391,7 +401,7 @@ export function runCards(items, srsMode, isRandom = true) {
 				const clientY = e.touches ? e.touches[0].clientY : e.clientY;
 				return [clientX - rect.left, clientY - rect.top];
 			};
-			
+
 			const start = (e) => {
 				if (settings.stylusOnly && e.pointerType === "touch") return;
 				if (placeholder) placeholder.style.display = "none";
@@ -399,21 +409,23 @@ export function runCards(items, srsMode, isRandom = true) {
 				ctx.beginPath();
 				ctx.moveTo(...pos(e));
 			};
-			
+
 			const move = (e) => {
 				if (!drawing) return;
 				ctx.lineTo(...pos(e));
 				ctx.stroke();
 			};
-			
-			const end = () => { drawing = false; };
-			
+
+			const end = () => {
+				drawing = false;
+			};
+
 			canvas.addEventListener("pointerdown", start);
 			canvas.addEventListener("pointermove", move);
 			canvas.addEventListener("pointerup", end);
 			canvas.addEventListener("pointercancel", end);
 			canvas.addEventListener("pointerout", end);
-			
+
 			eraseBtn.addEventListener("click", (ev) => {
 				ev.stopPropagation();
 				ctx.clearRect(0, 0, canvas.width, canvas.height);

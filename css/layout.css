@@ -72,7 +72,9 @@ header .header-actions {
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	transition: background 0.2s, color 0.2s;
+	transition:
+		background 0.2s,
+		color 0.2s;
 	min-width: 32px;
 	min-height: 32px;
 }
