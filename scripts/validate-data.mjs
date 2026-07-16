@@ -67,6 +67,22 @@ for (const [name, arr] of vocabSets) {
 			)
 		)
 			err(`${where}: ex debe ser [zh,es,en]`);
+		if (e.cols) {
+			if (!Array.isArray(e.cols)) {
+				err(`${where}: cols debe ser un arreglo`);
+			} else {
+				e.cols.forEach((c, idx) => {
+					if (typeof c !== "string" || !c) {
+						err(`${where}: cols[${idx}] debe ser string no vacío`);
+					} else if (!Array.from(c).some(isHan)) {
+						err(
+							`${where}: cols[${idx}] ('${c}') ` +
+								"debe contener caracteres Han",
+						);
+					}
+				});
+			}
+		}
 		// alineación pinyin ↔ caracteres
 		const hanChars = Array.from(e.h).filter(isHan);
 		if (hanChars.length) {

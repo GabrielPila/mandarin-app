@@ -77,6 +77,26 @@ export function upsertFields(src, exportName, index, fields) {
 	return src.slice(0, obj.start) + text + src.slice(obj.end);
 }
 
+// Inserta o actualiza el campo de colocaciones 'cols' (cols: ["x", "y"])
+// en el objeto `index` del array `exportName`. Devuelve el nuevo fuente.
+export function upsertColsField(src, exportName, index, cols) {
+	const { objects } = scanArrayObjects(src, exportName);
+	const obj = objects[index];
+	if (!obj) throw new Error(`${exportName}[${index}] no existe`);
+	let text = src.slice(obj.start, obj.end);
+	const colsStr = `cols: [${cols.map((c) => JSON.stringify(c)).join(", ")}]`;
+	const re = /(\bcols:\s*\[.*?\])/u;
+	if (re.test(text)) {
+		text = text.replace(re, colsStr);
+	} else {
+		const closing = text.lastIndexOf("}");
+		let head = text.slice(0, closing).replace(/\s+$/u, "");
+		if (!/[,{]$/u.test(head)) head += ",";
+		text = `${head}\n\t\t${colsStr},\n\t${text.slice(closing)}`;
+	}
+	return src.slice(0, obj.start) + text + src.slice(obj.end);
+}
+
 // Añade `entryText` (un objeto ya formateado, sin coma final) al final del
 // array `exportName`. Solo append — nunca insertar en medio.
 export function appendEntry(src, exportName, entryText) {

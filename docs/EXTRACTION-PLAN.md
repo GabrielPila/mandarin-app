@@ -205,8 +205,9 @@ it (and sets extra:true); if it is new it is appended to `*-sup.js`.
   sec: 1,   // 1 = Palabras Nuevas after Texto 1, 2 = after Texto 2,
             // 3 = in-lesson Palabras Suplementarias block,
             // 4 = Vocabulario Adicional (outside the numbered blocks)
-  ord: 4 }  // the book's printed number within that block
+  ord: 4,   // the book's printed number within that block
             // sec:4 entries also get extra: true (see above)
+  cols: ["谁的", "他是谁"] } // collocations parsed from raw files
 ```
 
 Index-only words simply lack `sec`/`ord`. UI can later sort a lesson by

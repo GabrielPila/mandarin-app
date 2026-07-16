@@ -51,7 +51,20 @@ export function build() {
 // Líneas que contienen exactamente la palabra `word`.
 export function usesOf(word, limit = 8) {
 	const idx = build();
-	return (idx.get(word) || []).slice(0, limit);
+	const exact = idx.get(word) || [];
+	if (exact.length >= limit) return exact.slice(0, limit);
+	// Fallback a búsqueda de subcadena si hay pocas coincidencias exactas
+	const subMatches = search(word, limit);
+	const results = [...exact];
+	const seenZh = new Set(exact.map((m) => m.zh));
+	for (const m of subMatches) {
+		if (!seenZh.has(m.zh)) {
+			results.push(m);
+			seenZh.add(m.zh);
+			if (results.length >= limit) break;
+		}
+	}
+	return results;
 }
 
 // Búsqueda libre: líneas cuyo texto contiene la subcadena `q` (hanzi).

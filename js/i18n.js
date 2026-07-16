@@ -121,6 +121,7 @@ export const UI = {
 		restart: "Reiniciar",
 		chooseLesson: "Elige una lección",
 		usesInTexts: "Usos en los textos",
+		collocations: "Colocaciones",
 		seeMore: "ver más",
 		inTexts: "En los textos",
 		// dictación
@@ -248,6 +249,7 @@ export const UI = {
 		restart: "Restart",
 		chooseLesson: "Choose a lesson",
 		usesInTexts: "Uses in the texts",
+		collocations: "Collocations",
 		seeMore: "see more",
 		inTexts: "In the texts",
 		catNumbers: "Numbers",

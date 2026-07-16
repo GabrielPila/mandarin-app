@@ -43,6 +43,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 17,
+		cols: ["一杯水", "一杯咖啡", "一杯茶"],
 	},
 	{
 		h: "比萨饼",
@@ -54,6 +55,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 17,
+		cols: ["汉堡包和比萨饼"],
 	},
 	{
 		h: "脖子",
@@ -76,6 +78,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 15,
+		cols: ["参观画展", "参观博物馆"],
 	},
 	{
 		h: "操场",
@@ -87,6 +90,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 10,
+		cols: ["操场南边", "操场上"],
 	},
 	{
 		h: "称呼",
@@ -98,6 +102,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 17,
+		cols: ["怎么称呼"],
 	},
 	{
 		h: "城里",
@@ -109,6 +114,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 13,
+		cols: ["去城里"],
 	},
 	{
 		h: "橙汁",
@@ -120,6 +126,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 12,
+		cols: ["喜欢橙汁"],
 	},
 	{
 		h: "橙子",
@@ -131,6 +138,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 5,
+		cols: ["一个橙子", "买橙子"],
 	},
 	{
 		h: "厨房",
@@ -142,6 +150,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 5,
+		cols: ["厨房里", "厨房左边"],
 	},
 	{
 		h: "船",
@@ -153,6 +162,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 3,
+		cols: ["坐船"],
 	},
 	{
 		h: "打球",
@@ -164,6 +174,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 5,
+		cols: ["去打球", "喜欢打球"],
 	},
 	{
 		h: "大便",
@@ -175,6 +186,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 16,
+		cols: ["化验大便"],
 	},
 	{
 		h: "德国",
@@ -197,6 +209,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 19,
+		cols: ["第一次来北京", "第一次吃火锅"],
 	},
 	{
 		h: "电脑",
@@ -208,6 +221,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 10,
+		cols: ["用电脑", "买电脑"],
 	},
 	{
 		h: "电视",
@@ -219,6 +233,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 7,
+		cols: ["看电视"],
 	},
 	{
 		h: "电子邮件",
@@ -230,6 +245,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 12,
+		cols: ["发电子邮件"],
 	},
 	{
 		h: "豆浆",
@@ -241,6 +257,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 15,
+		cols: ["喜欢喝豆浆"],
 	},
 	{
 		h: "端午节",
@@ -285,6 +302,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 11,
+		cols: ["发短信"],
 	},
 	{
 		h: "发烧",
@@ -296,6 +314,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 8,
+		cols: ["有点儿发烧", "不发烧"],
 	},
 	{
 		h: "法国",
@@ -340,6 +359,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 10,
+		cols: ["有点儿感冒"],
 	},
 	{
 		h: "胳膊",
@@ -373,6 +393,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 16,
+		cols: ["去公园"],
 	},
 	{
 		h: "国庆节",
@@ -417,6 +438,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 16,
+		cols: ["喜欢吃汉堡包"],
 	},
 	{
 		h: "红色",
@@ -450,6 +472,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 2,
+		cols: ["后天晚上"],
 	},
 	{
 		h: "滑冰",
@@ -461,6 +484,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 8,
+		cols: ["会滑冰"],
 	},
 	{
 		h: "火车",
@@ -472,6 +496,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 1,
+		cols: ["坐火车"],
 	},
 	{
 		h: "火车站",
@@ -483,6 +508,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 2,
+		cols: ["去火车站"],
 	},
 	{
 		h: "火锅",
@@ -494,6 +520,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 23,
+		cols: ["吃火锅"],
 	},
 	{
 		h: "机场",
@@ -505,6 +532,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 4,
+		cols: ["去机场"],
 	},
 	{
 		h: "鸡",
@@ -527,6 +555,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 11,
+		cols: ["挂急诊"],
 	},
 	{
 		h: "记者",
@@ -549,6 +578,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 2,
+		cols: ["八十元六角"],
 	},
 	{
 		h: "京剧",
@@ -560,6 +590,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 22,
+		cols: ["喜欢京剧", "唱京剧"],
 	},
 	{
 		h: "经济",
@@ -571,6 +602,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 14,
+		cols: ["经济课", "学习经济"],
 	},
 	{
 		h: "经理",
@@ -593,6 +625,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 20,
+		cols: ["一个惊喜"],
 	},
 	{
 		h: "酒吧",
@@ -604,6 +637,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 8,
+		cols: ["酒吧前面"],
 	},
 	{
 		h: "咖啡厅",
@@ -615,6 +649,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 7,
+		cols: ["去咖啡厅", "咖啡厅里"],
 	},
 	{
 		h: "可乐",
@@ -626,6 +661,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 13,
+		cols: ["不喝可乐"],
 	},
 	{
 		h: "渴",
@@ -637,6 +673,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 2,
+		cols: ["很渴", "不渴", "不太渴"],
 	},
 	{
 		h: "客厅",
@@ -648,6 +685,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 3,
+		cols: ["在客厅", "客厅后边"],
 	},
 	{
 		h: "困",
@@ -659,6 +697,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 1,
+		cols: ["很困", "不困", "不太困"],
 	},
 	{
 		h: "拉肚子",
@@ -670,6 +709,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 9,
+		cols: ["不拉肚子"],
 	},
 	{
 		h: "篮球",
@@ -681,6 +721,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 9,
+		cols: ["打篮球"],
 	},
 	{
 		h: "劳动节",
@@ -725,6 +766,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 12,
+		cols: ["历史课", "学习历史"],
 	},
 	{
 		h: "录音",
@@ -736,6 +778,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 14,
+		cols: ["听录音"],
 	},
 	{
 		h: "律师",
@@ -780,6 +823,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 3,
+		cols: ["五毛钱"],
 	},
 	{
 		h: "美术馆",
@@ -791,6 +835,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 14,
+		cols: ["去美术馆"],
 	},
 	{
 		h: "面包",
@@ -802,6 +847,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 15,
+		cols: ["面包很好吃"],
 	},
 	{
 		h: "那儿",
@@ -813,6 +859,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 11,
+		cols: ["去那儿"],
 	},
 	{
 		h: "那",
@@ -824,6 +871,7 @@ export const B1_SUP = [
 		sup: 0,
 		sec: 2,
 		ord: 17,
+		cols: ["那是面条儿", "那是我爸爸"],
 	},
 	{
 		h: "男朋友",
@@ -835,6 +883,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 10,
+		cols: ["她男朋友", "我姐姐的男朋友"],
 	},
 	{
 		h: "难",
@@ -846,6 +895,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 17,
+		cols: ["很难", "不难"],
 	},
 	{
 		h: "牛",
@@ -868,6 +918,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 14,
+		cols: ["没有牛奶"],
 	},
 	{
 		h: "女朋友",
@@ -879,6 +930,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 11,
+		cols: ["我女朋友", "马大为的女朋友"],
 	},
 	{
 		h: "拍照",
@@ -890,6 +942,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 15,
+		cols: ["喜欢拍照", "不可以拍照"],
 	},
 	{
 		h: "排球",
@@ -901,6 +954,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 10,
+		cols: ["打排球"],
 	},
 	{
 		h: "跑步",
@@ -912,6 +966,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 6,
+		cols: ["去跑步", "喜欢跑步"],
 	},
 	{
 		h: "葡萄",
@@ -923,6 +978,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 6,
+		cols: ["两个葡萄"],
 	},
 	{
 		h: "骑",
@@ -945,6 +1001,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 1,
+		cols: ["前天下午"],
 	},
 	{
 		h: "轻松",
@@ -956,6 +1013,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 16,
+		cols: ["很轻松", "太轻松了"],
 	},
 	{
 		h: "清明节",
@@ -978,6 +1036,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 9,
+		cols: ["在清真餐厅吃饭"],
 	},
 	{
 		h: "情人节",
@@ -1000,6 +1059,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 18,
+		cols: ["天气晴"],
 	},
 	{
 		h: "裙子",
@@ -1011,6 +1071,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 10,
+		cols: ["一条裙子"],
 	},
 	{
 		h: "日本",
@@ -1033,6 +1094,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 17,
+		cols: ["写日记"],
 	},
 	{
 		h: "容易",
@@ -1044,6 +1106,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 16,
+		cols: ["很容易", "不容易"],
 	},
 	{
 		h: "商人",
@@ -1066,6 +1129,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 13,
+		cols: ["钢琴上边"],
 	},
 	{
 		h: "上个月",
@@ -1121,6 +1185,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 6,
+		cols: ["在书房写字"],
 	},
 	{
 		h: "帅",
@@ -1154,6 +1219,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 11,
+		cols: ["一件T恤"],
 	},
 	{
 		h: "太太",
@@ -1165,6 +1231,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 9,
+		cols: ["陈太太", "他太太"],
 	},
 	{
 		h: "泰国",
@@ -1198,6 +1265,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 10,
+		cols: ["汉语听力", "练习听力"],
 	},
 	{
 		h: "通",
@@ -1209,6 +1277,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 21,
+		cols: ["通电话"],
 	},
 	{
 		h: "透视",
@@ -1220,6 +1289,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 14,
+		cols: ["要不要透视"],
 	},
 	{
 		h: "腿",
@@ -1242,6 +1312,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 15,
+		cols: ["去外边", "银行外边"],
 	},
 	{
 		h: "外科",
@@ -1264,6 +1335,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 8,
+		cols: ["吃晚饭", "做晚饭"],
 	},
 	{
 		h: "卫生间",
@@ -1275,6 +1347,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 1,
+		cols: ["去卫生间", "卫生间在哪儿"],
 	},
 	{
 		h: "胃",
@@ -1286,6 +1359,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 3,
+		cols: ["胃不舒服"],
 	},
 	{
 		h: "文化",
@@ -1297,6 +1371,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 15,
+		cols: ["文化课", "学习文化", "中国文化"],
 	},
 	{
 		h: "卧室",
@@ -1308,6 +1383,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 2,
+		cols: ["回卧室", "卧室旁边"],
 	},
 	{
 		h: "午饭",
@@ -1319,6 +1395,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 3,
+		cols: ["吃午饭", "做午饭"],
 	},
 	{
 		h: "西班牙",
@@ -1341,6 +1418,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 13,
+		cols: ["吃西药"],
 	},
 	{
 		h: "吸烟",
@@ -1352,6 +1430,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 16,
+		cols: ["不可以吸烟", "想吸烟"],
 	},
 	{
 		h: "下边",
@@ -1363,6 +1442,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 14,
+		cols: ["楼下边"],
 	},
 	{
 		h: "下个月",
@@ -1396,6 +1476,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 17,
+		cols: ["化验小便"],
 	},
 	{
 		h: "新年",
@@ -1407,6 +1488,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 1,
+		cols: ["过新年"],
 	},
 	{
 		h: "牙",
@@ -1418,6 +1500,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 2,
+		cols: ["牙疼"],
 	},
 	{
 		h: "眼睛",
@@ -1429,6 +1512,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 1,
+		cols: ["大眼睛", "眼睛小"],
 	},
 	{
 		h: "羊",
@@ -1451,6 +1535,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 4,
+		cols: ["在阳台", "阳台里"],
 	},
 	{
 		h: "腰",
@@ -1473,6 +1558,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 7,
+		cols: ["听音乐会"],
 	},
 	{
 		h: "印度",
@@ -1506,6 +1592,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 1,
+		cols: ["一百二十九元"],
 	},
 	{
 		h: "早饭",
@@ -1517,6 +1604,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 2,
+		cols: ["吃早饭", "做早饭"],
 	},
 	{
 		h: "针灸",
@@ -1528,6 +1616,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 15,
+		cols: ["要针灸", "不用针灸"],
 	},
 	{
 		h: "中秋节",
@@ -1550,6 +1639,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 15,
+		cols: ["祝贺你"],
 	},
 	{
 		h: "自行车",
@@ -1561,6 +1651,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 6,
+		cols: ["骑自行车"],
 	},
 	{
 		h: "走路",
@@ -1572,6 +1663,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 7,
+		cols: ["走路去"],
 	},
 	{
 		h: "足球",
@@ -1583,6 +1675,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 12,
+		cols: ["踢足球"],
 	},
 	{
 		h: "作业",
@@ -1594,6 +1687,7 @@ export const B1_SUP = [
 		sup: 1,
 		sec: 3,
 		ord: 13,
+		cols: ["做作业"],
 	},
 	// extra tokens que aparecen en los textos pero no en el índice
 	{
@@ -1760,6 +1854,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 2,
 		extra: true,
+		cols: ["他们叫什么名字"],
 	},
 	{
 		h: "我们",
@@ -1772,6 +1867,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 1,
 		extra: true,
+		cols: ["我们老师", "我们都学习汉语"],
 	},
 	{
 		h: "她们",
@@ -1784,6 +1880,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 2,
 		extra: true,
+		cols: ["这是她们家的照片"],
 	},
 	{
 		h: "中午",
@@ -1796,6 +1893,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 2,
 		extra: true,
+		cols: ["中午十二点吃午饭"],
 	},
 	{
 		h: "周末",
@@ -1820,6 +1918,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 2,
 		extra: true,
+		cols: ["属兔"],
 	},
 	{
 		h: "猪",
@@ -1832,6 +1931,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 3,
 		extra: true,
+		cols: ["属猪"],
 	},
 	{
 		h: "上星期一",
@@ -1842,6 +1942,7 @@ export const B1_SUP = [
 		tags: ["npcr"],
 		sec: 3,
 		ord: 3,
+		cols: ["上星期一下午"],
 	},
 	{
 		h: "下星期一",
@@ -1852,6 +1953,7 @@ export const B1_SUP = [
 		tags: ["npcr"],
 		sec: 3,
 		ord: 4,
+		cols: ["下星期一一起活动"],
 	},
 	{
 		h: "南边",
@@ -1864,6 +1966,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 1,
 		extra: true,
+		cols: ["食堂在图书馆的南边"],
 	},
 	{
 		h: "员",
@@ -1887,6 +1990,7 @@ export const B1_SUP = [
 		sec: 1,
 		ord: 24,
 		extra: true,
+		cols: ["买飞机票"],
 	},
 	// —— Palabras de las lecturas del libro (Comprensión de Lectura) ——
 	{
@@ -2140,6 +2244,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 1,
 		extra: true,
+		cols: ["我是小羊"],
 	},
 	{
 		h: "你们",
@@ -2152,6 +2257,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 3,
 		extra: true,
+		cols: ["你们好"],
 	},
 	{
 		h: "小",
@@ -2164,6 +2270,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 4,
 		extra: true,
+		cols: ["小羊", "小狗", "小猫"],
 	},
 	{
 		h: "饿",
@@ -2175,6 +2282,7 @@ export const B1_SUP = [
 		tags: ["npcr", "hsk3"],
 		sec: 3,
 		ord: 3,
+		cols: ["很饿", "不饿", "不太饿"],
 	},
 	{
 		h: "累",
@@ -2186,6 +2294,7 @@ export const B1_SUP = [
 		tags: ["npcr", "hsk2"],
 		sec: 3,
 		ord: 4,
+		cols: ["很累", "不累", "不太累"],
 	},
 	{
 		h: "她",
@@ -2241,6 +2350,7 @@ export const B1_SUP = [
 		tags: ["npcr", "hsk1"],
 		sec: 3,
 		ord: 14,
+		cols: ["同学和老师"],
 	},
 	{
 		h: "大家",
@@ -2253,6 +2363,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 1,
 		extra: true,
+		cols: ["大家好"],
 	},
 	{
 		h: "儿子",
@@ -2265,6 +2376,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 3,
 		extra: true,
+		cols: ["女儿,"],
 	},
 	{
 		h: "学生",
@@ -2287,6 +2399,7 @@ export const B1_SUP = [
 		tags: ["npcr", "hsk1"],
 		sec: 3,
 		ord: 8,
+		cols: ["王先生", "陆雨平先生"],
 	},
 	{
 		h: "水",
@@ -2310,6 +2423,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 1,
 		extra: true,
+		cols: ["两点零五分)", "两点零五"],
 	},
 	{
 		h: "觉得",
@@ -2322,6 +2436,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 3,
 		extra: true,
+		cols: ["她不觉得累"],
 	},
 	{
 		h: "起床",
@@ -2333,6 +2448,7 @@ export const B1_SUP = [
 		tags: ["npcr", "hsk2"],
 		sec: 3,
 		ord: 1,
+		cols: ["几点起床"],
 	},
 	{
 		h: "运动",
@@ -2344,6 +2460,7 @@ export const B1_SUP = [
 		tags: ["npcr", "hsk2"],
 		sec: 3,
 		ord: 4,
+		cols: ["喜欢运动", "做运动"],
 	},
 	{
 		h: "睡觉",
@@ -2355,6 +2472,7 @@ export const B1_SUP = [
 		tags: ["npcr", "hsk1"],
 		sec: 3,
 		ord: 9,
+		cols: ["几点睡觉", "去睡觉"],
 	},
 	{
 		h: "文学",
@@ -2366,6 +2484,7 @@ export const B1_SUP = [
 		tags: ["npcr", "hsk5"],
 		sec: 3,
 		ord: 11,
+		cols: ["文学课", "学习文学"],
 	},
 	{
 		h: "语言",
@@ -2377,6 +2496,7 @@ export const B1_SUP = [
 		tags: ["npcr", "hsk4"],
 		sec: 3,
 		ord: 13,
+		cols: ["学习语言", "说什么语（言）"],
 	},
 	{
 		h: "爱人",
@@ -2389,6 +2509,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 4,
 		extra: true,
+		cols: ["她爱人是医生"],
 	},
 	{
 		h: "南",
@@ -2401,6 +2522,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 2,
 		extra: true,
+		cols: ["南门"],
 	},
 	{
 		h: "左边",
@@ -2412,6 +2534,7 @@ export const B1_SUP = [
 		tags: ["npcr", "hsk2"],
 		sec: 3,
 		ord: 12,
+		cols: ["左边的办公楼", "在食堂左边"],
 	},
 	{
 		h: "人民币",
@@ -2435,6 +2558,7 @@ export const B1_SUP = [
 		tags: ["npcr", "hsk3"],
 		sec: 3,
 		ord: 4,
+		cols: ["三元五角五分"],
 	},
 	{
 		h: "穿",
@@ -2446,6 +2570,7 @@ export const B1_SUP = [
 		tags: ["npcr", "hsk2"],
 		sec: 3,
 		ord: 14,
+		cols: ["穿衣服", "穿衬衫", "穿牛仔裤", "穿裙子"],
 	},
 	{
 		h: "肚子",
@@ -2457,6 +2582,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 1,
 		extra: true,
+		cols: ["肚子疼", "我肚子有点儿疼"],
 	},
 	{
 		h: "因为",
@@ -2469,6 +2595,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 1,
 		extra: true,
+		cols: ["马大为最喜欢秋天，因为水果都熟了"],
 	},
 	{
 		h: "超市",
@@ -2481,6 +2608,7 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 1,
 		extra: true,
+		cols: ["去超市", "在超市买东西"],
 	},
 	{
 		h: "饺子",
@@ -2493,5 +2621,6 @@ export const B1_SUP = [
 		sec: 4,
 		ord: 2,
 		extra: true,
+		cols: ["吃饺子", "北京人过春节吃饺子"],
 	},
 ];

@@ -22,6 +22,9 @@ as-is).
   pinyin↔character alignment, that every hanzi in the texts resolves in the
   dictionary, and that `sw.js` ASSETS matches the files on disk. Run after
   editing any `data/*.js`.
+- **Extract collocations**: `node scripts/extract-collocations.mjs` — parses
+  collocations from the 5th column of raw lesson files in `extraction/` and
+  patches them in place into `data/book*-{vocab,sup}.js`.
 - **Unit tests**: `node --test 'tests/*.test.mjs'` (segmenter, pinyin, SRS
   scheduling, number→hanzi). Plain Node, no deps.
 - **Deploy**: push to `main`. Vercel auto-deploys the repo root as a static
@@ -89,6 +92,10 @@ as-is).
   misaligns.
 - **Every UI string must exist in both `es` and `en`** in the `UI` map at the
   top of `js/app.js`; `T(key)` resolves against `SRS.settings.lang`.
+- **Collocations (`cols`):** Vocabulary entries can carry an optional `cols`
+  field (array of strings, e.g. `cols: ["运动鞋", "换鞋"]`) representing common
+  word combinations. These are parsed from raw markdown files and rendered in
+  the popup.
 
 ## Architecture
 

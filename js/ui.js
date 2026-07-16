@@ -111,6 +111,32 @@ export function showPopup(tok) {
 			exd.appendChild(tr);
 			div.appendChild(exd);
 		}
+		if (e.cols && e.cols.length) {
+			const cold = document.createElement("div");
+			cold.className = "pop-cols";
+			cold.innerHTML = `<div class="pop-ex-label">${T("collocations")}</div>`;
+			const list = document.createElement("div");
+			list.className = "pop-cols-list";
+			e.cols.forEach((col) => {
+				const item = document.createElement("div");
+				item.className = "pop-col-item";
+				const zh = document.createElement("div");
+				zh.className = "pop-col-zh";
+				zh.appendChild(renderTokens(col, "pinyin"));
+				const spk = document.createElement("button");
+				spk.className = "spk-btn";
+				spk.textContent = "🔊";
+				spk.addEventListener("click", (ev) => {
+					ev.stopPropagation();
+					speak(col);
+				});
+				item.appendChild(zh);
+				item.appendChild(spk);
+				list.appendChild(item);
+			});
+			cold.appendChild(list);
+			div.appendChild(cold);
+		}
 		// concordancia: usos en los textos
 		const uses = usesOf(e.h, 5);
 		if (uses.length) {
