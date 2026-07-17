@@ -28,7 +28,7 @@ export default async function handler(req) {
 		// Format for Gemini API
 		const geminiMessages = messages.map((m) => ({
 			role: m.role === "agent" ? "model" : "user",
-			parts: [{ text: m.content }],
+			parts: m.parts ? m.parts : [{ text: m.content }],
 		}));
 
 		// Inject system prompt as first message if possible or in contents

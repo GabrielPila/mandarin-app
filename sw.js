@@ -1,4 +1,4 @@
-const CACHE = "mandarin-v0.8.9";
+const CACHE = "mandarin-v0.9.0";
 const ASSETS = [
 	".",
 	"index.html",
