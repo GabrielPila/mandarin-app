@@ -121,7 +121,7 @@ export function renderStudy() {
     <div style="display:flex; flex-direction:column; gap:16px; margin-bottom: 16px; font-size: 13px; color: var(--muted); background: var(--card-bg); padding: 16px; border-radius: 12px; border: 1px solid var(--card-border);">
       <div style="display:flex; flex-wrap:wrap; gap:16px;">
         <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
-          <input type="checkbox" id="study-random" ${settings.studyRandom !== false ? "checked" : ""}> 🔀 ${T("randomOrder")}
+          <input type="checkbox" id="study-random" ${settings.studyRandom == false ? "checked" : ""}> 🔀 ${T("randomOrder")}
         </label>
         <label class="vocab-chk" style="display:inline-flex; align-items:center; gap:6px;">
           <input type="checkbox" id="study-reverse" ${settings.reverseCards ? "checked" : ""}> ⇄ ${T("reverse") || "Reverse Cards"}
@@ -299,7 +299,7 @@ export function renderStudy() {
 		if (
 			confirm(
 				T("resetConf") ||
-					"Are you absolutely sure you want to reset all your progress?",
+				"Are you absolutely sure you want to reset all your progress?",
 			)
 		) {
 			resetAll();
