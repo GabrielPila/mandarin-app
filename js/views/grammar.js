@@ -10,16 +10,36 @@ let grammarRubyMode = "none"; // 'none', 'pinyin', 'tones'
 
 export function renderGrammar() {
 	setView(`
-    <div class="reader-toggles" style="margin-bottom: 12px; padding: 0 16px;">
-      <button id="tg-pinyin">${T("pinyin")}</button>
-      <button id="tg-tones">${T("tones")}</button>
-    </div>
-    <div id="gfilter" class="scroll-row">
-       <button class="lesson-btn on" data-tag="all"><b>Todas</b></button>
-       <button class="lesson-btn" data-tag="hsk1"><b>HSK 1</b></button>
-       <button class="lesson-btn" data-tag="hsk2"><b>HSK 2</b></button>
-       <button class="lesson-btn" data-tag="hsk3"><b>HSK 3</b></button>
-       <button class="lesson-btn" data-tag="npcr"><b>NPCR</b></button>
+    <div style="
+      position: sticky; 
+      top: -16px; 
+      margin: -16px -16px 16px -16px; 
+      padding: 16px 16px 8px 16px; 
+      background-color: var(--bg-base); 
+      background-image: var(--bg-pattern); 
+      background-size: 8px 8px; 
+      z-index: 10; 
+      border-bottom: 1px solid var(--line);
+    ">
+      <div class="reader-toggles" style="
+        position: static; 
+        margin: 0 0 12px 0; 
+        padding: 0; 
+        background: transparent; 
+        border: none; 
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      ">
+        <button id="tg-pinyin">${T("pinyin")}</button>
+        <button id="tg-tones">${T("tones")}</button>
+      </div>
+      <div id="gfilter" class="scroll-row" style="margin: 0; padding-bottom: 4px;">
+         <button class="lesson-btn on" data-tag="all"><b>Todas</b></button>
+         <button class="lesson-btn" data-tag="hsk1"><b>HSK 1</b></button>
+         <button class="lesson-btn" data-tag="hsk2"><b>HSK 2</b></button>
+         <button class="lesson-btn" data-tag="hsk3"><b>HSK 3</b></button>
+         <button class="lesson-btn" data-tag="npcr"><b>NPCR</b></button>
+      </div>
     </div>
     <div id="glist" class="glist"></div>`);
 
