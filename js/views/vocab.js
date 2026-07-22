@@ -10,27 +10,59 @@ import { B1_TEXTS, B2_TEXTS } from "../../data/index.js";
 
 export function renderVocab() {
 	const v = setView(`
-    <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:16px;">
+    <div style="
+      display: flex; 
+      flex-direction: column; 
+      gap: 12px; 
+      margin: -16px -16px 16px -16px; 
+      padding: 16px 16px 12px 16px; 
+      position: sticky; 
+      top: -16px; 
+      background-color: var(--bg-base); 
+      background-image: var(--bg-pattern); 
+      background-size: 8px 8px; 
+      z-index: 10; 
+      border-bottom: 1px solid var(--line);
+    ">
       <div style="display:flex; gap:10px;">
-        <input id="vsearch" class="search" placeholder="${T("search")}" style="flex:1;">
+        <input id="vsearch" class="search" placeholder="${T("search")}" 
+               style="flex:1;">
         <div class="filter-wrap">
           <select id="vfilter" class="filter-select"></select>
         </div>
       </div>
-      <div style="display:flex; gap:20px; align-items:center; padding: 0 4px; flex-wrap:wrap;">
+      <div style="
+        display: flex; 
+        gap: 20px; 
+        align-items: center; 
+        padding: 0 4px; 
+        flex-wrap: wrap;
+      ">
         <div style="display:flex; gap:10px; align-items:center;">
-          <span style="font-size:12px; color:var(--text-light);">${T("sortBy")}:</span>
-          <select id="vsort" class="filter-select" style="min-width:auto; padding:4px 24px 4px 8px; font-size:13px;">
+          <span style="font-size:12px; color:var(--text-light);">
+            ${T("sortBy")}:
+          </span>
+          <select id="vsort" class="filter-select" 
+                  style="min-width:auto; padding:4px 24px 4px 8px; font-size:13px;">
             <option value="book">${T("sortBook")}</option>
             <option value="alpha">${T("sortAlpha")}</option>
           </select>
         </div>
         <div style="display:flex; gap:10px; margin-left:auto; align-items:center;">
-          <button id="btn-select-mode" class="lesson-chip" style="margin-right: 10px;">Select</button>
-          <label class="vocab-chk"><input type="checkbox" id="chk-core1" checked> CORE 1</label>
-          <label class="vocab-chk"><input type="checkbox" id="chk-core2" checked> CORE 2</label>
-          <label class="vocab-chk"><input type="checkbox" id="chk-sup" checked> SUP</label>
-          <label class="vocab-chk"><input type="checkbox" id="chk-extra" checked> EXTRA</label>
+          <button id="btn-select-mode" class="lesson-chip" 
+                  style="margin-right: 10px;">Select</button>
+          <label class="vocab-chk">
+            <input type="checkbox" id="chk-core1" checked> CORE 1
+          </label>
+          <label class="vocab-chk">
+            <input type="checkbox" id="chk-core2" checked> CORE 2
+          </label>
+          <label class="vocab-chk">
+            <input type="checkbox" id="chk-sup" checked> SUP
+          </label>
+          <label class="vocab-chk">
+            <input type="checkbox" id="chk-extra" checked> EXTRA
+          </label>
         </div>
       </div>
     </div>
@@ -39,8 +71,13 @@ export function renderVocab() {
     <div id="floating-bar" class="floating-bar hidden">
       <span id="floating-count">0 words selected</span>
       <div style="margin-left:auto; display:flex; gap: 8px;">
-        <button id="btn-select-all" class="btn small" style="background: rgba(255,255,255,0.1); border: 1px solid var(--line);">Select All Visible</button>
-        <button id="btn-save-block" class="btn primary small">Save Block</button>
+        <button id="btn-select-all" class="btn small" 
+                style="background: rgba(255,255,255,0.1); border: 1px solid var(--line);">
+          Select All Visible
+        </button>
+        <button id="btn-save-block" class="btn primary small">
+          Save Block
+        </button>
       </div>
     </div>`);
 	let activeFilter = "all";
@@ -261,7 +298,14 @@ export function renderVocab() {
 				const coreText = e.sec === 2 ? "CORE 2" : "CORE 1";
 				tag = `<span class="vtag core-tag">${coreText}</span>`;
 			}
-			d.innerHTML = `<span class="vh" style="display:flex; align-items:center; gap:8px;">${e.h}<button class="spk-btn" style="width:24px; height:24px; font-size:12px;" title="Play audio">🔊</button></span><span class="vp">${e.p}</span>
+			d.innerHTML = `
+        <span class="vh" style="display:flex; align-items:center; gap:8px;">
+          ${e.h}
+          <button class="spk-btn" 
+                  style="width:24px; height:24px; font-size:12px;" 
+                  title="Play audio">🔊</button>
+        </span>
+        <span class="vp">${e.p}</span>
         <span class="vg">${gloss(e)}</span>
         <div style="display:flex; gap:6px; align-items:center;">
           ${tag}
