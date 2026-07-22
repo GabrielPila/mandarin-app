@@ -261,12 +261,20 @@ export function renderVocab() {
 				const coreText = e.sec === 2 ? "CORE 2" : "CORE 1";
 				tag = `<span class="vtag core-tag">${coreText}</span>`;
 			}
-			d.innerHTML = `<span class="vh">${e.h}</span><span class="vp">${e.p}</span>
+			d.innerHTML = `<span class="vh" style="display:flex; align-items:center; gap:8px;">${e.h}<button class="spk-btn" style="width:24px; height:24px; font-size:12px;" title="Play audio">🔊</button></span><span class="vp">${e.p}</span>
         <span class="vg">${gloss(e)}</span>
         <div style="display:flex; gap:6px; align-items:center;">
           ${tag}
           <span class="vl">L${e.l === 0 ? "✦" : e.l}</span>
         </div>`;
+
+			const spkBtn = d.querySelector('.spk-btn');
+			if (spkBtn) {
+				spkBtn.addEventListener('click', (ev) => {
+					ev.stopPropagation();
+					speak(e.h);
+				});
+			}
 
 			if (selectMode) {
 				const chk = document.createElement("input");
