@@ -1,14 +1,14 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { webcrypto } from "node:crypto";
 
-const [input, output, password] = process.argv.slice(2);
+const [input, output, password, sharedSalt] = process.argv.slice(2);
 if (!input || !output || !password) {
 	console.error("Usage: node scripts/encrypt-private-readings.mjs INPUT OUTPUT PASSWORD");
 	process.exit(1);
 }
 
 const enc = new TextEncoder();
-const salt = webcrypto.getRandomValues(new Uint8Array(16));
+const salt = sharedSalt ? Uint8Array.from(Buffer.from(sharedSalt, "base64")) : webcrypto.getRandomValues(new Uint8Array(16));
 const iv = webcrypto.getRandomValues(new Uint8Array(12));
 const iterations = 310000;
 const material = await webcrypto.subtle.importKey("raw", enc.encode(password), "PBKDF2", false, ["deriveKey"]);

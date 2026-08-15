@@ -2,6 +2,27 @@
 const SRS_KEY = "mandarin.srs.v1";
 const SETTINGS_KEY = "mandarin.settings.v1";
 const MY_VOCAB_KEY = "mandarin.myVocabulary.v1";
+const READING_HISTORY_KEY = "mandarin.readingHistory.v1";
+let readingHistory = JSON.parse(localStorage.getItem(READING_HISTORY_KEY) || "{}");
+const saveReadingHistory = () => localStorage.setItem(READING_HISTORY_KEY, JSON.stringify(readingHistory));
+export const getReadingHistory = (id) => readingHistory[id] || {};
+export function recordReadingOpened(id) {
+	const now = new Date().toISOString(), previous = readingHistory[id] || {};
+	readingHistory[id] = { ...previous, firstOpenedAt: previous.firstOpenedAt || now, lastOpenedAt: now, status: previous.status === "read" ? "read" : "in-progress" };
+	saveReadingHistory();
+}
+export function markReadingComplete(id) {
+	const now = new Date().toISOString(), previous = readingHistory[id] || {};
+	readingHistory[id] = { ...previous, status: "read", lastCompletedAt: now, readCount: (previous.readCount || 0) + 1 };
+	saveReadingHistory();
+	return readingHistory[id];
+}
+export function toggleReadingFavorite(id) {
+	const previous = readingHistory[id] || {};
+	readingHistory[id] = { ...previous, favorite: !previous.favorite };
+	saveReadingHistory();
+	return readingHistory[id].favorite;
+}
 let myVocabulary = new Set(JSON.parse(localStorage.getItem(MY_VOCAB_KEY) || "[]"));
 export const getMyVocabularyIds = () => new Set(myVocabulary);
 export const hasMyVocabulary = (id) => myVocabulary.has(id);
@@ -82,6 +103,7 @@ export function exportData() {
 		srs: state,
 		settings,
 		myVocabulary: [...myVocabulary],
+		readingHistory,
 	});
 }
 export function importData(json) {
@@ -96,5 +118,9 @@ export function importData(json) {
 	if (Array.isArray(d.myVocabulary)) {
 		myVocabulary = new Set(d.myVocabulary);
 		localStorage.setItem(MY_VOCAB_KEY, JSON.stringify([...myVocabulary]));
+	}
+	if (d.readingHistory && typeof d.readingHistory === "object") {
+		readingHistory = d.readingHistory;
+		saveReadingHistory();
 	}
 }

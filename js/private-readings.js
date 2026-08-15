@@ -1,11 +1,20 @@
-const URL = "data/private/readings.enc.json";
+const CATALOG_URL = "data/private/catalog.json";
 const DB = "mandarin-private-content";
 const STORE = "keys";
 const KEY_ID = "private-readings-v1";
 const bytes = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
+let sessionKey = null;
 
-async function envelope() {
-	const response = await fetch(URL, { cache: "no-store" });
+async function catalog() {
+	const response = await fetch(CATALOG_URL, { cache: "no-store" });
+	if (!response.ok) throw new Error(`Private reading catalog unavailable (${response.status})`);
+	const parsed = await response.json();
+	if (!Array.isArray(parsed.collections) || !parsed.collections.length) throw new Error("Invalid reading catalog");
+	return parsed.collections;
+}
+
+async function envelope(url) {
+	const response = await fetch(url, { cache: "no-store" });
 	if (!response.ok) throw new Error(`Private readings unavailable (${response.status})`);
 	return response.json();
 }
@@ -46,23 +55,36 @@ async function decrypt(env, key) {
 }
 
 export async function unlockPrivateReadings(password, remember = true) {
-	const env = await envelope();
+	const collections = await catalog();
+	const env = await envelope(collections[0].file);
 	const key = await derive(password, env);
-	const books = await decrypt(env, key);
+	await decrypt(env, key);
+	sessionKey = { salt: env.salt, key };
 	if (remember) await storedKey("put", { salt: env.salt, key });
-	return books;
+	return collections;
 }
 
 export async function rememberedPrivateReadings() {
 	try {
-		const [env, saved] = await Promise.all([envelope(), storedKey("get")]);
+		const collections = await catalog();
+		const [env, saved] = await Promise.all([envelope(collections[0].file), storedKey("get")]);
 		if (!saved || saved.salt !== env.salt) return null;
-		return await decrypt(env, saved.key);
+		await decrypt(env, saved.key);
+		sessionKey = saved;
+		return collections;
 	} catch (_error) {
 		return null;
 	}
 }
 
+export async function loadPrivateReadingCollection(collection) {
+	const env = await envelope(collection.file);
+	const saved = sessionKey || await storedKey("get");
+	if (!saved || saved.salt !== env.salt) throw new Error("Private readings are locked");
+	return decrypt(env, saved.key);
+}
+
 export async function forgetPrivateReadings() {
+	sessionKey = null;
 	await storedKey("delete");
 }

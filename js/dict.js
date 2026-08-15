@@ -35,6 +35,21 @@ for (const e of ALL) {
 	if (e.h.length > MAXLEN) MAXLEN = e.h.length;
 }
 
+export function registerExternalVocabulary(entries, source = "Personal reading") {
+	for (const entry of entries || []) {
+		const existing = DICT.get(entry.h)?.find((candidate) => normPinyin(candidate.p) === normPinyin(entry.p));
+		if (existing) {
+			existing.sources = [...new Set([...(existing.sources || []), source])];
+			continue;
+		}
+		const e = { ...entry, custom: true, source, l: 0, tags: ["general", "reading"], id: `reading:${entry.h}:${normPinyin(entry.p)}` };
+		ALL.push(e);
+		if (!DICT.has(e.h)) DICT.set(e.h, []);
+		DICT.get(e.h).push(e);
+		MAXLEN = Math.max(MAXLEN, e.h.length);
+	}
+}
+
 export const isHan = (ch) => /[㐀-鿿豈-﫿]/.test(ch);
 
 // ---------- Segmentación (longest match) ----------

@@ -31,11 +31,14 @@ export const UI = {
 		myReadings: "Mis lecturas",
 		myReadingsDesc:
 			"Libros personales con pinyin, tonos, traducción y audio.",
+		loadingReadings: "Cargando lecturas…",
 		noMyReadings: "No hay lecturas personales instaladas en este dispositivo.",
 		importReading: "Importar lectura privada",
 		invalidReading: "No se pudo importar este archivo de lectura.",
 		unlockReadings: "Desbloquear lecturas privadas", unlockReadingsDesc: "La historia se descifra solamente en este dispositivo.", password: "Contraseña", rememberDevice: "Recordar este dispositivo", unlock: "Desbloquear", wrongPassword: "Contraseña incorrecta.", forgetDevice: "Olvidar este dispositivo", generalVocabulary: "Vocabulario general", bookVocabulary: "Vocabulario del libro", allVocabulary: "Todo el vocabulario", myStudyList: "Mi lista de estudio", addStudyList: "Añadir a mi lista", inStudyList: "En mi lista",
 		chapter: "Capítulo",
+		episode: "Episodio", unread: "Sin leer", inProgress: "En progreso", readTimes: "Lecturas", lastRead: "Última lectura", markAsRead: "Marcar como leído", originalSource: "Fuente original",
+		filterTopic: "Tema", filterLength: "Extensión", filterStatus: "Estado", allTopics: "Todos los temas", allLengths: "Cualquier extensión", allStatuses: "Cualquier estado", favorites: "Favoritos", readStatus: "Leído", short: "Corta", medium: "Media", long: "Larga", humor: "Humor", story: "Relato", informational: "Informativa", sourceOrder: "Orden original", newest: "Más recientes", shortest: "Más cortas", leastRecent: "Repasar primero", results: "resultados", characters: "caracteres", words: "palabras", favorite: "Favorito", noMatchingReadings: "No hay lecturas que coincidan con estos filtros.",
 		bookLects: "Lecturas del libro",
 		bookLectsDesc:
 			"Textos de la sección «Comprensión de Lectura» de cada lección " +
@@ -78,6 +81,8 @@ export const UI = {
 		sizeSmall: "Pequeño",
 		sizeMedium: "Mediano",
 		sizeLarge: "Grande",
+		sizeXLarge: "Muy grande",
+		sizeXXLarge: "Extra grande",
 		voiceSpeed: "Velocidad de voz",
 		voice: "Voz preferida",
 		testVoice: "🔊 Probar",
@@ -173,11 +178,14 @@ export const UI = {
 		myReadings: "My readings",
 		myReadingsDesc:
 			"Personal books with pinyin, tones, translation, and audio.",
+		loadingReadings: "Loading readings…",
 		noMyReadings: "No personal readings are installed on this device.",
 		importReading: "Import private reading",
 		invalidReading: "This reading file could not be imported.",
 		unlockReadings: "Unlock private readings", unlockReadingsDesc: "The story is decrypted only on this device.", password: "Password", rememberDevice: "Remember this device", unlock: "Unlock", wrongPassword: "Incorrect password.", forgetDevice: "Forget this device", generalVocabulary: "General Vocabulary", bookVocabulary: "Book Vocabulary", allVocabulary: "All vocabulary", myStudyList: "My Study List", addStudyList: "Add to My Study List", inStudyList: "In My Study List",
 		chapter: "Chapter",
+		episode: "Episode", unread: "Unread", inProgress: "In progress", readTimes: "Times read", lastRead: "Last read", markAsRead: "Mark as read", originalSource: "Original source",
+		filterTopic: "Topic", filterLength: "Length", filterStatus: "Status", allTopics: "All topics", allLengths: "Any length", allStatuses: "Any status", favorites: "Favorites", readStatus: "Read", short: "Short", medium: "Medium", long: "Long", humor: "Humor", story: "Story", informational: "Informational", sourceOrder: "Original order", newest: "Newest", shortest: "Shortest", leastRecent: "Review first", results: "results", characters: "characters", words: "words", favorite: "Favorite", noMatchingReadings: "No readings match these filters.",
 		bookLects: "Book readings",
 		bookLectsDesc:
 			'Texts from the "Reading Comprehension" section of each ' +
@@ -219,6 +227,8 @@ export const UI = {
 		sizeSmall: "Small",
 		sizeMedium: "Medium",
 		sizeLarge: "Large",
+		sizeXLarge: "Very large",
+		sizeXXLarge: "Extra large",
 		voiceSpeed: "Voice speed",
 		voice: "Preferred voice",
 		testVoice: "🔊 Test",

@@ -106,3 +106,21 @@ body.text-large {
 	--font-xxl: 64px;
 	--font-ruby: 17px;
 }
+
+body.text-xlarge {
+	--font-base: 22px;
+	--font-md: 26px;
+	--font-lg: 34px;
+	--font-xl: 48px;
+	--font-xxl: 72px;
+	--font-ruby: 20px;
+}
+
+body.text-xxlarge {
+	--font-base: 25px;
+	--font-md: 30px;
+	--font-lg: 40px;
+	--font-xl: 56px;
+	--font-xxl: 80px;
+	--font-ruby: 23px;
+}

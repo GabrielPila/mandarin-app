@@ -278,7 +278,7 @@ export function startQuiz(word) {
 // ---------- tema y tamaño de texto ----------
 export function applyTheme() {
 	document.body.className = document.body.className
-		.replace(/text-(small|medium|large)/, "")
+		.replace(/text-(small|medium|large|xlarge|xxlarge)/, "")
 		.trim();
 	if (!settings.textSize) settings.textSize = "medium";
 	document.body.classList.add("text-" + settings.textSize);

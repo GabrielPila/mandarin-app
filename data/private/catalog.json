@@ -1,0 +1,35 @@
+{
+  "v": 1,
+  "collections": [
+    {
+      "id": "my-teacher-is-a-martian",
+      "source": "Mandarin Companion - Breakthrough Level",
+      "titleZh": "我的老师是火星人",
+      "titleEn": "My Teacher Is a Martian",
+      "titleEs": "Mi profesor es marciano",
+      "file": "data/private/martian.enc.json",
+      "readingCount": 10,
+      "kind": "book"
+    },
+    {
+      "id": "mandarinbean-hsk1",
+      "source": "Mandarin Bean",
+      "titleZh": "Mandarin Bean · HSK 1",
+      "titleEn": "Mandarin Bean · HSK 1",
+      "titleEs": "Mandarin Bean · HSK 1",
+      "file": "data/private/mandarinbean-hsk1.enc.json",
+      "readingCount": 55,
+      "kind": "online-collection"
+    },
+    {
+      "id": "mandarinbean-hsk2",
+      "source": "Mandarin Bean",
+      "titleZh": "Mandarin Bean · HSK 2",
+      "titleEn": "Mandarin Bean · HSK 2",
+      "titleEs": "Mandarin Bean · HSK 2",
+      "file": "data/private/mandarinbean-hsk2.enc.json",
+      "readingCount": 137,
+      "kind": "online-collection"
+    }
+  ]
+}

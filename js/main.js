@@ -95,7 +95,7 @@ $("#lang-toggle").addEventListener("click", () => {
 });
 
 $("#ts-toggle").addEventListener("click", () => {
-	const sizes = ["small", "medium", "large"];
+	const sizes = ["small", "medium", "large", "xlarge", "xxlarge"];
 	let idx = sizes.indexOf(settings.textSize);
 	if (idx === -1) idx = 1;
 	settings.textSize = sizes[(idx + 1) % sizes.length];
