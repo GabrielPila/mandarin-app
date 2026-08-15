@@ -140,11 +140,16 @@ export function createReaderPlayer() {
 		if (onState) onState(true);
 		next();
 	}
+	function toggle(start = 0) {
+		if (playing && index === start) stop();
+		else play(start);
+	}
 	return {
 		setLines(l) {
 			lines = l;
 		},
 		play,
+		toggle,
 		stop,
 		isPlaying: () => playing,
 		onStateChange(cb) {

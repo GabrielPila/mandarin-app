@@ -7,6 +7,8 @@ import {
 	isHan,
 	DICT,
 	normPinyin,
+	registerExternalVocabulary,
+	externalVocabularyDictionary,
 } from "../js/dict.js";
 
 test("segment: longest match wins", () => {
@@ -16,6 +18,25 @@ test("segment: longest match wins", () => {
 		["图书馆", "在", "食堂", "北边"],
 	);
 	assert.ok(toks.every((t) => !t.plain));
+});
+
+test("segment: favors complete coverage over a greedy overlapping word", () => {
+	const toks = segment("写作业了");
+	assert.deepEqual(toks.map((t) => t.t), ["写", "作业", "了"]);
+	assert.ok(toks.every((t) => !t.plain));
+});
+
+test("segment: reading vocabulary overrides a generic dictionary meaning", () => {
+	const vocabulary = [
+		{ h: "天上", p: "tiān shàng", en: "heaven", es: "cielo" },
+		{ h: "王", p: "wáng", en: "king", es: "rey" },
+	];
+	registerExternalVocabulary(vocabulary, "Context test");
+	const local = externalVocabularyDictionary(vocabulary);
+	const toks = segment("天上的王", local).filter((token) => !token.plain);
+	assert.deepEqual(toks.map((token) => token.t), ["天上", "的", "王"]);
+	assert.equal(toks[0].entries[0].en, "heaven");
+	assert.equal(toks[2].entries[0].en, "king");
 });
 
 test("segment: punctuation and digits pass through as plain tokens", () => {

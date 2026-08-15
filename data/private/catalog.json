@@ -30,6 +30,26 @@
       "file": "data/private/mandarinbean-hsk2.enc.json",
       "readingCount": 137,
       "kind": "online-collection"
+    },
+    {
+      "id": "chinese-reading-practice-beginner",
+      "source": "Chinese Reading Practice",
+      "titleZh": "Chinese Reading Practice · 初级",
+      "titleEn": "Chinese Reading Practice · Beginner",
+      "titleEs": "Chinese Reading Practice · Principiante",
+      "file": "data/private/chinese-reading-practice-beginner.enc.json",
+      "readingCount": 77,
+      "kind": "online-collection"
+    },
+    {
+      "id": "chinese-reading-practice-intermediate",
+      "source": "Chinese Reading Practice",
+      "titleZh": "Chinese Reading Practice · 中级",
+      "titleEn": "Chinese Reading Practice · Intermediate",
+      "titleEs": "Chinese Reading Practice · Intermedio",
+      "file": "data/private/chinese-reading-practice-intermediate.enc.json",
+      "readingCount": 78,
+      "kind": "online-collection"
     }
   ]
 }

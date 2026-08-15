@@ -37,49 +37,78 @@ for (const e of ALL) {
 
 export function registerExternalVocabulary(entries, source = "Personal reading") {
 	for (const entry of entries || []) {
-		const existing = DICT.get(entry.h)?.find((candidate) => normPinyin(candidate.p) === normPinyin(entry.p));
+		const existing = DICT.get(entry.h)?.find((candidate) =>
+			normPinyin(candidate.p) === normPinyin(entry.p) &&
+			candidate.en === entry.en && candidate.es === entry.es);
 		if (existing) {
 			existing.sources = [...new Set([...(existing.sources || []), source])];
+			entry._dictionaryEntry = existing;
 			continue;
 		}
-		const e = { ...entry, custom: true, source, l: 0, tags: ["general", "reading"], id: `reading:${entry.h}:${normPinyin(entry.p)}` };
+		const e = { ...entry, custom: true, source, l: 0, tags: ["general", "reading"],
+			id: `reading:${source}:${entry.h}:${normPinyin(entry.p)}:${entry.en}` };
 		ALL.push(e);
 		if (!DICT.has(e.h)) DICT.set(e.h, []);
 		DICT.get(e.h).push(e);
 		MAXLEN = Math.max(MAXLEN, e.h.length);
+		entry._dictionaryEntry = e;
 	}
+}
+
+export function externalVocabularyDictionary(entries) {
+	const dictionary = new Map();
+	for (const entry of entries || []) {
+		const value = entry._dictionaryEntry || entry;
+		if (!dictionary.has(entry.h)) dictionary.set(entry.h, []);
+		dictionary.get(entry.h).push(value);
+	}
+	return dictionary;
 }
 
 export const isHan = (ch) => /[㐀-鿿豈-﫿]/.test(ch);
 
-// ---------- Segmentación (longest match) ----------
-export function segment(text) {
+// ---------- Segmentación ----------
+// Choose the path with the greatest overall dictionary coverage. A purely
+// greedy longest match turns 写作业 into 写作 + unknown 业 even though the
+// better reading is 写 + 作业.
+function segmentHan(run, localDictionary) {
+	const dp = Array(run.length + 1);
+	dp[run.length] = { known: 0, count: 0, firstLength: 0, tokens: [] };
+	const better = (candidate, current) =>
+		candidate.known > current.known ||
+		(candidate.known === current.known && candidate.count < current.count) ||
+		(candidate.known === current.known && candidate.count === current.count && candidate.firstLength > current.firstLength);
+	for (let i = run.length - 1; i >= 0; i--) {
+		const unknownTail = dp[i + 1];
+		let best = { known: unknownTail.known, count: unknownTail.count + 1, firstLength: 1,
+			tokens: [{ t: run[i], plain: true }, ...unknownTail.tokens] };
+		for (let length = Math.min(MAXLEN, run.length - i); length >= 1; length--) {
+			const word = run.slice(i, i + length);
+			const entries = localDictionary?.get(word) || DICT.get(word);
+			if (!entries) continue;
+			const tail = dp[i + length];
+			const candidate = { known: tail.known + length, count: tail.count + 1, firstLength: length,
+				tokens: [{ t: word, entries }, ...tail.tokens] };
+			if (better(candidate, best)) best = candidate;
+		}
+		dp[i] = best;
+	}
+	return dp[0].tokens;
+}
+
+export function segment(text, localDictionary) {
 	const tokens = [];
 	let i = 0;
 	while (i < text.length) {
-		const ch = text[i];
-		if (!isHan(ch)) {
-			let j = i + 1;
+		let j = i + 1;
+		if (isHan(text[i])) {
+			while (j < text.length && isHan(text[j])) j++;
+			tokens.push(...segmentHan(text.slice(i, j), localDictionary));
+		} else {
 			while (j < text.length && !isHan(text[j])) j++;
 			tokens.push({ t: text.slice(i, j), plain: true });
-			i = j;
-			continue;
 		}
-		let matched = null;
-		for (let len = Math.min(MAXLEN, text.length - i); len >= 1; len--) {
-			const cand = text.slice(i, i + len);
-			if (DICT.has(cand)) {
-				matched = cand;
-				break;
-			}
-		}
-		if (matched) {
-			tokens.push({ t: matched, entries: DICT.get(matched) });
-			i += matched.length;
-		} else {
-			tokens.push({ t: ch, plain: true });
-			i += 1;
-		}
+		i = j;
 	}
 	return tokens;
 }

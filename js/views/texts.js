@@ -6,7 +6,7 @@ import {
 	B2_READINGS,
 } from "../../data/index.js";
 import { settings, getReadingHistory, recordReadingOpened, markReadingComplete, toggleReadingFavorite } from "../store.js";
-import { registerExternalVocabulary } from "../dict.js";
+import { externalVocabularyDictionary, registerExternalVocabulary } from "../dict.js";
 import { T } from "../i18n.js";
 import { $, setView, renderTokens } from "../ui.js";
 import { createReaderPlayer } from "../audio.js";
@@ -14,7 +14,12 @@ import { register, nav } from "../router.js";
 import { forgetPrivateReadings, loadPrivateReadingCollection, rememberedPrivateReadings, unlockPrivateReadings } from "../private-readings.js";
 
 const player = createReaderPlayer();
-window.__stopReader = () => player.stop(); // el router lo llama al cambiar de pestaña
+let readerKeyHandler = null;
+function clearReaderKeyboard() {
+	if (readerKeyHandler) document.removeEventListener("keydown", readerKeyHandler);
+	readerKeyHandler = null;
+}
+window.__stopReader = () => { player.stop(); clearReaderKeyboard(); }; // el router lo llama al cambiar de pestaña
 
 let privateBooks;
 const privateCollectionCache = new Map();
@@ -56,6 +61,7 @@ async function loadPrivateBooks() {
 
 export async function renderTextList(initialList = "d") {
 	player.stop();
+	clearReaderKeyboard();
 	setView(`<p class="section-desc">${T("loadingReadings")}</p>`);
 	let personal = null;
 	try {
@@ -98,20 +104,22 @@ export async function renderTextList(initialList = "d") {
 	const ld = $("#list-d"),
 		lr = $("#list-r"),
 		lm = $("#list-m");
-	B1_TEXTS.concat(B2_TEXTS).forEach((t) => {
+	const dialogs = B1_TEXTS.concat(B2_TEXTS);
+	dialogs.forEach((t, index) => {
 		const b = document.createElement("button");
 		b.className = "text-item";
 		b.innerHTML = `<b>${T("lesson")} ${t.l}</b><span class="ti-zh">${t.t}</span>
       <span class="ti-tr">${settings.lang === "en" ? t.ten : t.tes}</span>`;
-		b.addEventListener("click", () => renderReader(t, "dialog"));
+		b.addEventListener("click", () => renderReader(t, "dialog", () => renderTextList("d"), { items: dialogs, index }));
 		ld.appendChild(b);
 	});
-	B1_READINGS.concat(B2_READINGS).forEach((t) => {
+	const readings = B1_READINGS.concat(B2_READINGS);
+	readings.forEach((t, index) => {
 		const b = document.createElement("button");
 		b.className = "text-item reading";
 		b.innerHTML = `<b>${T("lesson")} ${t.l}</b><span class="ti-zh">${t.t}</span>
       <span class="ti-tr">${settings.lang === "en" ? t.ten : t.tes}</span>`;
-		b.addEventListener("click", () => renderReader(t, "reading"));
+		b.addEventListener("click", () => renderReader(t, "reading", () => renderTextList("r"), { items: readings, index }));
 		lr.appendChild(b);
 	});
 	if (!personal) {
@@ -162,6 +170,7 @@ function chapterMetadata(chapter) {
 	return {
 		topics: chapter.metadata?.source?.topics || (chapter.tags || []).filter((tag) => !/^HSK|Mandarin Bean$/i.test(tag)),
 		hsk: chapter.metadata?.source?.hsk,
+		level: chapter.metadata?.source?.level,
 		publishedAt: chapter.metadata?.source?.publishedAt || "",
 		hanCharacters,
 		words: calculated.words || chapter.vocabulary?.length || 0,
@@ -172,11 +181,28 @@ function chapterMetadata(chapter) {
 
 function metadataChips(chapter) {
 	const meta = chapterMetadata(chapter);
-	return [meta.hsk && `HSK ${meta.hsk}`, ...meta.topics, meta.contentType && T(meta.contentType), T(meta.length), `${meta.hanCharacters} ${T("characters")}`].filter(Boolean);
+	return [meta.hsk ? `HSK ${meta.hsk}` : meta.level, ...meta.topics, meta.contentType && T(meta.contentType), T(meta.length), `${meta.hanCharacters} ${T("characters")}`].filter(Boolean);
+}
+
+function privateReaderItem(chapter, book) {
+	return {
+		t: chapter.titleZh,
+		ten: chapter.titleEn,
+		tes: chapter.titleEs,
+		l: chapter.number,
+		lines: chapter.lines,
+		privateBook: book,
+		id: chapter.id || `${book.id}:${chapter.number}`,
+		sourceUrl: chapter.sourceUrl,
+		metadata: chapter.metadata,
+		tags: chapter.tags,
+		vocabulary: chapter.vocabulary,
+	};
 }
 
 function renderPrivateBook(book) {
 	player.stop();
+	clearReaderKeyboard();
 	const online = book.kind === "online-collection";
 	const filterState = privateBookViewState.get(book.id) || { topic: "all", length: "all", status: "all", sort: "source" };
 	privateBookViewState.set(book.id, filterState);
@@ -217,7 +243,8 @@ function renderPrivateBook(book) {
 			$("#reading-results").textContent = `${chapters.length} ${T("results")}`;
 		}
 		if (!chapters.length) list.innerHTML = `<p class="empty">${T("noMatchingReadings")}</p>`;
-		chapters.forEach(({ chapter }) => {
+		const readerItems = chapters.map(({ chapter }) => privateReaderItem(chapter, book));
+		chapters.forEach(({ chapter }, index) => {
 		const history = getReadingHistory(chapter.id || `${book.id}:${chapter.number}`);
 		const wrapper = document.createElement("div");
 		wrapper.className = "reading-list-item";
@@ -229,25 +256,7 @@ function renderPrivateBook(book) {
 			<span class="ti-zh">${chapter.titleZh}</span>
 			<span class="ti-tr">${settings.lang === "en" ? chapter.titleEn : chapter.titleEs}</span>
 			${online ? `<span class="metadata-chips">${metadataChips(chapter).map((chip) => `<span>${chip}</span>`).join("")}</span>` : ""}`;
-		b.addEventListener("click", () =>
-			renderReader(
-				{
-					t: chapter.titleZh,
-					ten: chapter.titleEn,
-					tes: chapter.titleEs,
-					l: chapter.number,
-					lines: chapter.lines,
-					privateBook: book,
-					id: chapter.id || `${book.id}:${chapter.number}`,
-					sourceUrl: chapter.sourceUrl,
-					metadata: chapter.metadata,
-					tags: chapter.tags,
-					vocabulary: chapter.vocabulary,
-				},
-				"private",
-				() => renderPrivateBook(book),
-			),
-		);
+		b.addEventListener("click", () => renderReader(readerItems[index], "private", () => renderPrivateBook(book), { items: readerItems, index }));
 		wrapper.appendChild(b);
 		if (online) {
 			const favorite = document.createElement("button");
@@ -274,16 +283,21 @@ function renderPrivateBook(book) {
 let readerMode = "none",
 	readerTrans = false;
 
-function renderReader(t, kind, onBack = renderTextList) {
+function renderReader(t, kind, onBack = renderTextList, navigation = null) {
 	player.stop();
 	if (t.id) recordReadingOpened(t.id);
 	let activePart = 0;
 	const itemLabel = kind === "private" && t.privateBook?.kind === "online-collection" ? T("episode") : kind === "private" ? T("chapter") : T("lesson");
 	const v = setView(`
-    <button id="back" class="back-btn">← ${T("back")}</button>
-    <h2 class="reader-title">${t.t}</h2>
-    <p id="active-reader-sub" class="reader-sub">${settings.lang === "en" ? t.ten : t.tes} · ${itemLabel} ${t.l}</p>
-	<div id="reader-meta" class="metadata-chips"></div>
+	<div class="reader-header">
+      <button id="back" class="back-btn">← ${T("back")}</button>
+	  <div class="reader-heading">
+        <h2 class="reader-title">${t.t}</h2>
+        <p id="active-reader-sub" class="reader-sub">${settings.lang === "en" ? t.ten : t.tes} · ${itemLabel} ${t.l}</p>
+	    <div id="reader-meta" class="metadata-chips"></div>
+	  </div>
+	  ${navigation ? `<div id="reader-page-nav-top" class="reader-page-nav"></div>` : ""}
+	</div>
     <div id="part-tabs" class="reader-toggles" style="margin-top:12px; margin-bottom:12px; display:none;"></div>
     <div class="reader-toggles">
       <button id="tg-pinyin">${T("pinyin")}</button>
@@ -293,6 +307,17 @@ function renderReader(t, kind, onBack = renderTextList) {
     </div>
     <div id="reader"></div>`);
 	$("#back").addEventListener("click", onBack);
+	const renderPageNavigation = (container) => {
+		if (!navigation || !container) return;
+		container.innerHTML = `<button class="reader-nav-icon reader-prev" aria-label="${T("previous")}" title="${T("previous")}"${navigation.index === 0 ? " disabled" : ""}>‹</button><span>${navigation.index + 1} / ${navigation.items.length}</span><button class="reader-nav-icon reader-next" aria-label="${T("next")}" title="${T("next")}"${navigation.index === navigation.items.length - 1 ? " disabled" : ""}>›</button>`;
+		container.querySelector(".reader-prev").addEventListener("click", () => {
+			if (navigation.index > 0) renderReader(navigation.items[navigation.index - 1], kind, onBack, { ...navigation, index: navigation.index - 1 });
+		});
+		container.querySelector(".reader-next").addEventListener("click", () => {
+			if (navigation.index < navigation.items.length - 1) renderReader(navigation.items[navigation.index + 1], kind, onBack, { ...navigation, index: navigation.index + 1 });
+		});
+	};
+	renderPageNavigation($("#reader-page-nav-top"));
 	if (t.metadata) $("#reader-meta").innerHTML = metadataChips(t).map((chip) => `<span>${chip}</span>`).join("");
 
 	if (kind === "dialog" && t.parts && t.parts.length > 1) {
@@ -318,9 +343,17 @@ function renderReader(t, kind, onBack = renderTextList) {
 		if (b) b.textContent = playing ? "⏹️" : "🔊";
 	});
 	$("#tg-audio").addEventListener("click", () => {
-		if (player.isPlaying()) player.stop();
-		else player.play(0);
+		player.isPlaying() ? player.stop() : player.play(0);
 	});
+	clearReaderKeyboard();
+	readerKeyHandler = (event) => {
+		if (event.code !== "Space" || event.repeat) return;
+		const target = event.target;
+		if (target?.isContentEditable || target?.matches?.("input, textarea, select, button, a")) return;
+		event.preventDefault();
+		player.isPlaying() ? player.stop() : player.play(0);
+	};
+	document.addEventListener("keydown", readerKeyHandler);
 	const update = () => {
 		$("#tg-pinyin").classList.toggle("on", readerMode === "pinyin");
 		$("#tg-tones").classList.toggle("on", readerMode === "tones");
@@ -347,6 +380,7 @@ function renderReader(t, kind, onBack = renderTextList) {
 		$("#tg-pinyin").textContent = T("pinyin");
 		$("#tg-tones").textContent = T("tones");
 		$("#tg-trans").textContent = T("trans");
+		renderPageNavigation($("#reader-page-nav-top"));
 		if (t.metadata) $("#reader-meta").innerHTML = metadataChips(t).map((chip) => `<span>${chip}</span>`).join("");
 		drawReader(t, kind, activePart);
 		if (view) view.scrollTop = scrollTop;
@@ -358,6 +392,7 @@ function drawReader(t, kind, activePart = 0) {
 	const r = $("#reader");
 	r.innerHTML = "";
 	const lineObjs = [];
+	const localDictionary = externalVocabularyDictionary(t.vocabulary);
 
 	let partsToRender = [];
 	if (kind === "dialog") {
@@ -389,7 +424,7 @@ function drawReader(t, kind, activePart = 0) {
 			}
 			const zh = document.createElement("div");
 			zh.className = "line-zh";
-			zh.appendChild(renderTokens(line.zh, readerMode, line.py || ""));
+			zh.appendChild(renderTokens(line.zh, readerMode, line.py || "", localDictionary, line.meanings || []));
 			row.appendChild(zh);
 			if (readerTrans) {
 				const tr = document.createElement("div");
@@ -400,7 +435,7 @@ function drawReader(t, kind, activePart = 0) {
 			r.appendChild(row);
 			const obj = { row, text: line.zh, speaker: line.s };
 			lineObjs.push(obj);
-			row.addEventListener("click", () => player.play(lineObjs.indexOf(obj)));
+			row.addEventListener("click", () => player.toggle(lineObjs.indexOf(obj)));
 		}
 	});
 	player.setLines(lineObjs);
@@ -428,6 +463,19 @@ function drawReader(t, kind, activePart = 0) {
 			actions.appendChild(source);
 		}
 		r.appendChild(actions);
+	}
+	if (navigation) {
+		const bottomNavigation = document.createElement("div");
+		bottomNavigation.className = "reader-page-nav";
+		r.appendChild(bottomNavigation);
+		const previous = document.createElement("button");
+		previous.className = "reader-nav-icon"; previous.disabled = navigation.index === 0; previous.textContent = "‹"; previous.title = T("previous"); previous.setAttribute("aria-label", T("previous"));
+		previous.addEventListener("click", () => renderReader(navigation.items[navigation.index - 1], kind, onBack, { ...navigation, index: navigation.index - 1 }));
+		const position = document.createElement("span"); position.textContent = `${navigation.index + 1} / ${navigation.items.length}`;
+		const next = document.createElement("button");
+		next.className = "reader-nav-icon"; next.disabled = navigation.index === navigation.items.length - 1; next.textContent = "›"; next.title = T("next"); next.setAttribute("aria-label", T("next"));
+		next.addEventListener("click", () => renderReader(navigation.items[navigation.index + 1], kind, onBack, { ...navigation, index: navigation.index + 1 }));
+		bottomNavigation.append(previous, position, next);
 	}
 }
 

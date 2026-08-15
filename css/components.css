@@ -892,6 +892,77 @@
 	line-height: 1.4;
 }
 
+.pop-context {
+	margin: 10px 0 8px;
+	padding: 10px 12px;
+	border-left: 3px solid var(--primary);
+	border-radius: 0 8px 8px 0;
+	background: color-mix(in srgb, var(--primary) 8%, transparent);
+	font-size: var(--font-base);
+}
+
+.pop-other-label {
+	margin-top: 12px;
+}
+
+.component-back {
+	border: 0;
+	background: none;
+	color: var(--primary);
+	font: inherit;
+	font-weight: 600;
+	padding: 4px 0 8px;
+	cursor: pointer;
+}
+
+.pop-components {
+	margin-top: 14px;
+	padding: 12px 14px;
+	border-radius: 12px;
+	background: rgba(0, 0, 0, 0.03);
+}
+
+.pop-component-list {
+	display: grid;
+	gap: 8px;
+	margin-top: 8px;
+}
+
+.pop-component {
+	display: grid;
+	grid-template-columns: auto auto 1fr;
+	align-items: baseline;
+	gap: 10px;
+	width: 100%;
+	padding: 10px 12px;
+	border: 1px solid var(--line);
+	border-radius: 10px;
+	background: var(--card-bg);
+	color: var(--ink);
+	text-align: left;
+	cursor: pointer;
+}
+
+.pop-component-h {
+	font-size: 26px;
+	font-weight: 600;
+}
+
+.pop-component-p {
+	color: var(--primary);
+	font-weight: 500;
+}
+
+.pop-component-g {
+	color: var(--muted);
+}
+
+@media (prefers-color-scheme: dark) {
+	.pop-components {
+		background: rgba(255, 255, 255, 0.05);
+	}
+}
+
 .pop-ex {
 	margin-top: 14px;
 	background: rgba(0, 0, 0, 0.03);
@@ -2238,3 +2309,89 @@
 	margin: 24px 0 12px;
 }
 .reader-actions a.btn { text-decoration: none; }
+
+.reader-page-nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	margin: 6px 0 12px;
+}
+
+.reader-header {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	grid-template-areas:
+		"back back"
+		"heading navigation";
+	align-items: center;
+	column-gap: 20px;
+}
+
+.reader-header > .back-btn {
+	grid-area: back;
+	justify-self: start;
+}
+
+.reader-heading {
+	grid-area: heading;
+	min-width: 0;
+}
+
+.reader-heading .reader-title {
+	margin-bottom: 8px;
+}
+
+.reader-heading .reader-sub {
+	margin-bottom: 10px;
+}
+
+.reader-header > .reader-page-nav {
+	grid-area: navigation;
+	margin: 0;
+}
+
+.reader-page-nav span {
+	color: var(--muted);
+	font-weight: 600;
+	min-width: 54px;
+	text-align: center;
+}
+
+.reader-nav-icon {
+	width: 42px;
+	height: 38px;
+	border: 1px solid var(--line);
+	border-radius: 12px;
+	background: var(--card-bg);
+	color: var(--primary);
+	font-size: 30px;
+	line-height: 1;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.reader-page-nav button:disabled {
+	opacity: 0.35;
+	cursor: default;
+}
+
+@media (max-width: 520px) {
+	.reader-header {
+		grid-template-areas:
+			"back navigation"
+			"heading heading";
+		column-gap: 10px;
+	}
+
+	.reader-page-nav {
+		margin-block: 4px 10px;
+	}
+
+	.reader-header > .reader-page-nav {
+		margin: 0;
+		justify-self: end;
+	}
+}
