@@ -1,6 +1,15 @@
 // store.js — persistencia (localStorage) de estado SRS, ajustes y racha
 const SRS_KEY = "mandarin.srs.v1";
 const SETTINGS_KEY = "mandarin.settings.v1";
+const MY_VOCAB_KEY = "mandarin.myVocabulary.v1";
+let myVocabulary = new Set(JSON.parse(localStorage.getItem(MY_VOCAB_KEY) || "[]"));
+export const getMyVocabularyIds = () => new Set(myVocabulary);
+export const hasMyVocabulary = (id) => myVocabulary.has(id);
+export function toggleMyVocabulary(id) {
+	if (myVocabulary.has(id)) myVocabulary.delete(id); else myVocabulary.add(id);
+	localStorage.setItem(MY_VOCAB_KEY, JSON.stringify([...myVocabulary]));
+	return myVocabulary.has(id);
+}
 
 let state = {};
 try {
@@ -72,6 +81,7 @@ export function exportData() {
 		exported: new Date().toISOString(),
 		srs: state,
 		settings,
+		myVocabulary: [...myVocabulary],
 	});
 }
 export function importData(json) {
@@ -82,5 +92,9 @@ export function importData(json) {
 	if (d.settings) {
 		Object.assign(settings, d.settings);
 		saveSettings();
+	}
+	if (Array.isArray(d.myVocabulary)) {
+		myVocabulary = new Set(d.myVocabulary);
+		localStorage.setItem(MY_VOCAB_KEY, JSON.stringify([...myVocabulary]));
 	}
 }

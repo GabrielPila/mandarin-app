@@ -1,8 +1,12 @@
 .claude/
+.codex/
 .DS_Store
 .env
 .env.local
 books/
 *.pdf
+data/private-readings.json
+private-source/
+tmp/
 .vercel
 .env*

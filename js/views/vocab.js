@@ -1,6 +1,6 @@
 // views/vocab.js — explorador de vocabulario con búsqueda y concordancia
 import { ALL, normPinyin } from "../dict.js";
-import { settings, saveSettings } from "../store.js";
+import { settings, saveSettings, getMyVocabularyIds } from "../store.js";
 import { T, gloss } from "../i18n.js";
 import { speak } from "../audio.js";
 import { $, setView, popupEntry, renderTokens } from "../ui.js";
@@ -30,6 +30,7 @@ export function renderVocab() {
         <div class="filter-wrap">
           <select id="vfilter" class="filter-select"></select>
         </div>
+		<select id="vscope" class="filter-select"><option value="all">${T("allVocabulary")}</option><option value="book">${T("bookVocabulary")}</option><option value="general">${T("generalVocabulary")}</option><option value="mine">${T("myStudyList")}</option></select>
       </div>
       <div style="
         display: flex; 
@@ -81,6 +82,7 @@ export function renderVocab() {
       </div>
     </div>`);
 	let activeFilter = "all";
+	let scope = "all";
 	let showCore1 = true;
 	let showCore2 = true;
 	let showSup = true;
@@ -167,6 +169,7 @@ export function renderVocab() {
 		draw();
 	});
 	$("#vsearch").addEventListener("input", draw);
+	$("#vscope").addEventListener("change", (e) => { scope = e.target.value; draw(); });
 
 	function updateFloatingBar() {
 		const bar = $("#floating-bar");
@@ -226,6 +229,10 @@ export function renderVocab() {
 		const list = $("#vlist");
 		list.innerHTML = "";
 		let items = ALL.filter((e) => {
+			if (scope === "book" && e.custom) return false;
+			if (scope === "general" && !e.custom) return false;
+			if (scope === "mine" && !getMyVocabularyIds().has(e.id)) return false;
+			if (e._deleted) return false;
 			const isExtra = !!e.extra || (!e.sup && e.sec !== 1 && e.sec !== 2);
 			const isSup = !!e.sup && !isExtra;
 			const isCore1 = !e.sup && !isExtra && e.sec === 1;
@@ -290,7 +297,9 @@ export function renderVocab() {
 			d.className = "vrow" + (e.sup ? " sup" : "") + (e.extra ? " extra" : "");
 			const isExtra = !!e.extra || (!e.sup && e.sec !== 1 && e.sec !== 2);
 			let tag = "";
-			if (isExtra) {
+			if (e.custom) {
+				tag = `<span class="vtag core-tag">${T("generalVocabulary")}</span>`;
+			} else if (isExtra) {
 				tag = `<span class="vtag sup-tag">${T("extraTag").toUpperCase()}</span>`;
 			} else if (e.sup) {
 				tag = `<span class="vtag sup-tag">SUP</span>`;

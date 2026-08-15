@@ -424,6 +424,10 @@
 	color: var(--accent);
 }
 
+.text-item.personal-reading b {
+	color: var(--primary);
+}
+
 .ti-zh {
 	font-size: var(--font-lg);
 	font-weight: 500;

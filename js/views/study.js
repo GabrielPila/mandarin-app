@@ -6,6 +6,7 @@ import {
 	exportData,
 	importData,
 	resetAll,
+	getMyVocabularyIds,
 } from "../store.js";
 import { renderBlocks } from "./blocks.js";
 import * as SRS from "../srs.js";
@@ -53,7 +54,8 @@ function bar(learned, mature, total) {
 }
 
 function dashboardHTML() {
-	const pool = cardPool(ALL);
+	const saved = getMyVocabularyIds();
+	const pool = cardPool(ALL.filter((e) => !e.custom || saved.has(e.id)));
 	const st = SRS.stats(pool);
 	let h = `<details class="dash"><summary>${T("progress")} — ${st.learned} ${T("known")} · ${st.mature} ${T("mature")}</summary>`;
 	// por lección
@@ -95,7 +97,8 @@ const GAMES = [
 		"hardWordsDesc",
 		'<i data-lucide="target"></i>',
 		() => {
-			const l = SRS.leeches(cardPool(ALL));
+			const saved = getMyVocabularyIds();
+			const l = SRS.leeches(cardPool(ALL.filter((e) => !e.custom || saved.has(e.id))));
 			if (l.length) startCram(l);
 			else alert(T("noDue"));
 		},
@@ -108,7 +111,8 @@ const GAMES = [
 ];
 
 export function renderStudy() {
-	const pool = cardPool(ALL);
+	const saved = getMyVocabularyIds();
+	const pool = cardPool(ALL.filter((e) => !e.custom || saved.has(e.id)));
 	const st = SRS.stats(pool);
 	const v = setView(`
     <div class="stats">

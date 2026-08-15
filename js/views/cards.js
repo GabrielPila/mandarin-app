@@ -1,6 +1,6 @@
 // views/cards.js — runner de flashcards (SRS, cram, cartas inversas) + resumen
 import { ALL, DICT, isHan } from "../dict.js";
-import { settings } from "../store.js";
+import { settings, getMyVocabularyIds } from "../store.js";
 import * as SRS from "../srs.js";
 import { T, gloss, exGloss } from "../i18n.js";
 import { speak } from "../audio.js";
@@ -29,7 +29,8 @@ function baseEntry(id) {
 }
 
 export function startSRS() {
-	const pool = cardPool(ALL);
+	const saved = getMyVocabularyIds();
+	const pool = cardPool(ALL.filter((e) => !e.custom || saved.has(e.id)));
 	// ids normales
 	let dueIds = SRS.dueCards(pool).map((e) => e.id);
 	let newIds = SRS.newCards(pool).map((e) => e.id);

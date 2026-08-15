@@ -1,6 +1,6 @@
 // ui.js — primitivas de interfaz compartidas por las vistas
 import { segment, syllables, toneOf, TONE_MARK, isHan, DICT } from "./dict.js";
-import { settings } from "./store.js";
+import { settings, hasMyVocabulary, toggleMyVocabulary } from "./store.js";
 import { T, gloss, exGloss } from "./i18n.js";
 import { speak } from "./audio.js";
 import { usesOf } from "./concordance.js";
@@ -22,10 +22,39 @@ export function cardPool(ALL) {
 
 // ---------- render de texto chino con ruby ----------
 // mode: 'none' | 'pinyin' | 'tones'
-export function renderTokens(zh, mode) {
+export function renderTokens(zh, mode, explicitPinyin = "") {
 	const frag = document.createDocumentFragment();
+	const provided = explicitPinyin.trim()
+		? explicitPinyin.trim().split(/\s+/)
+		: null;
+	let providedIndex = 0;
 	for (const tok of segment(zh)) {
 		if (tok.plain) {
+			if (provided && Array.from(tok.t).some(isHan)) {
+				const w = document.createElement("span");
+				w.className = "w unknown-word";
+				Array.from(tok.t).forEach((ch) => {
+					const cs = document.createElement("span");
+					cs.className = "ch";
+					const ruby = document.createElement("span");
+					ruby.className = "ruby";
+					const py = isHan(ch) ? provided[providedIndex++] || "" : "";
+					if (mode === "pinyin") ruby.textContent = py;
+					else if (mode === "tones") {
+						ruby.textContent = py ? TONE_MARK[toneOf(py)] : " ";
+						ruby.classList.add("tones-only");
+					}
+					if (mode === "none") ruby.style.display = "none";
+					const base = document.createElement("span");
+					base.className = "base";
+					base.textContent = ch;
+					cs.appendChild(ruby);
+					cs.appendChild(base);
+					w.appendChild(cs);
+				});
+				frag.appendChild(w);
+				continue;
+			}
 			const sp = document.createElement("span");
 			sp.className = "plain";
 			const ruby = document.createElement("span");
@@ -42,7 +71,9 @@ export function renderTokens(zh, mode) {
 			continue;
 		}
 		const e = tok.entries[0];
-		const syls = syllables(e);
+		const syls = provided
+			? Array.from(tok.t).map(() => provided[providedIndex++] || "")
+			: syllables(e);
 		const w = document.createElement("span");
 		w.className = "w";
 		w.dataset.h = tok.t;
@@ -81,13 +112,19 @@ export function showPopup(tok) {
 	tok.entries.forEach((e, idx) => {
 		const div = document.createElement("div");
 		div.className = "pop-entry";
-		const meta = `${e.pos ? e.pos + " · " : ""}${T("lesson")} ${e.l}${e.sup ? " · " + T("supTag") : ""}`;
+		const meta = e.custom ? `${T("generalVocabulary")} · ${e.source || T("myReadings")}` : `${e.pos ? e.pos + " · " : ""}${T("lesson")} ${e.l}${e.sup ? " · " + T("supTag") : ""}`;
 		div.innerHTML = `<div class="pop-head"><span class="pop-h">${e.h}</span>
       <button class="spk-btn pop-spk">🔊</button>
       <span class="pop-p">${e.p}</span></div>
       <div class="hw-container"></div>
       <div class="pop-meta">${meta}</div>
       <div class="pop-g">${gloss(e)}</div>`;
+		const save = document.createElement("button");
+		save.className = "btn small";
+		const updateSave = () => save.textContent = hasMyVocabulary(e.id) ? `✓ ${T("inStudyList")}` : `＋ ${T("addStudyList")}`;
+		updateSave();
+		save.addEventListener("click", () => { toggleMyVocabulary(e.id); updateSave(); });
+		div.appendChild(save);
 		div.querySelector(".pop-spk").addEventListener("click", () => speak(e.h));
 		if (e.ex) {
 			const exd = document.createElement("div");

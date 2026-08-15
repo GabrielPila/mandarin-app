@@ -28,6 +28,14 @@ export const UI = {
 		readingsDesc:
 			"Relatos narrados por una sola persona, generados usando " +
 			"exclusivamente el vocabulario visto hasta cada lección.",
+		myReadings: "Mis lecturas",
+		myReadingsDesc:
+			"Libros personales con pinyin, tonos, traducción y audio.",
+		noMyReadings: "No hay lecturas personales instaladas en este dispositivo.",
+		importReading: "Importar lectura privada",
+		invalidReading: "No se pudo importar este archivo de lectura.",
+		unlockReadings: "Desbloquear lecturas privadas", unlockReadingsDesc: "La historia se descifra solamente en este dispositivo.", password: "Contraseña", rememberDevice: "Recordar este dispositivo", unlock: "Desbloquear", wrongPassword: "Contraseña incorrecta.", forgetDevice: "Olvidar este dispositivo", generalVocabulary: "Vocabulario general", bookVocabulary: "Vocabulario del libro", allVocabulary: "Todo el vocabulario", myStudyList: "Mi lista de estudio", addStudyList: "Añadir a mi lista", inStudyList: "En mi lista",
+		chapter: "Capítulo",
 		bookLects: "Lecturas del libro",
 		bookLectsDesc:
 			"Textos de la sección «Comprensión de Lectura» de cada lección " +
@@ -159,6 +167,14 @@ export const UI = {
 		readingsDesc:
 			"Single-person narratives generated using strictly the " +
 			"vocabulary learned up to each lesson.",
+		myReadings: "My readings",
+		myReadingsDesc:
+			"Personal books with pinyin, tones, translation, and audio.",
+		noMyReadings: "No personal readings are installed on this device.",
+		importReading: "Import private reading",
+		invalidReading: "This reading file could not be imported.",
+		unlockReadings: "Unlock private readings", unlockReadingsDesc: "The story is decrypted only on this device.", password: "Password", rememberDevice: "Remember this device", unlock: "Unlock", wrongPassword: "Incorrect password.", forgetDevice: "Forget this device", generalVocabulary: "General Vocabulary", bookVocabulary: "Book Vocabulary", allVocabulary: "All vocabulary", myStudyList: "My Study List", addStudyList: "Add to My Study List", inStudyList: "In My Study List",
+		chapter: "Chapter",
 		bookLects: "Book readings",
 		bookLectsDesc:
 			'Texts from the "Reading Comprehension" section of each ' +

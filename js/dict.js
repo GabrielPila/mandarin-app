@@ -1,5 +1,5 @@
 // dict.js — diccionario combinado, segmentación y utilidades de pinyin
-import { B1_VOCAB, B1_SUP, B2_VOCAB, B2_SUP } from "../data/index.js";
+import { B1_VOCAB, B1_SUP, B2_VOCAB, B2_SUP, CUSTOM_VOCAB } from "../data/index.js";
 
 // ---------- Diccionario ----------
 // INVARIANTE: los ids son posiciones de array (b1:i, b1s:i, b2:i, b2s:i).
@@ -21,6 +21,10 @@ B1_VOCAB.forEach((e, i) => add(e, "b1:" + i, 1));
 B1_SUP.forEach((e, i) => add(e, "b1s:" + i, 1));
 B2_VOCAB.forEach((e, i) => add(e, "b2:" + i, 2));
 B2_SUP.forEach((e, i) => add(e, "b2s:" + i, 2));
+CUSTOM_VOCAB.forEach((e, i) => add(e, "custom:" + i, 0));
+
+export const BOOK_ALL = ALL.filter((e) => !e.custom);
+export const GENERAL_ALL = ALL.filter((e) => e.custom && !e._deleted);
 
 export const DICT = new Map(); // hanzi -> [entradas]
 let MAXLEN = 1;

@@ -8,6 +8,7 @@ export function register(tab, fn) {
 
 export function nav(tab) {
 	if (window.__stopReader) window.__stopReader();
+	window.__refreshLanguage = null;
 	current = tab;
 	["study", "texts", "vocab", "grammar", "settings"].forEach((t) => {
 		const el = document.querySelector("#tab-" + t);

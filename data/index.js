@@ -17,3 +17,4 @@ export { B1_PHONETICS } from "./book1-phonetics.js";
 export { B2_PHONETICS } from "./book2-phonetics.js";
 export { B1_LECTURAS } from "./book1-lecturas.js";
 export { B2_LECTURAS } from "./book2-lecturas.js";
+export { CUSTOM_VOCAB } from "./custom-vocab.js";

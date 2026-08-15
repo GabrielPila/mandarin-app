@@ -1,9 +1,11 @@
 // main.js — arranque de la aplicación
 import { settings, saveSettings } from "./store.js";
-import { T } from "./i18n.js";
+import { T, UI } from "./i18n.js";
 import { $, applyTheme } from "./ui.js";
 import { nav, current } from "./router.js";
 import { chineseVoices } from "./audio.js";
+import { ALL } from "./dict.js";
+import * as DATA from "../data/index.js";
 // las vistas se registran a sí mismas al importarse:
 import "./views/study.js";
 import "./views/texts.js";
@@ -18,7 +20,6 @@ function renderTabs() {
 	$("#tab-vocab .tab-label").textContent = T("vocab");
 	$("#tab-grammar .tab-label").textContent = T("grammar");
 	$("#tab-tutor .tab-label").textContent = T("tutor");
-	nav(current);
 }
 
 const updateLangIcon = () => {
@@ -26,11 +27,71 @@ const updateLangIcon = () => {
 	$("#lang-toggle .lang-txt").textContent = txt;
 };
 
+function languagePairs(from, to) {
+	const pairs = new Map();
+	const fragments = [];
+	const add = (source, target) => {
+		if (typeof source === "string" && typeof target === "string" && source && target && source !== target)
+			pairs.set(source, target);
+	};
+	for (const key of Object.keys(UI[from])) {
+		add(UI[from][key], UI[to][key]);
+		if (UI[from][key]?.length >= 3 && UI[to][key]) fragments.push([UI[from][key], UI[to][key]]);
+	}
+	const seen = new Set();
+	const visit = (value) => {
+		if (!value || typeof value !== "object" || seen.has(value)) return;
+		seen.add(value);
+		if (Array.isArray(value)) {
+			if (value.length === 3 && typeof value[1] === "string" && typeof value[2] === "string")
+				add(from === "en" ? value[2] : value[1], to === "en" ? value[2] : value[1]);
+			value.forEach(visit);
+			return;
+		}
+		add(value[from], value[to]);
+		add(value[`t${from}`], value[`t${to}`]);
+		add(value[`i${from}`], value[`i${to}`]);
+		Object.values(value).forEach(visit);
+	};
+	Object.values(DATA).forEach(visit);
+	visit(ALL);
+	visit(window.__languageData);
+	return { pairs: [...pairs], fragments: fragments.sort((a, b) => b[0].length - a[0].length) };
+}
+
+function translateCurrentScreen(from, to) {
+	const { pairs, fragments } = languagePairs(from, to);
+	const exact = new Map(pairs);
+	const translate = (text) => {
+		if (!text) return text;
+		const leading = text.match(/^\s*/)[0];
+		const trailing = text.match(/\s*$/)[0];
+		const end = trailing.length ? text.length - trailing.length : text.length;
+		const core = text.slice(leading.length, end);
+		if (exact.has(core)) return leading + exact.get(core) + trailing;
+		let result = core;
+		for (const [source, target] of fragments)
+			if (result.includes(source)) result = result.split(source).join(target);
+		return leading + result + trailing;
+	};
+	const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+	const nodes = [];
+	while (walker.nextNode()) nodes.push(walker.currentNode);
+	for (const node of nodes) {
+		if (!node.parentElement?.closest("script,style")) node.nodeValue = translate(node.nodeValue);
+	}
+	document.querySelectorAll("[placeholder], [title], [aria-label]").forEach((element) => {
+		for (const attr of ["placeholder", "title", "aria-label"])
+			if (element.hasAttribute(attr)) element.setAttribute(attr, translate(element.getAttribute(attr)));
+	});
+}
+
 $("#lang-toggle").addEventListener("click", () => {
+	const previousLanguage = settings.lang;
 	settings.lang = settings.lang === "es" ? "en" : "es";
 	saveSettings();
 	updateLangIcon();
-	renderTabs(); // This naturally acts as the old LangChangeHandler
+	translateCurrentScreen(previousLanguage, settings.lang);
 });
 
 $("#ts-toggle").addEventListener("click", () => {
@@ -193,10 +254,20 @@ if (window.lucide) {
 
 if ("serviceWorker" in navigator) {
 	if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
-		// Disable caching during local development to prevent getting "stuck"
-		navigator.serviceWorker.getRegistrations().then((registrations) => {
-			for (const registration of registrations) {
-				registration.unregister();
+		// Local previews must always use the files currently on disk. Remove both
+		// registrations and their caches; an old controlling worker otherwise keeps
+		// serving stale navigation code until the tab is closed.
+		Promise.all([
+			navigator.serviceWorker.getRegistrations().then((registrations) =>
+				Promise.all(registrations.map((registration) => registration.unregister())),
+			),
+			"caches" in window
+				? caches.keys().then((keys) => Promise.all(keys.map((key) => caches.delete(key))))
+				: Promise.resolve(),
+		]).then(() => {
+			if (navigator.serviceWorker.controller && !sessionStorage.getItem("local-cache-reset")) {
+				sessionStorage.setItem("local-cache-reset", "1");
+				location.reload();
 			}
 		});
 	} else {
