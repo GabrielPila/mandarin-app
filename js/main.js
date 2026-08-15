@@ -103,6 +103,41 @@ $("#ts-toggle").addEventListener("click", () => {
 	applyTheme();
 });
 
+const updateButton = $("#update-toggle");
+function markUpdateReady(ready = true) {
+	const dot = updateButton?.querySelector(".update-dot");
+	if (dot) dot.hidden = !ready;
+	if (updateButton) {
+		const label = T(ready ? "updateReady" : "checkUpdates");
+		updateButton.title = label;
+		updateButton.setAttribute("aria-label", label);
+	}
+}
+
+async function refreshInstalledApp() {
+	if (!updateButton || updateButton.disabled) return;
+	updateButton.disabled = true;
+	updateButton.classList.add("checking");
+	updateButton.title = T("updatingApp");
+	try {
+		if ("serviceWorker" in navigator) {
+			const registrations = await navigator.serviceWorker.getRegistrations();
+			await Promise.all(registrations.map((registration) => registration.unregister()));
+		}
+		if ("caches" in window) {
+			const keys = await caches.keys();
+			await Promise.all(keys.map((key) => caches.delete(key)));
+		}
+		location.reload();
+	} catch (_error) {
+		updateButton.disabled = false;
+		updateButton.classList.remove("checking");
+		markUpdateReady(false);
+	}
+}
+updateButton?.addEventListener("click", refreshInstalledApp);
+markUpdateReady(false);
+
 TABS.forEach((t) => $("#tab-" + t).addEventListener("click", () => nav(t)));
 
 // popup: cerrar al tocar fondo o botón
@@ -271,6 +306,16 @@ if ("serviceWorker" in navigator) {
 			}
 		});
 	} else {
-		navigator.serviceWorker.register("sw.js");
+		navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).then((registration) => {
+			if (registration.waiting) markUpdateReady(true);
+			registration.addEventListener("updatefound", () => {
+				const worker = registration.installing;
+				worker?.addEventListener("statechange", () => {
+					if (worker.state === "installed" && navigator.serviceWorker.controller)
+						markUpdateReady(true);
+				});
+			});
+			registration.update().catch(() => {});
+		});
 	}
 }

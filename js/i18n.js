@@ -140,6 +140,9 @@ export const UI = {
 		catMixed: "Mixto",
 		typeAnswer: "Escribe la respuesta",
 		reveal: "Mostrar respuesta",
+		checkUpdates: "Buscar actualizaciones",
+		updateReady: "Actualización disponible — toca para instalar",
+		updatingApp: "Actualizando…",
 	},
 	en: {
 		appTitle: "Practical Chinese",
@@ -275,6 +278,9 @@ export const UI = {
 		catMixed: "Mixed",
 		typeAnswer: "Type the answer",
 		reveal: "Reveal answer",
+		checkUpdates: "Check for updates",
+		updateReady: "Update available — tap to install",
+		updatingApp: "Updating…",
 	},
 };
 
