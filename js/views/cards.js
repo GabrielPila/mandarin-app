@@ -120,8 +120,8 @@ export function runCards(items, srsMode, isRandom = true) {
 			const fl = $("#fail-list");
 			failedList.forEach((e) => {
 				const d = document.createElement("div");
-				d.className = "vrow";
-				d.innerHTML = `<span class="vh">${e.h}</span><span class="vp">${e.p}</span><span class="vg">${gloss(e)}</span><span class="vl">${e.l === 0 ? "✦" : e.l}</span>`;
+				const ordText = e.ord != null ? `${e.ord}.` : "";
+				d.innerHTML = `<span class="vord">${ordText}</span><span class="vh">${e.h}</span><span class="vp">${e.p}</span><span class="vg">${gloss(e)}</span><span class="vl">${e.l === 0 ? "✦" : e.l}</span>`;
 				d.addEventListener("click", () => popupEntry(e.h));
 				fl.appendChild(d);
 			});

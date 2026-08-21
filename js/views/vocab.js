@@ -169,7 +169,10 @@ export function renderVocab() {
 		draw();
 	});
 	$("#vsearch").addEventListener("input", draw);
-	$("#vscope").addEventListener("change", (e) => { scope = e.target.value; draw(); });
+	$("#vscope").addEventListener("change", (e) => {
+		scope = e.target.value;
+		draw();
+	});
 
 	function updateFloatingBar() {
 		const bar = $("#floating-bar");
@@ -307,7 +310,9 @@ export function renderVocab() {
 				const coreText = e.sec === 2 ? "CORE 2" : "CORE 1";
 				tag = `<span class="vtag core-tag">${coreText}</span>`;
 			}
+			const ordText = e.ord != null ? `${e.ord}.` : "";
 			d.innerHTML = `
+        <span class="vord">${ordText}</span>
         <span class="vh" style="display:flex; align-items:center; gap:8px;">
           ${e.h}
           <button class="spk-btn" 
@@ -321,9 +326,9 @@ export function renderVocab() {
           <span class="vl">L${e.l === 0 ? "✦" : e.l}</span>
         </div>`;
 
-			const spkBtn = d.querySelector('.spk-btn');
+			const spkBtn = d.querySelector(".spk-btn");
 			if (spkBtn) {
-				spkBtn.addEventListener('click', (ev) => {
+				spkBtn.addEventListener("click", (ev) => {
 					ev.stopPropagation();
 					speak(e.h);
 				});
