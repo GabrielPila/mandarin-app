@@ -262,6 +262,23 @@ export function renderVocab() {
 			);
 		}
 
+		function parseOrd(ord) {
+			if (ord == null) return { base: 999, sub: "" };
+			const str = String(ord);
+			const match = str.match(/^(\d+)([a-z]?)$/i);
+			if (match) {
+				return { base: parseInt(match[1], 10), sub: match[2].toLowerCase() };
+			}
+			return { base: 999, sub: str };
+		}
+
+		function compareOrd(aOrd, bOrd) {
+			const a = parseOrd(aOrd);
+			const b = parseOrd(bOrd);
+			if (a.base !== b.base) return a.base - b.base;
+			return a.sub.localeCompare(b.sub);
+		}
+
 		if (sortMode === "alpha") {
 			items.sort((a, b) => normPinyin(a.p).localeCompare(normPinyin(b.p)));
 		} else {
@@ -270,7 +287,7 @@ export function renderVocab() {
 				const sa = a.sec || 99;
 				const sb = b.sec || 99;
 				if (sa !== sb) return sa - sb;
-				return (a.ord || 999) - (b.ord || 999);
+				return compareOrd(a.ord, b.ord);
 			});
 		}
 

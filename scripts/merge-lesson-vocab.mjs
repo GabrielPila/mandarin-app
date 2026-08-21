@@ -131,7 +131,7 @@ for (const block of raw.vocabBlocks) {
 			discrepancies.push(
 				`${item.h}: POS difiere — data '${c.e.pos || "∅"}' vs libro '${item.pos}'`,
 			);
-		const expectedOrd = i + 1;
+		const expectedOrd = item.n;
 		if (c.e.sec != null && (c.e.sec !== block.sec || c.e.ord !== expectedOrd))
 			discrepancies.push(
 				`${item.h}: ya tenía sec/ord ${c.e.sec}/${c.e.ord}, ahora ${block.sec}/${expectedOrd}`,
@@ -226,7 +226,7 @@ if (WRITE) {
 		for (const m of mine) {
 			// cross-lesson: sec/ord are relative to l; never write across lessons
 			if (m.isCrossLesson) continue;
-			const fields = { sec: m.sec, ord: m.itemIndex + 1 };
+			const fields = { sec: m.sec, ord: m.item.n };
 			if (m.sec === 4) fields.extra = true;
 			text = upsertFields(text, src.name, m.idx, fields);
 		}
@@ -250,7 +250,7 @@ if (APPEND && toAppend.length) {
 				l: raw.lesson,
 				tags: ["npcr"],
 				sec: t.sec,
-				ord: t.itemIndex + 1,
+				ord: t.item.n,
 				...(t.sec === 4 ? { extra: true } : {}),
 			}),
 		);

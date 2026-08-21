@@ -56,7 +56,7 @@ export const B2_SUP = [
 		l: 16,
 		sup: 1,
 		sec: 3,
-		ord: 14,
+		ord: 13,
 		cols: ["变成足球迷"],
 	},
 	{
@@ -174,7 +174,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 9,
+		ord: 8,
 	},
 	{
 		h: "出租车",
@@ -185,7 +185,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 3,
+		ord: 2,
 	},
 	{
 		h: "传统文化",
@@ -232,7 +232,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 23,
+		ord: 21,
 	},
 	{
 		h: "黛玉葬花",
@@ -278,7 +278,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 17,
+		ord: 15,
 	},
 	{
 		h: "登机口",
@@ -359,7 +359,7 @@ export const B2_SUP = [
 		l: 16,
 		sup: 1,
 		sec: 3,
-		ord: 16,
+		ord: 15,
 		cols: ["我们的队长"],
 	},
 	{
@@ -396,7 +396,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 4,
+		ord: 3,
 	},
 	{
 		h: "发烧",
@@ -443,7 +443,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 19,
+		ord: 17,
 	},
 	{
 		h: "坟墓",
@@ -478,7 +478,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 12,
+		ord: 11,
 	},
 	{
 		h: "古代",
@@ -560,7 +560,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 21,
+		ord: 19,
 	},
 	{
 		h: "哈尔滨",
@@ -630,7 +630,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 10,
+		ord: 9,
 	},
 	{
 		h: "蝴蝶",
@@ -687,7 +687,7 @@ export const B2_SUP = [
 		l: 12,
 		sup: 1,
 		sec: 3,
-		ord: 11,
+		ord: "8a",
 		cols: ["汇款", "汇钱"],
 	},
 	{
@@ -699,7 +699,7 @@ export const B2_SUP = [
 		l: 12,
 		sup: 1,
 		sec: 3,
-		ord: 10,
+		ord: 8,
 		cols: ["给家里汇款", "银行汇款"],
 	},
 	{
@@ -723,7 +723,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 5,
+		ord: 4,
 	},
 	{
 		h: "机场",
@@ -734,7 +734,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 7,
+		ord: 6,
 	},
 	{
 		h: "纪念",
@@ -745,7 +745,7 @@ export const B2_SUP = [
 		l: 12,
 		sup: 1,
 		sec: 3,
-		ord: 7,
+		ord: "6a",
 		cols: ["纪念日", "纪念品"],
 	},
 	{
@@ -841,7 +841,7 @@ export const B2_SUP = [
 		l: 16,
 		sup: 1,
 		sec: 3,
-		ord: 15,
+		ord: 14,
 		cols: ["比赛结束了"],
 	},
 	{
@@ -970,7 +970,7 @@ export const B2_SUP = [
 		l: 16,
 		sup: 1,
 		sec: 3,
-		ord: 18,
+		ord: 17,
 		cols: ["打篮球"],
 	},
 	{
@@ -1160,7 +1160,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 18,
+		ord: 16,
 	},
 	{
 		h: "排",
@@ -1183,7 +1183,7 @@ export const B2_SUP = [
 		l: 16,
 		sup: 1,
 		sec: 3,
-		ord: 19,
+		ord: 18,
 		cols: ["打排球"],
 	},
 	{
@@ -1207,7 +1207,7 @@ export const B2_SUP = [
 		l: 16,
 		sup: 1,
 		sec: 3,
-		ord: 20,
+		ord: 19,
 		cols: ["打乒乓球"],
 	},
 	{
@@ -1254,7 +1254,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 6,
+		ord: 5,
 	},
 	{
 		h: "晴",
@@ -1337,7 +1337,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 8,
+		ord: 7,
 	},
 	{
 		h: "三国演义",
@@ -1383,7 +1383,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 14,
+		ord: 13,
 	},
 	{
 		h: "适合",
@@ -1394,7 +1394,7 @@ export const B2_SUP = [
 		l: 16,
 		sup: 1,
 		sec: 3,
-		ord: 21,
+		ord: 20,
 		cols: ["适合我", "非常适合"],
 	},
 	{
@@ -1442,7 +1442,7 @@ export const B2_SUP = [
 		l: 12,
 		sup: 1,
 		sec: 3,
-		ord: 15,
+		ord: 12,
 	},
 	{
 		h: "书架",
@@ -1569,7 +1569,7 @@ export const B2_SUP = [
 		l: 16,
 		sup: 1,
 		sec: 3,
-		ord: 12,
+		ord: 11,
 		cols: ["去体育场"],
 	},
 	{
@@ -1629,7 +1629,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 11,
+		ord: 10,
 	},
 	{
 		h: "玩具",
@@ -1711,7 +1711,7 @@ export const B2_SUP = [
 		l: 16,
 		sup: 1,
 		sec: 3,
-		ord: 17,
+		ord: 16,
 		cols: ["下次来", "下次再来"],
 	},
 	{
@@ -1746,7 +1746,7 @@ export const B2_SUP = [
 		l: 12,
 		sup: 1,
 		sec: 3,
-		ord: 16,
+		ord: 13,
 		cols: ["相反的方向"],
 	},
 	{
@@ -1863,7 +1863,7 @@ export const B2_SUP = [
 		l: 12,
 		sup: 1,
 		sec: 3,
-		ord: 9,
+		ord: 7,
 		cols: ["一只熊猫", "汽车品牌熊猫"],
 	},
 	{
@@ -1875,7 +1875,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 16,
+		ord: "14a",
 	},
 	{
 		h: "修理",
@@ -1886,7 +1886,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 15,
+		ord: 14,
 	},
 	{
 		h: "宣纸",
@@ -2013,7 +2013,7 @@ export const B2_SUP = [
 		l: 12,
 		sup: 1,
 		sec: 3,
-		ord: 13,
+		ord: 10,
 		cols: ["我家的邮递员"],
 	},
 	{
@@ -2025,7 +2025,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 20,
+		ord: 18,
 	},
 	{
 		h: "邮局",
@@ -2036,7 +2036,7 @@ export const B2_SUP = [
 		l: 12,
 		sup: 1,
 		sec: 3,
-		ord: 12,
+		ord: 9,
 		cols: ["一个邮局", "去邮局"],
 	},
 	{
@@ -2048,7 +2048,7 @@ export const B2_SUP = [
 		l: 12,
 		sup: 1,
 		sec: 3,
-		ord: 8,
+		ord: "6b",
 		cols: ["买邮票", "贴邮票"],
 	},
 	{
@@ -2154,7 +2154,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 22,
+		ord: 20,
 	},
 	{
 		h: "支",
@@ -2165,7 +2165,7 @@ export const B2_SUP = [
 		l: 16,
 		sup: 1,
 		sec: 3,
-		ord: 13,
+		ord: 12,
 		cols: ["一支队"],
 	},
 	{
@@ -2189,7 +2189,7 @@ export const B2_SUP = [
 		l: 13,
 		sup: 1,
 		sec: 3,
-		ord: 13,
+		ord: 12,
 	},
 	{
 		h: "准时",
@@ -3182,7 +3182,7 @@ export const B2_SUP = [
 		l: 12,
 		tags: ["npcr", "hsk3"],
 		sec: 3,
-		ord: 14,
+		ord: 11,
 		cols: ["一个故事", "听故事"],
 	},
 	{
@@ -3193,7 +3193,7 @@ export const B2_SUP = [
 		en: "direction",
 		l: 12,
 		sec: 3,
-		ord: 17,
+		ord: 14,
 		cols: ["相反的方向"],
 	},
 	{
@@ -3217,7 +3217,7 @@ export const B2_SUP = [
 		l: 13,
 		tags: ["npcr", "hsk3"],
 		sec: 3,
-		ord: 2,
+		ord: "1a",
 		cols: ["书包", "在包里"],
 	},
 	{
@@ -3229,7 +3229,7 @@ export const B2_SUP = [
 		l: 13,
 		tags: ["npcr", "hsk2"],
 		sec: 3,
-		ord: 24,
+		ord: 22,
 		cols: ["找人", "找房间", "找一找"],
 	},
 	{
@@ -3241,7 +3241,7 @@ export const B2_SUP = [
 		l: 13,
 		tags: ["npcr", "hsk1"],
 		sec: 3,
-		ord: 25,
+		ord: 23,
 		cols: ["一张桌子", "新桌子"],
 	},
 	{
@@ -3253,7 +3253,7 @@ export const B2_SUP = [
 		l: 13,
 		tags: ["npcr", "hsk1"],
 		sec: 3,
-		ord: 26,
+		ord: 24,
 		cols: ["便宜的椅子"],
 	},
 	{
@@ -3265,7 +3265,7 @@ export const B2_SUP = [
 		l: 13,
 		tags: ["npcr", "hsk3"],
 		sec: 3,
-		ord: 27,
+		ord: 25,
 		cols: ["搬家", "搬桌子"],
 	},
 	{
@@ -3415,7 +3415,7 @@ export const B2_SUP = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 3,
-		ord: 11,
+		ord: "10a",
 		cols: ["看报", "一张报"],
 	},
 	{

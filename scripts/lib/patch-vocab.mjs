@@ -54,7 +54,7 @@ export function scanArrayObjects(src, exportName) {
 	throw new Error(`array ${exportName} sin cierre ']'`);
 }
 
-// Inserta o actualiza campos planos de número o booleano ({sec:1, extra:true})
+// Inserta o actualiza campos planos de número, string o booleano ({sec:1, ord:"1a", extra:true})
 // en el objeto `index` del array `exportName`. Devuelve el nuevo fuente.
 export function upsertFields(src, exportName, index, fields) {
 	const { objects } = scanArrayObjects(src, exportName);
@@ -62,8 +62,9 @@ export function upsertFields(src, exportName, index, fields) {
 	if (!obj) throw new Error(`${exportName}[${index}] no existe`);
 	let text = src.slice(obj.start, obj.end);
 	const pending = [];
-	for (const [key, val] of Object.entries(fields)) {
-		const re = new RegExp(`(\\b${key}:\\s*)(?:\\d+|true|false)`, "u");
+	for (const [key, rawVal] of Object.entries(fields)) {
+		const val = typeof rawVal === "string" ? JSON.stringify(rawVal) : rawVal;
+		const re = new RegExp(`(\\b${key}:\\s*)(?:\\d+|true|false|"[^"]*")`, "u");
 		if (re.test(text)) text = text.replace(re, `$1${val}`);
 		else pending.push([key, val]);
 	}
@@ -118,7 +119,8 @@ export function formatVocabEntry(e) {
 	lines.push(`es: ${q(e.es)}`, `en: ${q(e.en)}`, `l: ${e.l}`);
 	if (e.tags?.length) lines.push(`tags: [${e.tags.map(q).join(", ")}]`);
 	if (e.sec != null) lines.push(`sec: ${e.sec}`);
-	if (e.ord != null) lines.push(`ord: ${e.ord}`);
+	if (e.ord != null)
+		lines.push(`ord: ${typeof e.ord === "string" ? q(e.ord) : e.ord}`);
 	if (e.extra) lines.push("extra: true");
 	return `{\n${lines.map((l) => `\t\t${l},`).join("\n")}\n\t}`;
 }

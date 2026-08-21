@@ -104,8 +104,13 @@ for (const [name, arr] of vocabSets) {
 		if (e.sec != null || e.ord != null) {
 			if (!(Number.isInteger(e.sec) && e.sec >= 1 && e.sec <= 4))
 				err(`${where}: sec inválido '${e.sec}' (1-4, junto con ord)`);
-			if (!(Number.isInteger(e.ord) && e.ord >= 1))
-				err(`${where}: ord inválido '${e.ord}' (entero ≥1, junto con sec)`);
+			const validOrd =
+				(typeof e.ord === "number" && Number.isInteger(e.ord) && e.ord >= 1) ||
+				(typeof e.ord === "string" && /^\d+[a-z]?$/u.test(e.ord));
+			if (!validOrd)
+				err(
+					`${where}: ord inválido '${e.ord}' (entero ≥1 o '1a', junto con sec)`,
+				);
 			const okey = `b${name[1]} L${e.l} sec${e.sec} ord${e.ord}`;
 			if (secOrd.has(okey))
 				err(`${where}: sec/ord duplicado (${okey}) con ${secOrd.get(okey)}`);

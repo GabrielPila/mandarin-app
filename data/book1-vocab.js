@@ -222,7 +222,7 @@ export const B1_VOCAB = [
 			"Please come in and sit down.",
 		],
 		sec: 1,
-		ord: 6,
+		ord: "5a",
 	},
 	{
 		h: "问",
@@ -238,7 +238,7 @@ export const B1_VOCAB = [
 			"Let me ask you a question.",
 		],
 		sec: 1,
-		ord: 7,
+		ord: "5b",
 	},
 	{
 		h: "什么",
@@ -250,7 +250,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["这是什么?", "¿Qué es esto?", "What is this?"],
 		sec: 1,
-		ord: 8,
+		ord: 6,
 	},
 	{
 		h: "名字",
@@ -266,7 +266,7 @@ export const B1_VOCAB = [
 			"His Chinese name is Lin Qiang.",
 		],
 		sec: 1,
-		ord: 9,
+		ord: 7,
 		cols: ["什么名字", "叫什么名字"],
 	},
 	{
@@ -283,7 +283,7 @@ export const B1_VOCAB = [
 			"My surname is Song; I'm Song Hua.",
 		],
 		sec: 1,
-		ord: 10,
+		ord: 8,
 		cols: ["姓宋", "姓马"],
 	},
 	{
@@ -296,7 +296,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["认识你很高兴。", "Encantado de conocerte.", "Nice to meet you."],
 		sec: 1,
-		ord: 11,
+		ord: 9,
 		cols: ["认识你", "认识马大为"],
 	},
 	{
@@ -309,7 +309,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["我很好。", "Estoy muy bien.", "I'm very well."],
 		sec: 1,
-		ord: 12,
+		ord: 10,
 		cols: ["很好"],
 	},
 	{
@@ -326,7 +326,7 @@ export const B1_VOCAB = [
 			"I'm especially glad you came.",
 		],
 		sec: 1,
-		ord: 13,
+		ord: 11,
 		cols: ["很高兴"],
 	},
 	{
@@ -343,7 +343,7 @@ export const B1_VOCAB = [
 			"I'm glad to meet you too.",
 		],
 		sec: 1,
-		ord: 14,
+		ord: 12,
 		cols: ["也很高兴", "也认识你"],
 	},
 	{
@@ -524,7 +524,7 @@ export const B1_VOCAB = [
 		l: 1,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 15,
+		ord: 13,
 	},
 	{
 		h: "宋华",
@@ -535,7 +535,7 @@ export const B1_VOCAB = [
 		l: 1,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 16,
+		ord: 14,
 	},
 	{
 		h: "丁力波",
@@ -596,7 +596,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["你很早。", "Llegas muy temprano.", "You're very early."],
 		sec: 1,
-		ord: 3,
+		ord: "2a",
 		cols: ["很早", "你早"],
 	},
 	{
@@ -609,7 +609,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["你们好!", "¡Hola a todos!", "Hello, everyone!"],
 		sec: 1,
-		ord: 4,
+		ord: 3,
 		cols: ["你们好"],
 	},
 	{
@@ -622,7 +622,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["我们都是学生。", "Todos somos estudiantes.", "We are all students."],
 		sec: 1,
-		ord: 5,
+		ord: "3a",
 		cols: ["我们", "他们"],
 	},
 	{
@@ -635,7 +635,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["这是马大为。", "Este es Ma Dawei.", "This is Ma Dawei."],
 		sec: 1,
-		ord: 6,
+		ord: 4,
 	},
 	{
 		h: "是",
@@ -647,7 +647,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["我是美国人。", "Soy estadounidense.", "I am American."],
 		sec: 1,
-		ord: 7,
+		ord: 5,
 		cols: ["这是宋华"],
 	},
 	{
@@ -660,7 +660,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["他是我朋友。", "Él es mi amigo.", "He is my friend."],
 		sec: 1,
-		ord: 8,
+		ord: 6,
 		cols: ["我朋友", "你朋友"],
 	},
 	{
@@ -677,7 +677,7 @@ export const B1_VOCAB = [
 			"He just arrived in Beijing.",
 		],
 		sec: 1,
-		ord: 9,
+		ord: 7,
 		cols: ["刚认识"],
 	},
 	{
@@ -694,7 +694,7 @@ export const B1_VOCAB = [
 			"We can arrive at twelve.",
 		],
 		sec: 1,
-		ord: 10,
+		ord: 8,
 		cols: ["刚到"],
 	},
 	{
@@ -711,7 +711,7 @@ export const B1_VOCAB = [
 			"Hello! What's your surname?",
 		],
 		sec: 1,
-		ord: 11,
+		ord: 9,
 		cols: ["您好"],
 	},
 	{
@@ -728,7 +728,7 @@ export const B1_VOCAB = [
 			"Teacher, may I ask your surname?",
 		],
 		sec: 1,
-		ord: 12,
+		ord: 10,
 		cols: ["您贵姓"],
 	},
 	{
@@ -741,7 +741,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["你是哪国人?", "¿De qué país eres?", "Which country are you from?"],
 		sec: 1,
-		ord: 13,
+		ord: 11,
 	},
 	{
 		h: "国",
@@ -757,7 +757,7 @@ export const B1_VOCAB = [
 			"Are you going back home this winter?",
 		],
 		sec: 1,
-		ord: 14,
+		ord: 12,
 	},
 	{
 		h: "人",
@@ -773,7 +773,7 @@ export const B1_VOCAB = [
 			"My mom is from Beijing.",
 		],
 		sec: 1,
-		ord: 15,
+		ord: 13,
 		cols: ["哪国人"],
 	},
 	{
@@ -790,7 +790,7 @@ export const B1_VOCAB = [
 			"I also study Chinese.",
 		],
 		sec: 1,
-		ord: 16,
+		ord: 14,
 		cols: ["学习什么"],
 	},
 	{
@@ -803,7 +803,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["我学英语。", "Estudio inglés.", "I study English."],
 		sec: 1,
-		ord: 17,
+		ord: "14a",
 	},
 	{
 		h: "汉语",
@@ -819,7 +819,7 @@ export const B1_VOCAB = [
 			"Your Chinese is really good.",
 		],
 		sec: 1,
-		ord: 18,
+		ord: 15,
 		cols: ["学习汉语", "刚学汉语"],
 	},
 	{
@@ -832,7 +832,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["老师, 再见!", "¡Adiós, profesor!", "Goodbye, teacher!"],
 		sec: 1,
-		ord: 19,
+		ord: 16,
 	},
 	{
 		h: "陈",
@@ -843,7 +843,7 @@ export const B1_VOCAB = [
 		l: 2,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 20,
+		ord: 17,
 	},
 	{
 		h: "北京",
@@ -854,7 +854,7 @@ export const B1_VOCAB = [
 		l: 2,
 		tags: ["npcr", "hsk1"],
 		sec: 1,
-		ord: 21,
+		ord: 18,
 	},
 	{
 		h: "美国",
@@ -865,7 +865,7 @@ export const B1_VOCAB = [
 		l: 2,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 22,
+		ord: 19,
 	},
 	{
 		h: "点心",
@@ -910,7 +910,7 @@ export const B1_VOCAB = [
 			"What do Beijingers like to eat?",
 		],
 		sec: 2,
-		ord: 3,
+		ord: "2a",
 		cols: ["吃点心"],
 	},
 	{
@@ -927,7 +927,7 @@ export const B1_VOCAB = [
 			"My dad is from Shanghai.",
 		],
 		sec: 2,
-		ord: 4,
+		ord: 3,
 		cols: ["我爸爸", "你爸爸", "爸爸很忙"],
 	},
 	{
@@ -944,7 +944,7 @@ export const B1_VOCAB = [
 			"He likes eating snacks.",
 		],
 		sec: 2,
-		ord: 5,
+		ord: 4,
 		cols: ["喜欢点心", "喜欢吃点心", "喜欢学汉语"],
 	},
 	{
@@ -961,7 +961,7 @@ export const B1_VOCAB = [
 			"I'll buy strawberries and apples.",
 		],
 		sec: 2,
-		ord: 6,
+		ord: 5,
 		cols: ["我和你"],
 	},
 	{
@@ -974,7 +974,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["他喜欢吃米饭。", "A él le gusta el arroz.", "He likes rice."],
 		sec: 2,
-		ord: 7,
+		ord: 6,
 		cols: ["米饭和点心", "喜欢吃米饭"],
 	},
 	{
@@ -987,7 +987,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["我们一起吃饭吧。", "Comamos juntos.", "Let's eat together."],
 		sec: 2,
-		ord: 8,
+		ord: "6a",
 		cols: ["吃饭"],
 	},
 	{
@@ -1000,7 +1000,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["我妈妈是老师。", "Mi mamá es profesora.", "My mom is a teacher."],
 		sec: 2,
-		ord: 9,
+		ord: 7,
 		cols: ["我妈妈", "妈妈喜欢"],
 	},
 	{
@@ -1017,7 +1017,7 @@ export const B1_VOCAB = [
 			"She likes noodles.",
 		],
 		sec: 2,
-		ord: 10,
+		ord: 8,
 		cols: ["她朋友", "她妈妈"],
 	},
 	{
@@ -1034,7 +1034,7 @@ export const B1_VOCAB = [
 			"Mom likes noodles.",
 		],
 		sec: 2,
-		ord: 11,
+		ord: 9,
 		cols: ["吃面条儿", "不喜欢吃面条儿", "面条儿很好吃"],
 	},
 	{
@@ -1051,7 +1051,7 @@ export const B1_VOCAB = [
 			"This isn't jiaozi, it's baozi.",
 		],
 		sec: 2,
-		ord: 12,
+		ord: 10,
 		cols: ["不吃饺子", "喜欢吃饺子", "饺子很好吃"],
 	},
 	{
@@ -1068,7 +1068,7 @@ export const B1_VOCAB = [
 			"Baozi are big; jiaozi are small.",
 		],
 		sec: 2,
-		ord: 13,
+		ord: 11,
 		cols: ["吃包子", "不喜欢吃包子", "包子很好吃"],
 	},
 	{
@@ -1085,7 +1085,7 @@ export const B1_VOCAB = [
 			"Look, those are jiaozi.",
 		],
 		sec: 2,
-		ord: 16,
+		ord: 14,
 		cols: ["你看", "看什么"],
 	},
 	{
@@ -1102,7 +1102,7 @@ export const B1_VOCAB = [
 			"I want jiaozi and baozi too.",
 		],
 		sec: 2,
-		ord: 19,
+		ord: 17,
 		cols: ["要包子", "不要饺子", "我也要"],
 	},
 	{
@@ -1114,7 +1114,7 @@ export const B1_VOCAB = [
 		l: 2,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 20,
+		ord: 18,
 	},
 	{
 		h: "王小云",
@@ -1125,7 +1125,7 @@ export const B1_VOCAB = [
 		l: 2,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 21,
+		ord: 19,
 	},
 	{
 		h: "都",
@@ -1137,7 +1137,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["他们都很好。", "Todos están bien.", "They are all fine."],
 		sec: 2,
-		ord: 18,
+		ord: 16,
 		cols: ["都很好", "都很好吃"],
 	},
 	{
@@ -1154,7 +1154,7 @@ export const B1_VOCAB = [
 			"The library is very big.",
 		],
 		sec: 2,
-		ord: 14,
+		ord: 12,
 		cols: ["大人", "大包子", "很大"],
 	},
 	{
@@ -1171,7 +1171,7 @@ export const B1_VOCAB = [
 			"This street is really small.",
 		],
 		sec: 2,
-		ord: 15,
+		ord: 13,
 		cols: ["小点心", "小饺子", "很小"],
 	},
 	// ---- Lección 3 ----
@@ -1495,7 +1495,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["我身体没问题。", "Mi salud no tiene problema.", "My health is fine."],
 		sec: 1,
-		ord: 20,
+		ord: "19a",
 		cols: ["没有", "没有朋友", "没有人"],
 	},
 	{
@@ -1508,7 +1508,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["贝贝是我的小狗。", "Beibei es mi perrito.", "Beibei is my puppy."],
 		sec: 1,
-		ord: 21,
+		ord: 20,
 		cols: ["小狗", "我的小狗"],
 	},
 	{
@@ -1520,7 +1520,7 @@ export const B1_VOCAB = [
 		l: 3,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 22,
+		ord: 21,
 	},
 	{
 		h: "真",
@@ -1639,7 +1639,7 @@ export const B1_VOCAB = [
 			"Our class has many girls.",
 		],
 		sec: 2,
-		ord: 8,
+		ord: "7a",
 	},
 	{
 		h: "今年",
@@ -1655,7 +1655,7 @@ export const B1_VOCAB = [
 			"How old is your brother this year?",
 		],
 		sec: 2,
-		ord: 9,
+		ord: 8,
 		cols: ["今年很忙"],
 	},
 	{
@@ -1668,7 +1668,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["他一九八八年出生。", "Él nació en 1988.", "He was born in 1988."],
 		sec: 2,
-		ord: 10,
+		ord: "8a",
 		cols: ["2016年", "2020年"],
 	},
 	{
@@ -1681,7 +1681,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["她今年五岁。", "Ella tiene cinco años.", "She is five years old."],
 		sec: 2,
-		ord: 11,
+		ord: 9,
 		cols: ["五岁", "九岁", "几岁"],
 	},
 	{
@@ -1698,7 +1698,7 @@ export const B1_VOCAB = [
 			"The weather is great today!",
 		],
 		sec: 2,
-		ord: 12,
+		ord: 10,
 	},
 	{
 		h: "天",
@@ -1714,7 +1714,7 @@ export const B1_VOCAB = [
 			"That day is also my brother's birthday.",
 		],
 		sec: 2,
-		ord: 13,
+		ord: "10a",
 		cols: ["一天", "两天"],
 	},
 	{
@@ -1731,7 +1731,7 @@ export const B1_VOCAB = [
 			"She has piano class today.",
 		],
 		sec: 2,
-		ord: 14,
+		ord: 11,
 		cols: ["学钢琴"],
 	},
 	{
@@ -1748,7 +1748,7 @@ export const B1_VOCAB = [
 			"I have many classes tomorrow.",
 		],
 		sec: 2,
-		ord: 15,
+		ord: 12,
 		cols: ["钢琴课", "汉语课", "没有课"],
 	},
 	{
@@ -1765,7 +1765,7 @@ export const B1_VOCAB = [
 			"Chinese kids are so busy!",
 		],
 		sec: 2,
-		ord: 16,
+		ord: 13,
 		cols: ["中国孩子", "美国孩子", "一个孩子"],
 	},
 	{
@@ -1778,7 +1778,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk3"],
 		ex: ["是啊, 现在是秋天了。", "Sí, ya es otoño.", "Yes, it's autumn now."],
 		sec: 2,
-		ord: 17,
+		ord: 14,
 	},
 	{
 		h: "晚上",
@@ -1794,7 +1794,7 @@ export const B1_VOCAB = [
 			"There's a good movie tomorrow night.",
 		],
 		sec: 2,
-		ord: 18,
+		ord: 15,
 		cols: ["晚上工作", "晚上有课"],
 	},
 	{
@@ -1807,7 +1807,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["现在不晚。", "Ahora no es tarde.", "It's not late now."],
 		sec: 2,
-		ord: 19,
+		ord: "15a",
 		cols: ["很晚", "不晚"],
 	},
 	{
@@ -1824,7 +1824,7 @@ export const B1_VOCAB = [
 			"She often teaches us English.",
 		],
 		sec: 2,
-		ord: 20,
+		ord: 16,
 		cols: ["学习英语", "英语课"],
 	},
 	{
@@ -1836,7 +1836,7 @@ export const B1_VOCAB = [
 		l: 3,
 		tags: ["npcr", "hsk1"],
 		sec: 2,
-		ord: 21,
+		ord: 17,
 	},
 	{
 		h: "陆雨平",
@@ -1847,7 +1847,7 @@ export const B1_VOCAB = [
 		l: 3,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 22,
+		ord: 18,
 	},
 	// ---- Lección 4 ----
 	{
@@ -1946,7 +1946,7 @@ export const B1_VOCAB = [
 			"Come again next Monday.",
 		],
 		sec: 1,
-		ord: 6,
+		ord: "5a",
 	},
 	{
 		h: "半",
@@ -1962,7 +1962,7 @@ export const B1_VOCAB = [
 			"There's grammar class at eight thirty.",
 		],
 		sec: 1,
-		ord: 7,
+		ord: 6,
 		cols: ["八点半", "半个"],
 	},
 	{
@@ -1979,7 +1979,7 @@ export const B1_VOCAB = [
 			"I often ask them grammar questions.",
 		],
 		sec: 1,
-		ord: 8,
+		ord: 7,
 		cols: ["学习语法", "语法课"],
 	},
 	{
@@ -1996,7 +1996,7 @@ export const B1_VOCAB = [
 			"They teach me to write characters.",
 		],
 		sec: 1,
-		ord: 9,
+		ord: 8,
 		cols: ["学习汉字", "汉字课"],
 	},
 	{
@@ -2013,7 +2013,7 @@ export const B1_VOCAB = [
 			"Shall we go now or in the afternoon?",
 		],
 		sec: 1,
-		ord: 10,
+		ord: 9,
 		cols: ["今天下午", "明天下午", "下午没有课"],
 	},
 	{
@@ -2030,7 +2030,7 @@ export const B1_VOCAB = [
 			"Come back next Monday.",
 		],
 		sec: 1,
-		ord: 11,
+		ord: "9a",
 	},
 	{
 		h: "刻",
@@ -2046,7 +2046,7 @@ export const B1_VOCAB = [
 			"There's speaking class at a quarter past two.",
 		],
 		sec: 1,
-		ord: 12,
+		ord: 10,
 		cols: ["两点一刻", "七点三刻"],
 	},
 	{
@@ -2063,7 +2063,7 @@ export const B1_VOCAB = [
 			"Let's practice speaking together.",
 		],
 		sec: 1,
-		ord: 13,
+		ord: 11,
 		cols: ["汉语口语", "口语课"],
 	},
 	{
@@ -2076,7 +2076,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk2"],
 		ex: ["你累不累?", "¿Estás cansada?", "Are you tired?"],
 		sec: 1,
-		ord: 14,
+		ord: 12,
 		cols: ["很累", "真累", "特别累"],
 	},
 	{
@@ -2093,7 +2093,7 @@ export const B1_VOCAB = [
 			"By the way, are you free tomorrow night?",
 		],
 		sec: 1,
-		ord: 15,
+		ord: 13,
 	},
 	{
 		h: "对",
@@ -2109,7 +2109,7 @@ export const B1_VOCAB = [
 			"Right, I'm hungry too.",
 		],
 		sec: 1,
-		ord: 16,
+		ord: "13a",
 	},
 	{
 		h: "时间",
@@ -2125,7 +2125,7 @@ export const B1_VOCAB = [
 			"Do you have time on Sunday?",
 		],
 		sec: 1,
-		ord: 17,
+		ord: 14,
 		cols: ["有时间", "没有时间", "有没有时间"],
 	},
 	{
@@ -2142,7 +2142,7 @@ export const B1_VOCAB = [
 			"There's a good movie tomorrow night.",
 		],
 		sec: 1,
-		ord: 18,
+		ord: 15,
 		cols: ["看电影"],
 	},
 	{
@@ -2155,7 +2155,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk2"],
 		ex: ["我们一起去吧。", "Vamos juntos.", "Let's go together."],
 		sec: 1,
-		ord: 19,
+		ord: 16,
 		cols: ["一起学习", "一起工作", "一起看电影"],
 	},
 	{
@@ -2168,7 +2168,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["你去哪儿?", "¿Adónde vas?", "Where are you going?"],
 		sec: 1,
-		ord: 20,
+		ord: 17,
 		cols: ["一起去", "去上海", "刚去美国", "去他们家"],
 	},
 	{
@@ -2181,7 +2181,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk2"],
 		ex: ["咱们打车去吧。", "Vayamos en taxi.", "Let's take a taxi."],
 		sec: 1,
-		ord: 21,
+		ord: 18,
 		cols: ["一起去吧", "坐吧"],
 	},
 	{
@@ -2198,7 +2198,7 @@ export const B1_VOCAB = [
 			"I'm afraid that won't work.",
 		],
 		sec: 1,
-		ord: 22,
+		ord: 19,
 	},
 	{
 		h: "行",
@@ -2210,7 +2210,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk4"],
 		ex: ["恐怕不行。", "Me temo que no.", "I'm afraid not."],
 		sec: 1,
-		ord: 23,
+		ord: 20,
 		cols: ["不行"],
 	},
 	{
@@ -2227,7 +2227,7 @@ export const B1_VOCAB = [
 			"They help me practice speaking.",
 		],
 		sec: 1,
-		ord: 24,
+		ord: 21,
 		cols: ["练习口语", "练习汉字", "做练习"],
 	},
 	{
@@ -2367,7 +2367,7 @@ export const B1_VOCAB = [
 			"I like listening to Chinese songs.",
 		],
 		sec: 2,
-		ord: 9,
+		ord: "8a",
 		cols: ["听汉语", "练习听"],
 	},
 	{
@@ -2384,7 +2384,7 @@ export const B1_VOCAB = [
 			"My whole family speaks Chinese.",
 		],
 		sec: 2,
-		ord: 10,
+		ord: "8b",
 		cols: ["说汉语", "不说英语"],
 	},
 	{
@@ -2401,7 +2401,7 @@ export const B1_VOCAB = [
 			"There are twenty-six girls.",
 		],
 		sec: 2,
-		ord: 11,
+		ord: 9,
 		cols: ["六个女生", "女生多", "你们班的女生"],
 	},
 	{
@@ -2418,7 +2418,7 @@ export const B1_VOCAB = [
 			"Our class only has four boys.",
 		],
 		sec: 2,
-		ord: 12,
+		ord: 10,
 		cols: ["十二个男生", "男生多", "我们班的男生"],
 	},
 	{
@@ -2435,7 +2435,7 @@ export const B1_VOCAB = [
 			"Boys all like cars.",
 		],
 		sec: 2,
-		ord: 13,
+		ord: "10a",
 		cols: ["男老师", "男孩子"],
 	},
 	{
@@ -2452,7 +2452,7 @@ export const B1_VOCAB = [
 			"Your class has few boys.",
 		],
 		sec: 2,
-		ord: 14,
+		ord: 11,
 		cols: ["很少", "不少", "男生少"],
 	},
 	{
@@ -2465,7 +2465,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk3"],
 		ex: ["我只会一点儿。", "Solo sé un poco.", "I only know a little."],
 		sec: 2,
-		ord: 15,
+		ord: 12,
 		cols: ["只有一个", "只说汉语", "只喜欢妈妈"],
 	},
 	{
@@ -2482,7 +2482,7 @@ export const B1_VOCAB = [
 			"How many people are in your class altogether?",
 		],
 		sec: 2,
-		ord: 16,
+		ord: 13,
 		cols: ["多少人", "多少个汉字", "多少张照片"],
 	},
 	{
@@ -2499,7 +2499,7 @@ export const B1_VOCAB = [
 			"Your class is really interesting.",
 		],
 		sec: 2,
-		ord: 17,
+		ord: 14,
 		cols: ["很有意思", "没有意思"],
 	},
 	{
@@ -2516,7 +2516,7 @@ export const B1_VOCAB = [
 			"What does this character mean?",
 		],
 		sec: 2,
-		ord: 18,
+		ord: "14a",
 		cols: ["这个汉字的意思", "什么意思"],
 	},
 	{
@@ -2533,7 +2533,7 @@ export const B1_VOCAB = [
 			"Our class has eighteen students in all.",
 		],
 		sec: 2,
-		ord: 19,
+		ord: 15,
 		cols: ["中国学生", "很多学生", "女学生"],
 	},
 	{
@@ -2546,7 +2546,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["你来我们班吧。", "Ven a nuestra clase.", "Come to our class."],
 		sec: 2,
-		ord: 20,
+		ord: 16,
 		cols: ["来中国", "刚来北京", "来学校", "明天晚上来"],
 	},
 	{
@@ -2559,7 +2559,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk4"],
 		ex: ["你学习什么专业?", "¿Qué carrera estudias?", "What's your major?"],
 		sec: 2,
-		ord: 21,
+		ord: 17,
 		cols: ["什么专业", "汉语专业", "多少个专业"],
 	},
 	{
@@ -2572,7 +2572,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk4"],
 		ex: ["好主意!", "¡Buena idea!", "Good idea!"],
 		sec: 2,
-		ord: 22,
+		ord: 18,
 		cols: ["好主意", "有一个主意"],
 	},
 	// ---- Lección 5 ----
@@ -2606,7 +2606,7 @@ export const B1_VOCAB = [
 			"What date is this Sunday?",
 		],
 		sec: 1,
-		ord: 2,
+		ord: "1a",
 		cols: ["星期一", "星期几", "一个星期"],
 	},
 	{
@@ -2619,7 +2619,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["什么事儿?", "¿Qué pasa?", "What's the matter?"],
 		sec: 1,
-		ord: 3,
+		ord: 2,
 		cols: ["什么事儿", "有事儿吗", "好事儿"],
 	},
 	{
@@ -2632,7 +2632,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk2"],
 		ex: ["祝你生日快乐!", "¡Feliz cumpleaños!", "Happy birthday!"],
 		sec: 1,
-		ord: 4,
+		ord: 3,
 		cols: ["他的生日", "二十岁生日"],
 	},
 	{
@@ -2649,7 +2649,7 @@ export const B1_VOCAB = [
 			"October 25th is a Sunday.",
 		],
 		sec: 1,
-		ord: 5,
+		ord: "3a",
 		cols: ["一月一日"],
 	},
 	{
@@ -2666,7 +2666,7 @@ export const B1_VOCAB = [
 			"We're having a birthday party.",
 		],
 		sec: 1,
-		ord: 6,
+		ord: 4,
 		cols: ["生日聚会", "有一个聚会"],
 	},
 	{
@@ -2683,7 +2683,7 @@ export const B1_VOCAB = [
 			"Everyone sings and dances together.",
 		],
 		sec: 1,
-		ord: 7,
+		ord: 5,
 		cols: ["大家好", "我们大家", "大家一起去"],
 	},
 	{
@@ -2696,7 +2696,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk2"],
 		ex: ["我们一起唱歌吧。", "Cantemos juntos.", "Let's sing together."],
 		sec: 1,
-		ord: 8,
+		ord: 6,
 		cols: ["喜欢唱歌"],
 	},
 	{
@@ -2713,7 +2713,7 @@ export const B1_VOCAB = [
 			"She sings the birthday song.",
 		],
 		sec: 1,
-		ord: 9,
+		ord: "6a",
 		cols: ["唱中国歌", "唱生日歌"],
 	},
 	{
@@ -2726,7 +2726,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["我喜欢这个歌。", "Me gusta esta canción.", "I like this song."],
 		sec: 1,
-		ord: 10,
+		ord: "6b",
 	},
 	{
 		h: "跳舞",
@@ -2742,7 +2742,7 @@ export const B1_VOCAB = [
 			"Are you coming? Everyone dances together.",
 		],
 		sec: 1,
-		ord: 11,
+		ord: 7,
 		cols: ["不喜欢跳舞", "跳个舞"],
 	},
 	{
@@ -2755,7 +2755,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["她跳个舞。", "Ella baila un baile.", "She dances a dance."],
 		sec: 1,
-		ord: 12,
+		ord: "7a",
 	},
 	{
 		h: "舞",
@@ -2771,7 +2771,7 @@ export const B1_VOCAB = [
 			"She doesn't like dancing.",
 		],
 		sec: 1,
-		ord: 13,
+		ord: "7b",
 	},
 	{
 		h: "参加",
@@ -2783,7 +2783,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk3"],
 		ex: ["你参加不参加?", "¿Vas a participar?", "Are you taking part?"],
 		sec: 1,
-		ord: 14,
+		ord: 8,
 		cols: ["参加生日聚会", "参加活动"],
 	},
 	{
@@ -2796,7 +2796,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk2"],
 		ex: ["十月二十五号。", "El 25 de octubre.", "October 25th."],
 		sec: 1,
-		ord: 15,
+		ord: 9,
 		cols: ["15号", "325号", "小号", "大号"],
 	},
 	{
@@ -2813,7 +2813,7 @@ export const B1_VOCAB = [
 			"October 25th is my birthday.",
 		],
 		sec: 1,
-		ord: 16,
+		ord: 10,
 		cols: ["十二个月", "十二月", "二月四日", "八月二十二号"],
 	},
 	{
@@ -2830,7 +2830,7 @@ export const B1_VOCAB = [
 			"I'm really sorry, I can't come.",
 		],
 		sec: 1,
-		ord: 17,
+		ord: 11,
 	},
 	{
 		h: "可惜",
@@ -2842,7 +2842,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk4"],
 		ex: ["真可惜!", "¡Qué lástima!", "What a pity!"],
 		sec: 1,
-		ord: 18,
+		ord: 12,
 		cols: ["很可惜"],
 	},
 	{
@@ -2859,7 +2859,7 @@ export const B1_VOCAB = [
 			"What gift will you give your brother?",
 		],
 		sec: 1,
-		ord: 19,
+		ord: 13,
 		cols: ["送饺子", "送照片"],
 	},
 	{
@@ -2876,7 +2876,7 @@ export const B1_VOCAB = [
 			"This is your birthday present.",
 		],
 		sec: 1,
-		ord: 20,
+		ord: 14,
 		cols: ["生日礼物", "送礼物"],
 	},
 	{
@@ -2893,7 +2893,7 @@ export const B1_VOCAB = [
 			"I'm giving him a birthday cake.",
 		],
 		sec: 1,
-		ord: 21,
+		ord: 15,
 		cols: ["一个蛋糕", "吃蛋糕", "送蛋糕", "生日蛋糕"],
 	},
 	{
@@ -2906,7 +2906,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["两盒巧克力。", "Dos cajas de chocolate.", "Two boxes of chocolates."],
 		sec: 1,
-		ord: 22,
+		ord: 16,
 		cols: ["一盒点心", "一盒咖啡", "一盒茶"],
 	},
 	{
@@ -2923,7 +2923,7 @@ export const B1_VOCAB = [
 			"I'll buy a box of chocolates.",
 		],
 		sec: 1,
-		ord: 23,
+		ord: 17,
 		cols: ["送一盒巧克力", "吃巧克力"],
 	},
 	{
@@ -2940,7 +2940,7 @@ export const B1_VOCAB = [
 			"How old is your brother?",
 		],
 		sec: 1,
-		ord: 24,
+		ord: 18,
 		cols: ["他今年多大"],
 	},
 	{
@@ -2953,7 +2953,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk4"],
 		ex: ["他一九八八年出生。", "Él nació en 1988.", "He was born in 1988."],
 		sec: 1,
-		ord: 25,
+		ord: 19,
 		cols: ["1988年出生"],
 	},
 	{
@@ -2970,7 +2970,7 @@ export const B1_VOCAB = [
 			"My friend was born in the year of the dragon.",
 		],
 		sec: 1,
-		ord: 26,
+		ord: 20,
 		cols: ["属狗", "属什么"],
 	},
 	{
@@ -2983,7 +2983,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk5"],
 		ex: ["他属龙。", "Él es del año del dragón.", "He's a dragon (zodiac)."],
 		sec: 1,
-		ord: 27,
+		ord: 21,
 		cols: ["属龙", "龙年"],
 	},
 	{
@@ -3000,7 +3000,7 @@ export const B1_VOCAB = [
 			"His Chinese name is Lin Qiang.",
 		],
 		sec: 1,
-		ord: 28,
+		ord: 22,
 		cols: ["说中文", "学中文", "中文名字"],
 	},
 	{
@@ -3017,7 +3017,7 @@ export const B1_VOCAB = [
 			"He IS my brother!",
 		],
 		sec: 1,
-		ord: 29,
+		ord: 23,
 		cols: ["就是他", "就是我哥哥", "就在今天"],
 	},
 	{
@@ -3072,7 +3072,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["别客气。", "No seas tan formal.", "Don't be so polite."],
 		sec: 2,
-		ord: 4,
+		ord: "3a",
 		cols: ["很客气"],
 	},
 	{
@@ -3089,7 +3089,7 @@ export const B1_VOCAB = [
 			"Merry Christmas to you!",
 		],
 		sec: 2,
-		ord: 5,
+		ord: 4,
 		cols: ["祝你生日快乐"],
 	},
 	{
@@ -3102,7 +3102,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk2"],
 		ex: ["我来介绍一下。", "Déjame presentaros.", "Let me introduce you."],
 		sec: 2,
-		ord: 6,
+		ord: 5,
 		cols: ["介绍朋友", "介绍老师"],
 	},
 	{
@@ -3115,7 +3115,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["您可以尝一下。", "Puede probarlo.", "You can have a taste."],
 		sec: 2,
-		ord: 7,
+		ord: 6,
 		cols: ["认识一下", "看一下", "问一下"],
 	},
 	{
@@ -3132,7 +3132,7 @@ export const B1_VOCAB = [
 			"She often teaches us English.",
 		],
 		sec: 2,
-		ord: 8,
+		ord: 7,
 		cols: ["常常说中文"],
 	},
 	{
@@ -3149,7 +3149,7 @@ export const B1_VOCAB = [
 			"You should often go home to see grandma.",
 		],
 		sec: 2,
-		ord: 9,
+		ord: "7a",
 	},
 	{
 		h: "教",
@@ -3165,7 +3165,7 @@ export const B1_VOCAB = [
 			"I can teach you to swim.",
 		],
 		sec: 2,
-		ord: 10,
+		ord: 8,
 		cols: ["教汉语", "教钢琴", "教我"],
 	},
 	{
@@ -3182,7 +3182,7 @@ export const B1_VOCAB = [
 			"Soon we'll all eat longevity noodles.",
 		],
 		sec: 2,
-		ord: 13,
+		ord: 11,
 		cols: ["吃寿面", "做寿面"],
 	},
 	{
@@ -3199,7 +3199,7 @@ export const B1_VOCAB = [
 			"We'll eat the noodles in a bit.",
 		],
 		sec: 2,
-		ord: 14,
+		ord: 12,
 	},
 	{
 		h: "咱们",
@@ -3211,7 +3211,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk4"],
 		ex: ["来, 咱们干杯!", "¡Vamos, brindemos!", "Come on, let's toast!"],
 		sec: 2,
-		ord: 15,
+		ord: 13,
 	},
 	{
 		h: "干杯",
@@ -3227,7 +3227,7 @@ export const B1_VOCAB = [
 			"Cheers! Happy birthday!",
 		],
 		sec: 2,
-		ord: 16,
+		ord: 14,
 		cols: ["咱们干杯"],
 	},
 	{
@@ -3244,7 +3244,7 @@ export const B1_VOCAB = [
 			"Yesterday Xiaoyun even taught me to make noodles.",
 		],
 		sec: 2,
-		ord: 12,
+		ord: 10,
 		cols: ["昨天下午", "昨天晚上八点"],
 	},
 	{
@@ -3261,7 +3261,7 @@ export const B1_VOCAB = [
 			"They teach me to write characters.",
 		],
 		sec: 2,
-		ord: 11,
+		ord: 9,
 		cols: ["写汉字", "写名字"],
 	},
 	{
@@ -3273,7 +3273,7 @@ export const B1_VOCAB = [
 		l: 5,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 30,
+		ord: 24,
 	},
 	{
 		h: "林强",
@@ -3284,7 +3284,7 @@ export const B1_VOCAB = [
 		l: 5,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 31,
+		ord: 25,
 	},
 	// ---- Lección 6 ----
 	{
@@ -3381,7 +3381,7 @@ export const B1_VOCAB = [
 			"The main gate is ahead.",
 		],
 		sec: 1,
-		ord: 6,
+		ord: "5a",
 		cols: ["大门"],
 	},
 	{
@@ -3398,7 +3398,7 @@ export const B1_VOCAB = [
 			"The dining hall is to the right of the gate.",
 		],
 		sec: 1,
-		ord: 7,
+		ord: 6,
 		cols: ["右边的同学", "在校门右边"],
 	},
 	{
@@ -3411,7 +3411,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["在右边。", "Está a la derecha.", "It's on the right."],
 		sec: 1,
-		ord: 8,
+		ord: "6a",
 	},
 	{
 		h: "边",
@@ -3427,7 +3427,7 @@ export const B1_VOCAB = [
 			"The library is north of the dining hall.",
 		],
 		sec: 1,
-		ord: 9,
+		ord: "6b",
 	},
 	{
 		h: "跟",
@@ -3439,7 +3439,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk3"],
 		ex: ["你跟我来。", "Ven conmigo.", "Come with me."],
 		sec: 1,
-		ord: 10,
+		ord: 7,
 		cols: ["跟老师学", "跟我来"],
 	},
 	{
@@ -3456,7 +3456,7 @@ export const B1_VOCAB = [
 			"Here's a map of the school.",
 		],
 		sec: 1,
-		ord: 11,
+		ord: 8,
 		cols: ["来这儿", "在这儿"],
 	},
 	{
@@ -3473,7 +3473,7 @@ export const B1_VOCAB = [
 			"Here's a map of the school.",
 		],
 		sec: 1,
-		ord: 12,
+		ord: 9,
 		cols: ["学校的地图", "北京地图", "看地图"],
 	},
 	{
@@ -3486,7 +3486,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk2"],
 		ex: ["我给你介绍一下。", "Te lo presento.", "Let me show you around."],
 		sec: 1,
-		ord: 13,
+		ord: 10,
 		cols: ["给你介绍一下", "给我们唱歌", "给我们上课"],
 	},
 	{
@@ -3503,7 +3503,7 @@ export const B1_VOCAB = [
 			"Next to the dining hall is the office building.",
 		],
 		sec: 1,
-		ord: 14,
+		ord: 11,
 		cols: ["旁边的同学", "在食堂旁边"],
 	},
 	{
@@ -3520,7 +3520,7 @@ export const B1_VOCAB = [
 			"The office building isn't very big.",
 		],
 		sec: 1,
-		ord: 15,
+		ord: 12,
 		cols: ["学校的办公楼", "去办公楼"],
 	},
 	{
@@ -3533,7 +3533,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["今天不办公。", "Hoy no hay oficina.", "No office work today."],
 		sec: 1,
-		ord: 16,
+		ord: "12a",
 		cols: ["今天不办公"],
 	},
 	{
@@ -3550,7 +3550,7 @@ export const B1_VOCAB = [
 			"The building on the right is the dorm.",
 		],
 		sec: 1,
-		ord: 17,
+		ord: "12b",
 		cols: ["二楼", "在五楼", "楼上", "楼下"],
 	},
 	{
@@ -3563,7 +3563,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk3"],
 		ex: ["图书馆大不大?", "¿Es grande la biblioteca?", "Is the library big?"],
 		sec: 1,
-		ord: 18,
+		ord: 13,
 		cols: ["去图书馆", "有图书馆", "图书馆右边"],
 	},
 	{
@@ -3580,7 +3580,7 @@ export const B1_VOCAB = [
 			"I'm going to the library to read.",
 		],
 		sec: 1,
-		ord: 19,
+		ord: "13a",
 		cols: ["看书"],
 	},
 	{
@@ -3597,7 +3597,7 @@ export const B1_VOCAB = [
 			"The library is north of the dining hall.",
 		],
 		sec: 1,
-		ord: 20,
+		ord: 14,
 		cols: ["北边的办公楼", "在学校北边"],
 	},
 	{
@@ -3614,7 +3614,7 @@ export const B1_VOCAB = [
 			"The north gate is there.",
 		],
 		sec: 1,
-		ord: 21,
+		ord: "14a",
 		cols: ["北门"],
 	},
 	{
@@ -3631,7 +3631,7 @@ export const B1_VOCAB = [
 			"West of the library is the gym.",
 		],
 		sec: 1,
-		ord: 22,
+		ord: 15,
 		cols: ["西边的食堂", "在图书馆西边"],
 	},
 	{
@@ -3648,7 +3648,7 @@ export const B1_VOCAB = [
 			"The west gate is small.",
 		],
 		sec: 1,
-		ord: 23,
+		ord: "15a",
 		cols: ["西门"],
 	},
 	{
@@ -3665,7 +3665,7 @@ export const B1_VOCAB = [
 			"West of the library is the gym.",
 		],
 		sec: 1,
-		ord: 24,
+		ord: 16,
 		cols: ["去体育馆", "北京体育馆", "体育馆的北边"],
 	},
 	{
@@ -3682,7 +3682,7 @@ export const B1_VOCAB = [
 			"I have PE class.",
 		],
 		sec: 1,
-		ord: 25,
+		ord: "16a",
 		cols: ["体育课", "学体育"],
 	},
 	{
@@ -3699,7 +3699,7 @@ export const B1_VOCAB = [
 			"Is there a bank on campus?",
 		],
 		sec: 1,
-		ord: 26,
+		ord: 17,
 		cols: ["在里边", "图书馆里边"],
 	},
 	{
@@ -3716,7 +3716,7 @@ export const B1_VOCAB = [
 			"My home is right in this hutong.",
 		],
 		sec: 1,
-		ord: 27,
+		ord: "17a",
 		cols: ["图书馆里", "学校里", "班里", "家里", "楼里"],
 	},
 	{
@@ -3733,7 +3733,7 @@ export const B1_VOCAB = [
 			"The bank is east of the library.",
 		],
 		sec: 1,
-		ord: 28,
+		ord: 18,
 		cols: ["去银行", "在银行", "有银行", "中国银行", "银行里"],
 	},
 	{
@@ -3750,7 +3750,7 @@ export const B1_VOCAB = [
 			"The classroom building is east of the dining hall.",
 		],
 		sec: 1,
-		ord: 29,
+		ord: 19,
 		cols: ["东边的体育馆", "在校门东边"],
 	},
 	{
@@ -3767,7 +3767,7 @@ export const B1_VOCAB = [
 			"The east gate is there.",
 		],
 		sec: 1,
-		ord: 30,
+		ord: "19a",
 		cols: ["东门"],
 	},
 	{
@@ -3784,7 +3784,7 @@ export const B1_VOCAB = [
 			"Our dorm building is here.",
 		],
 		sec: 1,
-		ord: 31,
+		ord: 20,
 		cols: ["回宿舍", "去宿舍", "学生宿舍", "女生宿舍", "宿舍里"],
 	},
 	{
@@ -3801,7 +3801,7 @@ export const B1_VOCAB = [
 			"Where is the classroom building?",
 		],
 		sec: 1,
-		ord: 32,
+		ord: 21,
 		cols: ["教学楼", "汉语教学"],
 	},
 	{
@@ -3818,7 +3818,7 @@ export const B1_VOCAB = [
 			"Let me first take a look at the classroom building.",
 		],
 		sec: 1,
-		ord: 33,
+		ord: 22,
 		cols: ["先去", "先看", "先说", "先做", "先学", "先问", "先认识"],
 	},
 	{
@@ -3942,7 +3942,7 @@ export const B1_VOCAB = [
 			"There are people in front of the door.",
 		],
 		sec: 2,
-		ord: 8,
+		ord: "7a",
 		cols: ["图书馆前", "门前"],
 	},
 	{
@@ -3959,7 +3959,7 @@ export const B1_VOCAB = [
 			"Is there a restaurant across the way?",
 		],
 		sec: 2,
-		ord: 9,
+		ord: 8,
 		cols: ["对面的大楼", "在我家对面"],
 	},
 	{
@@ -3976,7 +3976,7 @@ export const B1_VOCAB = [
 			"There's a very big restaurant.",
 		],
 		sec: 2,
-		ord: 10,
+		ord: 9,
 		cols: ["去饭馆", "饭馆里"],
 	},
 	{
@@ -3989,7 +3989,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk4"],
 		ex: ["你先过马路。", "Primero cruza la calle.", "First cross the road."],
 		sec: 2,
-		ord: 11,
+		ord: 10,
 	},
 	{
 		h: "马路",
@@ -4001,7 +4001,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["你先过马路。", "Primero cruza la calle.", "First cross the road."],
 		sec: 2,
-		ord: 12,
+		ord: 11,
 		cols: ["马路的对面", "过马路"],
 	},
 	{
@@ -4018,7 +4018,7 @@ export const B1_VOCAB = [
 			"First take bus 961.",
 		],
 		sec: 2,
-		ord: 13,
+		ord: "11a",
 		cols: ["大路", "小路"],
 	},
 	{
@@ -4035,7 +4035,7 @@ export const B1_VOCAB = [
 			"There's a hutong behind the restaurant.",
 		],
 		sec: 2,
-		ord: 14,
+		ord: 12,
 		cols: ["超市后边", "在饭馆后边"],
 	},
 	{
@@ -4052,7 +4052,7 @@ export const B1_VOCAB = [
 			"The back door is small.",
 		],
 		sec: 2,
-		ord: 15,
+		ord: "12a",
 		cols: ["后门"],
 	},
 	{
@@ -4069,7 +4069,7 @@ export const B1_VOCAB = [
 			"This street is really small.",
 		],
 		sec: 2,
-		ord: 16,
+		ord: 13,
 		cols: ["一条马路", "一条龙", "一条狗"],
 	},
 	{
@@ -4086,7 +4086,7 @@ export const B1_VOCAB = [
 			"This is an old Beijing hutong.",
 		],
 		sec: 2,
-		ord: 17,
+		ord: 14,
 		cols: ["北京的胡同", "一条胡同"],
 	},
 	{
@@ -4103,7 +4103,7 @@ export const B1_VOCAB = [
 			"Wait, what did you say?",
 		],
 		sec: 2,
-		ord: 18,
+		ord: 15,
 		cols: ["等人", "等他们", "等一下", "等一会儿"],
 	},
 	{
@@ -4120,7 +4120,7 @@ export const B1_VOCAB = [
 			"A hutong is a small street.",
 		],
 		sec: 2,
-		ord: 19,
+		ord: 16,
 		cols: ["一条街道", "街道的对面"],
 	},
 	{
@@ -4137,7 +4137,7 @@ export const B1_VOCAB = [
 			"This street is really small.",
 		],
 		sec: 2,
-		ord: 20,
+		ord: "16a",
 		cols: ["大街", "小街", "街上"],
 	},
 	{
@@ -4154,7 +4154,7 @@ export const B1_VOCAB = [
 			"This is old Beijing's hutong.",
 		],
 		sec: 2,
-		ord: 21,
+		ord: 17,
 		cols: ["老人", "老北京", "老上海"],
 	},
 	// ---- Lección 7 ----
@@ -4568,7 +4568,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk2"],
 		ex: ["三百九十九块。", "399 kuai.", "399 kuai."],
 		sec: 2,
-		ord: 5,
+		ord: 4,
 		cols: ["一百", "三百九十九", "五百八十七"],
 	},
 	{
@@ -4581,7 +4581,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk4"],
 		ex: ["我可以试一下吗?", "¿Puedo probármelo?", "Can I try it on?"],
 		sec: 2,
-		ord: 6,
+		ord: 5,
 		cols: ["试一下", "可以试一下"],
 	},
 	{
@@ -4594,7 +4594,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk3"],
 		ex: ["当然可以。", "Por supuesto que sí.", "Of course you can."],
 		sec: 2,
-		ord: 7,
+		ord: 6,
 		cols: ["当然可以", "当然想去", "当然喜欢", "当然参加"],
 	},
 	{
@@ -4611,7 +4611,7 @@ export const B1_VOCAB = [
 			"On the left there are large shirts.",
 		],
 		sec: 2,
-		ord: 8,
+		ord: 7,
 		cols: ["左边的同学", "在校门左边"],
 	},
 	{
@@ -4624,7 +4624,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["在左边。", "Está a la izquierda.", "It's on the left."],
 		sec: 2,
-		ord: 9,
+		ord: "7a",
 	},
 	{
 		h: "合适",
@@ -4636,7 +4636,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk4"],
 		ex: ["这件很合适。", "Esta me queda muy bien.", "This one fits well."],
 		sec: 2,
-		ord: 10,
+		ord: 8,
 		cols: ["很合适", "真合适", "不合适"],
 	},
 	{
@@ -4649,7 +4649,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk5"],
 		ex: ["有没有牛仔裤?", "¿Tienen vaqueros?", "Do you have jeans?"],
 		sec: 2,
-		ord: 11,
+		ord: 9,
 		cols: ["一条牛仔裤", "买牛仔裤"],
 	},
 	{
@@ -4666,7 +4666,7 @@ export const B1_VOCAB = [
 			"I also want to buy a down jacket.",
 		],
 		sec: 2,
-		ord: 12,
+		ord: 10,
 		cols: ["一件羽绒服", "买羽绒服"],
 	},
 	{
@@ -4679,7 +4679,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["我不喜欢黑色。", "No me gusta el negro.", "I don't like black."],
 		sec: 2,
-		ord: 13,
+		ord: 11,
 		cols: ["喜欢黑色", "黑色的衬衫"],
 	},
 	{
@@ -4696,7 +4696,7 @@ export const B1_VOCAB = [
 			"These black jeans are nice.",
 		],
 		sec: 2,
-		ord: 14,
+		ord: "11a",
 		cols: ["黑牛仔裤", "黑衬衫"],
 	},
 	{
@@ -4713,7 +4713,7 @@ export const B1_VOCAB = [
 			"Do you have green down jackets?",
 		],
 		sec: 2,
-		ord: 15,
+		ord: 12,
 		cols: ["喜欢绿色", "绿色的羽绒服"],
 	},
 	{
@@ -4730,7 +4730,7 @@ export const B1_VOCAB = [
 			"In spring the trees turn green.",
 		],
 		sec: 2,
-		ord: 16,
+		ord: "12a",
 		cols: ["绿衬衫"],
 	},
 	{
@@ -4743,7 +4743,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["这件不错。", "Esta está bastante bien.", "This one is pretty good."],
 		sec: 2,
-		ord: 17,
+		ord: 13,
 		cols: ["很不错", "真不错"],
 	},
 	{
@@ -4760,7 +4760,7 @@ export const B1_VOCAB = [
 			"Chinese medicine isn't bad.",
 		],
 		sec: 2,
-		ord: 18,
+		ord: "13a",
 	},
 	{
 		h: "些",
@@ -4776,7 +4776,7 @@ export const B1_VOCAB = [
 			"How much for these clothes altogether?",
 		],
 		sec: 2,
-		ord: 19,
+		ord: 14,
 		cols: ["一些学生", "这些苹果"],
 	},
 	{
@@ -4789,7 +4789,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["你要多穿点儿衣服。", "Ponte más ropa.", "Put on more clothes."],
 		sec: 2,
-		ord: 20,
+		ord: 15,
 		cols: ["这些衣服", "一件衣服", "买衣服"],
 	},
 	{
@@ -4806,7 +4806,7 @@ export const B1_VOCAB = [
 			"2,191 kuai in total.",
 		],
 		sec: 2,
-		ord: 21,
+		ord: 16,
 		cols: ["一千", "一千二百六十五", "两千二百五十一"],
 	},
 	{
@@ -4819,7 +4819,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["一千二百零五块。", "1.205 kuai.", "1,205 kuai."],
 		sec: 2,
-		ord: 22,
+		ord: 17,
 		cols: ["一千二百零五块", "三块零五分钱"],
 	},
 	{
@@ -4832,7 +4832,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk4"],
 		ex: ["可以打折吗?", "¿Puede hacer descuento?", "Can you give a discount?"],
 		sec: 2,
-		ord: 23,
+		ord: 18,
 		cols: ["可以打折", "打六折", "不打折"],
 	},
 	{
@@ -4845,7 +4845,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["可以刷卡吗?", "¿Puedo pagar con tarjeta?", "Can I pay by card?"],
 		sec: 2,
-		ord: 24,
+		ord: 19,
 		cols: ["可以刷卡"],
 	},
 	{
@@ -4858,7 +4858,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["我有银行卡。", "Tengo tarjeta bancaria.", "I have a bank card."],
 		sec: 2,
-		ord: 25,
+		ord: "19a",
 		cols: ["银行卡"],
 	},
 	{
@@ -4875,7 +4875,7 @@ export const B1_VOCAB = [
 			"Can I pay by card? — No problem.",
 		],
 		sec: 2,
-		ord: 26,
+		ord: 20,
 	},
 	// ---- Lección 8 ----
 	{
@@ -4922,7 +4922,7 @@ export const B1_VOCAB = [
 			"I want to sleep, not get up.",
 		],
 		sec: 1,
-		ord: 3,
+		ord: "2a",
 		cols: ["一张床"],
 	},
 	{
@@ -4939,7 +4939,7 @@ export const B1_VOCAB = [
 			"You exercise at six every morning.",
 		],
 		sec: 1,
-		ord: 4,
+		ord: 3,
 		cols: ["每天", "每年", "每个人"],
 	},
 	{
@@ -4956,7 +4956,7 @@ export const B1_VOCAB = [
 			"He exercises every day.",
 		],
 		sec: 1,
-		ord: 5,
+		ord: 4,
 		cols: ["去运动"],
 	},
 	{
@@ -4969,7 +4969,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk3"],
 		ex: ["你为什么不去?", "¿Por qué no vas?", "Why aren't you going?"],
 		sec: 1,
-		ord: 6,
+		ord: 5,
 		cols: ["为什么还不起床", "为什么不去"],
 	},
 	{
@@ -4986,7 +4986,7 @@ export const B1_VOCAB = [
 			"I want to get up, but my head hurts.",
 		],
 		sec: 1,
-		ord: 7,
+		ord: 6,
 	},
 	{
 		h: "头",
@@ -4998,7 +4998,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["我头很疼。", "Me duele mucho la cabeza.", "My head really hurts."],
 		sec: 1,
-		ord: 8,
+		ord: 7,
 	},
 	{
 		h: "疼",
@@ -5010,7 +5010,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk3"],
 		ex: ["你嗓子疼不疼?", "¿Te duele la garganta?", "Does your throat hurt?"],
 		sec: 1,
-		ord: 9,
+		ord: 8,
 		cols: ["头疼", "哪儿疼"],
 	},
 	{
@@ -5027,7 +5027,7 @@ export const B1_VOCAB = [
 			"Sorry, I didn't know.",
 		],
 		sec: 1,
-		ord: 10,
+		ord: 9,
 	},
 	{
 		h: "舒服",
@@ -5043,7 +5043,7 @@ export const B1_VOCAB = [
 			"My whole body feels unwell.",
 		],
 		sec: 1,
-		ord: 11,
+		ord: 10,
 		cols: ["很舒服", "不舒服"],
 	},
 	{
@@ -5060,7 +5060,7 @@ export const B1_VOCAB = [
 			"Sorry. — It's OK.",
 		],
 		sec: 1,
-		ord: 12,
+		ord: 11,
 	},
 	{
 		h: "嗓子",
@@ -5076,7 +5076,7 @@ export const B1_VOCAB = [
 			"My throat hurts a bit too.",
 		],
 		sec: 1,
-		ord: 13,
+		ord: 12,
 		cols: ["嗓子疼", "嗓子不好"],
 	},
 	{
@@ -5111,7 +5111,7 @@ export const B1_VOCAB = [
 			"You should go see a doctor.",
 		],
 		sec: 1,
-		ord: 15,
+		ord: 14,
 		cols: ["应该做", "应该知道", "应该学习", "应该试一下", "不应该去"],
 	},
 	{
@@ -5128,7 +5128,7 @@ export const B1_VOCAB = [
 			"Tell me, what should I buy?",
 		],
 		sec: 1,
-		ord: 16,
+		ord: "14a",
 		cols: ["该做", "该去", "不该去"],
 	},
 	{
@@ -5145,7 +5145,7 @@ export const B1_VOCAB = [
 			"I don't want to go to the hospital.",
 		],
 		sec: 1,
-		ord: 17,
+		ord: 15,
 		cols: ["去医院", "大医院"],
 	},
 	{
@@ -5162,7 +5162,7 @@ export const B1_VOCAB = [
 			"You should go see a doctor.",
 		],
 		sec: 1,
-		ord: 18,
+		ord: 16,
 		cols: ["去看病", "去医院看病"],
 	},
 	{
@@ -5179,7 +5179,7 @@ export const B1_VOCAB = [
 			"He's sick and can't attend class.",
 		],
 		sec: 1,
-		ord: 19,
+		ord: "16a",
 		cols: ["有病", "没有病"],
 	},
 	{
@@ -5196,7 +5196,7 @@ export const B1_VOCAB = [
 			"How is your grandma's health?",
 		],
 		sec: 1,
-		ord: 20,
+		ord: 17,
 		cols: ["身体很好", "身体没问题", "身体不太好"],
 	},
 	{
@@ -5209,7 +5209,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["我想睡觉。", "Quiero dormir.", "I want to sleep."],
 		sec: 1,
-		ord: 21,
+		ord: 18,
 		cols: ["想睡觉", "快去睡觉"],
 	},
 	{
@@ -5226,7 +5226,7 @@ export const B1_VOCAB = [
 			"I want to sleep a while.",
 		],
 		sec: 1,
-		ord: 22,
+		ord: "18a",
 		cols: ["想睡一会儿"],
 	},
 	{
@@ -5243,7 +5243,7 @@ export const B1_VOCAB = [
 			"You still can't attend class tomorrow.",
 		],
 		sec: 1,
-		ord: 23,
+		ord: 19,
 		cols: ["能八点起床", "能参加", "恐怕不能来"],
 	},
 	{
@@ -5260,7 +5260,7 @@ export const B1_VOCAB = [
 			"You can't go to class tomorrow either.",
 		],
 		sec: 1,
-		ord: 24,
+		ord: 20,
 		cols: ["不能上课", "几点上课"],
 	},
 	{
@@ -5277,7 +5277,7 @@ export const B1_VOCAB = [
 			"Go now or this afternoon?",
 		],
 		sec: 1,
-		ord: 25,
+		ord: 21,
 		cols: ["睡觉还是起床", "现在去还是下午去"],
 	},
 	{
@@ -5294,7 +5294,7 @@ export const B1_VOCAB = [
 			"The weather is very cold today.",
 		],
 		sec: 1,
-		ord: 26,
+		ord: 22,
 		cols: ["天气很好", "好天气"],
 	},
 	{
@@ -5307,7 +5307,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["冬天很冷。", "El invierno es muy frío.", "Winter is very cold."],
 		sec: 1,
-		ord: 27,
+		ord: 23,
 		cols: ["天气很冷", "有点儿冷"],
 	},
 	{
@@ -5324,7 +5324,7 @@ export const B1_VOCAB = [
 			"You should wear more clothes.",
 		],
 		sec: 1,
-		ord: 28,
+		ord: 24,
 		cols: ["穿衣服", "多穿点儿衣服", "穿衬衫", "穿牛仔裤"],
 	},
 	{
@@ -5369,7 +5369,7 @@ export const B1_VOCAB = [
 			"Which department should we register with?",
 		],
 		sec: 2,
-		ord: 1,
+		ord: 2,
 		cols: ["挂什么号", "挂一个号"],
 	},
 	{
@@ -5386,7 +5386,7 @@ export const B1_VOCAB = [
 			"Register with internal medicine.",
 		],
 		sec: 2,
-		ord: 2,
+		ord: 3,
 		cols: ["什么科", "挂什么科"],
 	},
 	{
@@ -5403,7 +5403,7 @@ export const B1_VOCAB = [
 			"Internal medicine is on the second floor.",
 		],
 		sec: 2,
-		ord: 3,
+		ord: 4,
 		cols: ["挂内科", "看内科", "内科医生"],
 	},
 	{
@@ -5420,7 +5420,7 @@ export const B1_VOCAB = [
 			"There's no internal medicine on floor one.",
 		],
 		sec: 2,
-		ord: 4,
+		ord: "4a",
 		cols: ["办公楼内", "医院内"],
 	},
 	{
@@ -5471,7 +5471,7 @@ export const B1_VOCAB = [
 			"My whole family speaks Chinese.",
 		],
 		sec: 2,
-		ord: 7,
+		ord: "6a",
 		cols: ["全校", "全班", "全家"],
 	},
 	{
@@ -5488,7 +5488,7 @@ export const B1_VOCAB = [
 			"First let's take your temperature.",
 		],
 		sec: 2,
-		ord: 8,
+		ord: 7,
 		cols: ["量衣服"],
 	},
 	{
@@ -5505,7 +5505,7 @@ export const B1_VOCAB = [
 			"Let's take your temperature first.",
 		],
 		sec: 2,
-		ord: 9,
+		ord: 8,
 		cols: ["量体温"],
 	},
 	{
@@ -5522,7 +5522,7 @@ export const B1_VOCAB = [
 			"Doctor, what's the temperature?",
 		],
 		sec: 2,
-		ord: 10,
+		ord: 9,
 		cols: ["王大夫", "女大夫", "内科大夫"],
 	},
 	{
@@ -5535,7 +5535,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["38度4。", "38,4 grados.", "38.4 degrees."],
 		sec: 2,
-		ord: 11,
+		ord: 10,
 		cols: ["37度", "38度4", "多少度"],
 	},
 	{
@@ -5552,7 +5552,7 @@ export const B1_VOCAB = [
 			"Your throat is a bit inflamed.",
 		],
 		sec: 2,
-		ord: 12,
+		ord: 11,
 		cols: ["嗓子发炎", "有点儿发炎"],
 	},
 	{
@@ -5569,7 +5569,7 @@ export const B1_VOCAB = [
 			"Go get a blood test.",
 		],
 		sec: 2,
-		ord: 13,
+		ord: 12,
 		cols: ["验一下血"],
 	},
 	{
@@ -5582,7 +5582,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk4"],
 		ex: ["去验一下血吧。", "Hazte un análisis de sangre.", "Get a blood test."],
 		sec: 2,
-		ord: 14,
+		ord: "12a",
 	},
 	{
 		h: "打针",
@@ -5594,7 +5594,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk4"],
 		ex: ["要不要打针?", "¿Hace falta inyección?", "Do I need an injection?"],
 		sec: 2,
-		ord: 15,
+		ord: 13,
 		cols: ["不想打针", "要不要打针"],
 	},
 	{
@@ -5607,7 +5607,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["不用打针。", "No hace falta inyección.", "No injection needed."],
 		sec: 2,
-		ord: 16,
+		ord: "13a",
 		cols: ["打一针", "打几针"],
 	},
 	{
@@ -5620,7 +5620,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["不用打针。", "No hace falta inyección.", "No need for an injection."],
 		sec: 2,
-		ord: 17,
+		ord: 14,
 		cols: ["不用打针", "不用验血"],
 	},
 	{
@@ -5637,7 +5637,7 @@ export const B1_VOCAB = [
 			"You should drink more water.",
 		],
 		sec: 2,
-		ord: 18,
+		ord: 15,
 		cols: ["喝水", "多喝水"],
 	},
 	{
@@ -5654,7 +5654,7 @@ export const B1_VOCAB = [
 			"Drink lots of water and rest a lot.",
 		],
 		sec: 2,
-		ord: 19,
+		ord: 16,
 		cols: ["多休息", "休息一下", "休息一会儿", "不用休息"],
 	},
 	{
@@ -5671,7 +5671,7 @@ export const B1_VOCAB = [
 			"I hear Chinese medicine is good.",
 		],
 		sec: 2,
-		ord: 20,
+		ord: 17,
 		cols: ["吃中药", "买中药"],
 	},
 	{
@@ -5688,7 +5688,7 @@ export const B1_VOCAB = [
 			"First take some Chinese medicine.",
 		],
 		sec: 2,
-		ord: 21,
+		ord: "17a",
 		cols: ["吃药", "吃点儿药", "买药"],
 	},
 	// ---- Lección 9 ----
@@ -5863,7 +5863,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["今天风很大。", "Hoy hace mucho viento.", "It's very windy today."],
 		sec: 1,
-		ord: 11,
+		ord: "10a",
 		cols: ["大风"],
 	},
 	{
@@ -5880,7 +5880,7 @@ export const B1_VOCAB = [
 			"Welcome to my hometown.",
 		],
 		sec: 1,
-		ord: 12,
+		ord: 11,
 		cols: ["我的家乡"],
 	},
 	{
@@ -5897,7 +5897,7 @@ export const B1_VOCAB = [
 			"In spring all the trees turn green.",
 		],
 		sec: 1,
-		ord: 13,
+		ord: 12,
 		cols: ["绿树", "大树", "树绿了"],
 	},
 	{
@@ -5914,7 +5914,7 @@ export const B1_VOCAB = [
 			"In summer you can swim.",
 		],
 		sec: 1,
-		ord: 14,
+		ord: 13,
 		cols: ["很热的夏天", "喜欢夏天"],
 	},
 	{
@@ -5931,7 +5931,7 @@ export const B1_VOCAB = [
 			"Winter is cold and it often snows.",
 		],
 		sec: 1,
-		ord: 15,
+		ord: 14,
 		cols: ["很冷的冬天", "喜欢冬天"],
 	},
 	{
@@ -5948,7 +5948,7 @@ export const B1_VOCAB = [
 			"It often rains in summer.",
 		],
 		sec: 1,
-		ord: 16,
+		ord: 15,
 	},
 	{
 		h: "雨",
@@ -5960,7 +5960,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["今天有大雨。", "Hoy hay lluvia fuerte.", "There's heavy rain today."],
 		sec: 1,
-		ord: 17,
+		ord: "15a",
 		cols: ["大雨", "小雨"],
 	},
 	{
@@ -5977,7 +5977,7 @@ export const B1_VOCAB = [
 			"It often snows in winter.",
 		],
 		sec: 1,
-		ord: 18,
+		ord: 16,
 	},
 	{
 		h: "雪",
@@ -5989,7 +5989,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk2"],
 		ex: ["我喜欢看雪。", "Me gusta ver la nieve.", "I like watching the snow."],
 		sec: 1,
-		ord: 19,
+		ord: "16a",
 		cols: ["下雪", "下大雪"],
 	},
 	{
@@ -6006,7 +6006,7 @@ export const B1_VOCAB = [
 			"You can swim in summer.",
 		],
 		sec: 1,
-		ord: 20,
+		ord: 17,
 		cols: ["喜欢游泳", "去游泳"],
 	},
 	{
@@ -6019,7 +6019,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["你会滑雪吗?", "¿Sabes esquiar?", "Can you ski?"],
 		sec: 1,
-		ord: 21,
+		ord: 18,
 		cols: ["去滑雪", "喜欢滑雪"],
 	},
 	{
@@ -6032,7 +6032,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["我会开车。", "Sé conducir.", "I can drive."],
 		sec: 1,
-		ord: 22,
+		ord: 19,
 		cols: ["会滑雪", "会说汉语", "会一点儿"],
 	},
 	{
@@ -6049,7 +6049,7 @@ export const B1_VOCAB = [
 			"I couldn't before; I just started learning.",
 		],
 		sec: 1,
-		ord: 23,
+		ord: 20,
 		cols: ["以前不会", "以前学英语"],
 	},
 	{
@@ -6080,7 +6080,7 @@ export const B1_VOCAB = [
 			"You don't have to take a plane.",
 		],
 		sec: 1,
-		ord: 25,
+		ord: "21a",
 	},
 	{
 		h: "票",
@@ -6092,7 +6092,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk2"],
 		ex: ["我买一张票。", "Compro un boleto.", "I'll buy a ticket."],
 		sec: 1,
-		ord: 26,
+		ord: "21b",
 		cols: ["买票", "电影票", "一张票"],
 	},
 	{
@@ -6178,7 +6178,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["在这儿不能开。", "Aquí no puedo conducir.", "I can't drive here."],
 		sec: 2,
-		ord: 6,
+		ord: "5a",
 	},
 	{
 		h: "驾照",
@@ -6194,7 +6194,7 @@ export const B1_VOCAB = [
 			"I don't have a Chinese license.",
 		],
 		sec: 2,
-		ord: 7,
+		ord: 6,
 		cols: ["有驾照", "我的驾照"],
 	},
 	{
@@ -6207,7 +6207,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["咱们打车去吧。", "Vayamos en taxi.", "Let's take a taxi."],
 		sec: 2,
-		ord: 8,
+		ord: 7,
 	},
 	{
 		h: "路上",
@@ -6223,7 +6223,7 @@ export const B1_VOCAB = [
 			"There may be traffic jams now.",
 		],
 		sec: 2,
-		ord: 9,
+		ord: 8,
 		cols: ["路上车多", "路上人少"],
 	},
 	{
@@ -6240,7 +6240,7 @@ export const B1_VOCAB = [
 			"Taking a taxi might be slow.",
 		],
 		sec: 2,
-		ord: 10,
+		ord: 9,
 		cols: ["可能堵车", "可能下雨"],
 	},
 	{
@@ -6257,7 +6257,7 @@ export const B1_VOCAB = [
 			"There might be a traffic jam now.",
 		],
 		sec: 2,
-		ord: 11,
+		ord: 10,
 		cols: ["路上堵车", "堵车了"],
 	},
 	{
@@ -6274,7 +6274,7 @@ export const B1_VOCAB = [
 			"The road is too jammed.",
 		],
 		sec: 2,
-		ord: 12,
+		ord: "10a",
 		cols: ["太堵了"],
 	},
 	{
@@ -6291,7 +6291,7 @@ export const B1_VOCAB = [
 			"By taxi might be slow.",
 		],
 		sec: 2,
-		ord: 13,
+		ord: 11,
 		cols: ["很慢", "有点儿慢"],
 	},
 	{
@@ -6304,7 +6304,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk3"],
 		ex: ["咱们坐地铁吧。", "Tomemos el metro.", "Let's take the subway."],
 		sec: 2,
-		ord: 14,
+		ord: 12,
 		cols: ["坐地铁"],
 	},
 	{
@@ -6321,7 +6321,7 @@ export const B1_VOCAB = [
 			"First take bus 961.",
 		],
 		sec: 2,
-		ord: 15,
+		ord: 13,
 		cols: ["坐公共汽车"],
 	},
 	{
@@ -6338,7 +6338,7 @@ export const B1_VOCAB = [
 			"Taking the bus is cheap.",
 		],
 		sec: 2,
-		ord: 16,
+		ord: "13a",
 	},
 	{
 		h: "汽车",
@@ -6354,7 +6354,7 @@ export const B1_VOCAB = [
 			"Boys all like cars.",
 		],
 		sec: 2,
-		ord: 17,
+		ord: "13b",
 		cols: ["坐汽车", "开汽车"],
 	},
 	{
@@ -6371,7 +6371,7 @@ export const B1_VOCAB = [
 			"Transfer to subway line 1 at Pingguoyuan.",
 		],
 		sec: 2,
-		ord: 19,
+		ord: 15,
 		cols: ["换地铁", "换56路公共汽车"],
 	},
 	{
@@ -6388,7 +6388,7 @@ export const B1_VOCAB = [
 			"Take line 1 to Tian'anmen.",
 		],
 		sec: 2,
-		ord: 20,
+		ord: 16,
 		cols: ["地铁线", "1号线"],
 	},
 	{
@@ -6401,7 +6401,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk3"],
 		ex: ["我也饿了。", "Yo también tengo hambre.", "I'm hungry too."],
 		sec: 2,
-		ord: 21,
+		ord: 17,
 		cols: ["肚子饿", "有点儿饿", "很饿", "饿了"],
 	},
 	{
@@ -6413,7 +6413,7 @@ export const B1_VOCAB = [
 		l: 9,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 22,
+		ord: 18,
 	},
 	{
 		h: "苹果园",
@@ -6424,7 +6424,7 @@ export const B1_VOCAB = [
 		l: 9,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 23,
+		ord: 19,
 	},
 	// ---- Lección 10 ----
 	{
@@ -6454,7 +6454,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["我等了好久了。", "Esperé mucho tiempo.", "I waited a long time."],
 		sec: 1,
-		ord: 2,
+		ord: "1a",
 		cols: ["等好久了"],
 	},
 	{
@@ -6471,7 +6471,7 @@ export const B1_VOCAB = [
 			"I'm going to the Film Academy.",
 		],
 		sec: 1,
-		ord: 3,
+		ord: 2,
 		cols: ["电影学院", "在汉语学院学习"],
 	},
 	{
@@ -6488,7 +6488,7 @@ export const B1_VOCAB = [
 			"They invited me to give a lecture.",
 		],
 		sec: 1,
-		ord: 4,
+		ord: 3,
 		cols: ["做报告", "听报告"],
 	},
 	{
@@ -6505,7 +6505,7 @@ export const B1_VOCAB = [
 			"He studied Chinese at the Language Institute before.",
 		],
 		sec: 1,
-		ord: 5,
+		ord: 4,
 		cols: ["语言专业", "在语言学院学习"],
 	},
 	{
@@ -6522,7 +6522,7 @@ export const B1_VOCAB = [
 			"Her major is American literature.",
 		],
 		sec: 1,
-		ord: 6,
+		ord: 5,
 		cols: ["中国文学", "英国文学", "文学专业"],
 	},
 	{
@@ -6539,7 +6539,7 @@ export const B1_VOCAB = [
 			"He's now a professor of Chinese literature.",
 		],
 		sec: 1,
-		ord: 7,
+		ord: 6,
 		cols: ["中文教授", "丁教授"],
 	},
 	{
@@ -6556,7 +6556,7 @@ export const B1_VOCAB = [
 			"Did they go back to Canada for the holiday?",
 		],
 		sec: 1,
-		ord: 8,
+		ord: 7,
 		cols: ["过圣诞节", "过春节"],
 	},
 	{
@@ -6573,7 +6573,7 @@ export const B1_VOCAB = [
 			"You're spending Christmas in Beijing this year.",
 		],
 		sec: 1,
-		ord: 9,
+		ord: "7a",
 		cols: ["过生日", "过节"],
 	},
 	{
@@ -6590,7 +6590,7 @@ export const B1_VOCAB = [
 			"Do Chinese people celebrate Christmas too?",
 		],
 		sec: 1,
-		ord: 10,
+		ord: "7b",
 		cols: ["过节", "什么节"],
 	},
 	{
@@ -6607,7 +6607,7 @@ export const B1_VOCAB = [
 			"China's most important festival is Spring Festival.",
 		],
 		sec: 1,
-		ord: 17,
+		ord: 14,
 		cols: ["重要的节日", "节日快乐"],
 	},
 	{
@@ -6624,7 +6624,7 @@ export const B1_VOCAB = [
 			"My little brother lives with my grandma.",
 		],
 		sec: 1,
-		ord: 11,
+		ord: 8,
 		cols: ["我外婆"],
 	},
 	{
@@ -6641,7 +6641,7 @@ export const B1_VOCAB = [
 			"He lives with grandma.",
 		],
 		sec: 1,
-		ord: 12,
+		ord: 9,
 		cols: ["住学生宿舍", "跟我外婆一起住"],
 	},
 	{
@@ -6654,7 +6654,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["他去旅行了。", "Él se fue de viaje.", "He went traveling."],
 		sec: 1,
-		ord: 13,
+		ord: 10,
 		cols: ["去旅行", "喜欢旅行", "常常旅行"],
 	},
 	{
@@ -6667,7 +6667,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk3"],
 		ex: ["他还没有决定。", "Todavía no ha decidido.", "He hasn't decided yet."],
 		sec: 1,
-		ord: 15,
+		ord: 12,
 		cols: ["决定去", "决定参加", "还没有决定"],
 	},
 	{
@@ -6684,7 +6684,7 @@ export const B1_VOCAB = [
 			"Spring Festival is the most important holiday.",
 		],
 		sec: 1,
-		ord: 16,
+		ord: 13,
 		cols: ["重要的决定", "重要的活动", "很重要的问题"],
 	},
 	{
@@ -6701,7 +6701,7 @@ export const B1_VOCAB = [
 			"Many young people like Western holidays.",
 		],
 		sec: 1,
-		ord: 18,
+		ord: 15,
 		cols: ["很年轻", "年轻人", "年轻的医生"],
 	},
 	{
@@ -6718,7 +6718,7 @@ export const B1_VOCAB = [
 			"Young people like Western festivals.",
 		],
 		sec: 1,
-		ord: 19,
+		ord: 16,
 		cols: ["西方国家", "西方人", "西方文学"],
 	},
 	{
@@ -6735,7 +6735,7 @@ export const B1_VOCAB = [
 			"My wife asked me to buy a gift.",
 		],
 		sec: 1,
-		ord: 20,
+		ord: 17,
 		cols: ["我爱人", "我朋友的爱人"],
 	},
 	{
@@ -6748,7 +6748,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["妈妈, 我爱你!", "¡Mamá, te quiero!", "Mom, I love you!"],
 		sec: 1,
-		ord: 21,
+		ord: "17a",
 		cols: ["爱妈妈", "爱家乡", "我爱你"],
 	},
 	{
@@ -6765,7 +6765,7 @@ export const B1_VOCAB = [
 			"How old is his son?",
 		],
 		sec: 1,
-		ord: 22,
+		ord: 18,
 		cols: ["他儿子", "老师的儿子", "小儿子"],
 	},
 	{
@@ -6782,7 +6782,7 @@ export const B1_VOCAB = [
 			"He asked me to call mom.",
 		],
 		sec: 2,
-		ord: 9,
+		ord: 6,
 		cols: ["妈妈让我早点儿去"],
 	},
 	{
@@ -6825,7 +6825,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["我的手很冷。", "Tengo las manos frías.", "My hands are cold."],
 		sec: 2,
-		ord: 3,
+		ord: "2a",
 	},
 	{
 		h: "响",
@@ -6837,7 +6837,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk4"],
 		ex: ["你的手机响了。", "Tu móvil sonó.", "Your phone rang."],
 		sec: 2,
-		ord: 4,
+		ord: 3,
 		cols: ["手机响了"],
 	},
 	{
@@ -6854,7 +6854,7 @@ export const B1_VOCAB = [
 			"I went to the school store.",
 		],
 		sec: 2,
-		ord: 5,
+		ord: 4,
 		cols: ["去商店"],
 	},
 	{
@@ -6867,7 +6867,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["这个店很大。", "Esta tienda es grande.", "This shop is big."],
 		sec: 2,
-		ord: 6,
+		ord: "4a",
 		cols: ["药店", "饭店", "面包店"],
 	},
 	{
@@ -6884,7 +6884,7 @@ export const B1_VOCAB = [
 			"It's a text from my brother.",
 		],
 		sec: 2,
-		ord: 7,
+		ord: 5,
 		cols: ["手机短信", "一条短信"],
 	},
 	{
@@ -6901,7 +6901,7 @@ export const B1_VOCAB = [
 			"This street is very short.",
 		],
 		sec: 2,
-		ord: 8,
+		ord: "5a",
 		cols: ["很短", "有点儿短"],
 	},
 	{
@@ -6918,7 +6918,7 @@ export const B1_VOCAB = [
 			"He asked me to call mom.",
 		],
 		sec: 2,
-		ord: 10,
+		ord: 7,
 		cols: ["给妈妈打电话"],
 	},
 	{
@@ -6931,7 +6931,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["我给你打电话。", "Te llamo por teléfono.", "I'll call you."],
 		sec: 2,
-		ord: 11,
+		ord: "7a",
 		cols: ["一个电话", "电话响了"],
 	},
 	{
@@ -6944,7 +6944,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["喂, 是我。", "Hola, soy yo.", "Hello, it's me."],
 		sec: 2,
-		ord: 12,
+		ord: 8,
 		cols: ["喂，是我", "喂，是大为吗"],
 	},
 	{
@@ -6961,7 +6961,7 @@ export const B1_VOCAB = [
 			"She asked me to send you her greetings.",
 		],
 		sec: 2,
-		ord: 13,
+		ord: 9,
 		cols: ["向您问好", "问你好", "问他好"],
 	},
 	{
@@ -6978,7 +6978,7 @@ export const B1_VOCAB = [
 			"They often help me review the texts.",
 		],
 		sec: 2,
-		ord: 14,
+		ord: 10,
 		cols: ["请帮我一下"],
 	},
 	{
@@ -6995,7 +6995,7 @@ export const B1_VOCAB = [
 			"They help me review the lessons.",
 		],
 		sec: 2,
-		ord: 16,
+		ord: 12,
 		cols: ["复习语法", "复习汉字"],
 	},
 	{
@@ -7008,7 +7008,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["我们复习课文吧。", "Repasemos el texto.", "Let's review the text."],
 		sec: 2,
-		ord: 17,
+		ord: 13,
 		cols: ["复习课文", "学习课文", "这课的课文"],
 	},
 	{
@@ -7025,7 +7025,7 @@ export const B1_VOCAB = [
 			"I can use a Chinese dictionary now.",
 		],
 		sec: 2,
-		ord: 18,
+		ord: 14,
 		cols: ["用手机", "用一下电话"],
 	},
 	{
@@ -7042,7 +7042,7 @@ export const B1_VOCAB = [
 			"I can use a Chinese dictionary now.",
 		],
 		sec: 2,
-		ord: 19,
+		ord: 15,
 		cols: ["汉语词典", "会用汉语词典", "买汉语词典"],
 	},
 	{
@@ -7059,7 +7059,7 @@ export const B1_VOCAB = [
 			"I can also browse Chinese websites now.",
 		],
 		sec: 2,
-		ord: 20,
+		ord: 16,
 		cols: ["会上网", "能上网", "上网学习"],
 	},
 	{
@@ -7076,7 +7076,7 @@ export const B1_VOCAB = [
 			"I can use Chinese websites now.",
 		],
 		sec: 2,
-		ord: 21,
+		ord: "16a",
 		cols: ["中文网"],
 	},
 	{
@@ -7093,7 +7093,7 @@ export const B1_VOCAB = [
 			"We'll mail you a gift.",
 		],
 		sec: 2,
-		ord: 22,
+		ord: 17,
 		cols: ["寄礼物", "寄书", "寄词典", "寄衣服", "寄钱"],
 	},
 	{
@@ -7110,7 +7110,7 @@ export const B1_VOCAB = [
 			"I often visit grandma.",
 		],
 		sec: 1,
-		ord: 14,
+		ord: 11,
 		cols: ["看外婆", "看妈妈", "看朋友"],
 	},
 	{
@@ -7123,7 +7123,7 @@ export const B1_VOCAB = [
 		tags: ["npcr", "hsk1"],
 		ex: ["我们都很想你们。", "Los extrañamos mucho.", "We miss you a lot."],
 		sec: 2,
-		ord: 15,
+		ord: 11,
 		cols: ["想家", "想妈妈", "很想你"],
 	},
 	{
@@ -7136,7 +7136,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["祝你圣诞快乐!", "¡Feliz Navidad!", "Merry Christmas!"],
 		sec: 1,
-		ord: 24,
+		ord: 20,
 		cols: ["圣诞节礼物"],
 	},
 	{
@@ -7163,7 +7163,7 @@ export const B1_VOCAB = [
 		tags: ["npcr"],
 		ex: ["春节快乐!", "¡Feliz Año Nuevo Chino!", "Happy Chinese New Year!"],
 		sec: 1,
-		ord: 28,
+		ord: 24,
 		cols: ["过春节", "春节快乐"],
 	},
 	{
@@ -7175,7 +7175,7 @@ export const B1_VOCAB = [
 		l: 10,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 23,
+		ord: 19,
 	},
 	{
 		h: "加拿大",
@@ -7186,7 +7186,7 @@ export const B1_VOCAB = [
 		l: 10,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 25,
+		ord: 21,
 	},
 	{
 		h: "古波",
@@ -7197,7 +7197,7 @@ export const B1_VOCAB = [
 		l: 10,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 26,
+		ord: 22,
 	},
 	{
 		h: "丁云",
@@ -7208,7 +7208,7 @@ export const B1_VOCAB = [
 		l: 10,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 27,
+		ord: 23,
 	},
 	{
 		h: "坐",
@@ -7219,7 +7219,7 @@ export const B1_VOCAB = [
 		l: 9,
 		tags: ["npcr", "hsk1"],
 		sec: 1,
-		ord: 27,
+		ord: 22,
 		cols: ["坐飞机", "坐公共汽车"],
 	},
 	{
@@ -7231,7 +7231,7 @@ export const B1_VOCAB = [
 		l: 9,
 		tags: ["npcr", "hsk2"],
 		sec: 2,
-		ord: 18,
+		ord: 14,
 		cols: ["111路公共汽车"],
 	},
 ];

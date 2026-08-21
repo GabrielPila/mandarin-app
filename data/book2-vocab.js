@@ -9,7 +9,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 6,
+		ord: 5,
 		cols: ["啊，好的", "啊，是嘛"],
 	},
 	{
@@ -21,7 +21,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 24,
+		ord: "17a",
 		cols: ["哎，好的"],
 	},
 	{
@@ -33,7 +33,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 23,
+		ord: 17,
 		cols: ["哎呀，不好了！"],
 	},
 	{
@@ -45,7 +45,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 10,
+		ord: 9,
 		cols: ["爱情故事", "爱情剧场"],
 	},
 	{
@@ -57,7 +57,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 13,
+		ord: "11a",
 		cols: ["芭蕾舞"],
 	},
 	{
@@ -69,7 +69,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 12,
+		ord: 11,
 		cols: ["看芭蕾舞", "芭蕾舞演员"],
 	},
 	{
@@ -81,7 +81,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 9,
+		ord: 8,
 	},
 	{
 		h: "白",
@@ -92,7 +92,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk2"],
 		sec: 2,
-		ord: 9,
+		ord: 8,
 		cols: ["白衬衫", "白旗袍", "白纸"],
 	},
 	{
@@ -104,7 +104,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 28,
+		ord: 20,
 	},
 	{
 		h: "班",
@@ -115,7 +115,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 27,
+		ord: "19a",
 		cols: ["下一班飞机", "半小时一班"],
 	},
 	{
@@ -127,7 +127,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 7,
+		ord: 6,
 		cols: ["搬箱子", "搬东西"],
 	},
 	{
@@ -151,7 +151,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 13,
+		ord: "11a",
 		cols: ["办手续", "办事", "办完"],
 	},
 	{
@@ -163,7 +163,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 28,
+		ord: 20,
 		cols: ["一个办法", "好办法", "没有办法"],
 	},
 	{
@@ -175,7 +175,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 12,
+		ord: 11,
 		cols: ["办一件事", "办业务"],
 	},
 	{
@@ -187,7 +187,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 20,
+		ord: 16,
 		cols: ["帮帮我忙", "不用帮忙", "帮一下忙"],
 	},
 	{
@@ -199,7 +199,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 10,
+		ord: "8a",
 		cols: ["买了一个包", "丢了一个包"],
 	},
 	{
@@ -235,7 +235,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 3,
+		ord: "2a",
 		cols: ["一份报纸", "报告"],
 	},
 	{
@@ -271,7 +271,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 19,
+		ord: 15,
 		cols: ["在北方", "北方人", "中国的北方"],
 	},
 	{
@@ -318,7 +318,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk2"],
 		sec: 2,
-		ord: 14,
+		ord: "11a",
 		cols: ["比了", "1比0", "1比1"],
 	},
 	{
@@ -330,7 +330,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 13,
+		ord: 11,
 		cols: ["0比0)", "上半场比分", "0比1"],
 	},
 	{
@@ -342,7 +342,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 25,
+		ord: 20,
 		cols: ["足球比赛", "篮球比赛", "看比赛"],
 	},
 	{
@@ -354,7 +354,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 14,
+		ord: 10,
 		cols: ["一遍", "再读一遍"],
 	},
 	{
@@ -366,7 +366,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 8,
+		ord: 6,
 		cols: ["表演话剧", "表演完了"],
 	},
 	{
@@ -378,7 +378,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 12,
+		ord: 10,
 		cols: ["别的画儿", "别的颜色", "别的方法"],
 	},
 	{
@@ -402,7 +402,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 14,
+		ord: 11,
 		cols: ["一个宾馆", "住宾馆", "预订宾馆"],
 	},
 	{
@@ -414,7 +414,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 18,
+		ord: "14a",
 		cols: ["一个兵"],
 	},
 	{
@@ -426,7 +426,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 17,
+		ord: 14,
 		cols: ["参观兵马俑博物馆"],
 	},
 	{
@@ -438,7 +438,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 6,
+		ord: 5,
 		cols: ["不但好，而且便宜"],
 	},
 	{
@@ -450,7 +450,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk6"],
 		sec: 1,
-		ord: 17,
+		ord: 11,
 		cols: ["真不敢当"],
 	},
 	{
@@ -462,7 +462,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 9,
+		ord: 8,
 		cols: ["一部小说", "一部电影"],
 	},
 	{
@@ -474,7 +474,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 12,
+		ord: 10,
 		cols: ["下个月才行签证", "九点才起课"],
 	},
 	{
@@ -486,7 +486,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 14,
+		ord: "10a",
 		cols: ["钱财", "财物"],
 	},
 	{
@@ -498,7 +498,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk1"],
 		sec: 2,
-		ord: 7,
+		ord: 6,
 		cols: ["中国菜", "做菜", "喜欢吃的菜"],
 	},
 	{
@@ -510,7 +510,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 16,
+		ord: 13,
 		cols: ["参观大学", "参观一下"],
 	},
 	{
@@ -522,7 +522,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 8,
+		ord: 5,
 		cols: ["查一下", "查地图", "查资料"],
 	},
 	{
@@ -534,7 +534,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 10,
+		ord: 8,
 		cols: ["很差", "水平差", "不太差"],
 	},
 	{
@@ -546,7 +546,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 14,
+		ord: 12,
 		cols: ["时间很长", "这么长时间", "长筷子"],
 	},
 	{
@@ -571,7 +571,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 10,
+		ord: "8a",
 		cols: ["超二斤", "超过了"],
 	},
 	{
@@ -583,7 +583,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 9,
+		ord: 8,
 		cols: ["行李箱超重", "超重了"],
 	},
 	{
@@ -595,7 +595,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 17,
+		ord: 13,
 		cols: ["称一下", "称一称", "称包裹"],
 	},
 	{
@@ -619,7 +619,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 20,
+		ord: "15a",
 		cols: ["水池", "池子"],
 	},
 	{
@@ -655,7 +655,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 14,
+		ord: "11a",
 		cols: ["名不虚传", "传给你", "口传"],
 	},
 	{
@@ -692,7 +692,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 7,
+		ord: 6,
 		cols: ["1号窗口", "7号窗口"],
 	},
 	{
@@ -704,7 +704,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 13,
+		ord: 10,
 		cols: ["一次", "去三次", "这次"],
 	},
 	{
@@ -716,7 +716,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 4,
+		ord: 3,
 		cols: ["G2次", "火车次"],
 	},
 	{
@@ -728,7 +728,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 9,
+		ord: 6,
 		cols: ["从北京到友谊", "从英国来", "从家来"],
 	},
 	{
@@ -740,7 +740,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 15,
+		ord: 12,
 		cols: ["打太极拳"],
 	},
 	{
@@ -777,7 +777,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk6"],
 		sec: 2,
-		ord: 5,
+		ord: "4a",
 	},
 	{
 		h: "大使",
@@ -788,7 +788,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 11,
+		ord: "9a",
 		cols: ["一位大使", "中国大使"],
 	},
 	{
@@ -800,7 +800,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 10,
+		ord: 9,
 		cols: ["去大使馆", "在中国大使馆"],
 	},
 	{
@@ -812,7 +812,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 8,
+		ord: 6,
 		cols: ["一个大学生", "中国大学生"],
 	},
 	{
@@ -861,7 +861,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 5,
+		ord: "4a",
 		cols: ["包裹单", "书单"],
 	},
 	{
@@ -885,7 +885,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk2"],
 		sec: 2,
-		ord: 19,
+		ord: 16,
 		cols: ["是啊，但是...", "我很好但是有一点问题"],
 	},
 	{
@@ -897,7 +897,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 18,
+		ord: 15,
 		cols: ["当教练", "当裁判"],
 	},
 	{
@@ -933,7 +933,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 27,
+		ord: 21,
 		cols: ["得签字", "得填单子", "得问医生"],
 	},
 	{
@@ -945,7 +945,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 13,
+		ord: "10a",
 		cols: ["开始登机", "几点登机"],
 	},
 	{
@@ -957,7 +957,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 12,
+		ord: 10,
 		cols: ["收好登机牌", "检查登机牌"],
 	},
 	{
@@ -969,7 +969,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 20,
+		ord: 18,
 		cols: ["上海迪士尼乐园"],
 	},
 	{
@@ -1018,7 +1018,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr", "hsk1"],
 		sec: 1,
-		ord: 15,
+		ord: 11,
 		cols: ["打开电脑", "带电脑", "电脑包"],
 	},
 	{
@@ -1054,7 +1054,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk5"],
 		sec: 2,
-		ord: 3,
+		ord: "2a",
 		cols: ["山顶", "头顶"],
 	},
 	{
@@ -1079,7 +1079,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk1"],
 		sec: 2,
-		ord: 9,
+		ord: 8,
 		cols: ["商场的东西", "买东西", "买衣服东西"],
 	},
 	{
@@ -1091,7 +1091,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk2"],
 		sec: 2,
-		ord: 17,
+		ord: 15,
 		cols: ["懂了", "懂一点儿", "不懂", "不懂上海话"],
 	},
 	{
@@ -1103,7 +1103,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk5"],
 		sec: 2,
-		ord: 11,
+		ord: "9a",
 		cols: ["山洞里", "一个洞", "洞口"],
 	},
 	{
@@ -1127,7 +1127,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 27,
+		ord: 23,
 		cols: ["网络断了", "电话断了"],
 	},
 	{
@@ -1139,7 +1139,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 5,
+		ord: 3,
 		cols: ["锻炼身体", "多锻炼", "好好儿锻炼"],
 	},
 	{
@@ -1151,7 +1151,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 4,
+		ord: "2b",
 		cols: ["排一排", "排一下"],
 	},
 	{
@@ -1163,7 +1163,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 18,
+		ord: 14,
 		cols: ["一个队员", "年轻的队员", "老队员"],
 	},
 	{
@@ -1175,7 +1175,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 20,
+		ord: 13,
 		cols: ["对力波来说", "对你好", "对什么感兴趣"],
 	},
 	{
@@ -1187,7 +1187,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 10,
+		ord: 8,
 	},
 	{
 		h: "发",
@@ -1198,7 +1198,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 14,
+		ord: 11,
 		cols: ["发照片", "发给我", "拍照发照片"],
 	},
 	{
@@ -1222,7 +1222,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 24,
+		ord: 20,
 		cols: ["上网方便", "非常方便"],
 	},
 	{
@@ -1234,7 +1234,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 15,
+		ord: 12,
 		cols: ["一个房间", "没有房间", "漂亮的房间"],
 	},
 	{
@@ -1246,7 +1246,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 18,
+		ord: 14,
 		cols: ["放在这儿", "放在哪儿", "放下"],
 	},
 	{
@@ -1270,7 +1270,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 12,
+		ord: 9,
 		cols: ["非常高兴", "非常好", "非常喜欢中国音乐"],
 	},
 	{
@@ -1282,7 +1282,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 3,
+		ord: "1b",
 		cols: ["胖", "肥肉", "很肥"],
 	},
 	{
@@ -1294,7 +1294,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 20,
+		ord: "15a",
 		cols: ["电话费", "手机费", "费多少"],
 	},
 	{
@@ -1306,7 +1306,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 11,
+		ord: 9,
 		cols: ["丰富的文化", "丰富多彩"],
 	},
 	{
@@ -1330,7 +1330,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 27,
+		ord: 19,
 		cols: ["一幅画儿", "几幅画"],
 	},
 	{
@@ -1342,7 +1342,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 25,
+		ord: "18b",
 		cols: ["有福", "福气"],
 	},
 	{
@@ -1354,7 +1354,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk5"],
 		sec: 2,
-		ord: 21,
+		ord: "17a",
 		cols: ["辅导学生", "辅导学习"],
 	},
 	{
@@ -1366,7 +1366,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 20,
+		ord: 17,
 		cols: ["上辅导课"],
 	},
 	{
@@ -1390,7 +1390,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 17,
+		ord: 15,
 		cols: ["复印一下", "复印身份证", "复印两张"],
 	},
 	{
@@ -1402,7 +1402,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 11,
+		ord: 10,
 		cols: ["感人的故事", "非常感人"],
 	},
 	{
@@ -1414,7 +1414,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 21,
+		ord: 14,
 		cols: ["非常感兴趣", "对中国画感兴趣"],
 	},
 	{
@@ -1426,7 +1426,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 27,
+		ord: 24,
 		cols: ["比我高", "高水平"],
 	},
 	{
@@ -1450,7 +1450,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 3,
+		ord: 2,
 		cols: ["坐高铁", "高铁票"],
 	},
 	{
@@ -1498,7 +1498,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 16,
+		ord: 14,
 		cols: ["两公分", "长两公分"],
 	},
 	{
@@ -1510,7 +1510,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 11,
+		ord: 9,
 		cols: ["一公斤", "多少公斤", "超了三公斤"],
 	},
 	{
@@ -1522,7 +1522,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk2"],
 		sec: 2,
-		ord: 15,
+		ord: 13,
 		cols: ["一家公司", "快递公司", "回公司"],
 	},
 	{
@@ -1534,7 +1534,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 21,
+		ord: 20,
 		cols: ["钱不够", "够用了"],
 	},
 	{
@@ -1546,7 +1546,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 12,
+		ord: 11,
 		cols: ["小姑娘", "年轻的姑娘"],
 	},
 	{
@@ -1558,7 +1558,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 7,
+		ord: 6,
 		cols: ["古典音乐", "古典音乐会", "古典文学"],
 	},
 	{
@@ -1570,7 +1570,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 23,
+		ord: 20,
 		cols: ["一个故事", "中国的故事", "留学生的故事"],
 	},
 	{
@@ -1582,7 +1582,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk6"],
 		sec: 1,
-		ord: 20,
+		ord: 16,
 		cols: ["我的故乡", "回故乡"],
 	},
 	{
@@ -1594,7 +1594,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 16,
+		ord: 15,
 		cols: ["左拐", "右拐", "在街道拐弯"],
 	},
 	{
@@ -1606,7 +1606,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 25,
+		ord: 18,
 		cols: ["听广播", "广播里说"],
 	},
 	{
@@ -1618,7 +1618,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 26,
+		ord: 21,
 	},
 	{
 		h: "国际",
@@ -1642,7 +1642,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 21,
+		ord: "17a",
 		cols: ["国家队", "我们国家", "不同的国家"],
 	},
 	{
@@ -1654,7 +1654,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 20,
+		ord: 17,
 	},
 	{
 		h: "过道",
@@ -1689,7 +1689,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 11,
+		ord: "8a",
 		cols: ["大海", "海水"],
 	},
 	{
@@ -1701,7 +1701,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 11,
+		ord: 10,
 		cols: ["一张海报", "比赛海报", "演出海报"],
 	},
 	{
@@ -1713,7 +1713,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 24,
+		ord: 19,
 	},
 	{
 		h: "海运",
@@ -1724,7 +1724,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 10,
+		ord: 8,
 		cols: ["寄海运"],
 	},
 	{
@@ -1736,7 +1736,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 19,
+		ord: 17,
 		cols: ["寒假的时候", "去哪儿过寒假"],
 	},
 	{
@@ -1748,7 +1748,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 24,
+		ord: 20,
 		cols: ["参加汉语水平考试"],
 	},
 	{
@@ -1760,7 +1760,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 26,
+		ord: 19,
 		cols: ["去美国的航班", "晚上的航班", "这趟航班"],
 	},
 	{
@@ -1772,7 +1772,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk6"],
 		sec: 1,
-		ord: 9,
+		ord: 7,
 		cols: ["寄航空", "航空信"],
 	},
 	{
@@ -1784,7 +1784,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 5,
+		ord: 3,
 		cols: ["好好儿学习", "好好儿玩儿"],
 	},
 	{
@@ -1809,7 +1809,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 13,
+		ord: 11,
 		cols: ["好像是", "好像还有风"],
 	},
 	{
@@ -1821,7 +1821,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 22,
+		ord: 17,
 		cols: ["好心的司机", "好心人"],
 	},
 	{
@@ -1833,7 +1833,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 24,
+		ord: 19,
 		cols: ["小河", "一条河"],
 	},
 	{
@@ -1845,7 +1845,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk2"],
 		sec: 2,
-		ord: 15,
+		ord: 13,
 		cols: ["红的", "红旗袍", "比绿的漂亮"],
 	},
 	{
@@ -1857,7 +1857,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 22,
+		ord: 18,
 	},
 	{
 		h: "后来",
@@ -1868,7 +1868,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 9,
+		ord: 8,
 		cols: ["后来回了", "后来来到了"],
 	},
 	{
@@ -1880,7 +1880,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 7,
+		ord: 6,
 		cols: ["一本护照", "给护照", "护照丢了"],
 	},
 	{
@@ -1892,7 +1892,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 9,
+		ord: "5a",
 		cols: ["花儿", "白色花儿"],
 	},
 	{
@@ -1904,7 +1904,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 8,
+		ord: 5,
 		cols: ["欣赏花鸟画"],
 	},
 	{
@@ -1916,7 +1916,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 13,
+		ord: 8,
 		cols: ["画画儿", "画什么", "今天画什么"],
 	},
 	{
@@ -1928,7 +1928,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 15,
+		ord: 10,
 		cols: ["一位画家", "老画家", "中国的画家"],
 	},
 	{
@@ -1940,7 +1940,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 7,
+		ord: "4a",
 		cols: ["一张画儿", "看画儿"],
 	},
 	{
@@ -1952,7 +1952,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 23,
+		ord: "20a",
 		cols: ["北京话", "西安话", "什么地方的话"],
 	},
 	{
@@ -1976,7 +1976,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 26,
+		ord: 22,
 		cols: ["网络坏了", "手机坏了"],
 	},
 	{
@@ -1988,7 +1988,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 13,
+		ord: 11,
 		cols: ["还证书", "还钱", "还书", "还给他"],
 	},
 	{
@@ -2000,7 +2000,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk1"],
 		sec: 1,
-		ord: 3,
+		ord: "2a",
 		cols: ["晚会", "聚会", "生日会"],
 	},
 	{
@@ -2012,7 +2012,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 2,
+		ord: "1a",
 	},
 	{
 		h: "火车",
@@ -2035,7 +2035,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 13,
+		ord: 10,
 		cols: ["或者去博物馆", "或者去看电影"],
 	},
 	{
@@ -2047,7 +2047,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 24,
+		ord: "18a",
 		cols: ["车祸", "惹祸了"],
 	},
 	{
@@ -2071,7 +2071,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk2"],
 		sec: 2,
-		ord: 4,
+		ord: 3,
 		cols: ["一个鸡蛋", "吃鸡蛋", "炒鸡蛋"],
 	},
 	{
@@ -2083,7 +2083,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 11,
+		ord: 9,
 		cols: ["好极了", "有意思极了", "精彩极了"],
 	},
 	{
@@ -2095,7 +2095,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 21,
+		ord: 17,
 		cols: ["一个计划", "有什么计划", "打算计划", "计划旅游"],
 	},
 	{
@@ -2107,7 +2107,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 19,
+		ord: 17,
 		cols: ["记住了", "记生词", "记汉字"],
 	},
 	{
@@ -2119,7 +2119,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 16,
+		ord: 14,
 		cols: ["记得你", "不记得", "记得以前"],
 	},
 	{
@@ -2131,7 +2131,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 25,
+		ord: 22,
 		cols: ["一位记者", "中国记者"],
 	},
 	{
@@ -2143,7 +2143,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 24,
+		ord: "19a",
 		cols: ["继续上坡", "继续爬山", "继续工作"],
 	},
 	{
@@ -2155,7 +2155,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 27,
+		ord: 21,
 		cols: ["给你们加油", "来加油"],
 	},
 	{
@@ -2167,7 +2167,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk1"],
 		sec: 1,
-		ord: 16,
+		ord: "10a",
 		cols: ["画家", "文学家", "美术家", "音乐家"],
 	},
 	{
@@ -2179,7 +2179,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 24,
+		ord: 19,
 	},
 	{
 		h: "假",
@@ -2190,7 +2190,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 20,
+		ord: "17a",
 		cols: ["放假", "过寒假", "假期"],
 	},
 	{
@@ -2214,7 +2214,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 2,
+		ord: "1a",
 		cols: ["五斤减", "减一点儿"],
 	},
 	{
@@ -2250,7 +2250,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 12,
+		ord: 9,
 		cols: ["一个建议", "建议你", "有什么建议"],
 	},
 	{
@@ -2262,7 +2262,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 16,
+		ord: 14,
 		cols: ["交给他", "交钱", "交押金"],
 	},
 	{
@@ -2274,7 +2274,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 22,
+		ord: 17,
 		cols: ["足球教练", "踢球教练"],
 	},
 	{
@@ -2286,7 +2286,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 29,
+		ord: 25,
 		cols: ["接朋友", "接到学生", "去接他"],
 	},
 	{
@@ -2298,7 +2298,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 10,
+		ord: 7,
 		cols: ["一个节目", "汉语节目", "有意思的节目"],
 	},
 	{
@@ -2310,7 +2310,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 5,
+		ord: 4,
 		cols: ["检查结果", "结果怎么样"],
 	},
 	{
@@ -2322,7 +2322,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 13,
+		ord: 12,
 		cols: ["结婚了", "跟她结婚", "结婚仪式"],
 	},
 	{
@@ -2334,7 +2334,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk2"],
 		sec: 2,
-		ord: 20,
+		ord: 17,
 		cols: ["给你介绍一下", "介绍中国画"],
 	},
 	{
@@ -2358,7 +2358,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 31,
+		ord: "21b",
 		cols: ["很近", "不近"],
 	},
 	{
@@ -2403,7 +2403,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 9,
+		ord: 7,
 		cols: ["精彩的比赛", "精彩的节目"],
 	},
 	{
@@ -2415,7 +2415,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 9,
+		ord: "7a",
 		cols: ["美景", "远景", "风景"],
 	},
 	{
@@ -2427,7 +2427,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 8,
+		ord: 7,
 		cols: ["优美的景色", "山上的景色", "看景色"],
 	},
 	{
@@ -2451,7 +2451,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 16,
+		ord: 14,
 		cols: ["一句上海话", "一句话"],
 	},
 	{
@@ -2463,7 +2463,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 3,
+		ord: "2a",
 		cols: ["话剧", "京剧", "剧场"],
 	},
 	{
@@ -2475,7 +2475,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk6"],
 		sec: 1,
-		ord: 29,
+		ord: 26,
 		cols: ["写剧本", "汉语剧本"],
 	},
 	{
@@ -2487,7 +2487,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 19,
+		ord: "16a",
 		cols: ["大剧院", "国家剧院"],
 	},
 	{
@@ -2523,7 +2523,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk1"],
 		sec: 2,
-		ord: 5,
+		ord: 4,
 		cols: ["车开了", "开时间"],
 	},
 	{
@@ -2535,7 +2535,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 3,
+		ord: 2,
 		cols: ["商店开门了", "九点开门"],
 	},
 	{
@@ -2547,7 +2547,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 12,
+		ord: 7,
 		cols: ["开始上课", "马上开始", "还没开始"],
 	},
 	{
@@ -2571,7 +2571,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 17,
+		ord: 13,
 		cols: ["看样子不会下雨", "看样子这么好"],
 	},
 	{
@@ -2583,7 +2583,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 27,
+		ord: 20,
 		cols: ["身体康复", "早日康复"],
 	},
 	{
@@ -2595,7 +2595,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk2"],
 		sec: 2,
-		ord: 25,
+		ord: "20a",
 		cols: ["口语考试", "参加考试", "考试结束了"],
 	},
 	{
@@ -2619,7 +2619,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 24,
+		ord: "20b",
 		cols: ["新课本", "实用的课本"],
 	},
 	{
@@ -2631,7 +2631,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 25,
+		ord: 20,
 	},
 	{
 		h: "苦",
@@ -2642,7 +2642,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 15,
+		ord: "13a",
 		cols: ["很苦", "日子很苦", "太苦了"],
 	},
 	{
@@ -2654,7 +2654,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 10,
+		ord: "9a",
 		cols: ["一个快递", "送快递", "收快递"],
 	},
 	{
@@ -2678,7 +2678,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr", "hsk6"],
 		sec: 1,
-		ord: 20,
+		ord: 15,
 		cols: ["一个筐", "放在这里", "放进筐里"],
 	},
 	{
@@ -2690,7 +2690,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 18,
+		ord: 16,
 		cols: ["拉小提琴"],
 	},
 	{
@@ -2702,7 +2702,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk1"],
 		sec: 2,
-		ord: 8,
+		ord: 7,
 		cols: ["来一个", "来一些", "来了一瓶"],
 	},
 	{
@@ -2714,7 +2714,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 17,
+		ord: 15,
 		cols: ["离开你", "离开中国", "离开了十年"],
 	},
 	{
@@ -2750,7 +2750,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 9,
+		ord: "8a",
 		cols: ["一张脸", "脸部"],
 	},
 	{
@@ -2774,7 +2774,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 23,
+		ord: 19,
 	},
 	{
 		h: "聊",
@@ -2785,7 +2785,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 11,
+		ord: "9a",
 		cols: ["聊什么", "聊电影", "聊一聊"],
 	},
 	{
@@ -2797,7 +2797,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 10,
+		ord: 9,
 		cols: ["跟她聊天儿", "聊一会儿天儿"],
 	},
 	{
@@ -2821,7 +2821,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 25,
+		ord: 20,
 	},
 	{
 		h: "流利",
@@ -2832,7 +2832,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 15,
+		ord: 13,
 		cols: ["说话说得很流利", "英语说得很流利"],
 	},
 	{
@@ -2844,7 +2844,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 5,
+		ord: "3a",
 		cols: ["在中国留学", "去留学"],
 	},
 	{
@@ -2856,7 +2856,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 4,
+		ord: 3,
 		cols: ["一个留学生", "外国留学生"],
 	},
 	{
@@ -2880,7 +2880,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 17,
+		ord: 12,
 		cols: ["有点儿麻烦", "很麻烦", "麻烦朋友"],
 	},
 	{
@@ -2892,7 +2892,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 24,
+		ord: 16,
 		cols: ["写得马马虎虎", "学得马马虎虎"],
 	},
 	{
@@ -2917,7 +2917,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 10,
+		ord: 9,
 		cols: ["漂亮的毛衣", "买了一件毛衣"],
 	},
 	{
@@ -2941,7 +2941,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 19,
+		ord: 16,
 		cols: ["戴帽子", "跑掉帽子"],
 	},
 	{
@@ -2953,7 +2953,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 7,
+		ord: 6,
 		cols: ["很美的街道", "夜景很美"],
 	},
 	{
@@ -2965,7 +2965,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 2,
+		ord: "1a",
 		cols: ["喜欢美术", "学习美术"],
 	},
 	{
@@ -2989,7 +2989,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 23,
+		ord: "18a",
 		cols: ["一个梦", "中国梦", "美梦"],
 	},
 	{
@@ -3001,7 +3001,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 4,
+		ord: "3a",
 		cols: ["球迷", "京剧迷", "电影迷"],
 	},
 	{
@@ -3013,7 +3013,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 17,
+		ord: 15,
 		cols: ["棉的衣服", "棉旗袍"],
 	},
 	{
@@ -3025,7 +3025,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 6,
+		ord: 5,
 		cols: ["买面包", "一个面包", "一包面包"],
 	},
 	{
@@ -3049,7 +3049,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 13,
+		ord: 11,
 		cols: ["真的名不虚传"],
 	},
 	{
@@ -3061,7 +3061,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 22,
+		ord: 21,
 		cols: ["一张名片", "没有名片", "递名片"],
 	},
 	{
@@ -3073,7 +3073,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 21,
+		ord: 18,
 		cols: ["中国名曲", "有名的名曲"],
 	},
 	{
@@ -3085,7 +3085,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 20,
+		ord: 16,
 		cols: ["一张明信片", "从北京寄明信片"],
 	},
 	{
@@ -3097,7 +3097,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 9,
+		ord: 7,
 		cols: ["用墨画", "用画墨"],
 	},
 	{
@@ -3121,7 +3121,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk1"],
 		sec: 1,
-		ord: 23,
+		ord: 18,
 		cols: ["那就开始吧", "那你去"],
 	},
 	{
@@ -3133,7 +3133,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 26,
+		ord: 18,
 		cols: ["那么多", "那么容易", "那么大"],
 	},
 	{
@@ -3145,7 +3145,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 22,
+		ord: 17,
 		cols: ["那儿什么", "去那儿", "从那儿来"],
 	},
 	{
@@ -3157,7 +3157,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 17,
+		ord: 14,
 		cols: ["那些画儿", "那些颜色"],
 	},
 	{
@@ -3169,7 +3169,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 18,
+		ord: "14a",
 		cols: ["向南", "往南", "中国的南方"],
 	},
 	{
@@ -3181,7 +3181,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 17,
+		ord: 14,
 		cols: ["南方人", "南方的菜", "南方旅游"],
 	},
 	{
@@ -3193,7 +3193,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 18,
+		ord: 15,
 		cols: ["很难", "太难了", "不难"],
 	},
 	{
@@ -3205,7 +3205,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 10,
+		ord: "5b",
 		cols: ["小鸟", "白色鸟"],
 	},
 	{
@@ -3217,7 +3217,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk2"],
 		sec: 2,
-		ord: 5,
+		ord: 4,
 		cols: ["一瓶牛奶", "一盒牛奶", "喝牛奶"],
 	},
 	{
@@ -3229,7 +3229,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 21,
+		ord: 16,
 		cols: ["农村人", "在农村"],
 	},
 	{
@@ -3241,7 +3241,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk6"],
 		sec: 1,
-		ord: 23,
+		ord: 18,
 		cols: ["哦，我懂了", "哦，对"],
 	},
 	{
@@ -3265,7 +3265,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk5"],
 		sec: 2,
-		ord: 13,
+		ord: "10a",
 		cols: ["拍一拍照", "拍电影", "拍完了"],
 	},
 	{
@@ -3277,7 +3277,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 12,
+		ord: 10,
 		cols: ["拍照", "准备拍照", "拍了照"],
 	},
 	{
@@ -3289,7 +3289,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 3,
+		ord: "2a",
 		cols: ["排一排", "排一下"],
 	},
 	{
@@ -3313,7 +3313,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 14,
+		ord: "10b",
 		cols: ["车牌", "门牌"],
 	},
 	{
@@ -3325,7 +3325,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 19,
+		ord: 14,
 		cols: ["去派出所", "在派出所"],
 	},
 	{
@@ -3337,7 +3337,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 10,
+		ord: 7,
 		cols: ["比较胖", "胖了", "太胖了"],
 	},
 	{
@@ -3361,7 +3361,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 15,
+		ord: 11,
 		cols: ["跑一下", "一小时跑步"],
 	},
 	{
@@ -3373,7 +3373,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 15,
+		ord: 13,
 		cols: ["陪你来", "陪我去", "一起陪"],
 	},
 	{
@@ -3385,7 +3385,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk5"],
 		sec: 2,
-		ord: 11,
+		ord: 9,
 		cols: ["一匹马"],
 	},
 	{
@@ -3397,7 +3397,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 22,
+		ord: "16a",
 		cols: ["一瓶牛奶", "一瓶字奶"],
 	},
 	{
@@ -3409,7 +3409,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 21,
+		ord: 16,
 		cols: ["一瓶", "打开瓶子"],
 	},
 	{
@@ -3421,7 +3421,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 13,
+		ord: 10,
 	},
 	{
 		h: "浦东",
@@ -3432,7 +3432,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 18,
+		ord: 16,
 	},
 	{
 		h: "普通",
@@ -3443,7 +3443,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 14,
+		ord: "12a",
 		cols: ["普通人", "普通的衣服", "很普通"],
 	},
 	{
@@ -3455,7 +3455,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 13,
+		ord: 12,
 		cols: ["说普通话", "学习普通话"],
 	},
 	{
@@ -3467,7 +3467,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 22,
+		ord: 19,
 	},
 	{
 		h: "骑",
@@ -3478,7 +3478,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 13,
+		ord: "12a",
 		cols: ["骑自行车", "骑马"],
 	},
 	{
@@ -3514,7 +3514,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 23,
+		ord: 19,
 		cols: ["起床", "起来", "一起"],
 	},
 	{
@@ -3526,7 +3526,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 22,
+		ord: 18,
 		cols: ["站起来", "跑起来", "爬起来"],
 	},
 	{
@@ -3538,7 +3538,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 18,
+		ord: 14,
 		cols: ["今天的气温", "北京的气温", "很低的气温"],
 	},
 	{
@@ -3563,7 +3563,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 8,
+		ord: 7,
 		cols: ["办签证", "有签证", "申请签证"],
 	},
 	{
@@ -3575,7 +3575,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 26,
+		ord: 20,
 		cols: ["在这儿签字", "签个字", "签一下字"],
 	},
 	{
@@ -3587,7 +3587,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 25,
+		ord: 17,
 		cols: ["很谦虚", "不谦虚", "太谦虚了"],
 	},
 	{
@@ -3599,7 +3599,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 9,
+		ord: 8,
 		cols: ["钱包丢了", "钱包找到了"],
 	},
 	{
@@ -3611,7 +3611,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk5"],
 		sec: 2,
-		ord: 14,
+		ord: 12,
 		cols: ["浅颜色", "浅色", "有点儿浅"],
 	},
 	{
@@ -3623,7 +3623,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 30,
+		ord: 27,
 		cols: ["很强", "比我强", "不太强"],
 	},
 	{
@@ -3635,7 +3635,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 17,
+		ord: 15,
 		cols: ["敲门", "敲一下"],
 	},
 	{
@@ -3659,7 +3659,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 13,
+		ord: 9,
 		cols: ["看清楚", "听清楚", "写清楚", "想清楚"],
 	},
 	{
@@ -3671,7 +3671,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 14,
+		ord: "10a",
 		cols: ["一个球", "踢球"],
 	},
 	{
@@ -3695,7 +3695,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk6"],
 		sec: 2,
-		ord: 22,
+		ord: "18a",
 	},
 	{
 		h: "裙子",
@@ -3706,7 +3706,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 11,
+		ord: 10,
 		cols: ["一条裙子", "漂亮的裙子", "绿色的裙子"],
 	},
 	{
@@ -3718,7 +3718,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 16,
+		ord: 13,
 		cols: ["很热闹", "热闹的节日"],
 	},
 	{
@@ -3730,7 +3730,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 7,
+		ord: "4a",
 		cols: ["中国人民", "中国人民银行"],
 	},
 	{
@@ -3742,7 +3742,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 6,
+		ord: 4,
 		cols: ["用人民币", "换人民币"],
 	},
 	{
@@ -3754,7 +3754,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 19,
+		ord: 16,
 		cols: ["很容易", "不容易", "比较容易"],
 	},
 	{
@@ -3779,7 +3779,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 26,
+		ord: "20a",
 		cols: ["一场赛", "半场赛"],
 	},
 	{
@@ -3791,7 +3791,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 12,
+		ord: "10a",
 		cols: ["颜色", "黑色"],
 	},
 	{
@@ -3803,7 +3803,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 23,
+		ord: "18a",
 		cols: ["山顶", "山下", "爬山", "一座山"],
 	},
 	{
@@ -3827,7 +3827,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 10,
+		ord: 9,
 		cols: ["一个山洞", "进山洞"],
 	},
 	{
@@ -3851,7 +3851,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 8,
+		ord: 7,
 		cols: ["大商场", "去商场"],
 	},
 	{
@@ -3863,7 +3863,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 11,
+		ord: 8,
 		cols: ["商量一下", "一起商量"],
 	},
 	{
@@ -3875,7 +3875,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 12,
+		ord: 10,
 		cols: ["上半场比赛"],
 	},
 	{
@@ -3887,7 +3887,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 22,
+		ord: 20,
 		cols: ["说上海话", "学一句上海话"],
 	},
 	{
@@ -3911,7 +3911,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 13,
+		ord: 11,
 		cols: ["深颜色", "深蓝色", "有点儿深"],
 	},
 	{
@@ -3935,7 +3935,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 16,
+		ord: 13,
 		cols: ["还剩多少", "剩的时间", "剩下"],
 	},
 	{
@@ -3947,7 +3947,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk5"],
 		sec: 2,
-		ord: 23,
+		ord: "20a",
 		cols: ["实用的词典", "实用的手机", "校实用"],
 	},
 	{
@@ -3959,7 +3959,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 19,
+		ord: 17,
 		cols: ["参观世博园", "建设世博园"],
 	},
 	{
@@ -3971,7 +3971,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 7,
+		ord: 5,
 		cols: ["北京市", "市里"],
 	},
 	{
@@ -3983,7 +3983,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 8,
+		ord: 7,
 		cols: ["服装的式样", "这种式样", "有特别的式样"],
 	},
 	{
@@ -3995,7 +3995,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 24,
+		ord: "18a",
 		cols: ["收包裹", "收信", "收到中文书"],
 	},
 	{
@@ -4007,7 +4007,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 23,
+		ord: 18,
 		cols: ["收件人的姓名"],
 	},
 	{
@@ -4019,7 +4019,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk6"],
 		sec: 2,
-		ord: 18,
+		ord: 15,
 		cols: ["写书法", "学书法"],
 	},
 	{
@@ -4031,7 +4031,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk6"],
 		sec: 1,
-		ord: 29,
+		ord: 21,
 		cols: ["数一下", "数钱", "数人民币"],
 	},
 	{
@@ -4056,7 +4056,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 8,
+		ord: 7,
 		cols: ["很顺利", "工作顺利"],
 	},
 	{
@@ -4080,7 +4080,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 14,
+		ord: 13,
 		cols: ["公共汽车司机", "出租车司机"],
 	},
 	{
@@ -4092,7 +4092,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 19,
+		ord: "16a",
 	},
 	{
 		h: "死",
@@ -4103,7 +4103,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 16,
+		ord: 14,
 		cols: ["死了", "死过一次", "怎么死了"],
 	},
 	{
@@ -4126,7 +4126,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 4,
+		ord: 2,
 	},
 	{
 		h: "它",
@@ -4137,7 +4137,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk2"],
 		sec: 2,
-		ord: 6,
+		ord: "4a",
 		cols: ["忘了它", "别忘了它"],
 	},
 	{
@@ -4149,7 +4149,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 5,
+		ord: 4,
 		cols: ["它们的", "它们也上来"],
 	},
 	{
@@ -4161,7 +4161,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 14,
+		ord: 11,
 		cols: ["学太极拳", "表演太极拳"],
 	},
 	{
@@ -4173,7 +4173,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 22,
+		ord: 18,
 	},
 	{
 		h: "躺",
@@ -4196,7 +4196,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 6,
+		ord: 5,
 		cols: ["这趟车", "买这趟车的票"],
 	},
 	{
@@ -4220,7 +4220,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 12,
+		ord: 9,
 		cols: ["跑球", "喜欢踢球"],
 	},
 	{
@@ -4245,7 +4245,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 7,
+		ord: 5,
 		cols: ["体重是120斤", "体重是多少"],
 	},
 	{
@@ -4257,7 +4257,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 11,
+		ord: 10,
 		cols: ["替你收", "替他签字"],
 	},
 	{
@@ -4269,7 +4269,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 21,
+		ord: 16,
 		cols: ["填单子", "填姓名", "填好"],
 	},
 	{
@@ -4281,7 +4281,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 16,
+		ord: 13,
 		cols: ["停车", "停一停"],
 	},
 	{
@@ -4293,7 +4293,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 18,
+		ord: 15,
 		cols: ["地下停车场", "有空闲停车场"],
 	},
 	{
@@ -4305,7 +4305,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 16,
+		ord: 14,
 		cols: ["通电话", "通信"],
 	},
 	{
@@ -4317,7 +4317,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 24,
+		ord: 21,
 		cols: ["我同意", "同意你的建议", "不同意"],
 	},
 	{
@@ -4329,7 +4329,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 14,
+		ord: 13,
 		cols: ["很痛苦", "充满痛苦"],
 	},
 	{
@@ -4341,7 +4341,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 12,
+		ord: "9a",
 		cols: ["偷东西", "小偷偷了我的钱包"],
 	},
 	{
@@ -4365,7 +4365,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr", "hsk6"],
 		sec: 1,
-		ord: 8,
+		ord: 7,
 		cols: ["办托运", "托运行李", "行李托运"],
 	},
 	{
@@ -4377,7 +4377,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 19,
+		ord: 14,
 		cols: ["脱鞋子", "脱外衣", "脱下来"],
 	},
 	{
@@ -4389,7 +4389,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 21,
+		ord: 19,
 		cols: ["外滩的夜景"],
 	},
 	{
@@ -4401,7 +4401,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 16,
+		ord: 12,
 		cols: ["一件外衣", "拿外衣", "脱外衣"],
 	},
 	{
@@ -4413,7 +4413,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 19,
+		ord: 16,
 		cols: ["我们队的外援"],
 	},
 	{
@@ -4425,7 +4425,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr", "hsk5"],
 		sec: 2,
-		ord: 8,
+		ord: 7,
 		cols: ["弯弯的精", "弯下去"],
 	},
 	{
@@ -4437,7 +4437,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 25,
+		ord: 19,
 		cols: ["填完", "看完", "吃完", "写完了"],
 	},
 	{
@@ -4449,7 +4449,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 11,
+		ord: 8,
 		cols: ["玩儿得很高兴", "想玩儿"],
 	},
 	{
@@ -4461,7 +4461,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 4,
+		ord: "3a",
 		cols: ["一个玩笑", "开玩笑"],
 	},
 	{
@@ -4473,7 +4473,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 6,
+		ord: 4,
 		cols: ["一晚会", "参加晚会", "晚会上"],
 	},
 	{
@@ -4485,7 +4485,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk6"],
 		sec: 2,
-		ord: 25,
+		ord: 21,
 		cols: ["网络很好", "网络快", "没有网络"],
 	},
 	{
@@ -4497,7 +4497,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 15,
+		ord: 12,
 		cols: ["往左", "往西安走", "往哪儿走"],
 	},
 	{
@@ -4509,7 +4509,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 7,
+		ord: 5,
 		cols: ["忘了你", "别忘了", "记着别忘了"],
 	},
 	{
@@ -4533,7 +4533,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk5"],
 		sec: 2,
-		ord: 20,
+		ord: 17,
 		cols: ["一个卫生间", "卫生间在哪儿"],
 	},
 	{
@@ -4545,7 +4545,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 14,
+		ord: 12,
 		cols: ["哪位", "哪几位"],
 	},
 	{
@@ -4557,7 +4557,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 12,
+		ord: 10,
 		cols: ["中国文化", "文化教育", "文化名人"],
 	},
 	{
@@ -4569,7 +4569,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 28,
+		ord: 24,
 		cols: ["太无聊了", "觉得很无聊"],
 	},
 	{
@@ -4581,7 +4581,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 23,
+		ord: "19a",
 		cols: ["无线", "无线网"],
 	},
 	{
@@ -4593,7 +4593,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 22,
+		ord: 19,
 		cols: ["无线网", "用无线网"],
 	},
 	{
@@ -4605,7 +4605,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 30,
+		ord: 22,
 	},
 	{
 		h: "希望",
@@ -4640,7 +4640,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 16,
+		ord: 13,
 		cols: ["大虾", "小虾", "吃虾"],
 	},
 	{
@@ -4652,7 +4652,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 15,
+		ord: 12,
 		cols: ["下半场比赛"],
 	},
 	{
@@ -4664,7 +4664,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 9,
+		ord: 8,
 		cols: ["山下边", "在山下边", "楼下边的景色"],
 	},
 	{
@@ -4676,7 +4676,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 22,
+		ord: 18,
 		cols: ["下了了", "下课了", "下了课以后"],
 	},
 	{
@@ -4688,7 +4688,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 7,
+		ord: 6,
 		cols: ["一个箱子", "拿箱子"],
 	},
 	{
@@ -4700,7 +4700,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 14,
+		ord: "11a",
 		cols: ["像真的一样", "像齐白石"],
 	},
 	{
@@ -4712,7 +4712,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 18,
+		ord: 13,
 		cols: ["一条消息", "有什么消息", "好消息"],
 	},
 	{
@@ -4724,7 +4724,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 19,
+		ord: 15,
 		cols: ["北京小吃", "吃小吃", "我喜欢吃小吃"],
 	},
 	{
@@ -4736,7 +4736,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 8,
+		ord: 7,
 		cols: ["好小说", "写小说", "古典小说"],
 	},
 	{
@@ -4748,7 +4748,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 17,
+		ord: 15,
 		cols: ["一把小提琴", "拉小提琴"],
 	},
 	{
@@ -4760,7 +4760,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 11,
+		ord: 9,
 		cols: ["一个小偷儿", "抓小偷儿"],
 	},
 	{
@@ -4784,7 +4784,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 15,
+		ord: 14,
 		cols: ["嘉赏笑", "笑声笑", "笑话"],
 	},
 	{
@@ -4796,7 +4796,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 18,
+		ord: "13a",
 		cols: ["运动鞋", "换鞋", "穿好鞋子"],
 	},
 	{
@@ -4808,7 +4808,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 17,
+		ord: 13,
 		cols: ["颜色的鞋子", "合适的鞋子", "运动鞋子"],
 	},
 	{
@@ -4820,7 +4820,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk6"],
 		sec: 1,
-		ord: 26,
+		ord: 23,
 		cols: ["写作水平", "写作很好"],
 	},
 	{
@@ -4832,7 +4832,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 21,
+		ord: 19,
 		cols: ["非常辛苦了", "辛苦你了", "很辛苦"],
 	},
 	{
@@ -4844,7 +4844,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 16,
+		ord: 13,
 		cols: ["欣赏景色", "欣赏音乐", "欣赏美景"],
 	},
 	{
@@ -4856,7 +4856,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 18,
+		ord: 16,
 	},
 	{
 		h: "新实用汉语课本",
@@ -4867,7 +4867,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 22,
+		ord: 20,
 	},
 	{
 		h: "信",
@@ -4878,7 +4878,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 21,
+		ord: "16a",
 		cols: ["写信", "给朋友写信", "回信", "寄信"],
 	},
 	{
@@ -4890,7 +4890,7 @@ export const B2_VOCAB = [
 		l: 20,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 7,
+		ord: "6a",
 		extra: true,
 		cols: ["托运行李", "拿行李", "随身行李"],
 	},
@@ -4915,7 +4915,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 22,
+		ord: "14a",
 		cols: ["有兴趣", "没有兴趣"],
 	},
 	{
@@ -4927,7 +4927,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 22,
+		ord: 17,
 		cols: ["您的姓名", "写姓名", "写名字"],
 	},
 	{
@@ -4951,7 +4951,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 21,
+		ord: 18,
 	},
 	{
 		h: "选",
@@ -4962,7 +4962,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 10,
+		ord: 9,
 		cols: ["选衣服", "选式样", "选一选"],
 	},
 	{
@@ -4974,7 +4974,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 15,
+		ord: 13,
 		cols: ["有学生证", "带学生证", "办学生证"],
 	},
 	{
@@ -4986,7 +4986,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk2"],
 		sec: 2,
-		ord: 11,
+		ord: 10,
 		cols: ["什么颜色", "深颜色", "浅颜色"],
 	},
 	{
@@ -4998,7 +4998,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 32,
+		ord: "21c",
 		cols: ["眼睛", "眼前"],
 	},
 	{
@@ -5010,7 +5010,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 9,
+		ord: "6a",
 		cols: ["演话剧", "演得很好"],
 	},
 	{
@@ -5022,7 +5022,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 10,
+		ord: 9,
 		cols: ["京剧演出", "上海演出", "演出过"],
 	},
 	{
@@ -5070,7 +5070,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 6,
+		ord: 5,
 		cols: ["边儿的夜景", "这里非常漂亮"],
 	},
 	{
@@ -5082,7 +5082,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 20,
+		ord: 19,
 		cols: ["医药费", "花了多少医药"],
 	},
 	{
@@ -5106,7 +5106,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 11,
+		ord: 6,
 		cols: ["一样快", "一样好", "不一样"],
 	},
 	{
@@ -5118,7 +5118,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 14,
+		ord: 9,
 		cols: ["已经去了", "已经十一年了"],
 	},
 	{
@@ -5130,7 +5130,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 6,
+		ord: 5,
 		cols: ["五点以后", "下课以后", "吃了饭以后"],
 	},
 	{
@@ -5142,7 +5142,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 20,
+		ord: 18,
 		cols: ["以为是三楼呢", "以为你不来"],
 	},
 	{
@@ -5154,7 +5154,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr", "hsk1"],
 		sec: 2,
-		ord: 6,
+		ord: 5,
 		cols: ["坐椅子", "一把椅子", "一张椅子"],
 	},
 	{
@@ -5166,7 +5166,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 16,
+		ord: 12,
 		cols: ["一般要两个月", "一般七点起床"],
 	},
 	{
@@ -5190,7 +5190,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 23,
+		ord: 18,
 	},
 	{
 		h: "因为",
@@ -5201,7 +5201,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 6,
+		ord: 4,
 	},
 	{
 		h: "阴",
@@ -5212,7 +5212,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk2"],
 		sec: 2,
-		ord: 16,
+		ord: "12a",
 		cols: ["天气很阴", "太阴了", "今天阴"],
 	},
 	{
@@ -5224,7 +5224,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 15,
+		ord: 12,
 		cols: ["那天阴天", "阴的天"],
 	},
 	{
@@ -5261,7 +5261,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 18,
+		ord: "15a",
 		cols: ["印书", "印照片", "印地图"],
 	},
 	{
@@ -5273,7 +5273,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 5,
+		ord: 3,
 		cols: ["一英镑", "五百英镑", "换英镑"],
 	},
 	{
@@ -5285,7 +5285,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 25,
+		ord: "19a",
 		cols: ["九点营业", "超市的营业时间"],
 	},
 	{
@@ -5297,7 +5297,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 24,
+		ord: 19,
 		cols: ["一个营业员", "银行的营业员"],
 	},
 	{
@@ -5309,7 +5309,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 23,
+		ord: 19,
 		cols: ["我赢了", "比赛赢了", "一定赢"],
 	},
 	{
@@ -5321,7 +5321,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 7,
+		ord: 6,
 		cols: ["景色优美", "音乐优美"],
 	},
 	{
@@ -5333,7 +5333,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 19,
+		ord: 15,
 		cols: ["邮费是多少"],
 	},
 	{
@@ -5345,7 +5345,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 19,
+		ord: "12a",
 		cols: ["用油"],
 	},
 	{
@@ -5357,7 +5357,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 10,
+		ord: 8,
 		cols: ["用油彩画"],
 	},
 	{
@@ -5369,7 +5369,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 18,
+		ord: 12,
 		cols: ["看油画", "实油画", "喜欢油画"],
 	},
 	{
@@ -5381,7 +5381,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 5,
+		ord: "4a",
 		cols: ["旅游", "游泳", "一游"],
 	},
 	{
@@ -5393,7 +5393,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 19,
+		ord: 15,
 		cols: ["一个游泳池", "大游泳池"],
 	},
 	{
@@ -5405,7 +5405,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 17,
+		ord: 13,
 		cols: ["有的人", "有的有", "有的特别年轻"],
 	},
 	{
@@ -5417,7 +5417,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 10,
+		ord: 7,
 		cols: ["又来了", "又要去上海"],
 	},
 	{
@@ -5429,7 +5429,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 19,
+		ord: 15,
 		cols: ["预订宾馆", "预订位子", "预订机票"],
 	},
 	{
@@ -5441,7 +5441,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 14,
+		ord: 11,
 		cols: ["遇到", "遇见朋友"],
 	},
 	{
@@ -5453,7 +5453,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 18,
+		ord: 17,
 		cols: ["原来是这样", "原来是你"],
 	},
 	{
@@ -5465,7 +5465,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 30,
+		ord: "21a",
 		cols: ["很远", "不远", "太远"],
 	},
 	{
@@ -5477,7 +5477,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 29,
+		ord: 21,
 		extra: true,
 	},
 	{
@@ -5489,7 +5489,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 14,
+		ord: 12,
 		cols: ["愿意去", "愿意学", "不愿意"],
 	},
 	{
@@ -5513,7 +5513,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 12,
+		ord: "8b",
 		cols: ["运东西", "用船运"],
 	},
 	{
@@ -5525,7 +5525,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 11,
+		ord: 8,
 		cols: ["喜欢运动", "多运动", "运动运动"],
 	},
 	{
@@ -5537,7 +5537,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr", "hsk5"],
 		sec: 2,
-		ord: 21,
+		ord: 16,
 		cols: ["好运气", "今年的运气", "不好运气"],
 	},
 	{
@@ -5549,7 +5549,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk6"],
 		sec: 1,
-		ord: 4,
+		ord: 3,
 		cols: ["看杂技", "中国杂技表演"],
 	},
 	{
@@ -5561,7 +5561,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 15,
+		ord: "10b",
 		cols: ["大灾", "水灾", "火灾"],
 	},
 	{
@@ -5573,7 +5573,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 20,
+		ord: 17,
 		cols: ["再说还有别的"],
 	},
 	{
@@ -5623,7 +5623,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 26,
+		ord: 19,
 		cols: ["早日回国", "早日过考试", "早日康复"],
 	},
 	{
@@ -5635,7 +5635,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 9,
+		ord: 6,
 		cols: ["体重增加", "增加120斤", "太胖了"],
 	},
 	{
@@ -5647,7 +5647,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 21,
+		ord: 17,
 		cols: ["站起来", "站一站", "站着"],
 	},
 	{
@@ -5671,7 +5671,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk2"],
 		sec: 1,
-		ord: 28,
+		ord: 25,
 		cols: ["找你", "找我", "找到我"],
 	},
 	{
@@ -5683,7 +5683,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 12,
+		ord: 11,
 		cols: ["这么多", "这么好吃", "这么漂亮"],
 	},
 	{
@@ -5707,7 +5707,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 17,
+		ord: 14,
 		cols: ["这样做", "这样好", "这样说"],
 	},
 	{
@@ -5731,7 +5731,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 18,
+		ord: 16,
 		cols: ["真丝材料", "真丝衬衫", "真丝旗袍"],
 	},
 	{
@@ -5743,7 +5743,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk5"],
 		sec: 2,
-		ord: 6,
+		ord: "4a",
 		cols: ["正比赛", "正看电影"],
 	},
 	{
@@ -5755,7 +5755,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 15,
+		ord: 12,
 		cols: ["正好三天", "正好来了"],
 	},
 	{
@@ -5767,7 +5767,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk2"],
 		sec: 2,
-		ord: 5,
+		ord: 4,
 		cols: ["正在看电影", "正在看电视"],
 	},
 	{
@@ -5779,7 +5779,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 5,
+		ord: "4a",
 		cols: ["身份证", "工作证", "学生证"],
 	},
 	{
@@ -5791,7 +5791,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr", "hsk5"],
 		sec: 2,
-		ord: 16,
+		ord: 11,
 		cols: ["办证件", "拿出证件", "证件丢了"],
 	},
 	{
@@ -5803,7 +5803,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 6,
+		ord: 4,
 		cols: ["看中国画", "买中国画"],
 	},
 	{
@@ -5827,7 +5827,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 25,
+		ord: 20,
 		cols: ["终于到山顶了", "终于成功了"],
 	},
 	{
@@ -5839,7 +5839,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 8,
+		ord: "5a",
 		cols: ["太重了", "比较重"],
 	},
 	{
@@ -5863,7 +5863,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 8,
+		ord: 6,
 		cols: ["主要的话语", "主要问题", "主要有三个问题"],
 	},
 	{
@@ -5875,7 +5875,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 17,
+		ord: 16,
 		cols: ["请注意", "注意安全"],
 	},
 	{
@@ -5887,7 +5887,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 6,
+		ord: 5,
 		cols: ["著名歌剧", "著名演员"],
 	},
 	{
@@ -5899,7 +5899,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 20,
+		ord: 15,
 		cols: ["抓人", "抓小偷儿", "抓住了"],
 	},
 	{
@@ -5923,7 +5923,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk5"],
 		sec: 1,
-		ord: 19,
+		ord: 16,
 		cols: ["装在手机上", "装手机卡", "装东西"],
 	},
 	{
@@ -5947,7 +5947,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr", "hsk1"],
 		sec: 2,
-		ord: 4,
+		ord: 3,
 		cols: ["在桌子上", "放在桌子上"],
 	},
 	{
@@ -5959,7 +5959,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 18,
+		ord: 16,
 		cols: ["我自己", "他自己的东西"],
 	},
 	{
@@ -5971,7 +5971,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr", "hsk1"],
 		sec: 1,
-		ord: 28,
+		ord: "20b",
 		cols: ["一个字", "写字", "认识很多字"],
 	},
 	{
@@ -5983,7 +5983,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 13,
+		ord: "10a",
 		cols: ["总是"],
 	},
 	{
@@ -5995,7 +5995,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 12,
+		ord: 10,
 		cols: ["总是工作", "总是顺利"],
 	},
 	{
@@ -6020,7 +6020,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 7,
+		ord: "6a",
 		cols: ["租房间", "租衣服", "租一套"],
 	},
 	{
@@ -6032,7 +6032,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 13,
+		ord: 10,
 		cols: ["踢足球", "看足球", "喜欢踢足球"],
 	},
 	{
@@ -6044,7 +6044,7 @@ export const B2_VOCAB = [
 		l: 17,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 5,
+		ord: 4,
 		cols: ["组织比赛", "组织学生", "学生组织"],
 	},
 	{
@@ -6056,7 +6056,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 26,
+		ord: 20,
 		cols: ["最后有几句话", "最后去西安"],
 	},
 	{
@@ -6068,7 +6068,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr", "hsk6"],
 		sec: 1,
-		ord: 15,
+		ord: 11,
 		cols: ["一百元左右", "在二三元左右", "八点左右"],
 	},
 	{
@@ -6092,7 +6092,7 @@ export const B2_VOCAB = [
 		l: 11,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 27,
+		ord: "20a",
 		cols: ["签一下", "签名字"],
 	},
 	{
@@ -6104,7 +6104,7 @@ export const B2_VOCAB = [
 		l: 12,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 8,
+		ord: "6a",
 		cols: ["窗子", "窗户"],
 	},
 	{
@@ -6128,7 +6128,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk2"],
 		sec: 2,
-		ord: 15,
+		ord: 12,
 		cols: ["从这边走", "走路", "走一走"],
 	},
 	{
@@ -6140,7 +6140,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr"],
 		sec: 2,
-		ord: 17,
+		ord: 14,
 		cols: ["在地下", "地下一层", "地下商场"],
 	},
 	{
@@ -6152,7 +6152,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk4"],
 		sec: 2,
-		ord: 20,
+		ord: 17,
 		cols: ["大概五个小时", "大概八点"],
 	},
 	{
@@ -6164,7 +6164,7 @@ export const B2_VOCAB = [
 		l: 13,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 21,
+		ord: 18,
 		cols: ["听音乐", "我喜欢音乐"],
 	},
 	{
@@ -6176,7 +6176,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk1"],
 		sec: 1,
-		ord: 7,
+		ord: 5,
 		cols: ["开会", "晚会开不了"],
 	},
 	{
@@ -6188,7 +6188,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 21,
+		ord: 18,
 		cols: ["没有提高", "提高一点儿"],
 	},
 	{
@@ -6200,7 +6200,7 @@ export const B2_VOCAB = [
 		l: 14,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 22,
+		ord: 19,
 		cols: ["汉语水平", "口语水平", "找水平"],
 	},
 	{
@@ -6212,7 +6212,7 @@ export const B2_VOCAB = [
 		l: 15,
 		tags: ["npcr", "hsk1"],
 		sec: 1,
-		ord: 4,
+		ord: "2a",
 		cols: ["别开窗", "请开一下门"],
 	},
 	{
@@ -6223,7 +6223,7 @@ export const B2_VOCAB = [
 		en: "Beijing opera",
 		l: 15,
 		sec: 1,
-		ord: 23,
+		ord: 15,
 		cols: ["喜欢京剧", "看京剧", "对京剧感兴趣"],
 	},
 	{
@@ -6235,7 +6235,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr"],
 		sec: 1,
-		ord: 16,
+		ord: 12,
 		cols: ["我们队", "中国队", "留学生队", "足球队"],
 	},
 	{
@@ -6247,7 +6247,7 @@ export const B2_VOCAB = [
 		l: 16,
 		tags: ["npcr", "hsk3"],
 		sec: 2,
-		ord: 17,
+		ord: 14,
 		cols: ["接电话", "没接电话", "接到电话"],
 	},
 	{
@@ -6271,7 +6271,7 @@ export const B2_VOCAB = [
 		l: 18,
 		tags: ["npcr", "hsk4"],
 		sec: 1,
-		ord: 26,
+		ord: 21,
 		cols: ["爬长城", "一次长城", "攀登长城"],
 	},
 	{
@@ -6283,7 +6283,7 @@ export const B2_VOCAB = [
 		l: 19,
 		tags: ["npcr", "hsk3"],
 		sec: 1,
-		ord: 19,
+		ord: 18,
 		cols: ["马上上楼", "马上开始"],
 	},
 	{
