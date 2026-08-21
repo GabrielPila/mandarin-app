@@ -6,6 +6,7 @@ import {
 	toneOf,
 	isHan,
 	DICT,
+	ALL,
 	normPinyin,
 	registerExternalVocabulary,
 	externalVocabularyDictionary,
@@ -22,7 +23,10 @@ test("segment: longest match wins", () => {
 
 test("segment: favors complete coverage over a greedy overlapping word", () => {
 	const toks = segment("写作业了");
-	assert.deepEqual(toks.map((t) => t.t), ["写", "作业", "了"]);
+	assert.deepEqual(
+		toks.map((t) => t.t),
+		["写", "作业", "了"],
+	);
 	assert.ok(toks.every((t) => !t.plain));
 });
 
@@ -34,7 +38,10 @@ test("segment: reading vocabulary overrides a generic dictionary meaning", () =>
 	registerExternalVocabulary(vocabulary, "Context test");
 	const local = externalVocabularyDictionary(vocabulary);
 	const toks = segment("天上的王", local).filter((token) => !token.plain);
-	assert.deepEqual(toks.map((token) => token.t), ["天上", "的", "王"]);
+	assert.deepEqual(
+		toks.map((token) => token.t),
+		["天上", "的", "王"],
+	);
 	assert.equal(toks[0].entries[0].en, "heaven");
 	assert.equal(toks[2].entries[0].en, "king");
 });
@@ -110,4 +117,16 @@ test("dictionary covers core starters", () => {
 	for (const w of ["你好", "谢谢", "中国", "学习"]) {
 		assert.ok(DICT.has(w) || DICT.has(w[0]), `falta ${w}`);
 	}
+});
+
+test("cross-lesson entries are preserved in ALL and not tombstoned", () => {
+	const dianshi = ALL.filter((e) => e.h === "电视" && !e._deleted);
+	assert.ok(
+		dianshi.some((e) => e.l === 16 && e.sec === 2 && e.ord === 2),
+		"L16 core entry for 电视 must exist and not be _deleted",
+	);
+	assert.ok(
+		dianshi.some((e) => e.l === 4 && e.sec === 3 && e.ord === 7),
+		"L4 sup entry for 电视 must exist and not be _deleted",
+	);
 });

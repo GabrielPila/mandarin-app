@@ -1,5 +1,12 @@
-// ui.js — primitivas de interfaz compartidas por las vistas
-import { segment, syllables, toneOf, TONE_MARK, isHan, DICT } from "./dict.js";
+import {
+	segment,
+	syllables,
+	toneOf,
+	TONE_MARK,
+	isHan,
+	DICT,
+	normPinyin,
+} from "./dict.js";
 import { settings, hasMyVocabulary, toggleMyVocabulary } from "./store.js";
 import { T, gloss, exGloss } from "./i18n.js";
 import { speak } from "./audio.js";
@@ -22,12 +29,19 @@ export function cardPool(ALL) {
 
 // ---------- render de texto chino con ruby ----------
 // mode: 'none' | 'pinyin' | 'tones'
-export function renderTokens(zh, mode, explicitPinyin = "", localDictionary, contextualMeanings = []) {
+export function renderTokens(
+	zh,
+	mode,
+	explicitPinyin = "",
+	localDictionary,
+	contextualMeanings = [],
+) {
 	const frag = document.createDocumentFragment();
 	const provided = explicitPinyin.trim()
 		? explicitPinyin.trim().split(/\s+/)
 		: null;
-	let providedIndex = 0, hanOffset = 0;
+	let providedIndex = 0,
+		hanOffset = 0;
 	for (const tok of segment(zh, localDictionary)) {
 		const tokenOffset = hanOffset;
 		hanOffset += Array.from(tok.t).filter(isHan).length;
@@ -100,7 +114,9 @@ export function renderTokens(zh, mode, explicitPinyin = "", localDictionary, con
 		});
 		w.addEventListener("click", (ev) => {
 			ev.stopPropagation();
-			const contextualGloss = contextualMeanings.find((meaning) => meaning.at === tokenOffset && meaning.h === tok.t);
+			const contextualGloss = contextualMeanings.find(
+				(meaning) => meaning.at === tokenOffset && meaning.h === tok.t,
+			);
 			showPopup(tok, localDictionary, { contextualGloss });
 		});
 		frag.appendChild(w);
@@ -110,7 +126,11 @@ export function renderTokens(zh, mode, explicitPinyin = "", localDictionary, con
 
 // ---------- popup de palabra ----------
 export function showPopup(tok, localDictionary, options = {}) {
-	const { parentTok = null, parentContext = null, contextualGloss = null } = options;
+	const {
+		parentTok = null,
+		parentContext = null,
+		contextualGloss = null,
+	} = options;
 	const pop = $("#popup"),
 		body = $("#popup-body");
 	body.innerHTML = "";
@@ -124,11 +144,23 @@ export function showPopup(tok, localDictionary, options = {}) {
 		});
 		body.appendChild(back);
 	}
-	tok.entries.forEach((e, idx) => {
+	const seenDefs = new Set();
+	const uniqueEntries = (tok.entries || []).filter((e) => {
+		const k = `${normPinyin(e.p)}|${e.pos || ""}|${gloss(e)}`;
+		if (seenDefs.has(k)) return false;
+		seenDefs.add(k);
+		return true;
+	});
+	uniqueEntries.forEach((e, idx) => {
 		const div = document.createElement("div");
 		div.className = "pop-entry";
-		const meta = e.custom ? `${T("generalVocabulary")} · ${e.source || T("myReadings")}` : `${e.pos ? e.pos + " · " : ""}${T("lesson")} ${e.l}${e.sup ? " · " + T("supTag") : ""}`;
-		const meaningHere = contextualGloss && idx === 0 ? `<div class="pop-context"><div class="pop-ex-label">${T("meaningHere")}</div><div>${settings.lang === "en" ? contextualGloss.en : contextualGloss.es}</div></div><div class="pop-ex-label pop-other-label">${T("otherMeanings")}</div>` : "";
+		const meta = e.custom
+			? `${T("generalVocabulary")} · ${e.source || T("myReadings")}`
+			: `${e.pos ? e.pos + " · " : ""}${T("lesson")} ${e.l}${e.sup ? " · " + T("supTag") : ""}`;
+		const meaningHere =
+			contextualGloss && idx === 0
+				? `<div class="pop-context"><div class="pop-ex-label">${T("meaningHere")}</div><div>${settings.lang === "en" ? contextualGloss.en : contextualGloss.es}</div></div><div class="pop-ex-label pop-other-label">${T("otherMeanings")}</div>`
+				: "";
 		div.innerHTML = `<div class="pop-head"><span class="pop-h">${e.h}</span>
       <button class="spk-btn pop-spk">🔊</button>
       <span class="pop-p">${e.p}</span></div>
@@ -138,9 +170,15 @@ export function showPopup(tok, localDictionary, options = {}) {
       <div class="pop-g">${gloss(e)}</div>`;
 		const save = document.createElement("button");
 		save.className = "btn small";
-		const updateSave = () => save.textContent = hasMyVocabulary(e.id) ? `✓ ${T("inStudyList")}` : `＋ ${T("addStudyList")}`;
+		const updateSave = () =>
+			(save.textContent = hasMyVocabulary(e.id)
+				? `✓ ${T("inStudyList")}`
+				: `＋ ${T("addStudyList")}`);
 		updateSave();
-		save.addEventListener("click", () => { toggleMyVocabulary(e.id); updateSave(); });
+		save.addEventListener("click", () => {
+			toggleMyVocabulary(e.id);
+			updateSave();
+		});
 		div.appendChild(save);
 		div.querySelector(".pop-spk").addEventListener("click", () => speak(e.h));
 		const characters = Array.from(tok.t).filter(isHan);
@@ -159,7 +197,10 @@ export function showPopup(tok, localDictionary, options = {}) {
 				button.innerHTML = `<span class="pop-component-h">${character}</span><span class="pop-component-p">${component.p}</span><span class="pop-component-g">${gloss(component)}</span>`;
 				button.addEventListener("click", (event) => {
 					event.stopPropagation();
-					showPopup({ t: character, entries }, localDictionary, { parentTok: tok, parentContext: contextualGloss });
+					showPopup({ t: character, entries }, localDictionary, {
+						parentTok: tok,
+						parentContext: contextualGloss,
+					});
 				});
 				list.appendChild(button);
 			});

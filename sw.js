@@ -1,4 +1,4 @@
-const CACHE = "mandarin-v0.27.0";
+const CACHE = "mandarin-v0.27.1";
 const ASSETS = [
 	".",
 	"index.html",
@@ -60,11 +60,7 @@ const ASSETS = [
 	"icons/icon-180.png",
 ];
 self.addEventListener("install", (e) => {
-	e.waitUntil(
-		caches
-			.open(CACHE)
-			.then((c) => c.addAll(ASSETS)),
-	);
+	e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)));
 });
 self.addEventListener("message", (event) => {
 	if (event.data?.type === "SKIP_WAITING") self.skipWaiting();
