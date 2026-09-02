@@ -55,12 +55,10 @@ export function renderTokens(
 					const ruby = document.createElement("span");
 					ruby.className = "ruby";
 					const py = isHan(ch) ? provided[providedIndex++] || "" : "";
-					if (mode === "pinyin") ruby.textContent = py;
-					else if (mode === "tones") {
-						ruby.textContent = py ? TONE_MARK[toneOf(py)] : " ";
-						ruby.classList.add("tones-only");
-					}
+					const tone = py ? TONE_MARK[toneOf(py)] : "";
+					ruby.innerHTML = `<span class="py-txt">${py}</span><span class="tone-txt">${tone}</span>`;
 					if (mode === "none") ruby.style.display = "none";
+					else if (mode === "tones") ruby.classList.add("tones-only");
 					const base = document.createElement("span");
 					base.className = "base";
 					base.textContent = ch;
@@ -77,7 +75,6 @@ export function renderTokens(
 			const ruby = document.createElement("span");
 			ruby.className = "ruby";
 			ruby.innerHTML = "&nbsp;";
-			ruby.style.visibility = "hidden";
 			if (mode === "none") ruby.style.display = "none";
 			const base = document.createElement("span");
 			base.className = "base";
@@ -99,12 +96,11 @@ export function renderTokens(
 			cs.className = "ch";
 			const ruby = document.createElement("span");
 			ruby.className = "ruby";
-			if (mode === "pinyin") ruby.textContent = syls[i] || " ";
-			else if (mode === "tones") {
-				ruby.textContent = syls[i] ? TONE_MARK[toneOf(syls[i])] : " ";
-				ruby.classList.add("tones-only");
-			} else ruby.textContent = "";
+			const py = syls[i] || "";
+			const tone = py ? TONE_MARK[toneOf(py)] : "";
+			ruby.innerHTML = `<span class="py-txt">${py}</span><span class="tone-txt">${tone}</span>`;
 			if (mode === "none") ruby.style.display = "none";
+			else if (mode === "tones") ruby.classList.add("tones-only");
 			const base = document.createElement("span");
 			base.className = "base";
 			base.textContent = ch;

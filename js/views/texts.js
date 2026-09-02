@@ -354,11 +354,16 @@ function renderReader(t, kind, onBack = renderTextList, navigation = null) {
 		player.isPlaying() ? player.stop() : player.play(0);
 	};
 	document.addEventListener("keydown", readerKeyHandler);
+	const updateReaderClasses = () => {
+		const r = $("#reader");
+		if (!r) return;
+		r.className = `mode-${readerMode} ${readerTrans ? "show-trans" : "hide-trans"}`;
+	};
 	const update = () => {
 		$("#tg-pinyin").classList.toggle("on", readerMode === "pinyin");
 		$("#tg-tones").classList.toggle("on", readerMode === "tones");
 		$("#tg-trans").classList.toggle("on", readerTrans);
-		drawReader(t, kind, activePart);
+		updateReaderClasses();
 	};
 	$("#tg-pinyin").addEventListener("click", () => {
 		readerMode = readerMode === "pinyin" ? "none" : "pinyin";
@@ -385,12 +390,14 @@ function renderReader(t, kind, onBack = renderTextList, navigation = null) {
 		drawReader(t, kind, activePart);
 		if (view) view.scrollTop = scrollTop;
 	};
+	drawReader(t, kind, activePart);
 	update();
 }
 
 function drawReader(t, kind, activePart = 0) {
 	const r = $("#reader");
 	r.innerHTML = "";
+	r.className = `mode-${readerMode} ${readerTrans ? "show-trans" : "hide-trans"}`;
 	const lineObjs = [];
 	const localDictionary = externalVocabularyDictionary(t.vocabulary);
 
@@ -419,19 +426,17 @@ function drawReader(t, kind, activePart = 0) {
 			if (line.s) {
 				const sp = document.createElement("div");
 				sp.className = "speaker";
-				sp.appendChild(renderTokens(line.s, readerMode));
+				sp.textContent = line.s;
 				row.appendChild(sp);
 			}
 			const zh = document.createElement("div");
 			zh.className = "line-zh";
-			zh.appendChild(renderTokens(line.zh, readerMode, line.py || "", localDictionary, line.meanings || []));
+			zh.appendChild(renderTokens(line.zh, "reader", line.py || "", localDictionary, line.meanings || []));
 			row.appendChild(zh);
-			if (readerTrans) {
-				const tr = document.createElement("div");
-				tr.className = "line-tr";
-				tr.textContent = settings.lang === "en" ? line.en : line.es;
-				row.appendChild(tr);
-			}
+			const tr = document.createElement("div");
+			tr.className = "line-tr";
+			tr.textContent = (settings.lang === "en" ? line.en : line.es) || "";
+			row.appendChild(tr);
 			r.appendChild(row);
 			const obj = { row, text: line.zh, speaker: line.s };
 			lineObjs.push(obj);

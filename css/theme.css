@@ -35,7 +35,7 @@ body.theme-light {
 	--font-lg: 24px;
 	--font-xl: 34px;
 	--font-xxl: 56px;
-	--font-ruby: 14px;
+	--font-ruby: 11px;
 }
 
 /* ====== THEME: NIGHT (Dark) ====== */
@@ -43,11 +43,13 @@ body.theme-light {
 	:root:not(.theme-light) {
 		/* Deep Neutral Dark Background */
 		--bg-gradient: #111827;
-		--bg-pattern: none;
-		--bg-base: #111827;
+		--bg-pattern:
+			linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+		--bg-base: #0f172a;
 
 		--card-bg: rgba(31, 41, 55, 0.95);
-		--card-border: rgba(255, 255, 255, 0.05);
+		--card-border: rgba(255, 255, 255, 0.1);
 		--glass-nav: rgba(17, 24, 39, 0.85);
 		--ink: #f8fafc;
 		--muted: #94a3b8;
@@ -68,11 +70,13 @@ body.theme-light {
 body.theme-dark {
 	/* Deep Neutral Dark Background */
 	--bg-gradient: #111827;
-	--bg-pattern: none;
-	--bg-base: #111827;
+	--bg-pattern:
+		linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+	--bg-base: #0f172a;
 
 	--card-bg: rgba(31, 41, 55, 0.95);
-	--card-border: rgba(255, 255, 255, 0.05);
+	--card-border: rgba(255, 255, 255, 0.1);
 	--glass-nav: rgba(17, 24, 39, 0.85);
 	--ink: #f8fafc;
 	--muted: #94a3b8;
@@ -95,7 +99,7 @@ body.text-small {
 	--font-lg: 20px;
 	--font-xl: 28px;
 	--font-xxl: 46px;
-	--font-ruby: 12px;
+	--font-ruby: 10px;
 }
 
 body.text-large {
@@ -104,7 +108,7 @@ body.text-large {
 	--font-lg: 28px;
 	--font-xl: 40px;
 	--font-xxl: 64px;
-	--font-ruby: 17px;
+	--font-ruby: 13px;
 }
 
 body.text-xlarge {
@@ -113,7 +117,7 @@ body.text-xlarge {
 	--font-lg: 34px;
 	--font-xl: 48px;
 	--font-xxl: 72px;
-	--font-ruby: 20px;
+	--font-ruby: 15px;
 }
 
 body.text-xxlarge {
@@ -122,5 +126,5 @@ body.text-xxlarge {
 	--font-lg: 40px;
 	--font-xl: 56px;
 	--font-xxl: 80px;
-	--font-ruby: 23px;
+	--font-ruby: 17px;
 }
