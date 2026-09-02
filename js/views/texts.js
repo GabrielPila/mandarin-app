@@ -332,6 +332,7 @@ function renderReader(t, kind, onBack = renderTextList, navigation = null) {
 				btn.classList.add("on");
 				activePart = i;
 				player.stop();
+				drawReader(t, kind, activePart);
 				update();
 			});
 			pt.appendChild(btn);
