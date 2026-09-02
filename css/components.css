@@ -806,10 +806,15 @@
 }
 
 .ruby.tones-only .tone-txt {
-	display: inline;
-	font-size: 13px;
-	font-weight: 800;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Hiragino Sans GB", "Segoe UI Symbol", sans-serif;
+	font-size: 18px;
+	font-weight: 900;
 	line-height: 1;
+	transform: scaleX(1.4);
+	color: var(--primary);
 }
 
 /* Reader mode rules */
@@ -841,10 +846,15 @@
 }
 
 #reader.mode-tones .ruby .tone-txt {
-	display: inline;
-	font-size: 13px;
-	font-weight: 800;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Hiragino Sans GB", "Segoe UI Symbol", sans-serif;
+	font-size: 18px;
+	font-weight: 900;
 	line-height: 1;
+	transform: scaleX(1.4);
+	color: var(--primary);
 }
 
 .base {
