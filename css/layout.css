@@ -96,6 +96,20 @@ header .header-actions {
 	font-family: var(--font-mono, monospace);
 }
 
+#voice-btn {
+	display: block;
+	text-align: left;
+	max-width: 96px;
+	padding: 4px 8px;
+	border-radius: 6px;
+	background: rgba(128, 128, 128, 0.1);
+	font-size: 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	min-height: auto;
+}
+
 #update-toggle {
 	position: relative;
 }
@@ -110,7 +124,7 @@ header .header-actions {
 	header { padding-left: 10px; padding-right: 10px; gap: 4px; }
 	header .title-group [data-i18n="appTitle"] { display: none; }
 	header .header-actions { gap: 0; }
-	#voice-btn { max-width: 64px !important; }
+	#voice-btn { max-width: 68px !important; }
 }
 
 #view {
