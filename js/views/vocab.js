@@ -372,7 +372,7 @@ export function renderVocab() {
 					updateFloatingBar();
 				});
 			} else {
-				d.addEventListener("click", () => popupEntry(e.h));
+				d.addEventListener("click", () => popupEntry(e.h, e));
 			}
 			list.appendChild(d);
 		});

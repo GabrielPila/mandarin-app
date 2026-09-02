@@ -130,10 +130,12 @@ export function showPopup(tok, localDictionary, options = {}) {
 		parentTok = null,
 		parentContext = null,
 		contextualGloss = null,
+		initialId = null,
 	} = options;
 	const pop = $("#popup"),
 		body = $("#popup-body");
 	body.innerHTML = "";
+
 	if (parentTok) {
 		const back = document.createElement("button");
 		back.className = "component-back";
@@ -144,71 +146,223 @@ export function showPopup(tok, localDictionary, options = {}) {
 		});
 		body.appendChild(back);
 	}
+
+	const allEntries =
+		tok.entries && tok.entries.length
+			? tok.entries
+			: (localDictionary?.get(tok.t) || DICT.get(tok.t) || []);
+
 	const seenDefs = new Set();
-	const uniqueEntries = (tok.entries || []).filter((e) => {
+	const uniqueEntries = allEntries.filter((e) => {
 		const k = `${normPinyin(e.p)}|${e.pos || ""}|${gloss(e)}`;
 		if (seenDefs.has(k)) return false;
 		seenDefs.add(k);
 		return true;
 	});
+
+	if (uniqueEntries.length === 0) {
+		uniqueEntries.push({
+			id: `custom_${tok.t}`,
+			h: tok.t,
+			p: "",
+			es: "",
+			en: "",
+			custom: true,
+		});
+	}
+
+	// 1. Header con Hanzi y botón de audio
+	const headerDiv = document.createElement("div");
+	headerDiv.className = "pop-header";
+
+	const headRow = document.createElement("div");
+	headRow.className = "pop-head";
+
+	const hanziSpan = document.createElement("span");
+	hanziSpan.className = "pop-h";
+	hanziSpan.textContent = tok.t;
+	headRow.appendChild(hanziSpan);
+
+	const mainSpk = document.createElement("button");
+	mainSpk.className = "spk-btn pop-main-spk";
+	mainSpk.textContent = "🔊";
+	mainSpk.title = "Play audio";
+	mainSpk.addEventListener("click", () => speak(tok.t));
+	headRow.appendChild(mainSpk);
+
+	if (uniqueEntries.length === 1 && uniqueEntries[0].p) {
+		const singlePinyin = document.createElement("span");
+		singlePinyin.className = "pop-p";
+		singlePinyin.textContent = uniqueEntries[0].p;
+		headRow.appendChild(singlePinyin);
+	}
+
+	headerDiv.appendChild(headRow);
+
+	const hwCont = document.createElement("div");
+	hwCont.className = "hw-container";
+	headerDiv.appendChild(hwCont);
+	body.appendChild(headerDiv);
+
+	// Animación de trazo única por carácter
+	if (window.HanziWriter) {
+		for (const ch of tok.t) {
+			if (!isHan(ch)) continue;
+			const box = document.createElement("div");
+			box.className = "hw-box";
+			hwCont.appendChild(box);
+			const writer = window.HanziWriter.create(box, ch, {
+				width: 50,
+				height: 50,
+				padding: 2,
+				strokeColor: document.body.classList.contains("theme-dark")
+					? "#e53935"
+					: "#d32f2f",
+				delayBetweenStrokes: 100,
+				strokeAnimationSpeed: 1.5,
+			});
+			box.addEventListener("click", () => writer.animateCharacter());
+		}
+	}
+
+	// 2. Componentes de palabras compuestas
+	const characters = Array.from(tok.t).filter(isHan);
+	if (characters.length > 1) {
+		const components = document.createElement("div");
+		components.className = "pop-components";
+		components.innerHTML = `<div class="pop-ex-label">${T("wordComponents")}</div>`;
+		const list = document.createElement("div");
+		list.className = "pop-component-list";
+		characters.forEach((character) => {
+			const charEntries = localDictionary?.get(character) || DICT.get(character);
+			if (!charEntries?.length) return;
+			const component = charEntries[0];
+			const button = document.createElement("button");
+			button.className = "pop-component";
+			button.innerHTML = `<span class="pop-component-h">${character}</span><span class="pop-component-p">${component.p}</span><span class="pop-component-g">${gloss(component)}</span>`;
+			button.addEventListener("click", (event) => {
+				event.stopPropagation();
+				showPopup({ t: character, entries: charEntries }, localDictionary, {
+					parentTok: tok,
+					parentContext: contextualGloss,
+				});
+			});
+			list.appendChild(button);
+		});
+		if (list.children.length) {
+			components.appendChild(list);
+			body.appendChild(components);
+		}
+	}
+
+	// 3. Determinar pestaña activa
+	let activeIdx = 0;
+	if (initialId) {
+		const found = uniqueEntries.findIndex((e) => e.id === initialId);
+		if (found !== -1) activeIdx = found;
+	} else if (contextualGloss) {
+		const targetGloss =
+			(settings.lang === "en" ? contextualGloss.en : contextualGloss.es) || "";
+		const found = uniqueEntries.findIndex((e) => {
+			const g = gloss(e);
+			return (
+				g &&
+				targetGloss &&
+				(g.toLowerCase().includes(targetGloss.toLowerCase()) ||
+					targetGloss.toLowerCase().includes(g.toLowerCase()))
+			);
+		});
+		if (found !== -1) activeIdx = found;
+	}
+
+	// 4. Barra de pestañas (cuando hay más de 1 significado)
+	const panesWrapper = document.createElement("div");
+	panesWrapper.className = "pop-panes";
+
+	if (uniqueEntries.length > 1) {
+		const tabsNav = document.createElement("div");
+		tabsNav.className = "pop-tabs-nav";
+
+		uniqueEntries.forEach((e, idx) => {
+			const tabBtn = document.createElement("button");
+			tabBtn.className = `pop-tab-btn ${idx === activeIdx ? "active" : ""}`;
+			tabBtn.type = "button";
+
+			const lessonLabel = e.custom
+				? e.source || T("generalVocabulary")
+				: `L${e.l === 0 ? "✦" : (e.l || "?")}`;
+			const pinyinLabel = e.p ? `${e.p}` : "";
+			const posLabel = e.pos ? ` · ${e.pos}` : "";
+
+			tabBtn.innerHTML = `<span class="pop-tab-num">${idx + 1}</span><span class="pop-tab-p">${pinyinLabel}</span><span class="pop-tab-tag">${lessonLabel}${posLabel}</span>`;
+
+			tabBtn.addEventListener("click", () => {
+				tabsNav
+					.querySelectorAll(".pop-tab-btn")
+					.forEach((b) => b.classList.remove("active"));
+				tabBtn.classList.add("active");
+				panesWrapper.querySelectorAll(".pop-pane").forEach((p, pIdx) => {
+					p.classList.toggle("active", pIdx === idx);
+				});
+			});
+			tabsNav.appendChild(tabBtn);
+		});
+		body.appendChild(tabsNav);
+	}
+
+	// 5. Paneles de contenido para cada significado
 	uniqueEntries.forEach((e, idx) => {
-		const div = document.createElement("div");
-		div.className = "pop-entry";
+		const pane = document.createElement("div");
+		pane.className = `pop-pane ${idx === activeIdx ? "active" : ""}`;
+
 		const meta = e.custom
 			? `${T("generalVocabulary")} · ${e.source || T("myReadings")}`
 			: `${e.pos ? e.pos + " · " : ""}${T("lesson")} ${e.l}${e.sup ? " · " + T("supTag") : ""}`;
-		const meaningHere =
-			contextualGloss && idx === 0
-				? `<div class="pop-context"><div class="pop-ex-label">${T("meaningHere")}</div><div>${settings.lang === "en" ? contextualGloss.en : contextualGloss.es}</div></div><div class="pop-ex-label pop-other-label">${T("otherMeanings")}</div>`
-				: "";
-		div.innerHTML = `<div class="pop-head"><span class="pop-h">${e.h}</span>
-      <button class="spk-btn pop-spk">🔊</button>
-      <span class="pop-p">${e.p}</span></div>
-      <div class="hw-container"></div>
-      <div class="pop-meta">${meta}</div>
-      ${meaningHere}
-      <div class="pop-g">${gloss(e)}</div>`;
+
+		const isContextMatch =
+			contextualGloss &&
+			(idx === activeIdx ||
+				(settings.lang === "en" ? contextualGloss.en : contextualGloss.es) ===
+					gloss(e));
+
+		const meaningHere = isContextMatch
+			? `<div class="pop-context"><div class="pop-ex-label">${T("meaningHere")}</div><div>${settings.lang === "en" ? contextualGloss.en : contextualGloss.es}</div></div>`
+			: "";
+
+		const pinyinRow =
+			uniqueEntries.length > 1
+				? `<div class="pop-entry-pinyin-row">
+						<span class="pop-p">${e.p}</span>
+						<button class="spk-btn pop-spk" title="Play audio">🔊</button>
+						<span class="pop-meta">${meta}</span>
+				   </div>`
+				: `<div class="pop-meta">${meta}</div>`;
+
+		pane.innerHTML = `
+			${pinyinRow}
+			${meaningHere}
+			<div class="pop-g">${gloss(e)}</div>
+		`;
+
 		const save = document.createElement("button");
-		save.className = "btn small";
-		const updateSave = () =>
-			(save.textContent = hasMyVocabulary(e.id)
+		save.className = "btn small pop-save-btn";
+		const updateSave = () => {
+			save.textContent = hasMyVocabulary(e.id)
 				? `✓ ${T("inStudyList")}`
-				: `＋ ${T("addStudyList")}`);
+				: `＋ ${T("addStudyList")}`;
+		};
 		updateSave();
 		save.addEventListener("click", () => {
 			toggleMyVocabulary(e.id);
 			updateSave();
 		});
-		div.appendChild(save);
-		div.querySelector(".pop-spk").addEventListener("click", () => speak(e.h));
-		const characters = Array.from(tok.t).filter(isHan);
-		if (idx === 0 && characters.length > 1) {
-			const components = document.createElement("div");
-			components.className = "pop-components";
-			components.innerHTML = `<div class="pop-ex-label">${T("wordComponents")}</div>`;
-			const list = document.createElement("div");
-			list.className = "pop-component-list";
-			characters.forEach((character) => {
-				const entries = localDictionary?.get(character) || DICT.get(character);
-				if (!entries?.length) return;
-				const component = entries[0];
-				const button = document.createElement("button");
-				button.className = "pop-component";
-				button.innerHTML = `<span class="pop-component-h">${character}</span><span class="pop-component-p">${component.p}</span><span class="pop-component-g">${gloss(component)}</span>`;
-				button.addEventListener("click", (event) => {
-					event.stopPropagation();
-					showPopup({ t: character, entries }, localDictionary, {
-						parentTok: tok,
-						parentContext: contextualGloss,
-					});
-				});
-				list.appendChild(button);
-			});
-			if (list.children.length) {
-				components.appendChild(list);
-				div.appendChild(components);
-			}
+		pane.appendChild(save);
+
+		const spkBtn = pane.querySelector(".pop-spk");
+		if (spkBtn) {
+			spkBtn.addEventListener("click", () => speak(e.h));
 		}
+
 		if (e.ex) {
 			const exd = document.createElement("div");
 			exd.className = "pop-ex";
@@ -229,8 +383,9 @@ export function showPopup(tok, localDictionary, options = {}) {
 			tr.textContent = exGloss(e.ex);
 			exd.appendChild(zh);
 			exd.appendChild(tr);
-			div.appendChild(exd);
+			pane.appendChild(exd);
 		}
+
 		if (e.cols && e.cols.length) {
 			const cold = document.createElement("div");
 			cold.className = "pop-cols";
@@ -255,67 +410,53 @@ export function showPopup(tok, localDictionary, options = {}) {
 				list.appendChild(item);
 			});
 			cold.appendChild(list);
-			div.appendChild(cold);
+			pane.appendChild(cold);
 		}
-		// concordancia: usos en los textos
-		const uses = usesOf(e.h, 5);
-		if (uses.length) {
-			const box = document.createElement("div");
-			box.className = "pop-uses";
-			box.innerHTML = `<div class="pop-ex-label">${T("usesInTexts")} (${uses.length})</div>`;
-			uses.forEach((u) => {
-				const row = document.createElement("div");
-				row.className = "use-line";
-				const zh = document.createElement("div");
-				zh.className = "use-zh";
-				zh.appendChild(renderTokens(u.zh, "none"));
-				const spk = document.createElement("button");
-				spk.className = "spk-btn";
-				spk.textContent = "🔊";
-				spk.addEventListener("click", (ev) => {
-					ev.stopPropagation();
-					speak(u.zh);
-				});
-				zh.appendChild(spk);
-				const tr = document.createElement("div");
-				tr.className = "use-tr";
-				tr.textContent = settings.lang === "en" ? u.en : u.es;
-				row.appendChild(zh);
-				row.appendChild(tr);
-				box.appendChild(row);
-			});
-			div.appendChild(box);
-		}
-		body.appendChild(div);
-		// animaciones de trazo
-		if (window.HanziWriter) {
-			const hwCont = div.querySelector(".hw-container");
-			for (const ch of e.h) {
-				if (!isHan(ch)) continue;
-				const box = document.createElement("div");
-				box.className = "hw-box";
-				hwCont.appendChild(box);
-				const writer = window.HanziWriter.create(box, ch, {
-					width: 50,
-					height: 50,
-					padding: 2,
-					strokeColor: document.body.classList.contains("theme-dark")
-						? "#e53935"
-						: "#d32f2f",
-					delayBetweenStrokes: 100,
-					strokeAnimationSpeed: 1.5,
-				});
-				box.addEventListener("click", () => writer.animateCharacter());
-			}
-		}
+
+		panesWrapper.appendChild(pane);
 	});
+
+	body.appendChild(panesWrapper);
+
+	// 6. Concordancia: usos en los textos (renderizado una sola vez abajo)
+	const uses = usesOf(tok.t, 5);
+	if (uses.length) {
+		const box = document.createElement("div");
+		box.className = "pop-uses";
+		box.innerHTML = `<div class="pop-ex-label">${T("usesInTexts")} (${uses.length})</div>`;
+		uses.forEach((u) => {
+			const row = document.createElement("div");
+			row.className = "use-line";
+			const zh = document.createElement("div");
+			zh.className = "use-zh";
+			zh.appendChild(renderTokens(u.zh, "none"));
+			const spk = document.createElement("button");
+			spk.className = "spk-btn";
+			spk.textContent = "🔊";
+			spk.addEventListener("click", (ev) => {
+				ev.stopPropagation();
+				speak(u.zh);
+			});
+			zh.appendChild(spk);
+			const tr = document.createElement("div");
+			tr.className = "use-tr";
+			tr.textContent = settings.lang === "en" ? u.en : u.es;
+			row.appendChild(zh);
+			row.appendChild(tr);
+			box.appendChild(row);
+		});
+		body.appendChild(box);
+	}
+
 	pop.classList.add("open");
 	pop.querySelector(".popup-sheet")?.scrollTo({ top: 0 });
 }
 
 // popup de una entrada concreta (usado por vocab)
-export function popupEntry(hanzi) {
-	showPopup({ t: hanzi, entries: DICT.get(hanzi) });
+export function popupEntry(hanzi, initialEntry = null) {
+	const initialId =
+		typeof initialEntry === "string" ? initialEntry : initialEntry?.id;
+	showPopup({ t: hanzi, entries: DICT.get(hanzi) }, null, { initialId });
 }
 
 // ---------- quiz de trazado ----------

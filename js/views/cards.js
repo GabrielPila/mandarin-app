@@ -122,7 +122,7 @@ export function runCards(items, srsMode, isRandom = true) {
 				const d = document.createElement("div");
 				const ordText = e.ord != null ? `${e.ord}.` : "";
 				d.innerHTML = `<span class="vord">${ordText}</span><span class="vh">${e.h}</span><span class="vp">${e.p}</span><span class="vg">${gloss(e)}</span><span class="vl">${e.l === 0 ? "✦" : e.l}</span>`;
-				d.addEventListener("click", () => popupEntry(e.h));
+				d.addEventListener("click", () => popupEntry(e.h, e));
 				fl.appendChild(d);
 			});
 			$("#retry-failed").addEventListener("click", () =>
