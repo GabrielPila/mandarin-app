@@ -7,6 +7,7 @@ import { T } from "../i18n.js";
 let chatHistory = [];
 
 export function renderTutor() {
+	window.__refreshLanguage = renderTutor;
 	setView(`
 		<style>
 			@keyframes wave {
@@ -78,7 +79,7 @@ export function renderTutor() {
 	function addMessage(role, contentOrParts) {
 		const msg = document.createElement("div");
 		msg.className = "chat-msg " + role;
-		
+
 		if (typeof contentOrParts === "string") {
 			msg.innerHTML = parseMarkdown(contentOrParts);
 		} else if (Array.isArray(contentOrParts)) {
@@ -140,7 +141,7 @@ export function renderTutor() {
 			attachmentPreview.innerHTML = `<i data-lucide="image" style="width: 16px; height: 16px;"></i> Imagen adjunta <button type="button" id="clear-attach" style="margin-left:auto; color:var(--danger); padding: 4px;"><i data-lucide="x" style="width: 16px; height: 16px;"></i></button>`;
 			attachmentPreview.classList.remove("hidden");
 			if (window.lucide) lucide.createIcons({ root: attachmentPreview });
-			
+
 			$("#clear-attach").addEventListener("click", () => {
 				currentAttachment = null;
 				attachmentPreview.classList.add("hidden");
@@ -187,7 +188,7 @@ export function renderTutor() {
 					});
 				};
 				reader.readAsDataURL(audioBlob);
-				stream.getTracks().forEach(track => track.stop());
+				stream.getTracks().forEach((track) => track.stop());
 			};
 
 			mediaRecorder.onstart = () => {
@@ -218,7 +219,9 @@ export function renderTutor() {
 			mediaRecorder.start();
 		} catch (err) {
 			console.error("Error accessing mic:", err);
-			alert("No se pudo acceder al micrófono. Por favor, verifica los permisos.");
+			alert(
+				"No se pudo acceder al micrófono. Por favor, verifica los permisos.",
+			);
 		}
 	});
 
@@ -236,7 +239,7 @@ export function renderTutor() {
 			if (text) parts.push({ text });
 			parts.push({ inlineData: currentAttachment });
 			messageData = { role: "user", parts };
-			
+
 			currentAttachment = null;
 			attachmentPreview.classList.add("hidden");
 			imageUpload.value = "";
@@ -244,7 +247,10 @@ export function renderTutor() {
 			messageData = { role: "user", content: text };
 		}
 
-		addMessage("user", messageData.parts ? messageData.parts : messageData.content);
+		addMessage(
+			"user",
+			messageData.parts ? messageData.parts : messageData.content,
+		);
 		chatHistory.push(messageData);
 
 		typingEl.classList.remove("hidden");
@@ -266,7 +272,9 @@ export function renderTutor() {
 				try {
 					errorData = await res.json();
 				} catch (e) {
-					throw new Error(`Error HTTP ${res.status}: La API no está disponible en este servidor local.`);
+					throw new Error(
+						`Error HTTP ${res.status}: La API no está disponible en este servidor local.`,
+					);
 				}
 				throw new Error(errorData.error || "Error de red");
 			}

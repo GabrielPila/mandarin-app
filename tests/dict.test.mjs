@@ -130,3 +130,34 @@ test("cross-lesson entries are preserved in ALL and not tombstoned", () => {
 		"L4 sup entry for 电视 must exist and not be _deleted",
 	);
 });
+
+test("pinyin resolution: 的 produces 'de' and not English 'of'", () => {
+	const deEntries = DICT.get("的");
+	assert.ok(deEntries && deEntries.length > 0, "的 must exist in DICT");
+	assert.equal(deEntries[0].p, "de");
+
+	const toks = segment("孔子的故乡");
+	assert.deepEqual(
+		toks.map((t) => t.t),
+		["孔子", "的", "故乡"],
+	);
+	const pyList = toks.map((t) =>
+		t.plain ? t.t : syllables(t.entries[0]).join(" "),
+	);
+	assert.deepEqual(pyList, ["Kǒng zǐ", "de", "gù xiāng"]);
+
+	// None of the syllables should be English words like 'of'
+	for (const py of pyList) {
+		assert.notEqual(py, "of");
+	}
+});
+
+test("pinyin resolution: core pinyin syllables never contain English words", () => {
+	const sent = "他跟我一起去泰山。游完泰山，我们还想去孔子的故乡看看。";
+	const toks = segment(sent);
+	const allSyls = toks.flatMap((t) => (t.plain ? [] : syllables(t.entries[0])));
+	assert.ok(allSyls.includes("de"));
+	assert.ok(!allSyls.includes("of"));
+	assert.ok(!allSyls.includes("if"));
+	assert.ok(!allSyls.includes("you")); // tú should not be you
+});

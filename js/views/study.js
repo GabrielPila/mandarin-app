@@ -98,7 +98,9 @@ const GAMES = [
 		'<i data-lucide="target"></i>',
 		() => {
 			const saved = getMyVocabularyIds();
-			const l = SRS.leeches(cardPool(ALL.filter((e) => !e.custom || saved.has(e.id))));
+			const l = SRS.leeches(
+				cardPool(ALL.filter((e) => !e.custom || saved.has(e.id))),
+			);
 			if (l.length) startCram(l);
 			else alert(T("noDue"));
 		},
@@ -111,6 +113,7 @@ const GAMES = [
 ];
 
 export function renderStudy() {
+	window.__refreshLanguage = renderStudy;
 	const saved = getMyVocabularyIds();
 	const pool = cardPool(ALL.filter((e) => !e.custom || saved.has(e.id)));
 	const st = SRS.stats(pool);
@@ -303,7 +306,7 @@ export function renderStudy() {
 		if (
 			confirm(
 				T("resetConf") ||
-				"Are you absolutely sure you want to reset all your progress?",
+					"Are you absolutely sure you want to reset all your progress?",
 			)
 		) {
 			resetAll();

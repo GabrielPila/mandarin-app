@@ -9,6 +9,7 @@ import { search as textSearch } from "../concordance.js";
 import { B1_TEXTS, B2_TEXTS } from "../../data/index.js";
 
 export function renderVocab() {
+	window.__refreshLanguage = renderVocab;
 	const v = setView(`
     <div style="
       display: flex; 

@@ -34,7 +34,7 @@ export function renderGrammar() {
         <button id="tg-tones">${T("tones")}</button>
       </div>
       <div id="gfilter" class="scroll-row" style="margin: 0; padding-bottom: 4px;">
-         <button class="lesson-btn on" data-tag="all"><b>Todas</b></button>
+         <button class="lesson-btn on" data-tag="all"><b>${T("all")}</b></button>
          <button class="lesson-btn" data-tag="hsk1"><b>HSK 1</b></button>
          <button class="lesson-btn" data-tag="hsk2"><b>HSK 2</b></button>
          <button class="lesson-btn" data-tag="hsk3"><b>HSK 3</b></button>
@@ -43,6 +43,7 @@ export function renderGrammar() {
     </div>
     <div id="glist" class="glist"></div>`);
 
+	window.__refreshLanguage = renderGrammar;
 	let currentTag = "all";
 
 	const updateToggles = () => {
