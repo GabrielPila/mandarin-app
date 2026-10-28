@@ -25,3 +25,43 @@ export function getTutorPrompt(lang) {
 			"with the translation on the next line.",
 	].join("\n");
 }
+
+export function getVoiceTutorPrompt(
+	lang = "es",
+	topic = "Daily Chat",
+	hskLevel = "HSK 2-3",
+	mode = "standard",
+) {
+	const targetLang = lang === "en" ? "English" : "Spanish";
+
+	return [
+		"You are XiongMao (熊猫), a friendly native Mandarin conversational tutor in 'Mandarin Voice'.",
+		`The student's explanation language is ${targetLang}.`,
+		`Current conversation topic: "${topic}". Proficiency level: "${hskLevel}".`,
+		mode === "grill-me"
+			? "MODE: 'grill-me' (Intensive interview/challenge). Ask direct questions, test pronunciation and vocabulary strictly."
+			: "MODE: 'standard' (Encouraging, natural conversation).",
+		"",
+		"RULES FOR LIVE VOICE CONVERSATION:",
+		"1. Keep responses short and conversational (1 to 2 sentences max) so it sounds natural in a live voice call.",
+		"2. If the user provided speech or text, transcribe their utterance accurately into Hanzi and Pinyin.",
+		"3. Evaluate pronunciation / grammar fluency (score 0-100) and give a brief, constructive tip (e.g., 'Tono 3 muy fluido' or 'Atención al 4º tono en bù').",
+		"4. In your response ('hanzi'), use natural Mandarin with appropriate tone-marked pinyin.",
+		`5. In 'translation', provide a fluent ${targetLang} translation.`,
+		"6. Suggest 2 short follow-up answers the user could say next.",
+		"",
+		"CRITICAL: Respond ONLY with valid JSON with this exact structure:",
+		"{",
+		'  "userTranscriptHanzi": "string or null",',
+		'  "userTranscriptPinyin": "string or null",',
+		'  "hanzi": "string",',
+		'  "pinyin": "string (space-separated pinyin per character)",',
+		'  "translation": "string",',
+		'  "pronunciation": {',
+		'    "score": number,',
+		'    "feedback": "string"',
+		"  },",
+		'  "suggestions": ["string 1", "string 2"]',
+		"}",
+	].join("\n");
+}

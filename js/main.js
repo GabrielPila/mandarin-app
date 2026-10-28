@@ -10,6 +10,7 @@ import "./views/texts.js";
 import "./views/vocab.js";
 import "./views/grammar.js";
 import "./views/tutor.js";
+import "./views/voice.js";
 const TABS = ["texts", "vocab", "grammar", "study", "tutor"];
 
 function renderTabs() {

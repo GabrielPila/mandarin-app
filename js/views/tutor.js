@@ -16,6 +16,20 @@ export function renderTutor() {
 			}
 		</style>
 		<div class="chat-container">
+			<div class="voice-top-bar" style="margin-bottom: 8px;">
+				<div class="voice-brand-title">
+					<span class="zh-tag">中文</span>
+					<span>Tutor Chat</span>
+				</div>
+				<div class="voice-mode-capsule">
+					<button class="voice-mode-btn" id="btn-switch-voice" title="Modo llamada en vivo">
+						<i data-lucide="mic" style="width:14px; height:14px;"></i> Voz
+					</button>
+					<button class="voice-mode-btn active" id="btn-stay-chat" title="Modo chat clásico por texto">
+						<i data-lucide="message-square" style="width:14px; height:14px;"></i> Chat
+					</button>
+				</div>
+			</div>
 			<div class="chat-history" id="chat-history"></div>
 			<div class="agent-row typing-row hidden" id="typing-indicator">
 				<img src="./icons/panda-bot.png" class="agent-avatar">
@@ -334,8 +348,13 @@ export function renderTutor() {
 		}
 	});
 
+	$("#btn-switch-voice")?.addEventListener("click", async () => {
+		const { renderVoice } = await import("./voice.js");
+		renderVoice();
+	});
+
 	if (window.lucide) {
-		lucide.createIcons({ root: $("#chat-form") });
+		lucide.createIcons({ root: $("#view") });
 	}
 }
 
