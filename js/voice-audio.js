@@ -13,24 +13,43 @@ export class AudioRecorder {
 
 	async start() {
 		this.chunks = [];
-		this.stream = await navigator.mediaDevices.getUserMedia({
-			audio: {
-				channelCount: 1,
-				echoCancellation: true,
-				noiseSuppression: true,
-				autoGainControl: true,
-			},
-		});
-
-		// Detectar el formato soportado preferido
-		let mimeType = "audio/webm;codecs=opus";
-		if (!MediaRecorder.isTypeSupported(mimeType)) {
-			mimeType = MediaRecorder.isTypeSupported("audio/webm")
-				? "audio/webm"
-				: "audio/mp4";
+		if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+			throw new Error("El navegador no soporta captura de audio.");
 		}
 
-		this.mediaRecorder = new MediaRecorder(this.stream, { mimeType });
+		try {
+			this.stream = await navigator.mediaDevices.getUserMedia({
+				audio: {
+					echoCancellation: true,
+					noiseSuppression: true,
+					autoGainControl: true,
+				},
+			});
+		} catch {
+			this.stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+		}
+
+		// Detectar el formato soportado preferido
+		let mimeType = "";
+		if (typeof MediaRecorder !== "undefined" && MediaRecorder.isTypeSupported) {
+			const candidates = [
+				"audio/webm;codecs=opus",
+				"audio/webm",
+				"audio/mp4",
+				"audio/aac",
+			];
+			for (const candidate of candidates) {
+				if (MediaRecorder.isTypeSupported(candidate)) {
+					mimeType = candidate;
+					break;
+				}
+			}
+		}
+
+		this.mediaRecorder = mimeType
+			? new MediaRecorder(this.stream, { mimeType })
+			: new MediaRecorder(this.stream);
+
 		this.mediaRecorder.ondataavailable = (e) => {
 			if (e.data && e.data.size > 0) {
 				this.chunks.push(e.data);
@@ -117,11 +136,20 @@ export class VoiceActivityDetector {
 		this.isRunning = false;
 	}
 
-	start() {
+	async start() {
 		if (!this.stream) return;
-		this.audioContext = new (
-			window.AudioContext || window.webkitAudioContext
-		)();
+		const AudioCtx = window.AudioContext || window.webkitAudioContext;
+		if (!AudioCtx) return;
+
+		this.audioContext = new AudioCtx();
+		if (this.audioContext.state === "suspended") {
+			try {
+				await this.audioContext.resume();
+			} catch (err) {
+				console.warn("AudioContext resume failed:", err);
+			}
+		}
+
 		this.analyser = this.audioContext.createAnalyser();
 		this.analyser.fftSize = 512;
 		this.analyser.smoothingTimeConstant = 0.2;

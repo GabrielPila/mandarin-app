@@ -1,9 +1,7 @@
 // js/views/voice.js — Vista Mandarin Voice (Live Conversational Voice Tutor 2A)
-import { $, setView } from "../ui.js";
-import { register } from "../router.js";
+import { $, setView, renderTokens } from "../ui.js";
 import { settings } from "../store.js";
 import { T } from "../i18n.js";
-import { syllables } from "../dict.js";
 import {
 	AudioRecorder,
 	VoiceActivityDetector,
@@ -90,22 +88,6 @@ export function renderVoice() {
 
 			<!-- Chips de Temas / Respuestas Rápidas -->
 			<div class="voice-topics-row" id="voice-topics-container"></div>
-
-			<!-- Barra de Control de Llamada -->
-			<div class="voice-call-bar">
-				<button class="voice-call-btn ${isMuted ? "is-muted" : ""}" id="btn-call-mute">
-					<i data-lucide="${isMuted ? "mic-off" : "mic"}" style="width:16px; height:16px;"></i>
-					<span>${isMuted ? "Unmute" : "Mute"}</span>
-				</button>
-				<button class="voice-call-btn" id="btn-call-speaker">
-					<i data-lucide="volume-2" style="width:16px; height:16px;"></i>
-					<span>Speaker</span>
-				</button>
-				<button class="voice-call-btn btn-end" id="btn-call-end">
-					<i data-lucide="phone-off" style="width:16px; height:16px;"></i>
-					<span>${isSessionActive ? "Pausar" : "Salir"}</span>
-				</button>
-			</div>
 		</div>
 	`);
 
@@ -136,27 +118,8 @@ function renderRubyDialogue() {
 	transEl.textContent = `"${state.translation}"`;
 	container.innerHTML = "";
 
-	const chars = Array.from(state.hanzi || "");
-	const pyList = syllables(state.pinyin || "");
-
-	let pyIdx = 0;
-	chars.forEach((ch) => {
-		const isChinese = /[\u4e00-\u9fa5]/.test(ch);
-		const token = document.createElement("div");
-		token.className = "voice-token";
-
-		const pySpan = document.createElement("span");
-		pySpan.className = "voice-py";
-		pySpan.textContent = isChinese ? pyList[pyIdx++] || "" : "";
-
-		const zhSpan = document.createElement("span");
-		zhSpan.className = "voice-zh";
-		zhSpan.textContent = ch;
-
-		token.appendChild(pySpan);
-		token.appendChild(zhSpan);
-		container.appendChild(token);
-	});
+	const mode = state.showPinyin ? "pinyin" : "none";
+	container.appendChild(renderTokens(state.hanzi || "", mode));
 }
 
 /**
@@ -206,7 +169,7 @@ function updateOrbStatus(newStatus, feedbackMsg = null) {
 	state.status = newStatus;
 	const stage = $("#voice-orb-stage");
 	const feedbackText = $("#voice-feedback-text");
-	const icon = $("#orb-icon");
+	const orbBtn = $("#voice-orb-btn");
 
 	if (stage) {
 		stage.className = `voice-orb-stage status-${newStatus}`;
@@ -216,17 +179,15 @@ function updateOrbStatus(newStatus, feedbackMsg = null) {
 		feedbackText.textContent = feedbackMsg;
 	}
 
-	if (icon && window.lucide) {
-		if (newStatus === "listening") {
-			icon.setAttribute("data-lucide", "mic");
-		} else if (newStatus === "thinking") {
-			icon.setAttribute("data-lucide", "loader-2");
+	if (orbBtn && window.lucide) {
+		let iconName = "mic";
+		if (newStatus === "thinking") {
+			iconName = "loader-2";
 		} else if (newStatus === "speaking") {
-			icon.setAttribute("data-lucide", "volume-2");
-		} else {
-			icon.setAttribute("data-lucide", "mic");
+			iconName = "volume-2";
 		}
-		lucide.createIcons({ root: $("#voice-orb-btn") });
+		orbBtn.innerHTML = `<i data-lucide="${iconName}" id="orb-icon" style="width:36px; height:36px; color:#ffffff;"></i>`;
+		lucide.createIcons({ root: orbBtn });
 	}
 }
 
@@ -271,7 +232,7 @@ async function startListeningLoop() {
 			},
 		});
 
-		vad.start();
+		await vad.start();
 	} catch (err) {
 		console.error("Error al acceder al micrófono:", err);
 		updateOrbStatus("idle", "Permiso de micrófono requerido para el modo voz.");
@@ -409,38 +370,22 @@ function attachVoiceEvents() {
 	});
 
 	// Tocar el orbe: alternar hablar / pausar
-	$("#voice-orb-btn")?.addEventListener("click", () => {
+	const toggleVoiceSession = () => {
 		if (isSessionActive) {
 			stopListeningLoop();
 		} else {
 			startListeningLoop();
 		}
+	};
+	$("#voice-orb-btn")?.addEventListener("click", (e) => {
+		e.stopPropagation();
+		toggleVoiceSession();
 	});
-
-	// Mute
-	$("#btn-call-mute")?.addEventListener("click", (e) => {
-		isMuted = !isMuted;
-		e.currentTarget.classList.toggle("is-muted", isMuted);
-		if (isMuted) {
-			stopListeningLoop();
-			updateOrbStatus("idle", "Micrófono silenciado");
-		} else {
-			startListeningLoop();
-		}
-		if (window.lucide) lucide.createIcons({ root: e.currentTarget });
-	});
-
-	// Speaker (repetir frase actual)
-	$("#btn-call-speaker")?.addEventListener("click", () => {
-		playBase64Audio(null, settings.voiceSpeed || 1.0, state.hanzi);
-	});
-
-	// Fin de llamada / Pausa
-	$("#btn-call-end")?.addEventListener("click", () => {
-		stopListeningLoop();
-		updateOrbStatus("idle", "Llamada finalizada • Toca el orbe para reiniciar");
+	$("#voice-orb-stage")?.addEventListener("click", () => {
+		toggleVoiceSession();
 	});
 }
 
-// Registrar en el enrutador
-register("tutor", renderVoice);
+export function openVoiceMode() {
+	renderVoice();
+}

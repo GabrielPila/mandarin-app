@@ -16,7 +16,7 @@ export default async function handler(req) {
 		const apiKey = process.env.GEMINI_API_KEY;
 		if (!apiKey) throw new Error("GEMINI_API_KEY is not set.");
 
-		const MODEL_NAME = "gemini-3.1-flash-lite";
+		const MODEL_NAME = process.env.GEMINI_MODEL || "gemini-2.0-flash";
 
 		// ==========================================
 		// MODO VOZ: Mandarin Voice (JSON Estructurado)

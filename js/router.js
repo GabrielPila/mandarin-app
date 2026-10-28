@@ -10,7 +10,7 @@ export function nav(tab) {
 	if (window.__stopReader) window.__stopReader();
 	window.__refreshLanguage = null;
 	current = tab;
-	["study", "texts", "vocab", "grammar", "settings"].forEach((t) => {
+	["study", "texts", "vocab", "grammar", "tutor", "settings"].forEach((t) => {
 		const el = document.querySelector("#tab-" + t);
 		if (el) el.classList.toggle("active", t === tab);
 	});

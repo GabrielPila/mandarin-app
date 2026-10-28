@@ -187,11 +187,12 @@ export function renderTutor() {
 				recordAudioBtn.style.color = "var(--muted)";
 				if (window.lucide) lucide.createIcons({ root: recordAudioBtn });
 
-				const audioBlob = new Blob(audioChunks, { type: "audio/webm" });
+				const mimeType = mediaRecorder.mimeType || "audio/webm";
+				const audioBlob = new Blob(audioChunks, { type: mimeType });
 				const reader = new FileReader();
 				reader.onload = (ev) => {
 					const base64 = ev.target.result.split(",")[1];
-					currentAttachment = { mimeType: "audio/webm", data: base64 };
+					currentAttachment = { mimeType, data: base64 };
 					attachmentPreview.innerHTML = `<i data-lucide="mic" style="width: 16px; height: 16px;"></i> Audio adjunto <button type="button" id="clear-attach" style="margin-left:auto; color:var(--danger); padding: 4px;"><i data-lucide="x" style="width: 16px; height: 16px;"></i></button>`;
 					attachmentPreview.classList.remove("hidden");
 					if (window.lucide) lucide.createIcons({ root: attachmentPreview });

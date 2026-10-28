@@ -11,3 +11,6 @@ private-source/
 tmp/
 .vercel
 .env*
+node_modules/
+tests/screenshots/
+
