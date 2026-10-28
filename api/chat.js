@@ -16,7 +16,7 @@ export default async function handler(req) {
 		const apiKey = process.env.GEMINI_API_KEY;
 		if (!apiKey) throw new Error("GEMINI_API_KEY is not set.");
 
-		const MODEL_NAME = process.env.GEMINI_MODEL || "gemini-2.0-flash";
+		const MODEL_NAME = process.env.GEMINI_MODEL || "gemini-flash-latest";
 
 		// ==========================================
 		// MODO VOZ: Mandarin Voice (JSON Estructurado)
@@ -106,7 +106,12 @@ export default async function handler(req) {
 
 			if (!resp.ok) {
 				const errText = await resp.text();
-				throw new Error(errText);
+				let errMsg = errText;
+				try {
+					const parsed = JSON.parse(errText);
+					errMsg = parsed.error?.message || errText;
+				} catch (_) {}
+				throw new Error(errMsg);
 			}
 
 			const geminiData = await resp.json();
@@ -184,7 +189,12 @@ export default async function handler(req) {
 
 		if (!resp.ok) {
 			const errorText = await resp.text();
-			throw new Error(errorText);
+			let errMsg = errorText;
+			try {
+				const parsed = JSON.parse(errorText);
+				errMsg = parsed.error?.message || errorText;
+			} catch (_) {}
+			throw new Error(errMsg);
 		}
 
 		return new Response(resp.body, {
