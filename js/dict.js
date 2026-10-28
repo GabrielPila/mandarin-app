@@ -168,6 +168,13 @@ export function syllables(entry) {
 	if (chars.length === syls.length + 1 && chars[chars.length - 1] === "儿") {
 		return syls.concat([""]);
 	}
+	// Si falta separación de sílabas, intentar recuperar pinyin por carácter de DICT
+	if (chars.length > 1 && syls.length !== chars.length) {
+		const byChar = chars.map((c) => DICT.get(c)?.[0]?.p?.split(/\s+/)[0] || "");
+		if (byChar.every((s) => s.length > 0)) {
+			return byChar;
+		}
+	}
 	// desalineado: repartir lo mejor posible
 	const out = [];
 	for (let i = 0; i < chars.length; i++) out.push(syls[i] || "");
